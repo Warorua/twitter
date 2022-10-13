@@ -153,7 +153,7 @@ function user_history($change_part){
 }
 
 //POST SECURITY/////////////////////////////////////////////////////////////////////////////////////////////////
-$server_req = 'localhost';
+$server_req = 'tweetbot.site';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if ($_SERVER['SERVER_NAME'] != $server_req) {
