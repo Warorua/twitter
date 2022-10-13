@@ -431,26 +431,6 @@ $like_perc = ($likes * 100) / 5000;
 		chart.appear(1000, 100);
 	}); // end am5.ready()
 
-
-
-
-
-
-
-
-
-
-
-
-	setInterval(function() {
-		$.ajax({
-			type: "POST",
-			url: "../process/post/engine_clear.php",
-			data: {
-				user: '<?php echo $user['t_id'] ?>',
-			},
-		});
-	}, 5000);
 </script>
 
 <script>
