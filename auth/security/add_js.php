@@ -47,7 +47,7 @@ function log_graph($stat){
     "paging": true,
     "scrollX": true,
     responsive: true,
-    "ordering": false
+    order: [[0, 'desc']]
 });
 
 
