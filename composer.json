@@ -21,7 +21,8 @@
         "noweh/twitter-api-v2-php": "^1.7",
         "coderjerk/bird-elephant": "^0.5.0",
         "abraham/twitteroauth": "^4.0",
-        "utxo-one/twitter-ultimate-php": "^0.1.6"
+        "utxo-one/twitter-ultimate-php": "^0.1.6",
+        "simplehtmldom/simplehtmldom": "^2.0@RC"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.0",
