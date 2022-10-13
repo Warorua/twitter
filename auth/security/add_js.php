@@ -2,7 +2,7 @@
 function log_graph($stat){
     global $conn;
     global $user;
-    $stmt = $conn->prepare("SELECT time FROM logs WHERE user_id=:user_id AND status=:status");
+    $stmt = $conn->prepare("SELECT time FROM logs WHERE user_id=:user_id AND status=:status ORDER BY time DESC");
     $stmt->execute(['user_id'=>$user['id'], 'status'=>$stat]);
     $data = $stmt->fetchAll();
     $jan = $feb = $mar = $apr = $may = $jun = $jul = $aug = $sep = $oct = $nov = $dec = 0;
