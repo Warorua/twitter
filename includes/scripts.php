@@ -19,6 +19,9 @@
 <script src="../assets/plugins/custom/datatables/datatables.bundle.js"></script>
 <!--end::Vendors Javascript-->
 <!--begin::Custom Javascript(account overview page)-->
+<script src="../assets/js/custom/apps/user-management/users/list/table.js"></script>
+<script src="../assets/js/custom/apps/user-management/users/list/export-users.js"></script>
+<script src="../assets/js/custom/apps/user-management/users/list/add.js"></script>
 <script src="../assets/js/custom/pages/user-profile/followers.js"></script>
 <script src="../assets/js/widgets.bundle.js"></script>
 <script src="../assets/js/custom/widgets.js"></script>
@@ -430,7 +433,6 @@ $like_perc = ($likes * 100) / 5000;
 		series2.appear(1000);
 		chart.appear(1000, 100);
 	}); // end am5.ready()
-
 </script>
 
 <script>

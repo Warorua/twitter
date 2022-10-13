@@ -1060,12 +1060,16 @@ $data = $abraham_client->get('statuses/user_timeline', [
 //echo replier('1565628118001455105');
 //https://twitter.com/Megrata_/status/1579031379752337408?s=20&t=uXVwBYJQ0aN3MwNgEyneUw
 
+//*
 $followers = $bird_elephant->user('Kenyans')->following([
-  'max_results' => 1000,
-  'user.fields' => 'profile_image_url',
-  'user.fields' => 'following',
+  'max_results' => 10,
+  'user.fields' => 'location,created_at,public_metrics,url,profile_image_url',
   'pagination_token' => '26SFOO12P4U1GZZZ'
 ]);
+//*/
+
+//$followers =  user_metrics('1577321598155096064');
+
 echo json_encode($followers);
 
 

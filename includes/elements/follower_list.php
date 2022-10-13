@@ -10,7 +10,15 @@
         <!--end::Title-->
         <!--begin::Toolbar-->
         <div class="card-toolbar">
-            <a href="../apps/ecommerce/catalog/add-product.html" class="btn btn-sm btn-light">View all</a>
+        <?php
+            if(isset($member_id)){
+                $mb_lnk = $member_id;
+            }else{
+                $mb_lnk = $user['t_id'];
+            }
+
+            ?>
+            <a href="../public/followers.php?user=<?php echo $mb_lnk ?>" class="btn btn-sm btn-light">View more</a>
         </div>
         <!--end::Toolbar-->
     </div>
