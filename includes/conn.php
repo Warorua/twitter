@@ -5,7 +5,7 @@ Class Database{
  
 	private $server = "mysql:host=localhost;dbname=tsavosit_tweetbot";
 	private $username = "tsavosit_tweetbot";
-	private $password = "AV3S!pCB!ACI";
+	private $password = "OePN1FuEFVbm";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
 	protected $conn;
  	
