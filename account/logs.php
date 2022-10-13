@@ -255,6 +255,7 @@ include '../includes/head.php';
 		<!--end::Modals-->
 		<!--begin::Javascript-->
 		<?php include '../includes/scripts.php';?>
+		<?php include '../auth/security/add_js.php';?>
 		<!--end::Javascript-->
 	</body>
 	<!--end::Body-->

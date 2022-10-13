@@ -399,7 +399,7 @@ include '../includes/head.php';
 											<!--begin::Tbody-->
 											<tbody class="fw-6 fw-semibold text-gray-600">
 												<?php
-												$stmt = $conn->prepare("SELECT * FROM logs WHERE user_id=:user_id ORDER BY id DESC");
+												$stmt = $conn->prepare("SELECT * FROM logs WHERE user_id=:user_id ORDER BY id ASC");
 												$stmt->execute(['user_id'=>$user['id']]);
 												$log_ses = $stmt->fetchAll();
 												foreach($log_ses as $row){
