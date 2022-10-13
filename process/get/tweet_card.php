@@ -161,7 +161,7 @@ include '../../includes/api_config.php';
 													  <!--begin::Menu item-->
 													  <div kt_tweet_link="D" class="menu-item px-3">
 														  <div class="menu-content px-3 py-3">
-															  <a href="http://localhost/twitter/public/tweets.php?tweet='.$row['id'].'" target="_blank" class="btn btn-success btn-sm px-4">View Tweet</a>
+															  <a href="https://tweetbot.site/public/tweets.php?tweet='.$row['id'].'" target="_blank" class="btn btn-success btn-sm px-4">View Tweet</a>
 														  </div>
 													  </div>
 													  <!--end::Menu item-->

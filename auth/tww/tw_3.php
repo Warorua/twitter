@@ -53,12 +53,12 @@ if($row['numrows'] < 1){
     $stmt->execute(['t_id'=>$t_id, 'id'=>$_SESSION['user_id']]);
     $_SESSION['success'] = 'Account successfully linked';
     unset($_SESSION['access_token']);
-    redirect('http://localhost/twitter/account/settings.php');
+    redirect('https://tweetbot.site/account/settings.php');
   
   }else{
       $_SESSION['error'] = 'This user is linked to another account.';
           unset($_SESSION['access_token']);
-          redirect('http://localhost/twitter/account/settings.php');
+          redirect('https://tweetbot.site/account/settings.php');
   }
   ////////////////////////////////////////////////////////////////////////////////////////
   

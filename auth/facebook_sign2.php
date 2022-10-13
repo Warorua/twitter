@@ -144,7 +144,7 @@ exit;
 
 // replace your website URL same as added in the developers.Facebook.com/apps e.g. if you used http instead of https and you used            
 
-$loginUrl = $helper->getLoginUrl('http://localhost/twitter/auth/facebook_sign.php', $permissions);
+$loginUrl = $helper->getLoginUrl('https://tweetbot.site/auth/facebook_sign.php', $permissions);
 echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 
 }

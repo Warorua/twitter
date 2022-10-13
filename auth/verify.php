@@ -53,7 +53,7 @@
 							 }else{
 								$_SESSION['user_id'] = $row['id'];
 							$_SESSION['info'] = $row['email'];
-								header('location: http://localhost/twitter/account/overview.php');
+								header('location: https://tweetbot.site/account/overview.php');
 							 }
 
 							
@@ -98,6 +98,6 @@
 
 	login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
 
-	header('location: http://localhost/twitter/auth/sign-in.php');
+	header('location: https://tweetbot.site/auth/sign-in.php');
 
 ?>

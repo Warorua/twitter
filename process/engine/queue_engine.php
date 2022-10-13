@@ -66,7 +66,7 @@ if (time() > $client['execution']) {
 
     $url = 'http://localhost' . $client['page'] . '?bot_id=' . $client_id . '&auth_key=' . $auth_code;
 
-    //$url = 'http://localhost/twitter/account/lab4.php';
+    //$url = 'https://tweetbot.site/account/lab4.php';
 
     $fields = $obj;
 

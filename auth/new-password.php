@@ -2,7 +2,7 @@
 include '../includes/conn.php';
   if(!isset($_GET['code']) OR !isset($_GET['user'])){
 	$_SESSION['error'] = 'Invalid action!';
-    header('location: http://localhost/twitter/auth/sign-in.php');
+    header('location: https://tweetbot.site/auth/sign-in.php');
     exit(); 
   }
 ?>

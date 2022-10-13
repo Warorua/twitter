@@ -10,7 +10,7 @@ if(isset($_GET['bot_id'])){
 
 }elseif(!isset($_SESSION['user_id'])){
     $_SESSION['error'] = 'User not logged in!';
-   header('location:http://localhost/twitter/auth/sign-in.php ');
+   header('location:https://tweetbot.site/auth/sign-in.php ');
 }else{
     $conn = $pdo->open();
     $stmt = $conn->prepare("SELECT * FROM users WHERE id=:id");
@@ -19,10 +19,10 @@ if(isset($_GET['bot_id'])){
 
 	if($user['photo'] == ''){
 		$opt_img = array(
-		 'http://localhost/twitter/assets/media/stock/600x600/img-47.jpg',
-		 'http://localhost/twitter/assets/media/stock/600x600/img-49.jpg',
-		 'http://localhost/twitter/assets/media/stock/600x600/img-48.jpg',
-		 'http://localhost/twitter/assets/media/stock/600x600/img-45.jpg'
+		 'https://tweetbot.site/assets/media/stock/600x600/img-47.jpg',
+		 'https://tweetbot.site/assets/media/stock/600x600/img-49.jpg',
+		 'https://tweetbot.site/assets/media/stock/600x600/img-48.jpg',
+		 'https://tweetbot.site/assets/media/stock/600x600/img-45.jpg'
 	);
 	$user_image = $opt_img[rand(0, count($opt_img) - 1)];
 	}else{

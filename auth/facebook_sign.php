@@ -106,7 +106,7 @@ $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 if (isset($_GET['code'])) {
    // $_SESSION['fb_email'] = 'fbpic';
   
-    redirect('http://localhost/twitter/account/overview.php');
+    redirect('https://tweetbot.site/account/overview.php');
 //header('Location: profile.php');
 
 }
@@ -154,7 +154,7 @@ session_destroy();
 // redirecting user back to app login page
 
 //header("Location: ./");
-redirect('http://localhost/twitter/auth/sign-up.php');
+redirect('https://tweetbot.site/auth/sign-up.php');
 
 exit;
 
@@ -169,7 +169,7 @@ exit;
 }
 
 } 
-$loginUrl = $helper->getLoginUrl('http://localhost/twitter/auth/facebook_sign.php', $permissions);
+$loginUrl = $helper->getLoginUrl('https://tweetbot.site/auth/facebook_sign.php', $permissions);
 
 
 ?>

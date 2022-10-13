@@ -32,7 +32,7 @@ $totp = PedroSancao\OTP\TOTP::createRaw($row['two_auth_secret']);
 if($totp->verify($code)){
     $_SESSION['user_id'] = $row['id'];
     $_SESSION['info'] = $row['email'];
-    header('location: http://localhost/twitter/account/overview.php');
+    header('location: https://tweetbot.site/account/overview.php');
 }else{
     $_SESSION['error'] = 'Code invalid!';
     header('location: ./sign-in.php');
@@ -41,7 +41,7 @@ if($totp->verify($code)){
 if($_SESSION['mail_authCode'] == $code){
     $_SESSION['user_id'] = $row['id'];
     $_SESSION['info'] = $row['email'];
-    header('location: http://localhost/twitter/account/overview.php');
+    header('location: https://tweetbot.site/account/overview.php');
 }else{
     $_SESSION['error'] = 'Code invalid or expired!';
     header('location: ./sign-in.php');

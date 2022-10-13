@@ -22,8 +22,8 @@ require_once '../vendor/autoload.php';
 // init configuration
 $clientID = '167208180500-p33dejrdqld6261j1inueg9p0sr9fqig.apps.googleusercontent.com';
 $clientSecret = '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';
-//$redirectUri = 'http://localhost/twitter/account/overview.php';
-$redirectUri = 'http://localhost/twitter/auth/sign-up.php';
+//$redirectUri = 'https://tweetbot.site/account/overview.php';
+$redirectUri = 'https://tweetbot.site/auth/sign-up.php';
    
 // create Client Request to access Google API
 $client = new Google_Client();
@@ -68,16 +68,16 @@ if($row['numrows'] > 0){
     if($row['source'] == 'T0'){
      $_SESSION['error'] = 'User already registered with Twitter.';
      unset($_SESSION['access_token']);
-     redirect('http://localhost/twitter/auth/sign-up.php');
+     redirect('https://tweetbot.site/auth/sign-up.php');
     
     }elseif($row['source'] == 'F0'){
         $_SESSION['error'] = 'User already registered with Facebook.';
         unset($_SESSION['access_token']);
-        redirect('http://localhost/twitter/auth/sign-up.php');
+        redirect('https://tweetbot.site/auth/sign-up.php');
     }else{
         $_SESSION['error'] = 'User already registered. Login instead.';
         unset($_SESSION['access_token']);
-        redirect('http://localhost/twitter/auth/sign-up.php');
+        redirect('https://tweetbot.site/auth/sign-up.php');
     }
 }
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -88,14 +88,14 @@ $stmt->execute(['g_id'=>$g_id]);
 $row = $stmt->fetch();
 if($row['numrows'] > 0){
      $_SESSION['error'] = 'User already registered';
-     redirect('http://localhost/twitter/auth/sign-up.php');
+     redirect('https://tweetbot.site/auth/sign-up.php');
 }else{
     $stmt = $conn->prepare("INSERT INTO users (source, email, firstname, lastname, photo, g_id, status, type, created_on) VALUES (:source, :email, :firstname, :lastname, :photo, :g_id, :status, :type, :created_on)");
   $stmt->execute(['source'=>$source, 'email'=>$email, 'firstname'=>$firstname, 'lastname'=>$lastname, 'photo'=>$photo, 'g_id'=>$g_id, 'status'=>$status, 'type'=>$type, 'created_on'=>$create_on]);
  $_SESSION['user_id'] = $conn->lastInsertId();
  $_SESSION['error'] = $email;
 
- redirect('http://localhost/twitter/account/overview.php');
+ redirect('https://tweetbot.site/account/overview.php');
 }
 
 

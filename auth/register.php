@@ -39,7 +39,7 @@
 
 		if($password != $repassword){
 			$_SESSION['error'] = 'Passwords did not match';
-			header('location: http://localhost/twitter/auth/sign-up.php#');
+			header('location: https://tweetbot.site/auth/sign-up.php#');
 		}
 		
 		else{
@@ -57,20 +57,20 @@
      if($row['source'] == 'G0'){
       $_SESSION['error'] = 'User already registered with Google.';
       unset($_SESSION['access_token']);
-      redirect('http://localhost/twitter/auth/sign-up.php');
+      redirect('https://tweetbot.site/auth/sign-up.php');
      
      }elseif($row['source'] == 'F0'){
          $_SESSION['error'] = 'User already registered with Facebook.';
          unset($_SESSION['access_token']);
-         redirect('http://localhost/twitter/auth/sign-up.php');
+         redirect('https://tweetbot.site/auth/sign-up.php');
      }elseif($row['source'] == 'T0'){
         $_SESSION['error'] = 'User already registered with Twitter.';
         unset($_SESSION['access_token']);
-        redirect('http://localhost/twitter/auth/sign-up.php');
+        redirect('https://tweetbot.site/auth/sign-up.php');
     }else{
          $_SESSION['error'] = 'User already registered.';
          unset($_SESSION['access_token']);
-         redirect('http://localhost/twitter/auth/sign-up.php');
+         redirect('https://tweetbot.site/auth/sign-up.php');
      }
  }
  ////////////////////////////////////////////////////////////////////////////////////////
@@ -121,7 +121,7 @@
                              </div>
                              <!--end:Text-->
                              <!--begin:Action-->
-                             <a href="http://localhost/twitter/auth/activate.php?code='.$code.'&user='.$userid.'" target="_blank" style="background-color:#50CD89; border-radius:6px;display:inline-block; padding:11px 19px; color: #FFFFFF; font-size: 14px; font-weight:500;">Activate Account</a>
+                             <a href="https://tweetbot.site/auth/activate.php?code='.$code.'&user='.$userid.'" target="_blank" style="background-color:#50CD89; border-radius:6px;display:inline-block; padding:11px 19px; color: #FFFFFF; font-size: 14px; font-weight:500;">Activate Account</a>
                              <!--begin:Action-->
                          </div>
                          <!--end:Email content-->
@@ -291,13 +291,13 @@
 				        unset($_SESSION['email']);
 
 				        {$_SESSION['success'] = 'Account created. Check your email to activate.';
-				        header('location: http://localhost/twitter/auth/sign-up.php#');}
+				        header('location: https://tweetbot.site/auth/sign-up.php#');}
 
 				    } 
 									
 				    catch (Exception $e) {
 				        $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
-				        header('location: http://localhost/twitter/auth/sign-up.php#');
+				        header('location: https://tweetbot.site/auth/sign-up.php#');
 				    }
 
 				}
@@ -315,5 +315,5 @@
 	}
 	else{
 		$_SESSION['error'] = 'Complete filling the signup form first';
-		header('location: http://localhost/twitter/auth/sign-up.php#');
+		header('location: https://tweetbot.site/auth/sign-up.php#');
 	}

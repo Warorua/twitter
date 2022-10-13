@@ -104,7 +104,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
 
-$url = 'http://localhost/twitter/account/lab3.php';
+$url = 'https://tweetbot.site/account/lab3.php';
 
 $fields =
 array(

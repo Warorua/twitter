@@ -5,8 +5,8 @@ require_once '../vendor/autoload.php';
 // init configuration
 $clientID = '167208180500-p33dejrdqld6261j1inueg9p0sr9fqig.apps.googleusercontent.com';
 $clientSecret = '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';
-//$redirectUri = 'http://localhost/twitter/account/overview.php';
-$redirectUri = 'http://localhost/twitter/account/settings.php';
+//$redirectUri = 'https://tweetbot.site/account/overview.php';
+$redirectUri = 'https://tweetbot.site/account/settings.php';
    
 // create Client Request to access Google API
 $client = new Google_Client();
@@ -47,12 +47,12 @@ if($row['numrows'] < 1){
   $stmt = $conn->prepare("UPDATE users SET g_id=:g_id WHERE id=:id");
   $stmt->execute(['g_id'=>$g_id, 'id'=>$user['id']]);
   $_SESSION['success'] = 'Account successfully linked';
-  redirect('http://localhost/twitter/account/settings.php');
+  redirect('https://tweetbot.site/account/settings.php');
 
 }else{
     $_SESSION['error'] = 'This user is linked to another account.';
         unset($_SESSION['access_token']);
-        redirect('http://localhost/twitter/account/settings.php');
+        redirect('https://tweetbot.site/account/settings.php');
 }
 ////////////////////////////////////////////////////////////////////////////////////////
 

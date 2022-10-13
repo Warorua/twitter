@@ -35,16 +35,16 @@
             if($row['source'] == 'G0'){
                 $_SESSION['error'] = 'User has been registered with Google.';
                 
-                redirect('http://localhost/twitter/auth/reset-password.php');
+                redirect('https://tweetbot.site/auth/reset-password.php');
                
                }elseif($row['source'] == 'F0'){
                    $_SESSION['error'] = 'User has been registered with Facebook.';
                    
-                   redirect('http://localhost/twitter/auth/reset-password.php');
+                   redirect('https://tweetbot.site/auth/reset-password.php');
                }elseif($row['source'] == 'T0'){
                   $_SESSION['error'] = 'User has been registered with Twitter.';
                   
-                  redirect('http://localhost/twitter/auth/reset-password.php');
+                  redirect('https://tweetbot.site/auth/reset-password.php');
               }else{
 
 			//generate code
@@ -86,7 +86,7 @@
                                             </div>
                                             <!--end:Text-->
                                             <!--begin:Action-->
-                                            <a href="http://localhost/twitter/auth/new-password.php?code='.$code.'&user='.$row['id'].'" target="_blank" style="background-color:#50cd89; border-radius:6px;display:inline-block; padding:11px 19px; color: #FFFFFF; font-size: 14px; font-weight:500; font-family:Arial,Helvetica,sans-serif;">Change Password</a>
+                                            <a href="https://tweetbot.site/auth/new-password.php?code='.$code.'&user='.$row['id'].'" target="_blank" style="background-color:#50cd89; border-radius:6px;display:inline-block; padding:11px 19px; color: #FFFFFF; font-size: 14px; font-weight:500; font-family:Arial,Helvetica,sans-serif;">Change Password</a>
                                             <!--end:Action-->
                                         </div>
                                         <!--end:Email content-->
@@ -307,6 +307,6 @@
 		$_SESSION['error'] = 'Input email associated with account';
 	}
 
-	header('location: http://localhost/twitter/auth/reset-password.php');
+	header('location: https://tweetbot.site/auth/reset-password.php');
 
 ?>

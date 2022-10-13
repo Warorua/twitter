@@ -128,16 +128,16 @@ $email =  $fbemail;
       if($row['source'] == 'G0'){
        $_SESSION['error'] = 'User already registered with Google.';
        unset($_SESSION['access_token']);
-       redirect('http://localhost/twitter/auth/sign-up.php');
+       redirect('https://tweetbot.site/auth/sign-up.php');
       
       }elseif($row['source'] == 'T0'){
           $_SESSION['error'] = 'User already registered with Twitter.';
           unset($_SESSION['access_token']);
-          redirect('http://localhost/twitter/auth/sign-up.php');
+          redirect('https://tweetbot.site/auth/sign-up.php');
       }else{
           $_SESSION['error'] = 'User already registered. Login instead.';
           unset($_SESSION['access_token']);
-          redirect('http://localhost/twitter/auth/sign-up.php');
+          redirect('https://tweetbot.site/auth/sign-up.php');
       }
   }
   ////////////////////////////////////////////////////////////////////////////////////////
@@ -148,7 +148,7 @@ $stmt->execute(['f_id'=>$f_id]);
 $row = $stmt->fetch();
 if($row['numrows'] > 0){
      $_SESSION['error'] = 'User already registered. Login instead.';
-     header('location:http://localhost/twitter/auth/sign-up.php');
+     header('location:https://tweetbot.site/auth/sign-up.php');
 }else{
     $stmt = $conn->prepare("INSERT INTO users (source, email, firstname, lastname, photo, f_id, status, type, created_on) VALUES (:source, :email, :firstname, :lastname, :photo, :f_id, :status, :type, :created_on)");
   $stmt->execute(['source'=>$source, 'email'=>$email, 'firstname'=>$firstname, 'lastname'=>$lastname, 'photo'=>$photo, 'f_id'=>$f_id, 'status'=>$status, 'type'=>$type, 'created_on'=>$create_on]);

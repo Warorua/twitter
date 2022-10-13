@@ -115,13 +115,13 @@ if($row['numrows'] > 0 && $row['source'] == 'T0'){
   $_SESSION['user_id'] = $row['id'];
   $_SESSION['info'] = $row['t_id'];
   login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
-  redirect('http://localhost/twitter/account/overview.php');
+  redirect('https://tweetbot.site/account/overview.php');
 
 }else{
     $_SESSION['error'] = $status_info = 'User not account not found! Sign up to login.';
         unset($_SESSION['access_token']);
         login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
-        redirect('http://localhost/twitter/auth/sign-up.php');
+        redirect('https://tweetbot.site/auth/sign-up.php');
 }
 
 

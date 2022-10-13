@@ -22,7 +22,7 @@
 		$photo_path = realpath($_FILES['avatar']['name']);
 
 			if(!empty($photo)){
-			$pic_del = 'http://localhost/twitter/assets/media/profile/'.$user['photo'];
+			$pic_del = 'https://tweetbot.site/assets/media/profile/'.$user['photo'];
 			//unlink($pic_del);
 			$ext = pathinfo($photo, PATHINFO_EXTENSION);
 			$slugg = md5('Faraji');
@@ -30,7 +30,7 @@
 			$the_id = sha1($time_id);
 			$new_filename = $the_id.$slugg.'.'.$ext;
 				move_uploaded_file($_FILES['avatar']['tmp_name'], '../../assets/media/profile/'.$new_filename);
-				$filename = 'http://localhost/twitter/assets/media/profile/'.$new_filename;
+				$filename = 'https://tweetbot.site/assets/media/profile/'.$new_filename;
 				 	
 			}
 			else{

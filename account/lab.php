@@ -22,7 +22,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 
 define('CONSUMER_KEY', 'DU8WwngUfNBX5rMSObL8stCe4');
 define('CONSUMER_SECRET', 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp');
-define('OAUTH_CALLBACK', 'http://localhost/twitter/auth/sign-in.php');
+define('OAUTH_CALLBACK', 'https://tweetbot.site/auth/sign-in.php');
 
 $settings = [
   'account_id' => $user['t_id'],

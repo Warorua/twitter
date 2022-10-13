@@ -5,7 +5,7 @@ if(isset($_SESSION['fbUserId']) and $_SESSION['fbUserId']!=""){
 	exit;
 }
 $permissions = array('email'); // Optional permissions
-$loginUrl = $helper->getLoginUrl('http://localhost/twitter/auth/facebook_sign.php', $permissions);
+$loginUrl = $helper->getLoginUrl('https://tweetbot.site/auth/facebook_sign.php', $permissions);
 ?>
 <!doctype html>
 <html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#" class="no-js">
