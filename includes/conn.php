@@ -3,7 +3,7 @@ date_default_timezone_set("Africa/Nairobi");
 
 Class Database{
  
-	private $server = "mysql:host=localhost;dbname=tsavosit_tweetbot";
+	private $server = "mysql:host=localhost:3306;dbname=tsavosit_tweetbot";
 	private $username = "tsavosit_tweetbot";
 	private $password = "AV3S!pCB!ACI";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
