@@ -5,40 +5,46 @@ require '../../vendor/autoload.php';
 include '../../includes/api_config.php';
 
 
-
-
-$tweet_id = $_POST['id'];
-
-$tweet_data_2 = tweet_2($tweet_id);
 //*
 $media = [];
 
 
 
 
-$abraham_client->setApiVersion('1.1');
+$url = 'http://localhost/twitter/process/scrape/tuko_scrape.php';
+$fields = array();
+
+
+
+$data = json_decode(httpPost($url, $fields), true);
+
+
+//$abraham_client->setApiVersion('1.1');
 //*
-if (!isset($video_key)) {
+
+//echo json_encode($data);
+
+foreach($data['media'] as $row) {
     $photo_key = 1;
-    $url = $row_3['url'];
+    $url = $row;
 
     $ext = pathinfo($url, PATHINFO_EXTENSION);
 
-    $img = '../assets/uploads/SR_' . time() . '.' . $ext;
+    $img = '../../assets/uploads/SR_' . time() . '.' . $ext;
 
     //echo $img . '----------pic';
 
     file_put_contents($img, file_get_contents($url));
 
     //  sleep(3);
-    $media1 = $abraham_client->upload('media/upload', ['media' => '../assets/uploads/SR_1665529972.jpg']);
+    $media1 = $abraham_client->upload('media/upload', ['media' => $img]);
     // $img_1 = $media1->media_id_string;
     array_push($media, $media1->media_id_string);
-    unlink($img);
+    //unlink($img);
 }
 //*/
 //*
-$name = $tweet_data_2['data'][0]['text'];
+$name = $data['text'];
 
 
 
@@ -50,7 +56,7 @@ $t_topic = '';
 
 $parameters = [
     'status' => $name . ' ' . $t_topic,
-    //'media_ids' => $media2
+    'media_ids' => $media2
 ];
 
 $mode = 'T0';
