@@ -1,6 +1,6 @@
 <?php
-	session_start();
+	include './conn.php';
 	session_destroy();
 
-	header('location: https://tweetbot.site/auth/sign-in.php#');
+	header('location:  '.$parent_url.'/auth/sign-in.php#');
 ?>
