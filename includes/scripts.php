@@ -448,3 +448,35 @@ $like_perc = ($likes * 100) / 5000;
 		}
 	}
 </script>
+
+
+<script>
+	/////////////////////////////////////////refill
+	$(document).on('submit', '#pointsRef', function(e) {
+    e.preventDefault();
+
+   // formData = new FormData(this);
+    //formData.append('avatar', $('#upload_file_fr').files);
+	var price = $("input[name='avatar']").val();
+
+/*
+    $.ajax({
+      method: "POST",
+      url: "../auth/profile/two_auth.php",
+      data: formData,
+      processData: false, // tell jQuery not to process the data
+      contentType: false, // tell jQuery not to set contentType
+      enctype: 'multipart/form-data',
+
+      success: function(data) {
+        //  alert(data);
+        console.log(data);
+
+        window.location.reload();
+      }
+    });
+*/
+
+
+  });
+</script>
