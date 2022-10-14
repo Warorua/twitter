@@ -232,7 +232,7 @@ $ajax_user_id = $member_id;
 							</div>
 							<!--end::Start sidebar-->
 							<!--begin::Content-->
-							<div class="col-6 flex-lg-row-fluid mx-lg-13">
+							<div class="col-md-12 flex-lg-row-fluid mx-lg-13">
 								<!--begin::Mobile toolbar-->
 								<div class="d-flex d-lg-none align-items-center justify-content-end mb-10">
 									<div class="d-flex align-items-center gap-2">
