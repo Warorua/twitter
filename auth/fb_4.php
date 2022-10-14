@@ -147,12 +147,12 @@ if($row['numrows'] < 1){
     $stmt = $conn->prepare("UPDATE users SET f_id=:f_id WHERE id=:id");
     $stmt->execute(['f_id'=>$f_id, 'id'=>$user['id']]);
     $_SESSION['success'] = 'Account successfully linked';
-    redirect('https://tweetbot.site/account/settings.php');
+    redirect($parent_url.'/account/settings.php');
   
   }else{
       $_SESSION['error'] = 'This user is linked to another account.';
           unset($_SESSION['access_token']);
-          redirect('https://tweetbot.site/account/settings.php');
+          redirect($parent_url.'/account/settings.php');
   }
   ////////////////////////////////////////////////////////////////////////////////////////
   

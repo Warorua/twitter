@@ -1124,7 +1124,7 @@ include '../includes/head.php';
 											}
 											$f_btn = '<input class="form-check-input w-45px h-30px" type="checkbox" ' . $f_btnC . ' />';
 										} else {
-											$fb_url = 'https://tweetbot.site/auth/fb_4.php';
+											$fb_url = $parent_url.'/auth/fb_4.php';
 											include '../auth/fb_1.php';
 											$f_btn = '<a class="btn btn-success" href="' . $loginUrl . '" id="facebookswitch">Connect</a>';
 										}
@@ -1136,7 +1136,7 @@ include '../includes/head.php';
 											}
 											$t_btn = '<input class="form-check-input w-45px h-30px" type="checkbox" ' . $t_btnC . ' />';
 										} else {
-											$tw_url = 'https://tweetbot.site/account/settings.php';
+											$tw_url = $parent_url.'/account/settings.php';
 											include '../auth/tww/tw_3.php';
 											$t_btn = '<a class="btn btn-success" href="' . $url . '" id="twitterswitch">Connect</a>';
 										}

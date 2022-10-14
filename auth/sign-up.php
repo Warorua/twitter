@@ -173,7 +173,7 @@ include '../includes/conn.php';
 										<!--end::Symbol-->
 										<!--begin::Symbol-->
 <?php 
-$fb_url = 'https://tweetbot.site/auth/fb_2.php';
+$fb_url = $parent_url.'/auth/fb_2.php';
 include './fb_1.php' ?>
 
 										<a href="<?php echo $loginUrl ?>" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
@@ -182,7 +182,7 @@ include './fb_1.php' ?>
 										<!--end::Symbol-->
 															<!--begin::Symbol-->
 <?php 
-$tw_url = 'https://tweetbot.site/auth/sign-up.php';
+$tw_url = $parent_url.'/auth/sign-up.php';
 include './tww/tw_1.php' ?>
 
 

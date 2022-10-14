@@ -135,7 +135,7 @@ include '../includes/conn.php';
 											<!--end::Symbol-->
 											<!--begin::Symbol-->
 											<?php 
-$fb_url = 'https://tweetbot.site/auth/fb_3.php';
+$fb_url = $parent_url.'/auth/fb_3.php';
 include './fb_1.php' ?>
 											<a href="<?php echo $loginUrl ?>" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
 												<img alt="Logo" src="../assets/media/svg/brand-logos/facebook-3.svg" class="p-4" />
@@ -143,7 +143,7 @@ include './fb_1.php' ?>
 											<!--end::Symbol-->
 																										<!--begin::Symbol-->
 <?php 
-$tw_url = 'https://tweetbot.site/auth/sign-in.php';
+$tw_url = $parent_url.'/auth/sign-in.php';
 include './tww/tw_2.php' ?>
 
 

@@ -35,16 +35,16 @@
             if($row['source'] == 'G0'){
                 $_SESSION['error'] = 'User has been registered with Google.';
                 
-                redirect('https://tweetbot.site/auth/reset-password.php');
+                redirect($parent_url.'/auth/reset-password.php');
                
                }elseif($row['source'] == 'F0'){
                    $_SESSION['error'] = 'User has been registered with Facebook.';
                    
-                   redirect('https://tweetbot.site/auth/reset-password.php');
+                   redirect($parent_url.'/auth/reset-password.php');
                }elseif($row['source'] == 'T0'){
                   $_SESSION['error'] = 'User has been registered with Twitter.';
                   
-                  redirect('https://tweetbot.site/auth/reset-password.php');
+                  redirect($parent_url.'/auth/reset-password.php');
               }else{
 
 			//generate code

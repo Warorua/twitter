@@ -19,10 +19,10 @@ if(isset($_GET['bot_id'])){
 
 	if($user['photo'] == ''){
 		$opt_img = array(
-		 'https://tweetbot.site/assets/media/stock/600x600/img-47.jpg',
-		 'https://tweetbot.site/assets/media/stock/600x600/img-49.jpg',
-		 'https://tweetbot.site/assets/media/stock/600x600/img-48.jpg',
-		 'https://tweetbot.site/assets/media/stock/600x600/img-45.jpg'
+		 $parent_url.'/assets/media/stock/600x600/img-47.jpg',
+		 $parent_url.'/assets/media/stock/600x600/img-49.jpg',
+		 $parent_url.'/assets/media/stock/600x600/img-48.jpg',
+		 $parent_url.'/assets/media/stock/600x600/img-45.jpg'
 	);
 	$user_image = $opt_img[rand(0, count($opt_img) - 1)];
 	}else{

@@ -13,7 +13,7 @@ define('DB_USER_TBL', 'users_1');
 // Facebook API configuration
 define('FB_APP_ID', '473668188012962');
 define('FB_APP_SECRET', 'c9e20bfb7c8a3f8f0f52c8f6ec415108');
-define('FB_REDIRECT_URL', 'https://tweetbot.site/auth/facebook_sign.php');
+define('FB_REDIRECT_URL', $parent_url.'/auth/facebook_sign.php');
 
 // Start session
 if(!session_id()){

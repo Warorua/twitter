@@ -64,9 +64,9 @@ if (time() > $client['execution']) {
 
     $auth_code = json_encode($auth_key);
 
-    $url = 'https://tweetbot.site' . $client['page'] . '?bot_id=' . $client_id . '&auth_key=' . $auth_code;
+    $url = $parent_url.'' . $client['page'] . '?bot_id=' . $client_id . '&auth_key=' . $auth_code;
 
-    //$url = 'https://tweetbot.site/account/lab4.php';
+    //$url = $parent_url.'/account/lab4.php';
 
     $fields = $obj;
 

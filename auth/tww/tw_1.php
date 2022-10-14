@@ -107,16 +107,16 @@ if($row['numrows'] > 0){
     if($row['source'] == 'G0'){
      $_SESSION['error'] = 'User already registered with Google.';
      unset($_SESSION['access_token']);
-     redirect('https://tweetbot.site/auth/sign-up.php');
+     redirect($parent_url.'/auth/sign-up.php');
     
     }elseif($row['source'] == 'F0'){
         $_SESSION['error'] = 'User already registered with Facebook.';
         unset($_SESSION['access_token']);
-        redirect('https://tweetbot.site/auth/sign-up.php');
+        redirect($parent_url.'/auth/sign-up.php');
     }else{
         $_SESSION['error'] = 'User already registered. Login instead.';
         unset($_SESSION['access_token']);
-        redirect('https://tweetbot.site/auth/sign-up.php');
+        redirect($parent_url.'/auth/sign-up.php');
     }
 }
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -128,12 +128,12 @@ $row = $stmt->fetch();
 if($row['numrows'] > 0){
      $_SESSION['error'] = 'User already registered. Login instead.';
           unset($_SESSION['access_token']);
-     redirect('https://tweetbot.site/auth/sign-up.php');
+     redirect($parent_url.'/auth/sign-up.php');
 
 }elseif($suspension == TRUE){
 $_SESSION['error'] = 'This account has been banned and cannot be used!';
     unset($_SESSION['access_token']);
-redirect('https://tweetbot.site/auth/sign-up.php');
+redirect($parent_url.'/auth/sign-up.php');
 }else{
     $stmt = $conn->prepare("INSERT INTO users (username, address, verified, source, email, firstname, lastname, photo, t_id, status, type, created_on) VALUES (:username, :address, :verified, :source, :email, :firstname, :lastname, :photo, :t_id, :status, :type, :created_on)");
   $stmt->execute(['username'=>$username, 'address'=>$address, 'verified'=>$verified, 'source'=>$source, 'email'=>$email, 'firstname'=>$firstname, 'lastname'=>$lastname, 'photo'=>$photo, 't_id'=>$t_id, 'status'=>$status, 'type'=>$type, 'created_on'=>$create_on]);

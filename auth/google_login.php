@@ -21,8 +21,8 @@ require_once '../vendor/autoload.php';
 // init configuration
 $clientID = '167208180500-p33dejrdqld6261j1inueg9p0sr9fqig.apps.googleusercontent.com';
 $clientSecret = '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';
-//$redirectUri = 'https://tweetbot.site/account/overview.php';
-$redirectUri = 'https://tweetbot.site/auth/sign-in.php';
+//$redirectUri = $parent_url.'/account/overview.php';
+$redirectUri = $parent_url.'/auth/sign-in.php';
    
 // create Client Request to access Google API
 $client = new Google_Client();
@@ -76,13 +76,13 @@ if($row['numrows'] > 0 && $row['source'] == 'G0'){
   $_SESSION['user_id'] = $row['id'];
   $_SESSION['info'] = $row['g_id'];
   login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
-  redirect('https://tweetbot.site/account/overview.php');
+  redirect($parent_url.'/account/overview.php');
 
 }else{
     $_SESSION['error'] = $status_info = 'User not account not found! Sign up to login.';
         unset($_SESSION['access_token']);
         login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
-        redirect('https://tweetbot.site/auth/sign-in.php');
+        redirect($parent_url.'/auth/sign-in.php');
 }
 ////////////////////////////////////////////////////////////////////////////////////////
 

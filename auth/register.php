@@ -57,20 +57,20 @@
      if($row['source'] == 'G0'){
       $_SESSION['error'] = 'User already registered with Google.';
       unset($_SESSION['access_token']);
-      redirect('https://tweetbot.site/auth/sign-up.php');
+      redirect($parent_url.'/auth/sign-up.php');
      
      }elseif($row['source'] == 'F0'){
          $_SESSION['error'] = 'User already registered with Facebook.';
          unset($_SESSION['access_token']);
-         redirect('https://tweetbot.site/auth/sign-up.php');
+         redirect($parent_url.'/auth/sign-up.php');
      }elseif($row['source'] == 'T0'){
         $_SESSION['error'] = 'User already registered with Twitter.';
         unset($_SESSION['access_token']);
-        redirect('https://tweetbot.site/auth/sign-up.php');
+        redirect($parent_url.'/auth/sign-up.php');
     }else{
          $_SESSION['error'] = 'User already registered.';
          unset($_SESSION['access_token']);
-         redirect('https://tweetbot.site/auth/sign-up.php');
+         redirect($parent_url.'/auth/sign-up.php');
      }
  }
  ////////////////////////////////////////////////////////////////////////////////////////

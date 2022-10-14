@@ -26,7 +26,7 @@ $media = [];
 
 
 
-$url = 'http://localhost/twitter/process/scrape/tuko_scrape.php';
+$url = $parent_url.'process/scrape/tuko_scrape.php';
 $fields = array();
 
 
