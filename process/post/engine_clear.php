@@ -4,7 +4,7 @@ include '../../includes/session.php';
 require '../../vendor/autoload.php';
 include '../../includes/api_config.php';
 
-if(isset($_POST['user'])){
+if(!isset($_POST['user'])){
     $conn = $pdo->open();
 $stmt = $conn->prepare("SELECT * FROM engine_monitor");
 $stmt->execute();
