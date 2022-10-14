@@ -1,5 +1,5 @@
 <!--begin::Tables widget 12-->
-<div class="card card-flush h-xl-100 mb-5">
+<div class="card card-flush mb-5 mb-xxl-8">
     <!--begin::Header-->
     <div class="card-header pt-7">
         <!--begin::Title-->

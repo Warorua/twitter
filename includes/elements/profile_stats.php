@@ -1,5 +1,5 @@
 <!--begin::Mixed Widget 3-->
-<div class="card card-xl-stretch mb-xl-8">
+<div class="card card-flush mb-5 mb-xxl-8">
     <!--begin::Beader-->
     <div class="card-header border-0 py-5">
         <h3 class="card-title align-items-start flex-column">

@@ -421,36 +421,36 @@ $ajax_user_id = $user['t_id'];
 									<!--end::Body-->
 								</div>
 								<!--end::Stats widget widget 2-->
+								<?php
+								$profile_stats = $user_metrics;
+								//$profile_stats = user_metrics('1462050191662538757');
 
+								include '../includes/elements/profile_stats.php';
+
+
+								?>
+								<?php
+								$following_list_data = get_following($user['t_id']);
+								//$follower_list_data = get_followers('1462050191662538757');
+
+								include '../includes/elements/following_list.php';
+
+
+								?>
+
+								<?php
+								$follower_list_data = get_followers($user['t_id']);
+								//$follower_list_data = get_followers('1462050191662538757');
+
+
+								include '../includes/elements/follower_list.php';
+
+
+								?>
 								<!--begin::End sidebar-->
 								<div class="d-lg-flex flex-column flex-lg-row-auto col-10" data-kt-drawer="true" data-kt-drawer-name="end-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '250px': '300px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_social_end_sidebar_toggle">
 
-									<?php
-									$profile_stats = $user_metrics;
-									//$profile_stats = user_metrics('1462050191662538757');
 
-									include '../includes/elements/profile_stats.php';
-
-
-									?>
-									<?php
-									$following_list_data = get_following($user['t_id']);
-									//$follower_list_data = get_followers('1462050191662538757');
-
-									include '../includes/elements/following_list.php';
-
-
-									?>
-
-									<?php
-									$follower_list_data = get_followers($user['t_id']);
-									//$follower_list_data = get_followers('1462050191662538757');
-
-
-									include '../includes/elements/follower_list.php';
-
-
-									?>
 
 									<!--begin::Social widget 2-->
 									<div class="card card-flush mb-5 mb-xxl-8">
@@ -680,7 +680,7 @@ $ajax_user_id = $user['t_id'];
 			});
 		});
 	</script>
-	
+
 	<!--end::Javascript-->
 </body>
 <!--end::Body-->
