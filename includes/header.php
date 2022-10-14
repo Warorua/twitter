@@ -1024,7 +1024,7 @@
                     <!--end::Menu item-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-5">
-                        <a href="https://tweetbot.site/includes/logout.php#" class="menu-link px-5">Sign Out</a>
+                        <a href="<?php echo $parent_url ?>/includes/logout.php#" class="menu-link px-5">Sign Out</a>
                     </div>
                     <!--end::Menu item-->
                 </div>
