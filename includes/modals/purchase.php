@@ -51,7 +51,7 @@
                                             <div class="d-flex align-items-center me-2">
                                                 <!--begin::Radio-->
                                                 <div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-                                                    <input class="form-check-input" type="radio" name="plan" checked="checked" value="startup" />
+                                                    <input class="form-check-input" type="radio" name="plan" checked="checked" value="50" />
                                                 </div>
                                                 <!--end::Radio-->
                                                 <!--begin::Info-->
@@ -66,7 +66,7 @@
                                             <!--begin::Price-->
                                             <div class="ms-5">
                                                 <span class="mb-2">Ksh.</span>
-                                                <span class="fs-3x fw-bold" data-kt-plan-price-month="50" data-kt-plan-price-annual="1000">50</span>
+                                                <span id="pr1" class="fs-3x fw-bold" data-kt-plan-price-month="50" data-kt-plan-price-annual="1000">50</span>
                                                 <span class="fs-7 opacity-50">/
                                                     <span data-kt-element="period">Mon</span></span>
                                             </div>
@@ -79,7 +79,7 @@
                                             <div class="d-flex align-items-center me-2">
                                                 <!--begin::Radio-->
                                                 <div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-                                                    <input class="form-check-input" type="radio" name="plan" value="advanced" />
+                                                    <input class="form-check-input" type="radio" name="plan" value="200" />
                                                 </div>
                                                 <!--end::Radio-->
                                                 <!--begin::Info-->
@@ -94,7 +94,7 @@
                                             <!--begin::Price-->
                                             <div class="ms-5">
                                                 <span class="mb-2">Ksh.</span>
-                                                <span class="fs-3x fw-bold" data-kt-plan-price-month="200" data-kt-plan-price-annual="3399">200</span>
+                                                <span id="pr2" class="fs-3x fw-bold" data-kt-plan-price-month="200" data-kt-plan-price-annual="3399">200</span>
                                                 <span class="fs-7 opacity-50">/
                                                     <span data-kt-element="period">Mon</span></span>
                                             </div>
@@ -107,7 +107,7 @@
                                             <div class="d-flex align-items-center me-2">
                                                 <!--begin::Radio-->
                                                 <div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-                                                    <input class="form-check-input" type="radio" name="plan" value="enterprise" />
+                                                    <input class="form-check-input" type="radio" name="plan" value="500" />
                                                 </div>
                                                 <!--end::Radio-->
                                                 <!--begin::Info-->
@@ -123,7 +123,7 @@
                                             <!--begin::Price-->
                                             <div class="ms-5">
                                                 <span class="mb-2">Ksh.</span>
-                                                <span class="fs-3x fw-bold" data-kt-plan-price-month="500" data-kt-plan-price-annual="9999">500</span>
+                                                <span id="pr3" class="fs-3x fw-bold" data-kt-plan-price-month="500" data-kt-plan-price-annual="9999">500</span>
                                                 <span class="fs-7 opacity-50">/
                                                     <span data-kt-element="period">Mon</span></span>
                                             </div>

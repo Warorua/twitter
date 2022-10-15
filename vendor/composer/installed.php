@@ -7,7 +7,7 @@
         'aliases' => array(
             0 => '2.x-dev',
         ),
-        'reference' => '89829f3bb4bf8593da56f0ff62dd05181b87d713',
+        'reference' => 'f426b3c5e325a079234583ab0a778bd6624ed6be',
         'name' => 'google/apiclient',
         'dev' => true,
     ),
@@ -111,6 +111,15 @@
             'reference' => '018dfc4e1da92ad8a1b90adc4893f476a3b41cb8',
             'dev_requirement' => false,
         ),
+        'flutterwavedev/flutterwave-v3' => array(
+            'pretty_version' => '1.0.3',
+            'version' => '1.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../flutterwavedev/flutterwave-v3',
+            'aliases' => array(),
+            'reference' => '6662946b499b8998ca1b4f5e500c69ea63c65bca',
+            'dev_requirement' => false,
+        ),
         'google/apiclient' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
@@ -119,7 +128,7 @@
             'aliases' => array(
                 0 => '2.x-dev',
             ),
-            'reference' => '89829f3bb4bf8593da56f0ff62dd05181b87d713',
+            'reference' => 'f426b3c5e325a079234583ab0a778bd6624ed6be',
             'dev_requirement' => false,
         ),
         'google/apiclient-services' => array(
@@ -138,6 +147,15 @@
             'install_path' => __DIR__ . '/../google/auth',
             'aliases' => array(),
             'reference' => '8da16102d2cd1bdc128d97f323553df465ee7701',
+            'dev_requirement' => false,
+        ),
+        'graham-campbell/result-type' => array(
+            'pretty_version' => 'v1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../graham-campbell/result-type',
+            'aliases' => array(),
+            'reference' => 'a878d45c1914464426dc94da61c9e1d36ae262a8',
             'dev_requirement' => false,
         ),
         'guzzlehttp/guzzle' => array(
@@ -184,6 +202,15 @@
             'aliases' => array(),
             'reference' => 'ad87d5a5ca981228e0e205c2bc7dfb8e24559b60',
             'dev_requirement' => true,
+        ),
+        'mashape/unirest-php' => array(
+            'pretty_version' => 'v3.0.4',
+            'version' => '3.0.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mashape/unirest-php',
+            'aliases' => array(),
+            'reference' => '842c0f242dfaaf85f16b72e217bf7f7c19ab12cb',
+            'dev_requirement' => false,
         ),
         'monolog/monolog' => array(
             'pretty_version' => '2.8.0',
@@ -318,6 +345,15 @@
             'install_path' => __DIR__ . '/../phpmailer/phpmailer',
             'aliases' => array(),
             'reference' => '8b6386d7417526d1ea4da9edb70b8352f7543627',
+            'dev_requirement' => false,
+        ),
+        'phpoption/phpoption' => array(
+            'pretty_version' => '1.9.0',
+            'version' => '1.9.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpoption/phpoption',
+            'aliases' => array(),
+            'reference' => 'dc5ff11e274a90cc1c743f66c9ad700ce50db9ab',
             'dev_requirement' => false,
         ),
         'phpseclib/phpseclib' => array(
@@ -476,8 +512,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'ralouphie/getallheaders' => array(
@@ -730,7 +766,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-ctype',
             'aliases' => array(),
             'reference' => '6fd1b9a79f6e3cf65f9e679b23af304cd9e010d4',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-intl-grapheme' => array(
             'pretty_version' => 'v1.26.0',
@@ -757,7 +793,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
             'aliases' => array(),
             'reference' => '9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-php73' => array(
             'pretty_version' => 'v1.26.0',
@@ -775,7 +811,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-php80',
             'aliases' => array(),
             'reference' => 'cfa0ae98841b9e461207c13ab093d76b0fa7bace',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/process' => array(
             'pretty_version' => 'v5.4.11',
@@ -820,6 +856,15 @@
             'install_path' => __DIR__ . '/../utxo-one/twitter-ultimate-php',
             'aliases' => array(),
             'reference' => '45604c79c020c85ea5c97e86159c855f5388db32',
+            'dev_requirement' => false,
+        ),
+        'vlucas/phpdotenv' => array(
+            'pretty_version' => 'v5.4.1',
+            'version' => '5.4.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../vlucas/phpdotenv',
+            'aliases' => array(),
+            'reference' => '264dce589e7ce37a7ba99cb901eed8249fbec92f',
             'dev_requirement' => false,
         ),
         'webmozart/assert' => array(

@@ -104,6 +104,9 @@ if (isset($profile_stats_graph_data)) {
 } else {
 	$profile_stats_graph_data = '[0,0,0,0]';
 }
+
+$set = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$tx_ref = substr(str_shuffle($set), 0, 36);
 ?>
 <script>
 	var KTWidgets = {
@@ -449,34 +452,85 @@ $like_perc = ($likes * 100) / 5000;
 	}
 </script>
 
+<script>
+	$('span[data-kt-plan-price-month]').parent().parent().click(function() {
+		var price = $(this).attr("data-kt-plan-price-month");
+		//	alert(price);
+		//$(this).prepend('<span class="spinner-border spinner-border-sm" role="status"></span> ');
+	});
+</script>
 
 <script>
 	/////////////////////////////////////////refill
 	$(document).on('submit', '#pointsRef', function(e) {
-    e.preventDefault();
+		e.preventDefault();
 
-   // formData = new FormData(this);
-    //formData.append('avatar', $('#upload_file_fr').files);
-	var price = $("input[name='avatar']").val();
+		// formData = new FormData(this);
+		//formData.append('avatar', $('#upload_file_fr').files);
+		var price = $('input[name=plan]:checked').val();
 
-/*
-    $.ajax({
-      method: "POST",
-      url: "../auth/profile/two_auth.php",
-      data: formData,
-      processData: false, // tell jQuery not to process the data
-      contentType: false, // tell jQuery not to set contentType
-      enctype: 'multipart/form-data',
+		//	alert(price);
+		//
+		//FLWPUBK-ed9feb43ba6c806e2b78ee953080f58e-X
 
-      success: function(data) {
-        //  alert(data);
-        console.log(data);
+		FlutterwaveCheckout({
+			public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
+			tx_ref: '<?php echo $tx_ref ?>',
+			amount: price,
+			currency: "KES",
+			country: "KE",
+			payment_options: " ",
+			customer: {
+				email: '<?php echo $user['email'] ?>',
+				phone_number: '<?php echo $user['contact_info'] ?>',
+				firstname: '<?php echo $user['username'] ?>',
+				lastname: '<?php echo $user['lastname'] ?>',
+			},
+			redirect_url: "../process/engine/payment_process.php",
+			callback: function(data) { // specified callback function
+				console.log(data);
+				const reference = data.txref;
+				if (
+					response.tx.chargeResponse == "00" ||
+					response.tx.chargeResponse == "0"
+				) {
+					// redirect to a success page
+				} else {
+					// redirect to a failure page.
+				}
+			},
+			customizations: {
+				title: "KOT Tweet Admin",
+				description: "Refill your gas points",
+				logo: "https://tweetbot.site/assets/media/svg/brand-logos/twitter.svg",
+			},
+		});
 
-        window.location.reload();
-      }
-    });
-*/
+		/*
 
 
-  });
+
+
+
+		
+		    $.ajax({
+		      method: "POST",
+		      url: "../auth/profile/two_auth.php",
+		      data: formData,
+		      processData: false, // tell jQuery not to process the data
+		      contentType: false, // tell jQuery not to set contentType
+		      enctype: 'multipart/form-data',
+
+		      success: function(data) {
+		        //  alert(data);
+		        console.log(data);
+
+		        window.location.reload();
+		      }
+		    });
+		*/
+
+
+	});
 </script>
+<script src="https://checkout.flutterwave.com/v3.js"></script>
