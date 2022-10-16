@@ -865,7 +865,7 @@
                             <!--begin::Text-->
                             <div class="p-5 rounded bg-light-info text-dark fw-semibold mw-lg-400px text-start" data-kt-element="message-text">You can unwatch this repository immediately by clicking
                                 here:
-                                <a href="https://keenthemes.com/">Keenthemes.com</a>
+                                <a href="https://tweetbot.site/">Keenthemes.com</a>
                             </div>
                             <!--end::Text-->
                         </div>
@@ -1496,7 +1496,7 @@
                         <div class="fs-5 fw-semibold mb-5">
                             <span class="text-gray-500">Join our developers community to find answer to your question
                                 and help others.</span>
-                            <a class="explore-link d-none" href="https://keenthemes.com/licensing">FAQs</a>
+                            <a class="explore-link d-none" href="https://tweetbot.site/licensing">FAQs</a>
                         </div>
                         <!--end::Description-->
                         <!--begin::Link-->

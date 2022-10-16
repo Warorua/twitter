@@ -145,7 +145,7 @@ $wrapper_box = '
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
-		<meta property="og:url" content="https://keenthemes.com/metronic" />
+		<meta property="og:url" content="https://tweetbot.site/metronic" />
 		<meta property="og:site_name" content="Keenthemes | Metronic" />
 		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
 		<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
@@ -195,7 +195,7 @@ $wrapper_box = '
 				<div class="d-flex flex-center flex-column-auto p-10">
 					<!--begin::Links-->
 					<div class="d-flex align-items-center fw-bold fs-6">
-						<a href="https://keenthemes.com/" class="text-muted text-hover-primary px-2">About</a>
+						<a href="https://tweetbot.site/" class="text-muted text-hover-primary px-2">About</a>
 						<a href="mailto:support@keenthemes.com" class="text-muted text-hover-primary px-2">Contact</a>
 						<a href="https://1.envato.market/EA4JP" class="text-muted text-hover-primary px-2">Contact Us</a>
 					</div>

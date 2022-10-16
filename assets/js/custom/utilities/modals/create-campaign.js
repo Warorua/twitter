@@ -164,7 +164,7 @@ var KTCreateCampaign = (function () {
               mode: "range",
             }),
             new Dropzone("#kt_modal_create_campaign_files_upload", {
-              url: "https://keenthemes.com/scripts/void.php",
+              url: "https://tweetbot.site/scripts/void.php",
               paramName: "file",
               maxFiles: 10,
               maxFilesize: 10,
