@@ -321,11 +321,11 @@ $ajax_user_id = $user['t_id'];
 										<!--begin::Input group-->
 										<div class="row mb-7">
 											<!--begin::Label-->
-											<label class="col-lg-4 fw-semibold text-muted">Company Site</label>
+											<label class="col-lg-4 fw-semibold text-muted">Gas Points</label>
 											<!--end::Label-->
 											<!--begin::Col-->
 											<div class="col-lg-8">
-												<a href="#" class="fw-semibold fs-6 text-gray-800 text-hover-primary"><?php echo $user_company_site ?></a>
+												<a href="#" class="fw-semibold fs-6 text-gray-800 text-hover-primary"><?php echo number_format(safeDecrypt($user['p_value'], $user['p_key'])) ?></a>
 											</div>
 											<!--end::Col-->
 										</div>

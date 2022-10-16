@@ -10,7 +10,7 @@ $output = '';
 //Title
 $response = $httpClient->load($link);
 $title = $response->find('article.c-article-card  a span', 0)->plaintext . PHP_EOL . PHP_EOL;
-$text = $title.' @Tuko_co_ke';
+$text = $title.'';
 
 
 //$output .= sizeof($img).' - size of image array <br/>';

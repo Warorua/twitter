@@ -1,5 +1,6 @@
 <?php
 
+
 use UtxoOne\TwitterUltimatePhp\Clients\TweetClient;
 use UtxoOne\TwitterUltimatePhp\Clients\UserClient;
 use UtxoOne\TwitterUltimatePhp\Clients\ListClient;
@@ -15,53 +16,53 @@ $api_app = $stmt->fetch();
 if ($api_app['numrows'] < 1) {
   if (isset($_SESSION['access_token'])) {
 
-    define('CONSUMER_KEY', 'DU8WwngUfNBX5rMSObL8stCe4');
-    define('CONSUMER_SECRET', 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp');
+    define('CONSUMER_KEY', $system['consumer_key']);
+    define('CONSUMER_SECRET', $system['consumer_secret']);
     $access_token = $_SESSION['access_token'];
   
-    $client = new TweetClient(bearerToken: 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr');
+    $client = new TweetClient(bearerToken: $system['bearer_token']);
   
   
     $credentials_be = array(
-      'consumer_key' => 'DU8WwngUfNBX5rMSObL8stCe4',
-      'consumer_secret' => 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp',
-      'bearer_token' => 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr',
+      'consumer_key' => $system['consumer_key'],
+      'consumer_secret' => $system['consumer_secret'],
+      'bearer_token' => $system['bearer_token'],
       'auth_token' => '', // OAuth 2.0 auth token
       'token_identifier' => $access_token['oauth_token'],
       'token_secret' => $access_token['oauth_token_secret'],
     );
   
     $tweet_client = new TweetClient(
-      apiKey: 'DU8WwngUfNBX5rMSObL8stCe4',
-      apiSecret: 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp',
+      apiKey: $system['consumer_key'],
+      apiSecret: $system['consumer_secret'],
       accessToken: $access_token['oauth_token'],
       accessSecret: $access_token['oauth_token_secret'],
-      bearerToken: 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr'
+      bearerToken: $system['bearer_token']
     );
   
   
     $user_client = new UserClient(
-      apiKey: 'DU8WwngUfNBX5rMSObL8stCe4',
-      apiSecret: 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp',
+      apiKey: $system['consumer_key'],
+      apiSecret: $system['consumer_secret'],
       accessToken: $access_token['oauth_token'],
       accessSecret: $access_token['oauth_token_secret'],
-      bearerToken: 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr'
+      bearerToken: $system['bearer_token']
     );
   
     $list_client = new ListClient(
-      apiKey: 'DU8WwngUfNBX5rMSObL8stCe4',
-      apiSecret: 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp',
+      apiKey: $system['consumer_key'],
+      apiSecret: $system['consumer_secret'],
       accessToken: $access_token['oauth_token'],
       accessSecret: $access_token['oauth_token_secret'],
-      bearerToken: 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr'
+      bearerToken: $system['bearer_token']
     );
   
     $space_client = new SpaceClient(
-      apiKey: 'DU8WwngUfNBX5rMSObL8stCe4',
-      apiSecret: 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp',
+      apiKey: $system['consumer_key'],
+      apiSecret: $system['consumer_secret'],
       accessToken: $access_token['oauth_token'],
       accessSecret: $access_token['oauth_token_secret'],
-      bearerToken: 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr'
+      bearerToken: $system['bearer_token']
     );
   
   
@@ -70,9 +71,9 @@ if ($api_app['numrows'] < 1) {
   
     $settings = [
       'account_id' => $user['t_id'],
-      'consumer_key' => 'DU8WwngUfNBX5rMSObL8stCe4',
-      'consumer_secret' => 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp',
-      'bearer_token' => 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr',
+      'consumer_key' => $system['consumer_key'],
+      'consumer_secret' => $system['consumer_secret'],
+      'bearer_token' => $system['bearer_token'],
       'access_token' => $access_token['oauth_token'],
       'access_token_secret' => $access_token['oauth_token_secret']
     ];
@@ -155,6 +156,34 @@ if ($api_app['numrows'] < 1) {
     $t_user = $user_client->getUserById($user['t_id']);
   }
   
+}
+
+
+function charge($charge_points)
+{
+  global $user;
+  global $pdo;
+  $conn = $pdo->open();
+
+  if ($user['p_cipher'] == 0) {
+    $init_points = $user['p_value'];
+  } else {
+    $init_points = safeDecrypt($user['p_value'], $user['p_key']);
+  }
+
+
+  $raw_points = floatval($init_points) - $charge_points;
+
+  if ($user['p_cipher'] == 0) {
+    $cipher_points = $raw_points;
+  } else {
+    $cipher_points = safeEncrypt($raw_points, $user['p_key']);
+  }
+
+
+
+  $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_cipher=:p_cipher WHERE id=:id");
+  $stmt->execute(['id' => $user['id'], 'p_value' => $cipher_points, 'p_cipher' => $user['p_cipher']]);
 }
 
 
@@ -388,8 +417,9 @@ function pic_fix($img)
 function like_tweet($auth_user, $tweet_id)
 {
   global $tweet_client;
+ // global $charge;
   $statues = $tweet_client->likeTweet($auth_user, $tweet_id);
-
+ // charge($charge['like_charge']);
   $res = array_convert($statues);
 
   return $res;
@@ -398,8 +428,9 @@ function like_tweet($auth_user, $tweet_id)
 function unlike_tweet($auth_user, $tweet_id)
 {
   global $tweet_client;
+  global $charge;
   $statues = $tweet_client->unlikeTweet($auth_user, $tweet_id);
-
+  charge($charge['like_charge']);
   $res = array_convert($statues);
 
   return $res;
@@ -451,6 +482,7 @@ function tweet_reply_retweeter($auth_user, $tweet_with_replies, $limit)
 {
   global $abraham_client;
   global $tweet_client;
+  global $charge;
   $abraham_client->setApiVersion('2');
   $data = $abraham_client->get('tweets/search/recent', [
     "query" => 'in_reply_to_status_id:' . $tweet_with_replies,
@@ -463,6 +495,7 @@ function tweet_reply_retweeter($auth_user, $tweet_with_replies, $limit)
   foreach ($dt_2['data'] as $row) {
     //$response .= like_tweet($auth_user, $row['id']). '</br>';
     $response .= $tweet_client->retweet($auth_user, $row['id']);
+    charge($charge['tweet_charge']);
   }
   return json_encode($response);
 }
@@ -472,8 +505,9 @@ function follow($account_id_to_follow)
 {
   global $user_client;
   global $user;
+  global $charge;
   $data = $user_client->follow($user['t_id'], $account_id_to_follow);
-
+  charge($charge['follow_charge']);
   return array_convert($data);
 }
 
@@ -580,6 +614,45 @@ function tweet_reply_printer($tweet_with_replies, $limit)
   ]);
   $dt_2 = array_convert($data);
   return $dt_2;
+}
+    
+function safeEncrypt(string $message, string $key): string
+{
+    if (mb_strlen($key, '8bit') !== SODIUM_CRYPTO_SECRETBOX_KEYBYTES) {
+        throw new RangeException('Key is not the correct size (must be 32 bytes).');
+    }
+    $nonce = random_bytes(SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
+    
+    $cipher = base64_encode(
+        $nonce.
+        sodium_crypto_secretbox(
+            $message,
+            $nonce,
+            $key
+        )
+    );
+    sodium_memzero($message);
+    sodium_memzero($key);
+    return $cipher;
+}
+
+function safeDecrypt(string $encrypted, string $key): string
+{   
+    $decoded = base64_decode($encrypted);
+    $nonce = mb_substr($decoded, 0, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES, '8bit');
+    $ciphertext = mb_substr($decoded, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES, null, '8bit');
+    
+    $plain = sodium_crypto_secretbox_open(
+        $ciphertext,
+        $nonce,
+        $key
+    );
+    if (!is_string($plain)) {
+        throw new Exception('Invalid MAC');
+    }
+    sodium_memzero($ciphertext);
+    sodium_memzero($key);
+    return $plain;
 }
 
 if(!isset($_GET['bot_id'])){

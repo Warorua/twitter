@@ -23,7 +23,8 @@
         "abraham/twitteroauth": "^4.0",
         "utxo-one/twitter-ultimate-php": "^0.1.6",
         "simplehtmldom/simplehtmldom": "^2.0@RC",
-        "flutterwavedev/flutterwave-v3": "^1.0"
+        "flutterwavedev/flutterwave-v3": "^1.0",
+        "paragonie/sodium_compat": "^1.19"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.0",

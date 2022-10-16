@@ -85,6 +85,7 @@ if($_POST['t_topic'] == 1){
  $_SESSION['success'] = $message;
  
  $auth_user = $user['t_id'];
+ charge($charge['tweet_charge']);
  engine_control($command, 1);
     twitter_log($user['email'], '', $status, $mode, $user['id'], $auth_user, $output);
     echo json_encode($result);

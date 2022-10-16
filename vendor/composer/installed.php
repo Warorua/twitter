@@ -7,7 +7,7 @@
         'aliases' => array(
             0 => '2.x-dev',
         ),
-        'reference' => 'f426b3c5e325a079234583ab0a778bd6624ed6be',
+        'reference' => '158dfb486092d17d4504937a2453728aa9c725e8',
         'name' => 'google/apiclient',
         'dev' => true,
     ),
@@ -128,7 +128,7 @@
             'aliases' => array(
                 0 => '2.x-dev',
             ),
-            'reference' => 'f426b3c5e325a079234583ab0a778bd6624ed6be',
+            'reference' => '158dfb486092d17d4504937a2453728aa9c725e8',
             'dev_requirement' => false,
         ),
         'google/apiclient-services' => array(
@@ -264,6 +264,15 @@
             'install_path' => __DIR__ . '/../paragonie/random_compat',
             'aliases' => array(),
             'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
+            'dev_requirement' => false,
+        ),
+        'paragonie/sodium_compat' => array(
+            'pretty_version' => 'v1.19.0',
+            'version' => '1.19.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../paragonie/sodium_compat',
+            'aliases' => array(),
+            'reference' => 'cb15e403ecbe6a6cc515f855c310eb6b1872a933',
             'dev_requirement' => false,
         ),
         'pedrosancao/php-otp' => array(

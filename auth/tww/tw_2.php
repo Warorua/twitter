@@ -4,8 +4,8 @@
 ////////////
 require 'autoload.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
-define('CONSUMER_KEY', 'DU8WwngUfNBX5rMSObL8stCe4');
-define('CONSUMER_SECRET', 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp');
+define('CONSUMER_KEY', $system['consumer_key']);
+define('CONSUMER_SECRET', $system['consumer_secret']);
 define('OAUTH_CALLBACK', $tw_url);
 //define('oauth_token', '842987337353052160-LL8z2AHxYRP7lHo8iDaq8cLNzeSu8OP');
 //define('oauth_token_secret', '6eZZno5qC6d8E5Gtc9jakmhEgvP07F3MfxOBwJ5ysLm8x');

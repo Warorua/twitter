@@ -20,15 +20,15 @@ use Coderjerk\BirdElephant\BirdElephant;
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-define('CONSUMER_KEY', 'DU8WwngUfNBX5rMSObL8stCe4');
-define('CONSUMER_SECRET', 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp');
+define('CONSUMER_KEY', $system['consumer_key']);
+define('CONSUMER_SECRET', $system['consumer_secret']);
 define('OAUTH_CALLBACK', $parent_url.'/auth/sign-in.php');
 
 $settings = [
   'account_id' => $user['t_id'],
-  'consumer_key' => 'DU8WwngUfNBX5rMSObL8stCe4',
-  'consumer_secret' => 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp',
-  'bearer_token' => 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr',
+  'consumer_key' => $system['consumer_key'],
+  'consumer_secret' => $system['consumer_secret'],
+  'bearer_token' => $system['bearer_token'],
   'access_token' => '1377367159253434374-D9ps3Z81KlO4SKNUxIIL7lI82P5znZ',
   'access_token_secret' => 'CeUSSoaxaJOzqLoWY86Yr2bXBcmU5YpAx8wuKbvU1tZJT'
 ];
@@ -50,9 +50,9 @@ $noweh_client = new Client($settings);
 
 //your credentials, should be passed in via $_ENV or similar, don't hardcode.
 $credentials_be = array(
-  'consumer_key' => 'DU8WwngUfNBX5rMSObL8stCe4',
-  'consumer_secret' => 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp',
-  'bearer_token' => 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr',
+  'consumer_key' => $system['consumer_key'],
+  'consumer_secret' => $system['consumer_secret'],
+  'bearer_token' => $system['bearer_token'],
   // 'bearer_token' => '',
   // if using oAuth 2.0 with PKCE
   'auth_token' => $access_token['oauth_token'], // OAuth 2.0 auth token
@@ -72,20 +72,20 @@ use UtxoOne\TwitterUltimatePhp\Clients\TweetClient;
 use UtxoOne\TwitterUltimatePhp\Clients\UserClient;
 
 $tweet_client = new TweetClient(
-  apiKey: 'DU8WwngUfNBX5rMSObL8stCe4',
-  apiSecret: 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp',
+  apiKey: $system['consumer_key'],
+  apiSecret: $system['consumer_secret'],
   accessToken: $access_token['oauth_token'],
   accessSecret: $access_token['oauth_token_secret'],
-  bearerToken: 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr'
+  bearerToken: $system['bearer_token']
 
 );
 
 $user_client = new UserClient(
-  apiKey: 'DU8WwngUfNBX5rMSObL8stCe4',
-  apiSecret: 'krTyx7HEoBViLv9UQXOvzkAy1nRv9OwIf342TvuWIIGQtOsWDp',
+  apiKey: $system['consumer_key'],
+  apiSecret: $system['consumer_secret'],
   accessToken: $access_token['oauth_token'],
   accessSecret: $access_token['oauth_token_secret'],
-  bearerToken: 'AAAAAAAAAAAAAAAAAAAAABAchwEAAAAAli5UGS%2BxFqbbuUFbw41JPTwNYDI%3DnQgG3ZT8yAi1wWGIoegX43gNMT2QZeh26YQR5m27Ef2vveCNvr'
+  bearerToken: $system['bearer_token']
 
 );
 
@@ -1069,11 +1069,18 @@ $followers = $bird_elephant->user('Kenyans')->following([
 //*/
 
 //$followers =  user_metrics('1577321598155096064');
+$data = $abraham_client->get('statuses/user_timeline', [
+  "count" => 7,
+  'id' => 488631023,
+   
+  ]);
+
+$statues = $tweet_client->likeTweet('1577321598155096064','1580677302370721792');
+// charge($charge['like_charge']);
+ $res = array_convert($statues);
 
 
-
-
-echo json_encode(like_tweet('1577321598155096064','1580594175934091265'));
+echo json_encode($res);
 
 
 $end_time = microtime(true);

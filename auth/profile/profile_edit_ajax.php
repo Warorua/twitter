@@ -32,19 +32,19 @@
   $(document).on('submit', '#kt_account_profile_details_form_fr', function(e) {
     e.preventDefault();
 
-    var company_site = $("input[name='website']").val();
-    var email_comm = $("input[name='email_comm']").val();
-    var phone_comm = $("input[name='phone_comm']").val();
-    var marketing = $("input[name='marketing']").val();
-    var firstname = $("input[name='fname']").val();
-    var lastname = $("input[name='lname']").val();
-    var contact_info = $("input[name='phone']").val();
-    var company = $("input[name='company']").val();
-    var photo = $("input[name='avatar']").val();
-    var edit = '';
+   // var company_site = $("input[name='website']").val();
+   // var email_comm = $("input[name='email_comm']").val();
+   // var phone_comm = $("input[name='phone_comm']").val();
+   // var marketing = $("input[name='marketing']").val();
+   // var firstname = $("input[name='fname']").val();
+   // var lastname = $("input[name='lname']").val();
+   // var contact_info = $("input[name='phone']").val();
+   // var company = $("input[name='company']").val();
+   // var photo = $("input[name='avatar']").val();
+    //var edit = '';
 
     formData = new FormData(this);
-    //formData.append('avatar', $('#upload_file_fr').files);
+    formData.append('avatar', $('#upload_file_fr').files);
 
 
     $.ajax({
