@@ -173,7 +173,6 @@ function charge($charge_points)
 
 if($init_points < $charge_points){
 $_SESSION['error'] = 'Gas points depleted!';
-break;
 die();
 }
   $raw_points = floatval($init_points) - $charge_points;
