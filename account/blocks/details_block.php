@@ -87,7 +87,7 @@ if ($user_metrics['data']['verified']) {
                     </span>
                     <span class="d-flex flex-column align-items-start ms-2">
                         <span class="fs-3 fw-bold">Gas Balance</span>
-                        <span class="fs-7">PTS. <span class="badge badge-light-danger"><?php echo number_format(safeDecrypt($user['p_value'], $user['p_key'])) ?></span></span>
+                        <span class="fs-7">PTS. <span class="badge badge-light-danger"><?php echo number_format($user_points) ?></span></span>
                     </span>
                 </a>
             </div>

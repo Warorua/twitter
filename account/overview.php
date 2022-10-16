@@ -325,7 +325,7 @@ $ajax_user_id = $user['t_id'];
 											<!--end::Label-->
 											<!--begin::Col-->
 											<div class="col-lg-8">
-												<a href="#" class="fw-semibold fs-6 text-gray-800 text-hover-primary"><?php echo number_format(safeDecrypt($user['p_value'], $user['p_key'])) ?></a>
+												<a href="#" class="fw-semibold fs-6 text-gray-800 text-hover-primary"><?php echo number_format($user_points) ?></a>
 											</div>
 											<!--end::Col-->
 										</div>

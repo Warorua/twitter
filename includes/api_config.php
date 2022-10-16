@@ -665,6 +665,13 @@ if($user['access_token'] == ''){
   $stmt = $conn->prepare("UPDATE users SET access_token=:access_token, access_secret=:access_secret WHERE id=:id");
   $stmt->execute(['access_token'=>$access_token['oauth_token'], 'access_secret'=>$access_token['oauth_token_secret'], 'id'=>$user['id']]);
 }
+
+
+if ($user['p_cipher'] == 0) {
+  $user_points = $user['p_value'];
+} else {
+  $user_points = safeDecrypt($user['p_value'], $user['p_key']);
+}
 }
 
 ?>
