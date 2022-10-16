@@ -668,9 +668,9 @@ if($user['access_token'] == ''){
 
 
 if ($user['p_cipher'] == 0) {
-  $user_points = floatvar($user['p_value']);
+  $user_points = floatval($user['p_value']);
 } else {
-  $user_points = floatvar(safeDecrypt($user['p_value'], $user['p_key']));
+  $user_points = floatval(safeDecrypt($user['p_value'], $user['p_key']));
 }
 }
 
