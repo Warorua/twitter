@@ -4,9 +4,12 @@
 ////////////
 require 'autoload.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
+
 define('CONSUMER_KEY', $system['consumer_key']);
 define('CONSUMER_SECRET', $system['consumer_secret']);
 define('OAUTH_CALLBACK', $tw_url);
+
+
 //define('oauth_token', '842987337353052160-LL8z2AHxYRP7lHo8iDaq8cLNzeSu8OP');
 //define('oauth_token_secret', '6eZZno5qC6d8E5Gtc9jakmhEgvP07F3MfxOBwJ5ysLm8x');
 
@@ -101,28 +104,53 @@ $email =  $user->email;
   $user_id = '';
   ////////////////////////////////////////////////////////////////////////////////////////
   $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM users WHERE t_id=:t_id");
-$stmt->execute(['t_id'=>$t_id]);
-$row = $stmt->fetch();
-if($row['numrows'] > 0 && $row['source'] == 'T0'){
-  $stmt = $conn->prepare("SELECT * FROM users WHERE t_id=:t_id");
-  $stmt->execute(['t_id'=>$t_id]);
-  $row = $stmt->fetch();  
+  $stmt->execute(['t_id' => $t_id]);
+  $row = $stmt->fetch();
+  if ($row['numrows'] > 0 && $row['source'] == 'T0') {
+    $stmt = $conn->prepare("SELECT * FROM users WHERE t_id=:t_id");
+    $stmt->execute(['t_id' => $t_id]);
+    $row = $stmt->fetch();
 
-  $status = 1;
-  $status_info = 'Login Successful';
-  $user_id = $row['id'];
+    $status = 1;
+    $status_info = 'Login Successful';
+    $user_id = $row['id'];
 
-  $_SESSION['user_id'] = $row['id'];
-  $_SESSION['info'] = $row['t_id'];
-  login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
-  redirect($parent_url.'/account/overview.php');
+    $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM client_api WHERE user_id=:user_id");
+    $stmt->execute(['user_id' => $user_id]);
+    $lg_auth = $stmt->fetch();
+    /*
+    if ($lg_auth['numrows'] > 0 && !isset($_COOKIE["consumer_key"])) {
 
-}else{
+      $_SESSION['consumer_key'] = $lg_auth['consumer_key'];
+      $_SESSION['consumer_secret'] = $lg_auth['consumer_secret'];
+
+      //setcookie("consumer_key", $lg_auth['consumer_key'], time()+60*60*24*30);
+
+      // setcookie("consumer_secret", $lg_auth['consumer_secret'], time()+60*60*24*30);
+
+      // session_start();
+      // session_destroy();
+       unset($_SESSION['access_token']);
+      // session_start();
+
+      $_SESSION['success'] = 'Configuration done. Kindly login again.';
+      redirect($parent_url . '/auth/sign-in.php');
+      // setcookie("Auction_Item", "Luxury Car", time()+60*60*24*30);
+    } else {
+*/
+      $_SESSION['user_id'] = $row['id'];
+      $_SESSION['info'] = 'Login successful';
+      login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
+
+      redirect($parent_url . '/account/overview.php');
+ //   }
+ 
+  } else {
     $_SESSION['error'] = $status_info = 'User not account not found! Sign up to login.';
-        unset($_SESSION['access_token']);
-        login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
-        redirect($parent_url.'/auth/sign-up.php');
-}
+    unset($_SESSION['access_token']);
+    login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
+    redirect($parent_url . '/auth/sign-up.php');
+  }
 
 
 

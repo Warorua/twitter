@@ -1080,7 +1080,7 @@ $statues = $tweet_client->likeTweet('1577321598155096064','1580677302370721792')
  $res = array_convert($statues);
 
 
-echo json_encode($res);
+//echo json_encode($res);
 
 
 $end_time = microtime(true);

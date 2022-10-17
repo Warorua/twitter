@@ -825,6 +825,9 @@ include '../includes/head.php';
 												$api_consumer_key = $api_app['consumer_key'];
 												$api_consumer_secret =$api_app['consumer_secret'];
 												$api_bearer_token = $api_app['bearer_token'];
+												$api_access_token = $api_app['access_token'];
+												$api_access_secret = $api_app['access_secret'];
+
 											}
 
 											?>
@@ -854,6 +857,18 @@ include '../includes/head.php';
 													<div class="fv-row mb-3">
 														<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter Bearer token</label>
 														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Bearer token" name="bearer_token" value="<?php if (isset($api_bearer_token)) {echo $api_bearer_token;}; ?>" required/>
+													</div>
+												</div>
+												<div class="col-lg-12">
+													<div class="fv-row mb-3">
+														<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter Access token</label>
+														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Access token" name="access_token" value="<?php if (isset($api_access_token)) {echo $api_access_token;}; ?>" required/>
+													</div>
+												</div>
+												<div class="col-lg-12">
+													<div class="fv-row mb-3">
+														<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter Access secret</label>
+														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Access secret" name="access_secret" value="<?php if (isset($api_access_secret)) {echo $api_access_secret;}; ?>" required/>
 													</div>
 												</div>
 

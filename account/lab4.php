@@ -1,62 +1,72 @@
 <?php
 //*
-include '../includes/conn.php';
+  include '../includes/conn.php';
 
-include '../includes/session.php';
+  include '../includes/session.php';
 
-require '../vendor/autoload.php';
+ require '../vendor/autoload.php';
 
-include '../includes/api_config.php';
+ include '../includes/api_config.php';
+ use Abraham\TwitterOAuth\TwitterOAuth;
 
-$conn = $pdo->open();
-$stmt = $conn->prepare("SELECT *, users.id AS usid FROM users LEFT JOIN client_api ON users.id = client_api.user_id");
-$stmt->execute();
-$data = $stmt->fetchAll();
-
-//echo json_encode($data);
-
-//echo json_encode($_GET);
+//* Essential access
+$consumer_key = 'YRTcVlyLV1g72sQlKDlNbwSAI';
+//$consumer_key = 'g72sQlKDlNbwSAI';
+$consumer_secret = 'WSxtDMCiVh8GetLznc8hVO9DbBPLzDzhSFIgA5Ik7m6eM0MZbo';
+//$access_token = '1377367159253434374-9wtJ5EtQXA4lUm8bIohYkGZrh8P1Dq';
+$access_token = 'tQXA4lUm8bIohYkGZrh8P1Dq';
+$access_token_secret = 'OP5SOclkQRzJbUw6aSdzbE2Fr79xxiphpygBhKydGGsRj';
+$bearer_token = 'AAAAAAAAAAAAAAAAAAAAAAXdiAEAAAAAB8jzgRp%2BDMRFGQ%2FLehUeoX8Y05U%3DKG3BXbZ7qrxEz8ACaHEDOeSIcUFGgY5shIlOm8sdzpM8ZajYty';
 //*/
 
-//echo 'Yuuup';
+
+/* Elevated access
+$consumer_key = 'nsLZN64t31iUV39nqPgioyzsd';
+$consumer_secret = 'U5SSjztJsfXq89v1RWF6pRik1xCxibvnoDNQP6f6HaZzmYnDy8';
+$access_token = '1377367159253434374-cXjJiUp2jC2kHJFYRpNBt5h2BslxYf';
+$access_token_secret = '05Z6A9RLpnOHcQLiVzu6OAqh10B3FS3KT8fLBsQ2V34ap';
+$bearer_token = 'AAAAAAAAAAAAAAAAAAAAAAXdiAEAAAAAB8jzgRp%2BDMRFGQ%2FLehUeoX8Y05U%3DKG3BXbZ7qrxEz8ACaHEDOeSIcUFGgY5shIlOm8sdzpM8ZajYty';
+
+//*/
+
+/*
+$user_client = new UserClient(
+    apiKey: 'nsLZN64t31iUV39nqPgioyzsd',
+    apiSecret: 'U5SSjztJsfXq89v1RWF6pRik1xCxibvnoDNQP6f6HaZzmYnDy8',
+    accessToken: '1377367159253434374-cXjJiUp2jC2kHJFYRpNBt5h2BslxYf',
+    accessSecret: '05Z6A9RLpnOHcQLiVzu6OAqh10B3FS3KT8fLBsQ2V34ap',
+    bearerToken:  'AAAAAAAAAAAAAAAAAAAAAKzqhAEAAAAAPWvo1WjNaX%2FkP3airEoAwrNgX38%3DaTP7AtoOb2PGI7eeZEKjmqhaNLIy3z0Pd1O3UMH21Wmfr5fB0R'
+  );
+//*/
 
 
-// Do this once then store it somehow:
-$key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
-$message = 'We are all living in a yellow submarine';
+ $connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
+$content = $connection->get("account/verify_credentials");
 
-//$ciphertext = safeEncrypt($message, $key);
-//$ciphertext = safeEncrypt($user['p_value'], $user['p_key']);
-//$ciphertext = safeEncrypt($user['p_value'], '�o�z��O�{�Q7:�m��]���d}��G��w');
-$plaintext = safeDecrypt($user['p_value'], $user['p_key']);
+//$content = $abraham_client->get("account/verify_credentials");
 
-//var_dump($ciphertext);
-//echo $plaintext;
+//  include '../includes/api_config.php';
 
-echo json_encode($_SESSION['post']);
+// $conn = $pdo->open();
+// $stmt = $conn->prepare("SELECT *, users.id AS usid FROM users LEFT JOIN client_api ON users.id = client_api.user_id");
+// $stmt->execute();
+// $data = $stmt->fetchAll();
+
+echo json_encode($content);
+
+//*
+$arr1 = json_encode($content);
+$arr2 = json_decode($arr1, true);
+//echo $arr2['errors'][0]['code'];
+//*/
+
+if(isset($arr2['errors'][0]['code'])){
+   // echo 'ERROR';
+}else{
+   // echo 'SUCCESS';
+}
+
 ?>
-
-Fatal error: Uncaught TypeError: UtxoOne\TwitterUltimatePhp\Models\TwitterPostResponse::__construct(): Argument #1 ($response) must be of type object, null given, called in C:\xamppp\htdocs\twitter\vendor\utxo-one\twitter-ultimate-php\src\Clients\BaseClient.php on line 216 and defined in C:\xamppp\htdocs\twitter\vendor\utxo-one\twitter-ultimate-php\src\Models\TwitterPostResponse.php:7
-Stack trace:
-#0 C:\xamppp\htdocs\twitter\vendor\utxo-one\twitter-ultimate-php\src\Clients\BaseClient.php(216): UtxoOne\TwitterUltimatePhp\Models\TwitterPostResponse->__construct(NULL)
-#1 C:\xamppp\htdocs\twitter\vendor\utxo-one\twitter-ultimate-php\src\Clients\TweetClient.php(121): UtxoOne\TwitterUltimatePhp\Clients\BaseClient->post('users/157732159...', Array)
-#2 C:\xamppp\htdocs\twitter\includes\api_config.php(420): UtxoOne\TwitterUltimatePhp\Clients\TweetClient->likeTweet('157732159815509...', '158098017253407...')
-#3 C:\xamppp\htdocs\twitter\includes\api_config.php(451): like_tweet('157732159815509...', '158098017253407...')
-#4 C:\xamppp\htdocs\twitter\process\post\like_replies.php(25): tweet_reply_liker('157732159815509...', '158022177537946...', '100')
-#5 {main}
-thrown in C:\xamppp\htdocs\twitter\vendor\utxo-one\twitter-ultimate-php\src\Models\TwitterPostResponse.php on line 7
-
-
-
-Fatal error: Uncaught TypeError: UtxoOne\TwitterUltimatePhp\Models\TwitterPostResponse::__construct(): Argument #1 ($response) must be of type object, null given, called in C:\xamppp\htdocs\twitter\vendor\utxo-one\twitter-ultimate-php\src\Clients\BaseClient.php on line 216 and defined in C:\xamppp\htdocs\twitter\vendor\utxo-one\twitter-ultimate-php\src\Models\TwitterPostResponse.php:7
-Stack trace:
-#0 C:\xamppp\htdocs\twitter\vendor\utxo-one\twitter-ultimate-php\src\Clients\BaseClient.php(216): UtxoOne\TwitterUltimatePhp\Models\TwitterPostResponse->__construct(NULL)
-#1 C:\xamppp\htdocs\twitter\vendor\utxo-one\twitter-ultimate-php\src\Clients\TweetClient.php(121): UtxoOne\TwitterUltimatePhp\Clients\BaseClient->post('users/157732159...', Array)
-#2 C:\xamppp\htdocs\twitter\includes\api_config.php(420): UtxoOne\TwitterUltimatePhp\Clients\TweetClient->likeTweet('157732159815509...', '158032675250459...')
-#3 C:\xamppp\htdocs\twitter\process\post\like_tweet.php(17): like_tweet('157732159815509...', '158032675250459...')
-#4 {main}
-thrown in C:\xamppp\htdocs\twitter\vendor\utxo-one\twitter-ultimate-php\src\Models\TwitterPostResponse.php on line 7
-
 
 
 

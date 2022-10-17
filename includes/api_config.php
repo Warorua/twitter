@@ -87,11 +87,12 @@ if ($api_app['numrows'] < 1) {
   $api_consumer_key = $api_app['consumer_key'];
   $api_consumer_secret = $api_app['consumer_secret'];
   $api_bearer_token = $api_app['bearer_token'];
-  if (isset($_SESSION['access_token'])) {
-
+  $api_access_token = $api_app['access_token'];
+  $api_access_secret = $api_app['access_secret'];
+  
     define('CONSUMER_KEY', $api_consumer_key);
     define('CONSUMER_SECRET', $api_consumer_secret);
-    $access_token = $_SESSION['access_token'];
+   // $access_token = $_SESSION['access_token'];
   
     $client = new TweetClient(bearerToken:  $api_bearer_token);
   
@@ -101,15 +102,15 @@ if ($api_app['numrows'] < 1) {
       'consumer_secret' => $api_consumer_secret,
       'bearer_token' =>  $api_bearer_token,
       'auth_token' => '', // OAuth 2.0 auth token
-      'token_identifier' => $access_token['oauth_token'],
-      'token_secret' => $access_token['oauth_token_secret'],
+      'token_identifier' => $api_access_token,
+      'token_secret' => $api_access_secret,
     );
   
     $tweet_client = new TweetClient(
       apiKey: $api_consumer_key,
       apiSecret: $api_consumer_secret,
-      accessToken: $access_token['oauth_token'],
-      accessSecret: $access_token['oauth_token_secret'],
+      accessToken: $api_access_token,
+      accessSecret: $api_access_secret,
       bearerToken:  $api_bearer_token
     );
   
@@ -117,29 +118,37 @@ if ($api_app['numrows'] < 1) {
     $user_client = new UserClient(
       apiKey: $api_consumer_key,
       apiSecret: $api_consumer_secret,
-      accessToken: $access_token['oauth_token'],
-      accessSecret: $access_token['oauth_token_secret'],
+      accessToken: $api_access_token,
+      accessSecret: $api_access_secret,
       bearerToken:  $api_bearer_token
     );
+
+    // $user_client = new UserClient(
+    //   apiKey: 'nsLZN64t31iUV39nqPgioyzsd',
+    //   apiSecret: 'U5SSjztJsfXq89v1RWF6pRik1xCxibvnoDNQP6f6HaZzmYnDy8',
+    //   accessToken: '1377367159253434374-cXjJiUp2jC2kHJFYRpNBt5h2BslxYf',
+    //   accessSecret: '05Z6A9RLpnOHcQLiVzu6OAqh10B3FS3KT8fLBsQ2V34ap',
+    //   bearerToken:  'AAAAAAAAAAAAAAAAAAAAAKzqhAEAAAAAPWvo1WjNaX%2FkP3airEoAwrNgX38%3DaTP7AtoOb2PGI7eeZEKjmqhaNLIy3z0Pd1O3UMH21Wmfr5fB0R'
+    // );
   
     $list_client = new ListClient(
       apiKey: $api_consumer_key,
       apiSecret: $api_consumer_secret,
-      accessToken: $access_token['oauth_token'],
-      accessSecret: $access_token['oauth_token_secret'],
+      accessToken: $api_access_token,
+      accessSecret: $api_access_secret,
       bearerToken:  $api_bearer_token
     );
   
     $space_client = new SpaceClient(
       apiKey: $api_consumer_key,
       apiSecret: $api_consumer_secret,
-      accessToken: $access_token['oauth_token'],
-      accessSecret: $access_token['oauth_token_secret'],
+      accessToken: $api_access_token,
+      accessSecret: $api_access_secret,
       bearerToken:  $api_bearer_token
     );
   
   
-    $abraham_client = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
+    $abraham_client = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $api_access_token, $api_access_secret);
     $bird_elephant = new BirdElephant($credentials_be);
   
     $settings = [
@@ -147,22 +156,23 @@ if ($api_app['numrows'] < 1) {
       'consumer_key' => $api_consumer_key,
       'consumer_secret' => $api_consumer_secret,
       'bearer_token' =>  $api_bearer_token,
-      'access_token' => $access_token['oauth_token'],
-      'access_token_secret' => $access_token['oauth_token_secret']
+      'access_token' => $api_access_token,
+      'access_token_secret' => $api_access_secret
     ];
     $noweh_client = new Client($settings);
   
   
-    $t_user = $user_client->getUserById($user['t_id']);
-  }
+   
   
 }
 
-
+ $t_user = $user_client->getUserById($user['t_id']);
+  
 function charge($charge_points)
 {
   global $user;
   global $pdo;
+  global $parent_url;
   $conn = $pdo->open();
 
   if ($user['p_cipher'] == 0) {
@@ -171,22 +181,24 @@ function charge($charge_points)
     $init_points = safeDecrypt($user['p_value'], $user['p_key']);
   }
 
-if($init_points < $charge_points){
-$_SESSION['error'] = 'Gas points depleted!';
-die();
-}
-  $raw_points = floatval($init_points) - $charge_points;
-
-  if ($user['p_cipher'] == 0) {
-    $cipher_points = $raw_points;
+  if ($init_points < $charge_points) {
+    $_SESSION['error'] = 'Gas points depleted or insufficient!';
+    header('location: ' . $parent_url . '/account/overview.php');
+    die();
   } else {
-    $cipher_points = safeEncrypt($raw_points, $user['p_key']);
+    $raw_points = floatval($init_points) - $charge_points;
+
+    if ($user['p_cipher'] == 0) {
+      $cipher_points = $raw_points;
+    } else {
+      $cipher_points = safeEncrypt($raw_points, $user['p_key']);
+    }
+
+
+
+    $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_cipher=:p_cipher WHERE id=:id");
+    $stmt->execute(['id' => $user['id'], 'p_value' => $cipher_points, 'p_cipher' => $user['p_cipher']]);
   }
-
-
-
-  $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_cipher=:p_cipher WHERE id=:id");
-  $stmt->execute(['id' => $user['id'], 'p_value' => $cipher_points, 'p_cipher' => $user['p_cipher']]);
 }
 
 
@@ -420,9 +432,9 @@ function pic_fix($img)
 function like_tweet($auth_user, $tweet_id)
 {
   global $tweet_client;
- // global $charge;
+  global $charge;
   $statues = $tweet_client->likeTweet($auth_user, $tweet_id);
- // charge($charge['like_charge']);
+  charge($charge['like_charge']);
   $res = array_convert($statues);
 
   return $res;
@@ -582,25 +594,32 @@ function queueLoad()
   global $user;
   global $access_token;
   $conn = $pdo->open();
-  $stmt = $conn->prepare("SELECT * FROM twitter_logs WHERE user_id=:id ORDER BY id DESC LIMIT 1");
+
+  $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM twitter_logs WHERE user_id=:id");
   $stmt->execute(['id' => $user['id']]);
-  $data = $stmt->fetch();
+  $ct_data = $stmt->fetch();
 
-  if ((time() - strtotime($data['time'])) < 900) {
+  if ($ct_data['numrows'] > 0) {
+    $stmt = $conn->prepare("SELECT * FROM twitter_logs WHERE user_id=:id ORDER BY id DESC LIMIT 1");
+    $stmt->execute(['id' => $user['id']]);
+    $data = $stmt->fetch();
 
-    $method = $_SERVER['REQUEST_METHOD'];
-    if ($method == 'POST') {
-      $js_obj =  json_encode($_POST);
-    } else {
-      $js_obj =  json_encode($_GET);
+    if ((time() - strtotime($data['time'])) < 900) {
+
+      $method = $_SERVER['REQUEST_METHOD'];
+      if ($method == 'POST') {
+        $js_obj =  json_encode($_POST);
+      } else {
+        $js_obj =  json_encode($_GET);
+      }
+
+      $page = $_SERVER['PHP_SELF'];
+      $method = $_SERVER['REQUEST_METHOD'];
+      $exec_time = strtotime($data['time']) + 900;
+      $stmt = $conn->prepare("INSERT INTO process_engine (request_method,page,object,access_token,access_secret, execution, user_id) VALUES (:req, :page, :object, :access_token, :access_secret, :execution, :user_id)");
+      $stmt->execute(['req' => $method, 'page' => $page, 'object' => $js_obj, 'access_token' => $access_token['oauth_token'], 'access_secret' => $access_token['oauth_token_secret'], 'execution' => $exec_time, 'user_id' => $user['id']]);
+      die('Operation added to queue');
     }
-
-    $page = $_SERVER['PHP_SELF'];
-    $method = $_SERVER['REQUEST_METHOD'];
-    $exec_time = strtotime($data['time']) + 900;
-    $stmt = $conn->prepare("INSERT INTO process_engine (request_method,page,object,access_token,access_secret, execution, user_id) VALUES (:req, :page, :object, :access_token, :access_secret, :execution, :user_id)");
-    $stmt->execute(['req' => $method, 'page' => $page, 'object' => $js_obj, 'access_token' => $access_token['oauth_token'], 'access_secret' => $access_token['oauth_token_secret'], 'execution' => $exec_time, 'user_id' => $user['id']]);
-    die('Operation added to queue');
   }
 }
 
@@ -663,7 +682,7 @@ if(!isset($_GET['bot_id'])){
 //Warning: Array to string conversion in C:\xamppp\htdocs\twitter\includes\api_config.php on line 395
 
 
-if($user['access_token'] == ''){
+if($user['access_token'] != ''){
   $conn = $pdo->open();
   $stmt = $conn->prepare("UPDATE users SET access_token=:access_token, access_secret=:access_secret WHERE id=:id");
   $stmt->execute(['access_token'=>$access_token['oauth_token'], 'access_secret'=>$access_token['oauth_token_secret'], 'id'=>$user['id']]);
