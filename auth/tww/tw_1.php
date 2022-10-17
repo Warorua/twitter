@@ -96,12 +96,12 @@ $email =  $user->email;
  // echo json_encode($google_account_info);
  
  //check whether email is related to other account
- $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM users WHERE email=:email");
-$stmt->execute(['email'=>$email]);
+ $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM users WHERE username=:username");
+$stmt->execute(['username'=>$username]);
 $row = $stmt->fetch();
 if($row['numrows'] > 0){
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email=:email");
-    $stmt->execute(['email'=>$email]);
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username=:username");
+    $stmt->execute(['username'=>$username]);
     $row = $stmt->fetch();  
     
     if($row['source'] == 'G0'){
@@ -138,7 +138,7 @@ redirect($parent_url.'/auth/sign-up.php');
     $stmt = $conn->prepare("INSERT INTO users (username, address, verified, source, email, firstname, lastname, photo, t_id, status, type, created_on, p_value) VALUES (:username, :address, :verified, :source, :email, :firstname, :lastname, :photo, :t_id, :status, :type, :created_on, :p_value)");
   $stmt->execute(['username'=>$username, 'address'=>$address, 'verified'=>$verified, 'source'=>$source, 'email'=>$email, 'firstname'=>$firstname, 'lastname'=>$lastname, 'photo'=>$photo, 't_id'=>$t_id, 'status'=>$status, 'type'=>$type, 'created_on'=>$create_on, 'p_value'=>500]);
  $_SESSION['user_id'] = $conn->lastInsertId();
- $_SESSION['error'] =  $username;
+ $_SESSION['success'] =  'Welcome! Registration successful.';
 
  redirect('../account/overview.php');
 
