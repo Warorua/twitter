@@ -201,7 +201,18 @@ function charge($charge_points)
   }
 }
 
+function init_charge($charge_points){
+  global $user;
+  if ($user['p_cipher'] == 0) {
+    $init_points = $user['p_value'];
+  } else {
+    $init_points = safeDecrypt($user['p_value'], $user['p_key']);
+  }
+ $value = $init_points/$charge_points;
 
+ return $value;
+
+}
 
 function user_tweets($username, int $number)
 {
@@ -432,9 +443,7 @@ function pic_fix($img)
 function like_tweet($auth_user, $tweet_id)
 {
   global $tweet_client;
-  global $charge;
   $statues = $tweet_client->likeTweet($auth_user, $tweet_id);
-  charge($charge['like_charge']);
   $res = array_convert($statues);
 
   return $res;
@@ -454,6 +463,7 @@ function unlike_tweet($auth_user, $tweet_id)
 function tweet_reply_liker($auth_user, $tweet_with_replies, $limit)
 {
   global $abraham_client;
+  global $charge;
   $abraham_client->setApiVersion('2');
   $data = $abraham_client->get('tweets/search/recent', [
     "query" => 'in_reply_to_status_id:' . $tweet_with_replies,
@@ -463,9 +473,22 @@ function tweet_reply_liker($auth_user, $tweet_with_replies, $limit)
   ]);
   $dt_2 = array_convert($data);
   $response = '';
-  foreach ($dt_2['data'] as $row) {
-    $response .= like_tweet($auth_user, $row['id']). '</br>';
+
+  $limit = init_charge($charge['like_charge']);
+  $charge_pts = 0;
+
+  foreach ($dt_2['data'] as $id=> $row) {
+    $response .= like_tweet($auth_user, $row['id']);
+
+    $charge_pts += $charge['like_charge'];
+    if($id >= $limit){
+      break;
+    }
+
   }
+
+  charge($charge_pts);
+
   return json_encode($response);
 }
 
@@ -507,11 +530,19 @@ function tweet_reply_retweeter($auth_user, $tweet_with_replies, $limit)
   ]);
   $dt_2 = array_convert($data);
   $response = '';
-  foreach ($dt_2['data'] as $row) {
-    //$response .= like_tweet($auth_user, $row['id']). '</br>';
-    $response .= $tweet_client->retweet($auth_user, $row['id']);
-    charge($charge['tweet_charge']);
+  
+  $limit = init_charge($charge['tweet_charge']);
+  $charge_pts = 0;
+  
+  foreach ($dt_2['data'] as $id=> $row) {
+     $response .= $tweet_client->retweet($auth_user, $row['id']);
+
+    $charge_pts += $charge['tweet_charge'];
+    if($id >= $limit){
+      break;
+    }
   }
+  charge($charge_pts);
   return json_encode($response);
 }
 
@@ -520,15 +551,14 @@ function follow($account_id_to_follow)
 {
   global $user_client;
   global $user;
-  global $charge;
   $data = $user_client->follow($user['t_id'], $account_id_to_follow);
-  charge($charge['follow_charge']);
   return array_convert($data);
 }
 
 function tweet_reply_follower($tweet_with_replies, $limit)
 {
   global $abraham_client;
+  global $charge;
   $abraham_client->setApiVersion('2');
   $data = $abraham_client->get('tweets/search/recent', [
     "query" => 'in_reply_to_status_id:' . $tweet_with_replies,
@@ -538,15 +568,25 @@ function tweet_reply_follower($tweet_with_replies, $limit)
   ]);
   $dt_2 = array_convert($data);
   $response = '';
+  
+  $limit = init_charge($charge['follow_charge']);
+  $charge_pts = 0;
+
   if (isset($dt_2['data'])) {
     if (count($dt_2['data']) > 1) {
-      foreach ($dt_2['data'] as $row) {
+      foreach ($dt_2['data'] as $id => $row) {
         $id_of_user = $row['author_id'];
         follow($id_of_user);
+
+        $charge_pts += $charge['follow_charge'];
+        if ($id >= $limit) {
+          break;
+        }
       }
+      charge($charge_pts);
     }
     $response = '1';
-  }else{
+  } else {
     $response = '0';
   }
   return json_encode($response);
@@ -592,7 +632,7 @@ function queueLoad()
 {
   global $pdo;
   global $user;
-  global $access_token;
+  global $api_app;
   $conn = $pdo->open();
 
   $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM twitter_logs WHERE user_id=:id");
@@ -617,7 +657,7 @@ function queueLoad()
       $method = $_SERVER['REQUEST_METHOD'];
       $exec_time = strtotime($data['time']) + 900;
       $stmt = $conn->prepare("INSERT INTO process_engine (request_method,page,object,access_token,access_secret, execution, user_id) VALUES (:req, :page, :object, :access_token, :access_secret, :execution, :user_id)");
-      $stmt->execute(['req' => $method, 'page' => $page, 'object' => $js_obj, 'access_token' => $access_token['oauth_token'], 'access_secret' => $access_token['oauth_token_secret'], 'execution' => $exec_time, 'user_id' => $user['id']]);
+      $stmt->execute(['req' => $method, 'page' => $page, 'object' => $js_obj, 'access_token' => $api_app['access_token'], 'access_secret' => $api_app['access_secret'], 'execution' => $exec_time, 'user_id' => $user['id']]);
       die('Operation added to queue');
     }
   }

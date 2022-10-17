@@ -23,14 +23,26 @@ $output = '';
         if (isset($t_tweets['data'])) {
             if (count($t_tweets['data']) > 1) {
                 $status = 1;
+                
+                $limit = init_charge($charge['follow_charge']);
+                $charge_pts = 0;
+
+
                 foreach ($t_tweets['data'] as $id => $row) {
                     follow($row['id']);
+                    
                     $val = $id + 1;
                     $output = 'SUCCESS: You have followed ' . $val . ' accounts';
+
+                    $charge_pts += $charge['follow_charge'];
+                    if ($id >= $limit) {
+                        break;
+                    }
                     if ($id == 39) {
                         break;
                     }
                 }
+                charge($charge_pts);
             } else {
                 follow($t_tweets['data'][0]['id']);
                 $status = 1;
@@ -41,6 +53,10 @@ $output = '';
             $status = 0;
             $val = 0;
             $output = 'ERROR: Tweet has less no retweets!';
+        }else{
+            $status = 0;
+            $val = 0;
+            $output = 'ERROR: This tweet\'s retweets could not be read!';
         }
 
 
