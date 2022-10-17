@@ -78,7 +78,29 @@ if ($user_metrics['data']['verified']) {
             <!--end::User-->
             <!--begin::Actions-->
             <div class="d-flex my-4">
-                <a href="#" class="btn btn-flex btn-outline btn-outline-dashed btn-outline-info btn-active-light-info px-6 hover-scale">
+                <?php
+if ($api_app['numrows'] < 1) {
+$app_msg_bg = 'btn-color-danger';
+$app_msg_txt = 'App not set';
+}else{
+    $app_msg_bg = 'btn-color-primary';
+    $app_msg_txt = 'App set';
+}
+
+?>
+                <button type="button" class="btn btn-flex btn-bg-light <?php echo $app_msg_bg ?> px-6 m-2" data-bs-toggle="tooltip" data-bs-html="true" title="sdgsdg">
+                    <span class="svg-icon svg-icon-2x">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.3" d="M21 13H15V11H21C21.6 11 22 10.6 22 10C22 9.4 21.6 9 21 9H15V3C15 2.4 14.6 2 14 2C13.4 2 13 2.4 13 3V9H11V3C11 2.4 10.6 2 10 2C9.4 2 9 2.4 9 3V9H3C2.4 9 2 9.4 2 10C2 10.6 2.4 11 3 11H9V13H3C2.4 13 2 13.4 2 14C2 14.6 2.4 15 3 15H9V21C9 21.6 9.4 22 10 22C10.6 22 11 21.6 11 21V15H13V21C13 21.6 13.4 22 14 22C14.6 22 15 21.6 15 21V15H21C21.6 15 22 14.6 22 14C22 13.4 21.6 13 21 13Z" fill="currentColor" />
+                            <path d="M16 17H8C7.4 17 7 16.6 7 16V8C7 7.4 7.4 7 8 7H16C16.6 7 17 7.4 17 8V16C17 16.6 16.6 17 16 17ZM14 10H10V14H14V10Z" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <span class="d-flex flex-column align-items-start ms-2">
+                        <span class="fs-3 fw-bold">API v2</span>
+                        <span class="fs-7"><?php echo $app_msg_txt ?></span>
+                    </span>
+                </button>
+                <a class="btn btn-flex btn-bg-light btn-color-info px-6 hover-scale">
                     <span class="svg-icon svg-icon-2x">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path opacity="0.3" d="M20.335 15.537C21.725 14.425 21.57 12.812 21.553 11.224C21.4407 9.50899 20.742 7.88483 19.574 6.624C18.5503 5.40102 17.2668 4.4216 15.817 3.757C14.4297 3.26981 12.9703 3.01966 11.5 3.01701C8.79576 2.83108 6.11997 3.66483 4 5.35398C2.289 6.72498 1.23101 9.12497 2.68601 11.089C3.22897 11.6881 3.93029 12.1214 4.709 12.339C5.44803 12.6142 6.24681 12.6888 7.024 12.555C6.88513 12.9965 6.85078 13.4644 6.92367 13.9215C6.99656 14.3786 7.17469 14.8125 7.444 15.189C7.73891 15.5299 8.10631 15.8006 8.51931 15.9812C8.93232 16.1619 9.38047 16.2478 9.831 16.233C10.0739 16.2296 10.3141 16.1807 10.539 16.089C10.7371 15.9871 10.9288 15.8732 11.113 15.748C12.1594 15.2831 13.3275 15.1668 14.445 15.416C15.7795 15.7213 17.1299 15.952 18.49 16.107C18.7927 16.1438 19.0993 16.1313 19.398 16.07C19.7445 15.9606 20.0639 15.7789 20.335 15.537Z" fill="currentColor" />
@@ -170,40 +192,40 @@ if ($user_metrics['data']['verified']) {
             <!--begin::Progress-->
             <?php
             $prf_points = 0;
-            if($user['email']){
+            if ($user['email']) {
                 $prf_points += 1;
             }
-            if($user['firstname']){
+            if ($user['firstname']) {
                 $prf_points += 1;
             }
-            if($user['lastname']){
+            if ($user['lastname']) {
                 $prf_points += 1;
             }
-            if($user['contact_info']){
+            if ($user['contact_info']) {
                 $prf_points += 1;
             }
-            if($user['username']){
+            if ($user['username']) {
                 $prf_points += 1;
             }
-            if($user['address']){
+            if ($user['address']) {
                 $prf_points += 1;
             }
-            if($user['country']){
+            if ($user['country']) {
                 $prf_points += 1;
             }
-            if($user['t_id']){
+            if ($user['t_id']) {
                 $prf_points += 1;
             }
-            if($user['g_id']){
+            if ($user['g_id']) {
                 $prf_points += 1;
             }
-            if($user['f_id']){
+            if ($user['f_id']) {
                 $prf_points += 1;
             }
-            $prf_points_perc = $prf_points*10;
+            $prf_points_perc = $prf_points * 10;
 
 
-?>
+            ?>
             <div class="d-flex align-items-center w-200px w-sm-300px flex-column mt-3">
                 <div class="d-flex justify-content-between w-100 mt-auto mb-2">
                     <span class="fw-semibold fs-6 text-gray-400">Profile

@@ -71,9 +71,6 @@
 
 
 
-
-
-
 <script>
 	const Toast = Swal.mixin({
 		toast: true,
@@ -86,15 +83,26 @@
 			toast.addEventListener('mouseenter', Swal.stopTimer)
 			toast.addEventListener('mouseleave', Swal.resumeTimer)
 		}
-	})
+	});
+
+
 </script>
 <!--end::Custom Javascript-->
 <!--end::Custom Javascript-->
+
+
 
 <script>
 	$('button[type="submit"]').click(function() {
 		$(this).text("Processing...");
 		$(this).prepend('<span class="spinner-border spinner-border-sm" role="status"></span> ');
+	});
+	$(document).on("click", "div[kt_tweet_link_disabled]", function() {
+		Toast.fire({
+			icon: 'warning',
+			title: 'Sorry! You have not set up your Twitter API.',
+			html: 'To use this feature add your API credentials. Visit here to learn how to get your Twitter API app credentials and how to set them up to get started. <a href="#" class="btn btn-light-danger">Add app details</a>',
+		})
 	});
 </script>
 <?php include '../includes/ajax_calls.php' ?>
@@ -506,30 +514,6 @@ $like_perc = ($likes * 100) / 5000;
 				logo: "https://tweetbot.site/assets/media/svg/brand-logos/twitter.svg",
 			},
 		});
-
-		/*
-
-
-
-
-
-		
-		    $.ajax({
-		      method: "POST",
-		      url: "../auth/profile/two_auth.php",
-		      data: formData,
-		      processData: false, // tell jQuery not to process the data
-		      contentType: false, // tell jQuery not to set contentType
-		      enctype: 'multipart/form-data',
-
-		      success: function(data) {
-		        //  alert(data);
-		        console.log(data);
-
-		        window.location.reload();
-		      }
-		    });
-		*/
 
 
 	});

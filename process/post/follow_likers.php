@@ -11,8 +11,8 @@ if (isset($_SESSION['access_token'])) {
         $tweet_id = $_POST['id'];
         $command = 'follow';
         $mode = 'T0';
-        
-$output = '';
+
+        $output = '';
         $tweets = $bird_elephant->tweets();
 
         $t_tweets = array_convert($tweets->likers($tweet_id));
@@ -24,17 +24,23 @@ $output = '';
             if (count($t_tweets['data']) > 1) {
                 $status = 1;
                 foreach ($t_tweets['data'] as $id => $row) {
-                    follow($row['id']);
                     $val = $id + 1;
+                    queueLoad();
+        engine_control($command, $val);
+                    follow($row['id']);
+                    
                     $output = 'SUCCESS: You have followed ' . $val . ' accounts';
                     if ($id == 39) {
                         break;
                     }
                 }
             } else {
+                $val = 1;
+                queueLoad();
+        engine_control($command, $rep_count);
                 follow($t_tweets['data'][0]['id']);
                 $status = 1;
-                $val = 1;
+                
                 $output = 'SUCCESS:  You have followed 1 account!';
             }
         } elseif (isset($t_tweets['meta'])) {
@@ -50,13 +56,12 @@ $output = '';
 
 
 
-          engine_control($command, $val);
-          twitter_log($user['email'], '', $status, $mode, $user['id'], $auth_user, $output);
-    }else{
+        engine_control($command, $val);
+        twitter_log($user['email'], '', $status, $mode, $user['id'], $auth_user, $output);
+    } else {
         $status = 0;
         $output = 'unauthorised request!';
     }
-    
 } else {
     $output = 'oops! seems we don\'t know you';
 }
@@ -64,5 +69,3 @@ $output = '';
 
 
 echo $output;
-
-?>

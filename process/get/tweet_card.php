@@ -37,6 +37,18 @@ include '../../includes/api_config.php';
 										'id' => $dt->getId(),
 									   
 									  ]);
+									  if ($api_app['numrows'] < 1) {
+										$app_auth_tweet_id = 'kt_tweet_id_disabled';
+										$app_auth_tweet_link = 'kt_tweet_link_disabled';
+										$app_auth_tweet_status = 'disabled';
+										$app_auth_tweet_tooltip = 'data-bs-toggle="tooltip" data-bs-placement="right" title="Add app to use this feature"';
+										}else{
+											$app_auth_tweet_id = 'kt_tweet_id';
+										$app_auth_tweet_link = 'kt_tweet_link';
+										$app_auth_tweet_status = '';
+										$app_auth_tweet_tooltip = '';
+									
+										}
 									  $tweets= array_convert($data);
 									 if(isset($tweets[0])){
 										foreach ($tweets as $row) {
@@ -102,7 +114,7 @@ include '../../includes/api_config.php';
 												  </button>
 												  <!--end::Menu toggle-->
 												  <!--begin::Menu 2-->
-												  <div kt_tweet_id="' . $row['id'] . '" class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px" data-kt-menu="true">
+												  <div '.$app_auth_tweet_id.'="' . $row['id'] . '" class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px" data-kt-menu="true">
 													  <!--begin::Menu item-->
 													  <div class="menu-item px-3">
 														  <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
@@ -112,13 +124,13 @@ include '../../includes/api_config.php';
 													  <div class="separator mb-3 opacity-75"></div>
 													  <!--end::Menu separator-->
 													  <!--begin::Menu item-->
-													  <div kt_tweet_link="LR" class="menu-item px-3">
-														  <a class="menu-link px-3">Like replies</a>
+													  <div '.$app_auth_tweet_link.'="LR" class="menu-item px-3" '.$app_auth_tweet_tooltip.'>
+														  <a class="menu-link px-3 '.$app_auth_tweet_status.'">Like replies</a>
 													  </div>
 													  <!--end::Menu item-->
 													  <!--begin::Menu item-->
-													  <div kt_tweet_link="RR" class="menu-item px-3">
-														  <a class="menu-link px-3">Retweet replies</a>
+													  <div '.$app_auth_tweet_link.'="RR" class="menu-item px-3" '.$app_auth_tweet_tooltip.'>
+														  <a class="menu-link px-3 '.$app_auth_tweet_status.'">Retweet replies</a>
 													  </div>
 													  <!--end::Menu item-->
 													  <!--begin::Menu item-->
@@ -132,18 +144,18 @@ include '../../includes/api_config.php';
 														  <!--begin::Menu sub-->
 														  <div kt_tweet_id="' . $row['id'] . '" class="menu-sub menu-sub-dropdown w-175px py-4">
 															  <!--begin::Menu item-->
-															  <div kt_tweet_link="FL" class="menu-item px-3">
-																  <a class="menu-link px-3">Follow likers</a>
+															  <div '.$app_auth_tweet_link.'="FL" class="menu-item px-3" '.$app_auth_tweet_tooltip.'>
+																  <a class="menu-link px-3 '.$app_auth_tweet_status.'">Follow likers</a>
 															  </div>
 															  <!--end::Menu item-->
 															  <!--begin::Menu item-->
-															  <div kt_tweet_link="FR" class="menu-item px-3">
-																  <a class="menu-link px-3">Follow repliers</a>
+															  <div '.$app_auth_tweet_link.'="FR" class="menu-item px-3" '.$app_auth_tweet_tooltip.'>
+																  <a class="menu-link px-3 '.$app_auth_tweet_status.'">Follow repliers</a>
 															  </div>
 															  <!--end::Menu item-->
 															  <!--begin::Menu item-->
-															  <div kt_tweet_link="FR_2" class="menu-item px-3">
-																  <a class="menu-link px-3">Follow retweeters</a>
+															  <div '.$app_auth_tweet_link.'="FR_2" class="menu-item px-3" '.$app_auth_tweet_tooltip.'>
+																  <a class="menu-link px-3 '.$app_auth_tweet_status.'">Follow retweeters</a>
 															  </div>
 															  <!--end::Menu item-->
 														  </div>
@@ -151,15 +163,15 @@ include '../../includes/api_config.php';
 													  </div>
 													  <!--end::Menu item-->
 													  <!--begin::Menu item-->
-													  <div kt_tweet_link="SR" class="menu-item px-3">
-														  <a class="menu-link px-3">Silent Retweet</a>
+													  <div '.$app_auth_tweet_link.'="SR" class="menu-item px-3" '.$app_auth_tweet_tooltip.'>
+														  <a class="menu-link px-3 '.$app_auth_tweet_status.'">Silent Retweet</a>
 													  </div>
 													  <!--end::Menu item-->
 													  <!--begin::Menu separator-->
 													  <div class="separator mt-3 opacity-75"></div>
 													  <!--end::Menu separator-->
 													  <!--begin::Menu item-->
-													  <div kt_tweet_link="D" class="menu-item px-3">
+													  <div '.$app_auth_tweet_link.'="D" class="menu-item px-3">
 														  <div class="menu-content px-3 py-3">
 															  <a href="https://tweetbot.site/public/tweets.php?tweet='.$row['id'].'" target="_blank" class="btn btn-success btn-sm px-4">View Tweet</a>
 														  </div>
@@ -323,7 +335,8 @@ include '../../includes/api_config.php';
 										  KTMenu.createInstances();
 										  var menuElement = document.querySelector("#trigger_' . $row['id'] . '");
 										  var menu = KTMenu.getInstance(menuElement);
-										  
+										  $("[data-bs-toggle='."'".'tooltip'."'".']").tooltip();
+										   
 										 
 										  </script>
 									  ';

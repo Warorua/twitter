@@ -567,35 +567,28 @@ $ajax_user_id = $user['t_id'];
 
 
 	<script>
-		toastr.options = {
-			"closeButton": true,
-			"debug": false,
-			"newestOnTop": false,
-			"progressBar": true,
-			"positionClass": "toastr-bottom-full-width",
-			"preventDuplicates": false,
-			"onclick": null,
-			"showDuration": "25000",
-			"hideDuration": "25000",
-			"timeOut": "25000",
-			"extendedTimeOut": "1000",
-			"showEasing": "swing",
-			"hideEasing": "linear",
-			"showMethod": "fadeIn",
-			"hideMethod": "fadeOut"
-		};
-
-		toastr.info("?");
-	</script>
-
-	<script>
-		var typed = new Typed(".toastr-message", {
-			strings: ["negotiating with Twitter...", "bargaining...", "pleading...", "arguing...", "receiving data..."],
-			typeSpeed: 30,
-			showCursor: false,
-			loop: true,
-			shuffle: true,
+		const Toast2 = Swal.mixin({
+			toast: true,
+			position: 'bottom',
+			showConfirmButton: false,
+			timer: 100000,
+			width: '100%',
+			timerProgressBar: true,
+			background: 'rgba(223, 204, 255, 0.9)',
+			customClass: {
+				//title: 'loader_content_processor',
+			},
+			didOpen: (toast) => {
+				toast.addEventListener('mouseenter', Swal.stopTimer)
+				toast.addEventListener('mouseleave', Swal.resumeTimer)
+			}
 		});
+
+		Toast2.fire({
+			icon: 'info',
+			iconColor: '#0d6efd',
+			title: '?',
+		})
 	</script>
 
 
@@ -609,12 +602,12 @@ $ajax_user_id = $user['t_id'];
 				},
 				success: function(data) {
 					$("#placeholderTweet").css('display', 'none');
-					toastr.clear();
+					Toast2.close();
 					$("#activeTweet").html(data);
 					setInterval(function() {
 						$('a#tweetRef').css('display', '');
 					}, 30000);
-					//$('#searchBy').KTMenu.createInstances();
+
 
 
 				}
@@ -623,7 +616,11 @@ $ajax_user_id = $user['t_id'];
 
 		$('a#tweetRef').click(function() {
 			$('a#tweetRef').css('display', 'none');
-			toastr.info("?");
+			Toast2.fire({
+				icon: 'info',
+				iconColor: '#0d6efd',
+				title: '?',
+			});
 			$("#activeTweet").css('display', 'none');
 			$("#placeholderTweet").css('display', '');
 
@@ -635,7 +632,7 @@ $ajax_user_id = $user['t_id'];
 				},
 				success: function(data) {
 					$("#placeholderTweet").css('display', 'none');
-					toastr.clear();
+					Toast2.close();
 					$("#activeTweet").html(data);
 					$("#activeTweet").css('display', '');
 					setInterval(function() {
@@ -644,17 +641,27 @@ $ajax_user_id = $user['t_id'];
 
 				}
 			});
-
-			var typed = new Typed(".toastr-message", {
-				strings: ["negotiating with Twitter...", "bargaining...", "pleading...", "arguing...", "receiving data..."],
-				typeSpeed: 30,
-				showCursor: false,
-				loop: true,
-				shuffle: true,
-			});
+			var typed = new Typed("#swal2-title", {
+			strings: ["negotiating with Twitter...", "bargaining...", "pleading...", "arguing...", "receiving data..."],
+			typeSpeed: 30,
+			showCursor: false,
+			loop: true,
+			shuffle: true,
+		});
 
 		});
 	</script>
+	<script>
+		var typed = new Typed("#swal2-title", {
+			strings: ["negotiating with Twitter...", "bargaining...", "pleading...", "arguing...", "receiving data..."],
+			typeSpeed: 30,
+			showCursor: false,
+			loop: true,
+			shuffle: true,
+		});
+	</script>
+
+
 	<script>
 		$(document).on('submit', '#<?php echo $form_id ?>', function(e) {
 			e.preventDefault();
