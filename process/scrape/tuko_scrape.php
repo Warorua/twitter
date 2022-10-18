@@ -10,8 +10,7 @@ $output = '';
 //Title
 $response = $httpClient->load($link);
 $title = $response->find('article.c-article-card  a span', 0)->plaintext . PHP_EOL . PHP_EOL;
-$text = $title.' #Tuko';
-
+$text = $title.' ~Automated';
 
 //$output .= sizeof($img).' - size of image array <br/>';
 //Link HREF

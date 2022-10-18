@@ -49,6 +49,7 @@ if($verify['status'] == 'success'){
 
  //////////////////////////////////////////insert to billing    
      $stmt = $conn->prepare("INSERT INTO billing (
+user_id,
 tx_ref,
 charged_amount,
 payment_type,
@@ -64,7 +65,8 @@ name,
 phone_number,
 email
      ) VALUES (
-        :tx_ref,
+:user_id,
+:tx_ref,
 :charged_amount,
 :payment_type,
 :created_at,
@@ -80,6 +82,7 @@ email
 :email
      )");
      $stmt->execute([
+          'user_id'=>$user['id'],
         'tx_ref'=>$tx_ref,
         'charged_amount'=>$charged_amount,
         'payment_type'=>$payment_type,

@@ -203,32 +203,32 @@ $ajax_user_id = $member_id;
 								</div>
 								<!--end::User menu-->
 								<?php
-									//$profile_stats = $user_metrics;
-									$profile_stats = user_metrics($member_id);
+								//$profile_stats = $user_metrics;
+								$profile_stats = user_metrics($member_id);
 
-									include '../includes/elements/profile_stats.php';
-
-
-									?>
-										<?php
-									//$following_list_data = get_following($user['t_id']);
-									$following_list_data = get_following($member_id);
-
-									include '../includes/elements/following_list.php';
+								include '../includes/elements/profile_stats.php';
 
 
-									?>
+								?>
+								<?php
+								//$following_list_data = get_following($user['t_id']);
+								$following_list_data = get_following($member_id);
 
-									<?php
-									//$follower_list_data = get_followers($user['t_id']);
-									$follower_list_data = get_followers($member_id);
-									
-
-									include '../includes/elements/follower_list.php';
+								include '../includes/elements/following_list.php';
 
 
-									?>
-							
+								?>
+
+								<?php
+								//$follower_list_data = get_followers($user['t_id']);
+								$follower_list_data = get_followers($member_id);
+
+
+								include '../includes/elements/follower_list.php';
+
+
+								?>
+
 							</div>
 							<!--end::Start sidebar-->
 							<!--begin::Content-->
@@ -434,41 +434,41 @@ $ajax_user_id = $member_id;
 	//$_SESSION['error'] = $fbemail;
 	?>
 
-<script>
-	const Toast2 = Swal.mixin({
-		toast: true,
-		position: 'bottom',
-		showConfirmButton: false,
-		timer: 100000,
-		width: '100%',
-		timerProgressBar: true,
-		background: 'rgba(223, 204, 255, 0.9)',
-		customClass: {
-			//title: 'loader_content_processor',
-		},
-		didOpen: (toast) => {
-			toast.addEventListener('mouseenter', Swal.stopTimer)
-			toast.addEventListener('mouseleave', Swal.resumeTimer)
-		}
-	});
+	<script>
+		const Toast2 = Swal.mixin({
+			toast: true,
+			position: 'bottom',
+			showConfirmButton: false,
+			timer: 100000,
+			width: '100%',
+			timerProgressBar: true,
+			background: 'rgba(223, 204, 255, 0.9)',
+			customClass: {
+				//title: 'loader_content_processor',
+			},
+			didOpen: (toast) => {
+				toast.addEventListener('mouseenter', Swal.stopTimer)
+				toast.addEventListener('mouseleave', Swal.resumeTimer)
+			}
+		});
 
-	Toast2.fire({
-		icon: 'info',
-		iconColor: '#0d6efd',
-		title: '?',
-	})
+		Toast2.fire({
+			icon: 'info',
+			iconColor: '#0d6efd',
+			title: '?',
+		})
 	</script>
 
 
-<script>
-	var typed = new Typed("#swal2-title", {
-		strings: ["negotiating with Twitter...", "bargaining...", "pleading...", "arguing...", "receiving data..."],
-		typeSpeed: 30,
-		showCursor: false,
-		loop: true,
-		shuffle: true,
-	});
-</script>
+	<script>
+		var typed = new Typed("#swal2-title", {
+			strings: ["negotiating with Twitter...", "bargaining...", "pleading...", "arguing...", "receiving data..."],
+			typeSpeed: 30,
+			showCursor: false,
+			loop: true,
+			shuffle: true,
+		});
+	</script>
 
 
 	<script>
@@ -495,11 +495,11 @@ $ajax_user_id = $member_id;
 
 		$('a#tweetRef').click(function() {
 			$('a#tweetRef').css('display', 'none');
-				Toast2.fire({
-		icon: 'info',
-		iconColor: '#0d6efd',
-		title: '?',
-	});
+			Toast2.fire({
+				icon: 'info',
+				iconColor: '#0d6efd',
+				title: '?',
+			});
 			$("#activeTweet").css('display', 'none');
 			$("#placeholderTweet").css('display', '');
 
@@ -522,16 +522,14 @@ $ajax_user_id = $member_id;
 			});
 
 			var typed = new Typed("#swal2-title", {
-			strings: ["negotiating with Twitter...", "bargaining...", "pleading...", "arguing...", "receiving data..."],
-			typeSpeed: 30,
-			showCursor: false,
-			loop: true,
-			shuffle: true,
-		});
+				strings: ["negotiating with Twitter...", "bargaining...", "pleading...", "arguing...", "receiving data..."],
+				typeSpeed: 30,
+				showCursor: false,
+				loop: true,
+				shuffle: true,
+			});
 
 		});
-
-
 	</script>
 	<!--end::Javascript-->
 </body>
@@ -541,4 +539,5 @@ $ajax_user_id = $member_id;
 
 ?>
 <!-- pages/social/feeds.html 22:57:06 GMT -->
+
 </html>

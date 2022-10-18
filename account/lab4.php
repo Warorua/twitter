@@ -9,7 +9,7 @@
  include '../includes/api_config.php';
  use Abraham\TwitterOAuth\TwitterOAuth;
 
-//* Essential access
+/* Essential access
 $consumer_key = 'YRTcVlyLV1g72sQlKDlNbwSAI';
 //$consumer_key = 'g72sQlKDlNbwSAI';
 $consumer_secret = 'WSxtDMCiVh8GetLznc8hVO9DbBPLzDzhSFIgA5Ik7m6eM0MZbo';
@@ -39,9 +39,15 @@ $user_client = new UserClient(
   );
 //*/
 
+ // $connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
+ $abraham_client->setApiVersion('1.1');
+ $data = $abraham_client->get('direct_messages/events/list', [
+    "count" => 50,
+    //'id' => 488631023,
+     
+    ]);
 
- $connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
-$content = $connection->get("account/verify_credentials");
+// $content = $connection->get("account/verify_credentials");
 
 //$content = $abraham_client->get("account/verify_credentials");
 
@@ -52,9 +58,9 @@ $content = $connection->get("account/verify_credentials");
 // $stmt->execute();
 // $data = $stmt->fetchAll();
 
-echo json_encode($content);
+echo json_encode($data);
 
-//*
+/*
 $arr1 = json_encode($content);
 $arr2 = json_decode($arr1, true);
 //echo $arr2['errors'][0]['code'];
