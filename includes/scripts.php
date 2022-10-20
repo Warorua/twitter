@@ -84,8 +84,6 @@
 			toast.addEventListener('mouseleave', Swal.resumeTimer)
 		}
 	});
-
-
 </script>
 <!--end::Custom Javascript-->
 <!--end::Custom Javascript-->
@@ -517,5 +515,40 @@ $like_perc = ($likes * 100) / 5000;
 
 
 	});
+</script>
+
+
+
+<script>
+	var msg_id;
+	var msg_name;
+	var msg_prof;
+	var msg_username;
+	$(".chatTool").css('display', 'none');
+	function messenger(msg_id, msg_name, msg_prof, msg_username) {
+		var messenger_name = $(this).attr('kt_messenger');
+
+		$("a[kt_msg_name='msgName']").text(msg_name);
+		$("span[kt_msg_username='msgUserName']").text(msg_username);
+
+		$.ajax({
+			method: "POST",
+			url: "../process/get/direct_message.php",
+			data: {
+				msg_id:msg_id,
+				msg_name:msg_name,
+				msg_prof:msg_prof,
+				msg_username:msg_username
+			},
+
+			success: function(data) {
+				$(".userChatsHolder").css('display', 'none');
+				$(".chatTool").css('display', '');
+				$(".userChats").html(data);
+			}
+		});
+
+		//alert(msg_name);
+	}
 </script>
 <script src="https://checkout.flutterwave.com/v3.js"></script>

@@ -1,15 +1,21 @@
 <?php
-require '../vendor/autoload.php';
-include '../includes/conn.php';
-include '../includes/session.php';
-include '../includes/api_config.php';
+if ($_SERVER['REQUEST_METHOD'] != 'POST' && realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME'])) {
+    header('HTTP/1.0 403 Forbidden', TRUE, 403);
+    die(header('location: /index.php'));
+}
 
+include '../../includes/conn.php';
+include '../../includes/session.php';
+require '../../vendor/autoload.php';
+include '../../includes/api_config.php';
 
+if(isset($_POST['search'])){
+  
 try{
-    $user_msg_2 = $user_client->getUserByUsername('kot__agent');
+    $user_msg_2 = $user_client->getUserByUsername($_POST['search']);
 echo '
 	          <!--begin::User-->
-	              <div onclick="messenger(' . "'" . '' . $messager_id . '' . "'" . ', ' . "'" . '' . $user_msg_2->getName() . '' . "'" . ', ' . "'" . '' . pic_fix($user_msg_2->getProfileImageUrl()) . '' . "'" . ', ' . "'" . '' . $user_msg_2->getUsername() . '' . "'" . ')" class="d-flex flex-stack py-4 hover-scale">
+	              <div onclick="messenger(' . "'" . '' . $user_msg_2->getId() . '' . "'" . ', ' . "'" . '' . $user_msg_2->getName() . '' . "'" . ', ' . "'" . '' . pic_fix($user_msg_2->getProfileImageUrl()) . '' . "'" . ', ' . "'" . '' . $user_msg_2->getUsername() . '' . "'" . ')" class="d-flex flex-stack py-4 hover-scale">
 	             	 <!--begin::Details-->
 	                	<div class="d-flex align-items-center">
 		             	<!--begin::Avatar-->
@@ -39,15 +45,12 @@ echo '
 }
 catch(Exception $e){
     echo '404';
+}  
+}else{
+    echo '403';
 }
 
 
-//echo json_encode($user);
-//echo $data .'<br/><br/><br/>';
 
-//echo $_SESSION['mypic'].'<br/><br/><br/>';
 
-//echo $good_pic  .'<br/><br/><br/>';
-
-//echo $good_pic2  .'<br/><br/><br/>';
-//$myfile = base64_to_jpeg($base_file, 'tmp.jpg');
+?>
