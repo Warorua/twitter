@@ -264,6 +264,7 @@ $dt_1 = $stmt->fetchAll();
 $likes = 0;
 $tweets = 0;
 $follow = 0;
+$dm = 0;
 foreach ($dt_1 as $row) {
 	$cmd = $row['command'];
 	$count = $row['count'];
