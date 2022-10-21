@@ -285,11 +285,16 @@ foreach ($dt_1 as $row) {
 	if ($cmd == 'tweet') {
 		$tweets += $count;
 	}
+
+	if ($cmd == 'dm') {
+		$dm += $count;
+	}
 }
 
 $follow_perc = ($follow * 100) / 400;
 $tweet_perc = ($tweets * 100) / 2400;
 $like_perc = ($likes * 100) / 5000;
+$dm_perc = ($dm * 100) / 1000;
 ?>
 
 <script>
@@ -319,7 +324,7 @@ $like_perc = ($likes * 100) / 5000;
 		// Data
 		var data = [{
 			category: "Direct Messages",
-			value: 15,
+			value: <?php echo $dm_perc ?>,
 			full: 100,
 			columnSettings: {
 				fill: chart.get("colors").getIndex(0)

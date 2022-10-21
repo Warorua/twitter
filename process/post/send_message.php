@@ -57,7 +57,7 @@ if(isset($ms_3['ops'][1]['insert']['image'])){
 
 
 
-
+$command = 'dm';
 
 
 $abraham_client->setApiVersion('1.1');
@@ -74,7 +74,7 @@ $obj = '';
             ]
         ]
     ];
-
+    engine_control($command, 1);
 $data = $abraham_client->post('direct_messages/events/new', $obj, true);
 $_SESSION['success'] = 'Message sent!';
 echo json_encode($data);
