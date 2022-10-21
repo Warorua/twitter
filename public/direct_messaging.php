@@ -437,14 +437,14 @@ $ajax_user_id = $member_id;
 									<div class="card-footer pt-4" id="kt_chat_messenger_footer">
 										<form class="chatTool">
 											<!--begin:Toolbar-->
-											<div style="width:100%;" class="d-flex flex-stack">
+											<div class="row mt-3">
 												<!--begin::Actions-->
-												<div style="width:100%;" class="d-flex align-items-center me-2">
+												<div class="d-flex align-items-center me-2 col-md-7">
 													<!--begin::Form-->
 													<div style="width:100%;" class="ql-quil ql-quil-plain pb-3">
 														<!--begin::Editor-->
 														<input name="about" type="hidden">
-														<div style="width:100%;" data-kt-element="input" class="py-6 kt_docs_quill_basic col-md-12"></div>
+														<div data-kt-element="input" class="py-6 kt_docs_quill_basic"></div>
 														<!--end::Editor-->
 														<div class="separator"></div>
 													</div>
@@ -452,7 +452,10 @@ $ajax_user_id = $member_id;
 												</div>
 												<!--end::Actions-->
 												<!--begin::Send-->
-												<button class="btn btn-primary" type="submit" data-kt-element="send">Send</button>
+												<div class="col-md-4 mt-3">
+													<button class="btn btn-primary w-100" type="submit" data-kt-element="send">Send</button>
+
+												</div>
 												<!--end::Send-->
 											</div>
 											<!--end::Toolbar-->
