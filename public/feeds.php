@@ -29,6 +29,8 @@ if ($member_data['data']['verified']) {
 
 
 $ajax_user_id = $member_id;
+$page_sub_1 = 'User';
+$page_sub_2 = 'View';
 ?>
 <!--end::Head-->
 <!--begin::Body-->
