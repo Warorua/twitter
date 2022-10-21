@@ -437,14 +437,14 @@ $ajax_user_id = $member_id;
 									<div class="card-footer pt-4" id="kt_chat_messenger_footer">
 										<form class="chatTool">
 											<!--begin:Toolbar-->
-											<div class="d-flex flex-stack">
+											<div style="width:100%;" class="d-flex flex-stack">
 												<!--begin::Actions-->
-												<div class="d-flex align-items-center me-2">
+												<div style="width:100%;" class="d-flex align-items-center me-2">
 													<!--begin::Form-->
-													<div class="ql-quil ql-quil-plain pb-3">
+													<div style="width:100%;" class="ql-quil ql-quil-plain pb-3">
 														<!--begin::Editor-->
 														<input name="about" type="hidden">
-														<div style="width:50em;" data-kt-element="input" class="py-6 kt_docs_quill_basic"></div>
+														<div style="width:100%;" data-kt-element="input" class="py-6 kt_docs_quill_basic col-md-12"></div>
 														<!--end::Editor-->
 														<div class="separator"></div>
 													</div>
