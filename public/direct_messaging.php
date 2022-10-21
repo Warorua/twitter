@@ -435,7 +435,7 @@ $ajax_user_id = $member_id;
 									<!--end::Card body-->
 									<!--begin::Card footer-->
 									<div class="card-footer pt-4" id="kt_chat_messenger_footer">
-										<form class="chatTool">
+										<form class="chatTool container">
 											<!--begin:Toolbar-->
 											<div class="row mt-3">
 												<!--begin::Actions-->
@@ -583,5 +583,4 @@ $ajax_user_id = $member_id;
 
 ?>
 <!-- apps/chat/private.html 23:02:14 GMT -->
-
 </html>
