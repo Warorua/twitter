@@ -123,7 +123,7 @@ $ajax_user_id = $member_id;
 											<!--end::Icon-->
 											<!--begin::Input-->
 											<div class="input-group mb-5">
-												<input type="text" class="form-control form-control-solid px-15" name="search" value="" placeholder="Enter username to send DM..." />
+												<input type="text" class="form-control form-control-solid px-15" name="search" value="" placeholder="Enter username to DM..." />
 												<button class="btn btn-light-primary hover-scale" id="basic-addon1" type="submit">
 													<!--begin::Svg Icon | path: icons/duotune/communication/com006.svg-->
 													<span class="svg-icon svg-icon-2x">
