@@ -17,8 +17,8 @@ foreach($data as $row){
     //echo $row['id'].'------'.$interval->format("%H").' </br>';
    
     if($tim >= 24){
-       // $stmt = $conn->prepare("DELETE FROM engine_monitor WHERE id=:id");
-      //  $stmt->execute(['id'=>$row['id']]);
+        $stmt = $conn->prepare("DELETE FROM engine_monitor WHERE id=:id");
+        $stmt->execute(['id'=>$row['id']]);
         echo 'Yes<br/>';
     }else{
         echo 'No<br/>';
