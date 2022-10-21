@@ -452,7 +452,7 @@ $ajax_user_id = $member_id;
 												</div>
 												<!--end::Actions-->
 												<!--begin::Send-->
-												<div class="col-md-4 mt-3">
+												<div class="col-md-4 mt-5">
 													<button class="btn btn-primary w-100" type="submit" data-kt-element="send">Send</button>
 
 												</div>
