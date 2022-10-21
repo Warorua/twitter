@@ -1,4 +1,4 @@
-<form id="<?php echo $form_id ?>" class="ql-quil ql-quil-plain pb-3" method="POST">
+<form id="<?php echo $form_id ?>" class="ql-quil ql-quil-plain pb-3" method="POST" action="<?php echo $form_action ?>" enctype="multipart/form-data">
     <!--begin::Main form-->
     <div class="card card-flush mb-10">
         <!--begin::Header-->
@@ -14,73 +14,76 @@
         <!--begin::Body-->
         <div class="card-body pt-2 pb-0">
             <!--begin::Input-->
-            <textarea class="form-control bg-transparent border-0 px-0 h-125px" id="kt_social_feeds_post_input" name="text" data-kt-autosize="true" rows="1" placeholder="Type your message..."></textarea>
+            <textarea class="form-control bg-transparent border-0 px-0 h-125px" id="kt_social_feeds_post_input" name="text" data-kt-autosize="true" rows="1" placeholder="Type your <?php echo $rep_text ?>..."></textarea>
             <!--end::Input-->
             <div class="row g-5 w-100">
-                <div class="col-md-6">
-                    <!--begin::Image input-->
-                    <div class="image-input image-input-outline w-100 mb-5" data-kt-image-input="true" style="background-image: url(../assets/media/stock/1600x800/img-3.jpg)">
-                        <!--begin::Image preview wrapper-->
-                        <div class="image-input-wrapper w-100 h-125px" style="background-image: url(../assets/media/stock/1600x800/img-3.jpg)"></div>
-                        <!--end::Image preview wrapper-->
 
-                        <!--begin::Edit button-->
-                        <label class="btn btn-icon btn-circle btn-color-muted btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" data-bs-dismiss="click" title="Change avatar">
-                            <i class="bi bi-pencil-fill fs-7"></i>
 
-                            <!--begin::Inputs-->
-                            <input type="file" name="image" accept=".png, .jpg, .jpeg" />
-                            <input type="hidden" name="avatar_remove" />
-                            <!--end::Inputs-->
-                        </label>
-                        <!--end::Edit button-->
 
-                        <!--begin::Cancel button-->
-                        <span class="btn btn-icon btn-circle btn-color-muted btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" data-bs-dismiss="click" title="Cancel avatar">
-                            <i class="bi bi-x fs-2"></i>
-                        </span>
-                        <!--end::Cancel button-->
+            <?php echo $rep_status ?>
 
-                        <!--begin::Remove button-->
-                        <span class="btn btn-icon btn-circle btn-color-muted btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" data-bs-dismiss="click" title="Remove avatar">
-                            <i class="bi bi-x fs-2"></i>
-                        </span>
-                        <!--end::Remove button-->
+
+
+                <!--begin::Input group-->
+                <div class="form-group row">
+                    <!--begin::Label-->
+                    <label class="col-lg-2 col-form-label text-lg-right">Attach media:</label>
+                    <!--end::Label-->
+
+                    <!--begin::Col-->
+                    <div class="col-lg-10">
+                        <!--begin::Dropzone-->
+                        <div class="dropzone dropzone-queue mb-2" id="kt_dropzonejs_example_3">
+                            <!--begin::Controls-->
+                            <div class="dropzone-panel mb-lg-0 mb-2">
+                                <a class="dropzone-select btn btn-sm btn-primary me-2">Attach media</a>
+                                <a class="dropzone-remove-all btn btn-sm btn-light-primary">Remove All</a>
+                            </div>
+                            <!--end::Controls-->
+
+                            <!--begin::Items-->
+                            <div class="dropzone-items wm-200px">
+                                <div class="dropzone-item" style="display:none">
+                                    <!--begin::File-->
+                                    <div class="dropzone-file">
+                                        <div class="dropzone-filename" title="Tweet_media.jpg">
+                                            <span data-dz-name>Tweet_media.jpg</span>
+                                            <strong>(<span data-dz-size>340kb</span>)</strong>
+                                        </div>
+
+                                        <div class="dropzone-error" data-dz-errormessage></div>
+                                    </div>
+                                    <!--end::File-->
+
+                                    <!--begin::Progress-->
+                                    <div class="dropzone-progress">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end::Progress-->
+
+                                    <!--begin::Toolbar-->
+                                    <div class="dropzone-toolbar">
+                                        <span class="dropzone-delete" data-dz-remove><i class="bi bi-x fs-1"></i></span>
+                                    </div>
+                                    <!--end::Toolbar-->
+                                </div>
+                            </div>
+                            <!--end::Items-->
+                        </div>
+                        <!--end::Dropzone-->
+
+                        <!--begin::Hint-->
+                        <span class="form-text text-muted">Max media size is 15MB and max number of files is 4.</span>
+                        <!--end::Hint-->
                     </div>
-                    <!--end::Image input-->
+                    <!--end::Col-->
                 </div>
-                <div class="col-md-6">
-                    <!--begin::Image input-->
-                    <div class="image-input image-input-outline w-100 ms-5" data-kt-image-input="true" style="background-image: url(../assets/media/stock/1600x800/img-3.jpg)">
-                        <!--begin::Image preview wrapper-->
-                        <div class="image-input-wrapper w-100 h-125px" style="background-image: url(../assets/media/stock/1600x800/img-3.jpg)"></div>
-                        <!--end::Image preview wrapper-->
+                <!--end::Input group-->
 
-                        <!--begin::Edit button-->
-                        <label class="btn btn-icon btn-circle btn-color-muted btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" data-bs-dismiss="click" title="Change avatar">
-                            <i class="bi bi-pencil-fill fs-7"></i>
 
-                            <!--begin::Inputs-->
-                            <input type="file" name="image_2" accept=".png, .jpg, .jpeg" />
-                            <input type="hidden" name="avatar_remove" />
-                            <!--end::Inputs-->
-                        </label>
-                        <!--end::Edit button-->
-
-                        <!--begin::Cancel button-->
-                        <span class="btn btn-icon btn-circle btn-color-muted btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" data-bs-dismiss="click" title="Cancel avatar">
-                            <i class="bi bi-x fs-2"></i>
-                        </span>
-                        <!--end::Cancel button-->
-
-                        <!--begin::Remove button-->
-                        <span class="btn btn-icon btn-circle btn-color-muted btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" data-bs-dismiss="click" title="Remove avatar">
-                            <i class="bi bi-x fs-2"></i>
-                        </span>
-                        <!--end::Remove button-->
-                    </div>
-                    <!--end::Image input-->
-                </div>
 
 
             </div>

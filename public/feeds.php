@@ -125,7 +125,7 @@ $ajax_user_id = $member_id;
 											<ul class="nav nav-pills nav-pills-custom flex-column border-transparent fs-5 fw-bold">
 												<!--begin::Nav item-->
 												<li class="nav-item mt-5">
-													<a class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0 active" href="feeds.html">
+													<a class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0 active" id="usFeeds">
 														<!--begin::Svg Icon | path: icons/duotune/general/gen010.svg-->
 														<span class="svg-icon svg-icon-3 svg-icon-muted me-3">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +142,7 @@ $ajax_user_id = $member_id;
 												<!--end::Nav item-->
 												<!--begin::Nav item-->
 												<li class="nav-item mt-5">
-													<a class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0" href="activity.html">
+													<a href="../public/all_tweets.php?user=<?php echo $member_id ?>" class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0" id="usTweets">
 														<!--begin::Svg Icon | path: icons/duotune/arrows/arr070.svg-->
 														<span class="svg-icon svg-icon-3 svg-icon-muted me-3">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +152,7 @@ $ajax_user_id = $member_id;
 																<rect x="3" y="13" width="3" height="6" rx="1.5" fill="currentColor" />
 															</svg>
 														</span>
-														<!--end::Svg Icon-->Activity
+														<!--end::Svg Icon-->Tweets
 														<!--begin::Bullet-->
 														<span class="bullet-custom position-absolute start-0 top-0 w-3px h-100 bg-primary rounded-end"></span>
 														<!--end::Bullet-->
@@ -263,7 +263,8 @@ $ajax_user_id = $member_id;
 								<!--end::Mobile toolbar-->
 
 
-
+								<div class="mb-10" id="kt_social_tweets_posts">
+								</div>
 
 
 								<!--begin::Posts-->

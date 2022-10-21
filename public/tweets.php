@@ -3,18 +3,21 @@ include '../includes/head.php';
 if (isset($_GET['tweet'])) {
 	if (is_numeric($_GET['tweet'])) {
 		//$abraham_client->setApiVersion('2');
-		$statues = array_convert($tweet_client->getTweet($_GET['tweet']));
 
-		if (!isset($statues['data'])) {
-			$tweet_id = 1577370657020870656;
-		} else {
+		try {
+			$statues = array_convert($tweet_client->getTweet($_GET['tweet']));
 			$tweet_id = $_GET['tweet'];
+		} catch (Exception $e) {
+			$tweet_id = 1582432112384233474;
+			$_SESSION['error'] = 'Invalid tweet id';
 		}
 	} else {
-		$tweet_id = 1577370657020870656;
+		$tweet_id = 1582432112384233474;
+		$_SESSION['error'] = 'Invalid tweet id';
 	}
 } else {
-	$tweet_id = 1577370657020870656;
+	$tweet_id = 1582432112384233474;
+	$_SESSION['error'] = 'Invalid tweet id';
 }
 
 $tweet_data = array_convert($tweet_client->getTweet($tweet_id));
@@ -745,16 +748,17 @@ if ($tweet_data['data']['verified']) {
 									<!--begin::Body-->
 									<div class="card-body pt-6">
 										<?php
-$tweet_data_2 = tweet($tweet_data['data']['id']);
-if (isset($tweet_data_2['includes'])) {
-	foreach ($tweet_data_2['includes']['media'] as $row_3) {
-		$tweet_type = $row_3['type'];
-		$tweet_media_key = $row_3['media_key'];
-		if ($row_3['type'] != 'photo') {
-		  if(!isset($photo_key)){  $data_2 = tweet_video($tweet_data['data']['id']);
-			foreach ($data_2['includes']['media'] as $id=>$row_4) {
-				$video = $row_4['variants'][0]['url'];
-				echo '
+										$tweet_data_2 = tweet($tweet_data['data']['id']);
+										if (isset($tweet_data_2['includes'])) {
+											foreach ($tweet_data_2['includes']['media'] as $row_3) {
+												$tweet_type = $row_3['type'];
+												$tweet_media_key = $row_3['media_key'];
+												if ($row_3['type'] != 'photo') {
+													if (!isset($photo_key)) {
+														$data_2 = tweet_video($tweet_data['data']['id']);
+														foreach ($data_2['includes']['media'] as $id => $row_4) {
+															$video = $row_4['variants'][0]['url'];
+															echo '
 				<video
 				id="my-video"
 			class="video-js vjs-theme-city rounded"
@@ -775,18 +779,18 @@ if (isset($tweet_data_2['includes'])) {
 			</p>
 			  </video>
 				';
-				if($id == 0){
-				  break;
-
-				}
-			}
-			$video_key = 1;}
-		} else {
-		  if(!isset($video_key)){
-		  $photo_key = 1;
-			$tweet_img = $row_3['url'];
-			$img = "'" . $tweet_img . "'";
-			echo '
+															if ($id == 0) {
+																break;
+															}
+														}
+														$video_key = 1;
+													}
+												} else {
+													if (!isset($video_key)) {
+														$photo_key = 1;
+														$tweet_img = $row_3['url'];
+														$img = "'" . $tweet_img . "'";
+														echo '
 			<!--begin::Col-->
 		<div kt_img_type="tweetImg" class="w-auto h-300px mt-3">
 			<!--begin::Item-->
@@ -804,12 +808,13 @@ if (isset($tweet_data_2['includes'])) {
 		</div>
 		<!--end::Col-->
 		
-			';}
-		}
-	}
-}else{
-	echo 'This tweet has no media!';
-}
+			';
+													}
+												}
+											}
+										} else {
+											echo 'This tweet has no media!';
+										}
 
 
 										?>
@@ -821,6 +826,22 @@ if (isset($tweet_data_2['includes'])) {
 							<!--end::Col-->
 							<!--begin::Col-->
 							<div class="col-xl-8 mb-5 mb-xl-10">
+
+
+
+
+								<?php
+
+								if (isset($_SESSION['tweetMedia'])) {
+									unset($_SESSION['tweetMedia']);
+								}
+								$form_action = '/process/post/tweet.php';
+								$form_id = 'tweet_process_09';
+								$rep_status = '<input type="hidden" value="'.$tweet_id.'" name="tweet_id" />';
+								$rep_text = 'reply';
+								include '../includes/elements/tweet_form.php';
+								?>
+
 								<!--begin::Timeline Widget 1-->
 								<div class="card card-flush">
 
@@ -860,12 +881,12 @@ if (isset($tweet_data_2['includes'])) {
 
 															<?php
 															$tw_rep = tweet_reply_printer($tweet_data['data']['id'], 10);
-														
-															if(isset($tw_rep['data'])){
-																foreach ($tw_rep['data'] as $row) {
-																$rep_user = array_convert($user_client->getUserById($row['author_id']));
 
-																echo '
+															if (isset($tw_rep['data'])) {
+																foreach ($tw_rep['data'] as $row) {
+																	$rep_user = array_convert($user_client->getUserById($row['author_id']));
+
+																	echo '
 																															<tr>
 																	<td>
 																		<div class="symbol symbol-50px">
@@ -873,16 +894,29 @@ if (isset($tweet_data_2['includes'])) {
 																		</div>
 																	</td>
 																	<td>
-																		<a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">' . $rep_user['data']['name'] . '</a>
+																		<a href="../public/feeds.php?user=' . $rep_user['data']['id'] . '" class="text-dark fw-bold text-hover-primary mb-1 fs-6">' . $rep_user['data']['name'] . '</a>
 																		<span class="text-muted fw-semibold d-block fs-7">' . $rep_user['data']['username'] . '</span>
 																	</td>
 																	<td>
 																	' . $row['text'] . '
 																	</td>
+																	<td class="text-end">
+																	<a href="../public/tweets.php?tweet=' . $row['id'] . '" target="_blank" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
+																		<span class="svg-icon svg-icon-5 svg-icon-gray-700">
+																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
+																				<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->
+																	</a>
+																</td>
 																</tr>
 																';
-															}}else{
-																
+																}
+															} else {
+
 																echo '
 																<tr>
 																	
@@ -891,7 +925,6 @@ if (isset($tweet_data_2['includes'])) {
 																	</td>
 																</tr>
 																';
-
 															}
 
 
@@ -964,7 +997,7 @@ if (isset($tweet_data_2['includes'])) {
 		</span>
 		<!--end::Svg Icon-->
 	</div>
-	
+
 	<!--end::Scrolltop-->
 	<!--begin::Modals-->
 	<?php include '../includes/modals.php' ?>
@@ -973,6 +1006,115 @@ if (isset($tweet_data_2['includes'])) {
 	<?php include '../includes/scripts.php';
 	//$_SESSION['error'] = $fbemail;
 	?>
+
+	
+<script>
+		// set the dropzone container id
+		const id = "#kt_dropzonejs_example_3";
+		const dropzone = document.querySelector(id);
+
+		// set the preview element template
+		var previewNode = dropzone.querySelector(".dropzone-item");
+		previewNode.id = "";
+		var previewTemplate = previewNode.parentNode.innerHTML;
+		previewNode.parentNode.removeChild(previewNode);
+
+		var myDropzone = new Dropzone(id, { // Make the whole body a dropzone
+			url: "<?php echo $parent_url . $form_action ?>", // Set the url for your upload script location
+			method: "post",
+			parallelUploads: 20,
+			paramName: "file",
+			maxFiles: 4,
+			maxFilesize: 15, // Max filesize in MB
+			acceptedFiles: ".jpeg,.png,.gif,.mp4,.jpg",
+			previewTemplate: previewTemplate,
+			previewsContainer: id + " .dropzone-items", // Define the container to display the previews
+			clickable: id + " .dropzone-select", // Define the element that should be used as click trigger to select files.
+			maxfilesexceeded: function() {
+				const Toast = Swal.mixin({
+					toast: true,
+					position: 'top-end',
+					showConfirmButton: false,
+					timer: 3000,
+					timerProgressBar: true,
+					didOpen: (toast) => {
+						toast.addEventListener('mouseenter', Swal.stopTimer)
+						toast.addEventListener('mouseleave', Swal.resumeTimer)
+					}
+				})
+
+				Toast.fire({
+					icon: 'error',
+					title: 'Maximum files allowed is 4.'
+				})
+			},
+		});
+
+		myDropzone.on("addedfile", function(file) {
+			// Hookup the start button
+			const dropzoneItems = dropzone.querySelectorAll('.dropzone-item');
+			dropzoneItems.forEach(dropzoneItem => {
+				dropzoneItem.style.display = '';
+			});
+		});
+
+		// Update the total progress bar
+		myDropzone.on("totaluploadprogress", function(progress) {
+			const progressBars = dropzone.querySelectorAll('.progress-bar');
+			progressBars.forEach(progressBar => {
+				progressBar.style.width = progress + "%";
+			});
+		});
+
+		myDropzone.on("sending", function(file) {
+			// Show the total progress bar when upload starts
+			const progressBars = dropzone.querySelectorAll('.progress-bar');
+			progressBars.forEach(progressBar => {
+				progressBar.style.opacity = "1";
+			});
+		});
+
+		// Hide the total progress bar when nothing"s uploading anymore
+		myDropzone.on("complete", function(progress) {
+			const progressBars = dropzone.querySelectorAll('.dz-complete');
+
+			setTimeout(function() {
+				progressBars.forEach(progressBar => {
+					progressBar.querySelector('.progress-bar').style.opacity = "0";
+					progressBar.querySelector('.progress').style.opacity = "0";
+				});
+			}, 300);
+		});
+
+
+
+		/////////////////////////final form process
+		$(document).on('submit', '#<?php echo $form_id ?>', function(e) {
+			e.preventDefault();
+
+			formData = new FormData(this);
+			//formData.append('avatar', $('#upload_file_fr').files);
+
+
+			$.ajax({
+				method: "POST",
+				url: "..<?php echo $form_action ?>",
+				data: formData,
+				processData: false, // tell jQuery not to process the data
+				contentType: false, // tell jQuery not to set contentType
+				enctype: 'multipart/form-data',
+
+				success: function(data) {
+					// alert(data);
+					//console.log(data); 
+
+					window.location.reload();
+				}
+			});
+		});
+	</script>
+
+
 	<!--end::Javascript-->
 </body>
 <!--end::Body-->

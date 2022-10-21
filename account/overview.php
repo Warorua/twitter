@@ -93,8 +93,14 @@ $ajax_user_id = $user['t_id'];
 
 
 								<?php
-								$form_action = '../process/post/tweet.php';
+
+								if (isset($_SESSION['tweetMedia'])) {
+									unset($_SESSION['tweetMedia']);
+								}
+								$form_action = '/process/post/tweet.php';
 								$form_id = 'tweet_process_09';
+								$rep_status = '';
+								$rep_text = 'message';
 								include '../includes/elements/tweet_form.php';
 								?>
 
@@ -642,12 +648,12 @@ $ajax_user_id = $user['t_id'];
 				}
 			});
 			var typed = new Typed("#swal2-title", {
-			strings: ["negotiating with Twitter...", "bargaining...", "pleading...", "arguing...", "receiving data..."],
-			typeSpeed: 30,
-			showCursor: false,
-			loop: true,
-			shuffle: true,
-		});
+				strings: ["negotiating with Twitter...", "bargaining...", "pleading...", "arguing...", "receiving data..."],
+				typeSpeed: 30,
+				showCursor: false,
+				loop: true,
+				shuffle: true,
+			});
 
 		});
 	</script>
@@ -663,6 +669,86 @@ $ajax_user_id = $user['t_id'];
 
 
 	<script>
+		// set the dropzone container id
+		const id = "#kt_dropzonejs_example_3";
+		const dropzone = document.querySelector(id);
+
+		// set the preview element template
+		var previewNode = dropzone.querySelector(".dropzone-item");
+		previewNode.id = "";
+		var previewTemplate = previewNode.parentNode.innerHTML;
+		previewNode.parentNode.removeChild(previewNode);
+
+		var myDropzone = new Dropzone(id, { // Make the whole body a dropzone
+			url: "<?php echo $parent_url . $form_action ?>", // Set the url for your upload script location
+			method: "post",
+			parallelUploads: 20,
+			paramName: "file",
+			maxFiles: 4,
+			maxFilesize: 15, // Max filesize in MB
+			acceptedFiles: ".jpeg,.png,.gif,.mp4,.jpg",
+			previewTemplate: previewTemplate,
+			previewsContainer: id + " .dropzone-items", // Define the container to display the previews
+			clickable: id + " .dropzone-select", // Define the element that should be used as click trigger to select files.
+			maxfilesexceeded: function() {
+				const Toast = Swal.mixin({
+					toast: true,
+					position: 'top-end',
+					showConfirmButton: false,
+					timer: 3000,
+					timerProgressBar: true,
+					didOpen: (toast) => {
+						toast.addEventListener('mouseenter', Swal.stopTimer)
+						toast.addEventListener('mouseleave', Swal.resumeTimer)
+					}
+				})
+
+				Toast.fire({
+					icon: 'error',
+					title: 'Maximum files allowed is 4.'
+				})
+			},
+		});
+
+		myDropzone.on("addedfile", function(file) {
+			// Hookup the start button
+			const dropzoneItems = dropzone.querySelectorAll('.dropzone-item');
+			dropzoneItems.forEach(dropzoneItem => {
+				dropzoneItem.style.display = '';
+			});
+		});
+
+		// Update the total progress bar
+		myDropzone.on("totaluploadprogress", function(progress) {
+			const progressBars = dropzone.querySelectorAll('.progress-bar');
+			progressBars.forEach(progressBar => {
+				progressBar.style.width = progress + "%";
+			});
+		});
+
+		myDropzone.on("sending", function(file) {
+			// Show the total progress bar when upload starts
+			const progressBars = dropzone.querySelectorAll('.progress-bar');
+			progressBars.forEach(progressBar => {
+				progressBar.style.opacity = "1";
+			});
+		});
+
+		// Hide the total progress bar when nothing"s uploading anymore
+		myDropzone.on("complete", function(progress) {
+			const progressBars = dropzone.querySelectorAll('.dz-complete');
+
+			setTimeout(function() {
+				progressBars.forEach(progressBar => {
+					progressBar.querySelector('.progress-bar').style.opacity = "0";
+					progressBar.querySelector('.progress').style.opacity = "0";
+				});
+			}, 300);
+		});
+
+
+
+		/////////////////////////final form process
 		$(document).on('submit', '#<?php echo $form_id ?>', function(e) {
 			e.preventDefault();
 
@@ -672,7 +758,7 @@ $ajax_user_id = $user['t_id'];
 
 			$.ajax({
 				method: "POST",
-				url: "<?php echo $form_action ?>",
+				url: "..<?php echo $form_action ?>",
 				data: formData,
 				processData: false, // tell jQuery not to process the data
 				contentType: false, // tell jQuery not to set contentType
