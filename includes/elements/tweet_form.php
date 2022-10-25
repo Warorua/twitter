@@ -1,4 +1,4 @@
-<form id="<?php echo $form_id ?>" class="ql-quil ql-quil-plain pb-3" method="POST" action="<?php echo $form_action ?>" enctype="multipart/form-data">
+<form id="<?php echo $form_id ?>" class="ql-quil ql-quil-plain pb-3" method="POST" action="..<?php echo $form_action ?>" enctype="multipart/form-data">
     <!--begin::Main form-->
     <div class="card card-flush mb-10">
         <!--begin::Header-->

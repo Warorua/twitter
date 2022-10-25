@@ -670,7 +670,7 @@ $ajax_user_id = $user['t_id'];
 
 	<script>
 		// set the dropzone container id
-		const id = "#kt_dropzonejs_example_3";
+		const id = "#<?php echo $form_id ?>";
 		const dropzone = document.querySelector(id);
 
 		// set the preview element template
@@ -680,8 +680,8 @@ $ajax_user_id = $user['t_id'];
 		previewNode.parentNode.removeChild(previewNode);
 
 		var myDropzone = new Dropzone(id, { // Make the whole body a dropzone
-			url: "..<?php echo $form_action ?>", // Set the url for your upload script location
-			method: "post",
+			//url: "..<?php //echo $form_action ?>", // Set the url for your upload script location
+			//method: "post",
 			parallelUploads: 20,
 			paramName: "file",
 			maxFiles: 4,
