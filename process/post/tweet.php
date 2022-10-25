@@ -13,8 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 
 
-
-//if (isset($_FILES['file']['name'])) {
+try {
+  //if (isset($_FILES['file']['name'])) {
 
   if (isset($_SESSION['tweetMedia'])) {
     $_SESSION['tweetMedia'] = $_SESSION['tweetMedia'];
@@ -37,7 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
   $media1 = $abraham_client->upload('media/upload', ['media' => $file_path]);
   array_push($_SESSION['tweetMedia'], $media1->media_id_string);
   unlink($file_path);
-//}
+  //}
+} catch (Exception $e) {
+  $_SESSION['error'] = $e->getMessage();
+}
+
 
 
 
