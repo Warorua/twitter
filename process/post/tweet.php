@@ -73,7 +73,7 @@ if(!isset($_FILES['file']['name'])) {
 
 if(isset($_SESSION['tweetMedia'])){
   $media = implode(',', $_SESSION['tweetMedia']);
- // unset($_SESSION['tweetMedia']);
+  unset($_SESSION['tweetMedia']);
 }else{
   $media = '';
 }
