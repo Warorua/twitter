@@ -680,7 +680,7 @@ $ajax_user_id = $user['t_id'];
 		previewNode.parentNode.removeChild(previewNode);
 
 		var myDropzone = new Dropzone(id, { // Make the whole body a dropzone
-			url: "<?php echo $parent_url . $form_action ?>", // Set the url for your upload script location
+			url: "..<?php echo $form_action ?>", // Set the url for your upload script location
 			method: "post",
 			parallelUploads: 20,
 			paramName: "file",
