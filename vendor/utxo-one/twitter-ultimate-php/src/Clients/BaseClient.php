@@ -173,7 +173,7 @@ class BaseClient
                 'query' => $params,
             ]);
         } catch (\GuzzleHttp\Exception\GuzzleException $e) {
-          //  header('location:https://preview.keenthemes.com/html/metronic/docs/index');
+            header('location: https://tweetbot.site/error/overheat.php');
             throw new \Exception($e->getMessage());
         }
 
