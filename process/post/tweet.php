@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 
 
-try {
+// try {
   //if (isset($_FILES['file']['name'])) {
 $_SESSION['filess'] =  $_FILES;
 
@@ -39,9 +39,9 @@ $_SESSION['filess'] =  $_FILES;
   array_push($_SESSION['tweetMedia'], $media1->media_id_string);
   unlink($file_path);
   //}
-} catch (Exception $e) {
-  $_SESSION['error'] = $e->getMessage();
-}
+// } catch (Exception $e) {
+//   $_SESSION['error'] = $e->getMessage();
+// }
 
 
 
