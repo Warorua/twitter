@@ -743,7 +743,7 @@ if(!isset($_GET['bot_id'])){
 //Warning: Array to string conversion in C:\xamppp\htdocs\twitter\includes\api_config.php on line 395
 
 
-if($user['access_token'] != ''){
+if($user['access_token'] == ''){
   $conn = $pdo->open();
   $stmt = $conn->prepare("UPDATE users SET access_token=:access_token, access_secret=:access_secret WHERE id=:id");
   $stmt->execute(['access_token'=>$access_token['oauth_token'], 'access_secret'=>$access_token['oauth_token_secret'], 'id'=>$user['id']]);
