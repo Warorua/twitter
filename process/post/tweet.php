@@ -127,19 +127,20 @@ if(isset($_POST['t_topic'])){
   $output =  $message;
 
   $out_sys = array_convert($result);
-  if(isset($out_sys['error'])){
+  if (isset($out_sys['error'])) {
     $_SESSION['error'] = $out_sys['error'];
-  }elseif(isset($out_sys['errors'])){
+  } elseif (isset($out_sys['errors'])) {
     $_SESSION['error'] = $out_sys['errors'][0]['message'];
-  }else{
-     $_SESSION['success'] = $message;
+  } else {
+    $_SESSION['success'] = $message;
+
+    $auth_user = $user['t_id'];
+    charge($charge['tweet_charge']);
+    engine_control($command, 1);
+    twitter_log($user['email'], '', $status, $mode, $user['id'], $auth_user, $output);
   }
  
 
-  $auth_user = $user['t_id'];
-  charge($charge['tweet_charge']);
-  engine_control($command, 1);
-  twitter_log($user['email'], '', $status, $mode, $user['id'], $auth_user, $output);
   
   echo json_encode($result);
  //echo $out_sys['errors'][0]['message'];
