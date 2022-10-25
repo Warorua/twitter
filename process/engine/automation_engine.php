@@ -93,3 +93,5 @@ if ($data['status'] != 403) {
     echo 'Data already active!';
 }
 //*/
+
+file_get_contents('../post/engine_clear.php');
