@@ -658,7 +658,7 @@ function queueLoad()
       $exec_time = strtotime($data['time']) + 900;
       $stmt = $conn->prepare("INSERT INTO process_engine (request_method,page,object,access_token,access_secret, execution, user_id) VALUES (:req, :page, :object, :access_token, :access_secret, :execution, :user_id)");
       $stmt->execute(['req' => $method, 'page' => $page, 'object' => $js_obj, 'access_token' => $api_app['access_token'], 'access_secret' => $api_app['access_secret'], 'execution' => $exec_time, 'user_id' => $user['id']]);
-      die('Operation added to queue');
+     return exit('Operation added to queue');
     }
   }
 }
