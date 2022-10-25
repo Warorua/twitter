@@ -241,8 +241,8 @@ include 'includes/conn.php';
 						<h3 class="fs-2hx text-dark mb-5" id="how-it-works" data-kt-scroll-offset="{default: 100, lg: 150}">How it Works</h3>
 						<!--end::Title-->
 						<!--begin::Text-->
-						<div class="fs-5 text-muted fw-bold">Save thousands to millions of bucks by using single tool 
-						<br />for different amazing and great useful admin</div>
+						<div class="fs-5 text-muted fw-bold">To get the best experience you need to have an elevated 
+						<br />access Twitter developer account.</div>
 						<!--end::Text-->
 					</div>
 					<!--end::Heading-->
@@ -261,14 +261,14 @@ include 'includes/conn.php';
 									<span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">1</span>
 									<!--end::Badge-->
 									<!--begin::Title-->
-									<div class="fs-5 fs-lg-3 fw-bold text-dark">Jane Miller</div>
+									<div class="fs-5 fs-lg-3 fw-bold text-dark">Getting started</div>
 									<!--end::Title-->
 								</div>
 								<!--end::Heading-->
 								<!--begin::Description-->
-								<div class="fw-semibold fs-6 fs-lg-4 text-muted">Save thousands to millions of bucks 
-								<br />by using single tool for different 
-								<br />amazing and great</div>
+								<div class="fw-semibold fs-6 fs-lg-4 text-muted">Register for Twitter developer account 
+								<br />then apply for an elevated access
+								<br />Developer account</div>
 								<!--end::Description-->
 							</div>
 							<!--end::Story-->
@@ -292,9 +292,9 @@ include 'includes/conn.php';
 								</div>
 								<!--end::Heading-->
 								<!--begin::Description-->
-								<div class="fw-semibold fs-6 fs-lg-4 text-muted">Save thousands to millions of bucks 
-								<br />by using single tool for different 
-								<br />amazing and great</div>
+								<div class="fw-semibold fs-6 fs-lg-4 text-muted">Sign up then navigate to the settings 
+								<br />tab under add App and add your
+								<br />keys and tokens as given by Twitter.</div>
 								<!--end::Description-->
 							</div>
 							<!--end::Story-->
@@ -313,14 +313,14 @@ include 'includes/conn.php';
 									<span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">3</span>
 									<!--end::Badge-->
 									<!--begin::Title-->
-									<div class="fs-5 fs-lg-3 fw-bold text-dark">Enjoy Nautica App</div>
+									<div class="fs-5 fs-lg-3 fw-bold text-dark">Enjoy TweetBot</div>
 									<!--end::Title-->
 								</div>
 								<!--end::Heading-->
 								<!--begin::Description-->
-								<div class="fw-semibold fs-6 fs-lg-4 text-muted">Save thousands to millions of bucks 
-								<br />by using single tool for different 
-								<br />amazing and great</div>
+								<div class="fw-semibold fs-6 fs-lg-4 text-muted">After a successful setup enjoy your adventure 
+								<br />via the awesome features provided 
+								<br />by the App</div>
 								<!--end::Description-->
 							</div>
 							<!--end::Story-->
@@ -334,22 +334,42 @@ include 'includes/conn.php';
 						<div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false" data-tns-speed="2000" data-tns-autoplay="true" data-tns-autoplay-timeout="18000" data-tns-controls="true" data-tns-nav="false" data-tns-items="1" data-tns-center="false" data-tns-dots="false" data-tns-prev-button="#kt_team_slider_prev1" data-tns-next-button="#kt_team_slider_next1">
 							<!--begin::Item-->
 							<div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-								<img src="assets/media/product-demos/demo1.png" class="card-rounded shadow mw-100" alt="" />
+								<img src="assets/media/product-demos/1.png" class="card-rounded shadow mw-100" alt="" />
 							</div>
 							<!--end::Item-->
 							<!--begin::Item-->
 							<div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-								<img src="assets/media/product-demos/demo2.png" class="card-rounded shadow mw-100" alt="" />
+								<img src="assets/media/product-demos/2.png" class="card-rounded shadow mw-100" alt="" />
 							</div>
 							<!--end::Item-->
 							<!--begin::Item-->
 							<div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-								<img src="assets/media/product-demos/demo4.png" class="card-rounded shadow mw-100" alt="" />
+								<img src="assets/media/product-demos/4.png" class="card-rounded shadow mw-100" alt="" />
 							</div>
 							<!--end::Item-->
 							<!--begin::Item-->
 							<div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-								<img src="assets/media/product-demos/demo5.png" class="card-rounded shadow mw-100" alt="" />
+								<img src="assets/media/product-demos/5.png" class="card-rounded shadow mw-100" alt="" />
+							</div>
+							<!--end::Item-->
+							<!--begin::Item-->
+							<div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+								<img src="assets/media/product-demos/6.png" class="card-rounded shadow mw-100" alt="" />
+							</div>
+							<!--end::Item-->
+							<!--begin::Item-->
+							<div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+								<img src="assets/media/product-demos/7.png" class="card-rounded shadow mw-100" alt="" />
+							</div>
+							<!--end::Item-->
+							<!--begin::Item-->
+							<div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+								<img src="assets/media/product-demos/8.png" class="card-rounded shadow mw-100" alt="" />
+							</div>
+							<!--end::Item-->
+							<!--begin::Item-->
+							<div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+								<img src="assets/media/product-demos/9.png" class="card-rounded shadow mw-100" alt="" />
 							</div>
 							<!--end::Item-->
 						</div>
@@ -401,8 +421,8 @@ include 'includes/conn.php';
 							<h3 class="fs-2hx text-white fw-bold mb-5">We Make Things Better</h3>
 							<!--end::Title-->
 							<!--begin::Description-->
-							<div class="fs-5 text-gray-700 fw-bold">Save thousands to millions of bucks by using single tool 
-							<br />for different amazing and great useful admin</div>
+							<div class="fs-5 text-gray-700 fw-bold">Save time by using our automation tools to manage
+							<br />grow and tweet. Be unique. Use your label.</div>
 							<!--end::Description-->
 						</div>
 						<!--end::Heading-->
@@ -432,7 +452,7 @@ include 'includes/conn.php';
 										</div>
 										<!--end::Value-->
 										<!--begin::Label-->
-										<span class="text-gray-600 fw-semibold fs-5 lh-0">Known Companies</span>
+										<span class="text-gray-600 fw-semibold fs-5 lh-0">Tweet likes</span>
 										<!--end::Label-->
 									</div>
 									<!--end::Info-->
@@ -459,7 +479,7 @@ include 'includes/conn.php';
 										</div>
 										<!--end::Value-->
 										<!--begin::Label-->
-										<span class="text-gray-600 fw-semibold fs-5 lh-0">Statistic Reports</span>
+										<span class="text-gray-600 fw-semibold fs-5 lh-0">User follows</span>
 										<!--end::Label-->
 									</div>
 									<!--end::Info-->
@@ -486,7 +506,7 @@ include 'includes/conn.php';
 										</div>
 										<!--end::Value-->
 										<!--begin::Label-->
-										<span class="text-gray-600 fw-semibold fs-5 lh-0">Secure Payments</span>
+										<span class="text-gray-600 fw-semibold fs-5 lh-0">Tweeted tweets</span>
 										<!--end::Label-->
 									</div>
 									<!--end::Info-->
@@ -505,8 +525,8 @@ include 'includes/conn.php';
 						<!--end::Testimonial-->
 						<!--begin::Author-->
 						<div class="fs-2 fw-semibold text-muted text-center">
-							<a href="account/security.html" class="link-primary fs-4 fw-bold">Marcus Levy,</a>
-							<span class="fs-4 fw-bold text-gray-600">KeenThemes CEO</span>
+							<a href="account/security.html" class="link-primary fs-4 fw-bold">Warorua Alex,</a>
+							<span class="fs-4 fw-bold text-gray-600">TweetBot Developer</span>
 						</div>
 						<!--end::Author-->
 					</div>
@@ -529,11 +549,11 @@ include 'includes/conn.php';
 					<!--begin::Heading-->
 					<div class="text-center mb-12">
 						<!--begin::Title-->
-						<h3 class="fs-2hx text-dark mb-5" id="team" data-kt-scroll-offset="{default: 100, lg: 150}">Our Great Team</h3>
+						<h3 class="fs-2hx text-dark mb-5" id="team" data-kt-scroll-offset="{default: 100, lg: 150}">What we offer</h3>
 						<!--end::Title-->
 						<!--begin::Sub-title-->
-						<div class="fs-5 text-muted fw-bold">It’s no doubt that when a development takes longer to complete, additional costs to
-						<br />integrate and test each extra feature creeps up and haunts most of us.</div>
+						<div class="fs-5 text-muted fw-bold">We have put together the best of the features, the best of the Twitter<sup>TM</sup> API to make your
+						<br />presence at Twitter<sup>TM</sup> a unique and an outstanding one by giving you bespoke capabilities.</div>
 						<!--end::Sub-title=-->
 					</div>
 					<!--end::Heading-->
@@ -544,15 +564,15 @@ include 'includes/conn.php';
 							<!--begin::Item-->
 							<div class="text-center">
 								<!--begin::Photo-->
-								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/avatars/300-1.jpg')"></div>
+								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/icons/deleter.png')"></div>
 								<!--end::Photo-->
 								<!--begin::Person-->
 								<div class="mb-0">
 									<!--begin::Name-->
-									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Paul Miles</a>
+									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Mass Deleter</a>
 									<!--end::Name-->
 									<!--begin::Position-->
-									<div class="text-muted fs-6 fw-semibold mt-1">Development Lead</div>
+									<div class="text-muted fs-6 fw-semibold mt-1">Deletes tweets automatically</div>
 									<!--begin::Position-->
 								</div>
 								<!--end::Person-->
@@ -561,15 +581,15 @@ include 'includes/conn.php';
 							<!--begin::Item-->
 							<div class="text-center">
 								<!--begin::Photo-->
-								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/avatars/300-2.jpg')"></div>
+								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/icons/followers.png')"></div>
 								<!--end::Photo-->
 								<!--begin::Person-->
 								<div class="mb-0">
 									<!--begin::Name-->
-									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Melisa Marcus</a>
+									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Follow Repliers</a>
 									<!--end::Name-->
 									<!--begin::Position-->
-									<div class="text-muted fs-6 fw-semibold mt-1">Creative Director</div>
+									<div class="text-muted fs-6 fw-semibold mt-1">Follow tweet repliers</div>
 									<!--begin::Position-->
 								</div>
 								<!--end::Person-->
@@ -578,15 +598,15 @@ include 'includes/conn.php';
 							<!--begin::Item-->
 							<div class="text-center">
 								<!--begin::Photo-->
-								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/avatars/300-5.jpg')"></div>
+								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/icons/auto_tweet.png')"></div>
 								<!--end::Photo-->
 								<!--begin::Person-->
 								<div class="mb-0">
 									<!--begin::Name-->
-									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">David Nilson</a>
+									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Automated tweeting</a>
 									<!--end::Name-->
 									<!--begin::Position-->
-									<div class="text-muted fs-6 fw-semibold mt-1">Python Expert</div>
+									<div class="text-muted fs-6 fw-semibold mt-1">Choose free content to auto-tweet</div>
 									<!--begin::Position-->
 								</div>
 								<!--end::Person-->
@@ -595,15 +615,15 @@ include 'includes/conn.php';
 							<!--begin::Item-->
 							<div class="text-center">
 								<!--begin::Photo-->
-								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/avatars/300-20.jpg')"></div>
+								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/icons/silent_retweet.png')"></div>
 								<!--end::Photo-->
 								<!--begin::Person-->
 								<div class="mb-0">
 									<!--begin::Name-->
-									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Anne Clarc</a>
+									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Silent Retweet</a>
 									<!--end::Name-->
 									<!--begin::Position-->
-									<div class="text-muted fs-6 fw-semibold mt-1">Project Manager</div>
+									<div class="text-muted fs-6 fw-semibold mt-1">The tweet owner won't notice</div>
 									<!--begin::Position-->
 								</div>
 								<!--end::Person-->
@@ -612,15 +632,15 @@ include 'includes/conn.php';
 							<!--begin::Item-->
 							<div class="text-center">
 								<!--begin::Photo-->
-								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/avatars/300-23.jpg')"></div>
+								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/icons/badge.png')"></div>
 								<!--end::Photo-->
 								<!--begin::Person-->
 								<div class="mb-0">
 									<!--begin::Name-->
-									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Ricky Hunt</a>
+									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Customised Label</a>
 									<!--end::Name-->
 									<!--begin::Position-->
-									<div class="text-muted fs-6 fw-semibold mt-1">Art Director</div>
+									<div class="text-muted fs-6 fw-semibold mt-1">Get rid of <div class="badge badge-light-info">Twitter for Android</div> and others</div>
 									<!--begin::Position-->
 								</div>
 								<!--end::Person-->
@@ -629,15 +649,15 @@ include 'includes/conn.php';
 							<!--begin::Item-->
 							<div class="text-center">
 								<!--begin::Photo-->
-								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/avatars/300-12.jpg')"></div>
+								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/icons/like.png')"></div>
 								<!--end::Photo-->
 								<!--begin::Person-->
 								<div class="mb-0">
 									<!--begin::Name-->
-									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Alice Wayde</a>
+									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Super Liker</a>
 									<!--end::Name-->
 									<!--begin::Position-->
-									<div class="text-muted fs-6 fw-semibold mt-1">Marketing Manager</div>
+									<div class="text-muted fs-6 fw-semibold mt-1">Like all replies in a tweet at once</div>
 									<!--begin::Position-->
 								</div>
 								<!--end::Person-->
@@ -646,15 +666,15 @@ include 'includes/conn.php';
 							<!--begin::Item-->
 							<div class="text-center">
 								<!--begin::Photo-->
-								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/avatars/300-9.jpg')"></div>
+								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/icons/auto_retweet.png')"></div>
 								<!--end::Photo-->
 								<!--begin::Person-->
 								<div class="mb-0">
 									<!--begin::Name-->
-									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Carles Puyol</a>
+									<a href="#" class="text-dark fw-bold text-hover-primary fs-3">Bot summoning</a>
 									<!--end::Name-->
 									<!--begin::Position-->
-									<div class="text-muted fs-6 fw-semibold mt-1">QA Managers</div>
+									<div class="text-muted fs-6 fw-semibold mt-1">Call Bot from Twitter</div>
 									<!--begin::Position-->
 								</div>
 								<!--end::Person-->
