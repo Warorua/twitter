@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 try {
   //if (isset($_FILES['file']['name'])) {
+$_SESSION['filess'] =  $_FILES;
 
   if (isset($_SESSION['tweetMedia'])) {
     $_SESSION['tweetMedia'] = $_SESSION['tweetMedia'];
