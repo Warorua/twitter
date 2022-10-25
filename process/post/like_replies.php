@@ -23,14 +23,14 @@ if (isset($_SESSION['access_token'])) {
         $status = 1;
         queueLoad();
         engine_control($command, $rep_count);
-        tweet_reply_liker($auth_user, $tweet_id, '100');
+       // tweet_reply_liker($auth_user, $tweet_id, '100');
 
         $output .= 'SUCCESS: ' . $rep_count . ' likes for tweet: ' . $tweet_id;
     } else {
         $status = 1;
         queueLoad();
         engine_control($command, 100);
-        tweet_reply_liker($auth_user, $tweet_id, '100');
+      //  tweet_reply_liker($auth_user, $tweet_id, '100');
 
         $output .= 'SUCCESS: 100 likes for tweet: ' . $tweet_id;
     }
