@@ -71,7 +71,7 @@ $ajax_user_id = $member_id;
 				<!--end::Aside menu-->
 				<!--begin::Footer-->
 				<div class="aside-footer flex-column-auto pt-3 pb-7" id="kt_aside_footer">
-					<a href="https://preview.keenthemes.com/html/metronic/docs/getting-started" class="btn btn-custom btn-primary w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="200+ in-house components and 3rd-party plugins">
+					<a href="https://preview.TweetBotSite.com/html/metronic/docs/getting-started" class="btn btn-custom btn-primary w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="200+ in-house components and 3rd-party plugins">
 						<span class="btn-label">Docs & Components</span>
 						<!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
 						<span class="svg-icon btn-icon svg-icon-2">

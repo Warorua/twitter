@@ -9,7 +9,7 @@
 	<meta property="og:title" content="Grow and manage your Twitter account." />
 	<meta property="og:url" content="https://tweetbot.site/metronic" />
 	<meta property="og:site_name" content="The Tweet Bot Site | Kenyans On Twitter" />
-	<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+	<link rel="canonical" href="https://preview.TweetBotSite.com/metronic8" />
 	<link rel="shortcut icon" href="../assets/media/icons/twitter.png" />
 	<!--begin::Fonts-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />

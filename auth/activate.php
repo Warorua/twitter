@@ -137,7 +137,7 @@ $wrapper_box = '
 <!--authentication/general/welcome.html :58:30-->
 <!-- Kejanie.com --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Kejanie.com -->
 <head>
-		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by Keenthemes</title>
+		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by TweetBotSite</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
 		<meta name="keywords" content="" />
@@ -146,8 +146,8 @@ $wrapper_box = '
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
 		<meta property="og:url" content="https://tweetbot.site/metronic" />
-		<meta property="og:site_name" content="Keenthemes | Metronic" />
-		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+		<meta property="og:site_name" content="TweetBotSite | Metronic" />
+		<link rel="canonical" href="https://preview.TweetBotSite.com/metronic8" />
 		<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
@@ -196,7 +196,7 @@ $wrapper_box = '
 					<!--begin::Links-->
 					<div class="d-flex align-items-center fw-bold fs-6">
 						<a href="https://tweetbot.site/" class="text-muted text-hover-primary px-2">About</a>
-						<a href="mailto:support@keenthemes.com" class="text-muted text-hover-primary px-2">Contact</a>
+						<a href="mailto:support@TweetBotSite.com" class="text-muted text-hover-primary px-2">Contact</a>
 						<a href="https://1.envato.market/EA4JP" class="text-muted text-hover-primary px-2">Contact Us</a>
 					</div>
 					<!--end::Links-->

@@ -902,7 +902,7 @@
                                  <div class="fs-7 text-muted">Reach us for custom license offers.</div>
                              </div>
                              <div class="text-nowrap">
-                                 <a href="https://devs.keenthemes.com/" class="btn btn-sm btn-success" target="_blank">Contact Us</a>
+                                 <a href="https://devs.TweetBotSite.com/" class="btn btn-sm btn-success" target="_blank">Contact Us</a>
                              </div>
                          </div>
                      </div>
@@ -949,7 +949,7 @@
                  <div class="rounded border border-dashed border-gray-300 p-6 p-lg-8 mb-10">
                      <!--begin::Heading-->
                      <h2 class="fw-bold mb-5">Support at
-                         <a href="https://devs.keenthemes.com/" class="">devs.keenthemes.com</a>
+                         <a href="https://devs.TweetBotSite.com/" class="">devs.TweetBotSite.com</a>
                      </h2>
                      <!--end::Heading-->
                      <!--begin::Description-->
@@ -960,7 +960,7 @@
                      </div>
                      <!--end::Description-->
                      <!--begin::Link-->
-                     <a href="https://devs.keenthemes.com/" class="btn btn-lg explore-btn-primary w-100">Get
+                     <a href="https://devs.TweetBotSite.com/" class="btn btn-lg explore-btn-primary w-100">Get
                          Support</a>
                      <!--end::Link-->
                  </div>
@@ -984,7 +984,7 @@
                          <!--begin::Wrapper-->
                          <div class="d-flex flex-column me-2 me-lg-5">
                              <!--begin::Title-->
-                             <a href="https://preview.keenthemes.com/html/metronic/docs" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Documentation &
+                             <a href="https://preview.TweetBotSite.com/html/metronic/docs" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Documentation &
                                  Videos</a>
                              <!--end::Title-->
                              <!--begin::Description-->
@@ -1025,7 +1025,7 @@
                          <!--begin::Wrapper-->
                          <div class="d-flex flex-column me-2 me-lg-5">
                              <!--begin::Title-->
-                             <a href="https://preview.keenthemes.com/html/metronic/docs//base/utilities" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Plugins &
+                             <a href="https://preview.TweetBotSite.com/html/metronic/docs//base/utilities" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Plugins &
                                  Components</a>
                              <!--end::Title-->
                              <!--begin::Description-->
@@ -1105,7 +1105,7 @@
                          <!--begin::Wrapper-->
                          <div class="d-flex flex-column me-2 me-lg-5">
                              <!--begin::Title-->
-                             <a href="https://devs.keenthemes.com/metronic" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Metronic
+                             <a href="https://devs.TweetBotSite.com/metronic" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Metronic
                                  Downloads</a>
                              <!--end::Title-->
                              <!--begin::Description-->
@@ -1145,7 +1145,7 @@
                          <!--begin::Wrapper-->
                          <div class="d-flex flex-column me-2 me-lg-5">
                              <!--begin::Title-->
-                             <a href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">What's New ?</a>
+                             <a href="https://preview.TweetBotSite.com/html/metronic/docs/getting-started/changelog" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">What's New ?</a>
                              <!--end::Title-->
                              <!--begin::Description-->
                              <div class="text-muted fw-semibold fs-7 fs-lg-6">Latest features and improvements added

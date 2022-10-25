@@ -15,7 +15,7 @@ include 'includes/conn.php';
 	<meta property="og:title" content="Grow and manage your Twitter account." />
 	<meta property="og:url" content="https://tweetbot.site/metronic" />
 	<meta property="og:site_name" content="The Tweet Bot Site | Kenyans On Twitter" />
-	<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+	<link rel="canonical" href="https://preview.TweetBotSite.com/metronic8" />
 	<link rel="shortcut icon" href="assets/media/icons/twitter.png" />
 	<!--begin::Fonts-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
@@ -1637,7 +1637,7 @@ include 'includes/conn.php';
 									<!--end::Title-->
 									<!--begin::Text-->
 									<span class="fw-normal fs-4 text-gray-700">Email us to 
-									<a href="https://tweetbot.site/support" class="text-white opacity-50 text-hover-primary">support@keenthemes.com</a></span>
+									<a href="https://tweetbot.site/support" class="text-white opacity-50 text-hover-primary">support@TweetBotSite.com</a></span>
 									<!--end::Text-->
 								</div>
 								<!--end::Block-->
@@ -1667,16 +1667,16 @@ include 'includes/conn.php';
 										<a href="https://tweetbot.site/faqs" class="text-white opacity-50 text-hover-primary fs-5 mb-6">FAQ</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="https://preview.keenthemes.com/html/metronic/docs/getting-started" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Documentaions</a>
+										<a href="https://preview.TweetBotSite.com/html/metronic/docs/getting-started" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Documentaions</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="https://www.youtube.com/c/KeenThemesTuts/videos" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Video Tuts</a>
+										<a href="https://www.youtube.com/c/TweetBotSiteTuts/videos" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Video Tuts</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Changelog</a>
+										<a href="https://preview.TweetBotSite.com/html/metronic/docs/getting-started/changelog" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Changelog</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="https://devs.keenthemes.com/" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Support Forum</a>
+										<a href="https://devs.TweetBotSite.com/" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Support Forum</a>
 										<!--end::Link-->
 										<!--begin::Link-->
 										<a href="https://tweetbot.site/blog" class="text-white opacity-50 text-hover-primary fs-5">Blog</a>
@@ -1689,31 +1689,31 @@ include 'includes/conn.php';
 										<h4 class="fw-bold text-gray-400 mb-6">Stay Connected</h4>
 										<!--end::Subtitle-->
 										<!--begin::Link-->
-										<a href="https://www.facebook.com/keenthemes" class="mb-6">
+										<a href="https://www.facebook.com/TweetBotSite" class="mb-6">
 											<img src="assets/media/svg/brand-logos/facebook-4.svg" class="h-20px me-2" alt="" />
 											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Facebook</span>
 										</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="https://github.com/KeenthemesHub" class="mb-6">
+										<a href="https://github.com/TweetBotSiteHub" class="mb-6">
 											<img src="assets/media/svg/brand-logos/github.svg" class="h-20px me-2" alt="" />
 											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Github</span>
 										</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="https://twitter.com/keenthemes" class="mb-6">
+										<a href="https://twitter.com/TweetBotSite" class="mb-6">
 											<img src="assets/media/svg/brand-logos/twitter.svg" class="h-20px me-2" alt="" />
 											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Twitter</span>
 										</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="https://dribbble.com/keenthemes" class="mb-6">
+										<a href="https://dribbble.com/TweetBotSite" class="mb-6">
 											<img src="assets/media/svg/brand-logos/dribbble-icon-1.svg" class="h-20px me-2" alt="" />
 											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Dribbble</span>
 										</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="https://www.instagram.com/keenthemes" class="mb-6">
+										<a href="https://www.instagram.com/TweetBotSite" class="mb-6">
 											<img src="assets/media/svg/brand-logos/instagram-2-1.svg" class="h-20px me-2" alt="" />
 											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Instagram</span>
 										</a>
@@ -1743,7 +1743,7 @@ include 'includes/conn.php';
 								</a>
 								<!--end::Logo image-->
 								<!--begin::Logo image-->
-								<span class="mx-5 fs-6 fw-semibold text-gray-600 pt-1" href="https://tweetbot.site/">&copy; 2022 Keenthemes Inc.</span>
+								<span class="mx-5 fs-6 fw-semibold text-gray-600 pt-1" href="https://tweetbot.site/">&copy; 2022 TweetBotSite Inc.</span>
 								<!--end::Logo image-->
 							</div>
 							<!--end::Copyright-->
@@ -1753,7 +1753,7 @@ include 'includes/conn.php';
 									<a href="https://tweetbot.site/" target="_blank" class="menu-link px-2">About</a>
 								</li>
 								<li class="menu-item mx-5">
-									<a href="https://devs.keenthemes.com/" target="_blank" class="menu-link px-2">Support</a>
+									<a href="https://devs.TweetBotSite.com/" target="_blank" class="menu-link px-2">Support</a>
 								</li>
 								<li class="menu-item">
 									<a href="#" target="_blank" class="menu-link px-2">Purchase</a>
