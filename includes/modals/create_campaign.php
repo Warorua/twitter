@@ -341,15 +341,15 @@
                                                    <!--end:Icon-->
                                                    <!--begin:Info-->
                                                    <span class="d-flex flex-column">
-                                                       <span class="fw-bold fs-6">10 Minutes</span>
-                                                       <span class="fs-7 text-muted">Runs automation every 10mins</span>
+                                                       <span class="fw-bold fs-6">2 Minutes</span>
+                                                       <span class="fs-7 text-muted">Runs automation every 2mins</span>
                                                    </span>
                                                    <!--end:Info-->
                                                </span>
                                                <!--end:Label-->
                                                <!--begin:Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" checked name="frequency" value="10" />
+                                                   <input class="form-check-input" type="radio" checked name="frequency" value="2" />
                                                </span>
                                                <!--end:Input-->
                                            </label>
@@ -362,6 +362,32 @@
                                                    <span class="symbol symbol-50px me-6">
                                                        <span class="symbol-label bg-light-success">
                                                            <i class="bi bi-clock text-success fs-2x"></i>
+                                                       </span>
+                                                   </span>
+                                                   <!--end:Icon-->
+                                                   <!--begin:Info-->
+                                                   <span class="d-flex flex-column">
+                                                       <span class="fw-bold fs-6">10 Minutes</span>
+                                                       <span class="fs-7 text-muted">Runs automation every 10mins</span>
+                                                   </span>
+                                                   <!--end:Info-->
+                                               </span>
+                                               <!--end:Label-->
+                                               <!--begin:Input-->
+                                               <span class="form-check form-check-custom form-check-solid">
+                                                   <input class="form-check-input" type="radio" name="frequency" value="10" />
+                                               </span>
+                                               <!--end:Input-->
+                                           </label>
+                                           <!--end::Option-->
+                                           <!--begin:Option-->
+                                           <label class="d-flex flex-stack cursor-pointer mb-5">
+                                               <!--begin:Label-->
+                                               <span class="d-flex align-items-center me-2">
+                                                   <!--begin:Icon-->
+                                                   <span class="symbol symbol-50px me-6">
+                                                       <span class="symbol-label bg-light-danger">
+                                                           <i class="bi bi-clock-history text-danger fs-2x"></i>
                                                        </span>
                                                    </span>
                                                    <!--end:Icon-->
@@ -381,13 +407,13 @@
                                            </label>
                                            <!--end::Option-->
                                            <!--begin:Option-->
-                                           <label class="d-flex flex-stack cursor-pointer mb-5">
+                                           <label class="d-flex flex-stack cursor-pointer">
                                                <!--begin:Label-->
                                                <span class="d-flex align-items-center me-2">
                                                    <!--begin:Icon-->
                                                    <span class="symbol symbol-50px me-6">
-                                                       <span class="symbol-label bg-light-danger">
-                                                           <i class="bi bi-clock-history text-danger fs-2x"></i>
+                                                       <span class="symbol-label bg-light-primary">
+                                                           <i class="bi bi-smartwatch text-primary fs-2x"></i>
                                                        </span>
                                                    </span>
                                                    <!--end:Icon-->
@@ -402,32 +428,6 @@
                                                <!--begin:Input-->
                                                <span class="form-check form-check-custom form-check-solid">
                                                    <input class="form-check-input" type="radio" name="frequency" value="60" />
-                                               </span>
-                                               <!--end:Input-->
-                                           </label>
-                                           <!--end::Option-->
-                                           <!--begin:Option-->
-                                           <label class="d-flex flex-stack cursor-pointer">
-                                               <!--begin:Label-->
-                                               <span class="d-flex align-items-center me-2">
-                                                   <!--begin:Icon-->
-                                                   <span class="symbol symbol-50px me-6">
-                                                       <span class="symbol-label bg-light-primary">
-                                                           <i class="bi bi-smartwatch text-primary fs-2x"></i>
-                                                       </span>
-                                                   </span>
-                                                   <!--end:Icon-->
-                                                   <!--begin:Info-->
-                                                   <span class="d-flex flex-column">
-                                                       <span class="fw-bold fs-6">120 Minutes</span>
-                                                       <span class="fs-7 text-muted">Runs automation every 120mins</span>
-                                                   </span>
-                                                   <!--end:Info-->
-                                               </span>
-                                               <!--end:Label-->
-                                               <!--begin:Input-->
-                                               <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" name="frequency" value="120" />
                                                </span>
                                                <!--end:Input-->
                                            </label>
@@ -484,7 +484,7 @@
                                                    <!--begin::Icon-->
                                                    <span class="symbol symbol-50px me-6">
                                                        <span class="symbol-label bg-light-success">
-                                                           <i class="fas fa-database text-success fs-2x"></i>
+                                                           <i class="fonticon-globe text-success fs-2x"></i>
                                                        </span>
                                                    </span>
                                                    <!--end::Icon-->
@@ -510,7 +510,7 @@
                                                    <!--begin::Icon-->
                                                    <span class="symbol symbol-50px me-6">
                                                        <span class="symbol-label bg-light-danger">
-                                                           <i class="fab fa-google text-danger fs-2x"></i>
+                                                           <i class="fonticon-globe text-danger fs-2x"></i>
                                                        </span>
                                                    </span>
                                                    <!--end::Icon-->
@@ -536,7 +536,7 @@
                                                    <!--begin::Icon-->
                                                    <span class="symbol symbol-50px me-6">
                                                        <span class="symbol-label bg-light-warning">
-                                                           <i class="fab fa-amazon text-warning fs-2x"></i>
+                                                           <i class="fonticon-globe text-warning fs-2x"></i>
                                                        </span>
                                                    </span>
                                                    <!--end::Icon-->
