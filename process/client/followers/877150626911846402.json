@@ -1,0 +1,3464 @@
+{
+  "data": [
+    {
+      "username": "SirKen15758526",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 7,
+        "following_count": 144,
+        "tweet_count": 17,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2019-09-02T14:04:38.000Z",
+      "name": "SirKen",
+      "protected": false,
+      "verified": false,
+      "id": "1168525048652750854"
+    },
+    {
+      "username": "AyLacey",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 60,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-10-26T08:14:30.000Z",
+      "name": "Lacey_Ay",
+      "protected": false,
+      "verified": false,
+      "id": "1585182998323945472"
+    },
+    {
+      "username": "AlushMathew",
+      "description": "Am really handsome",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 8,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1462438501320900610/n-o6_ar0_normal.jpg",
+      "created_at": "2021-11-21T15:08:50.000Z",
+      "name": "Mathew Alush",
+      "protected": false,
+      "verified": false,
+      "id": "1462437768580247557"
+    },
+    {
+      "username": "WillyMungai11",
+      "description": "Have fun",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 45,
+        "tweet_count": 1,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1574646701528387585/8xt0kf7P_normal.png",
+      "created_at": "2022-09-27T06:26:43.000Z",
+      "name": "Willy Mungai",
+      "protected": false,
+      "verified": false,
+      "id": "1574646529880621058"
+    },
+    {
+      "username": "sandyphi525",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 26,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1578289303456825350/aS2_HtRt_normal.png",
+      "created_at": "2022-10-07T07:41:07.000Z",
+      "name": "Twity Rhoda",
+      "protected": false,
+      "verified": false,
+      "id": "1578288025511018498"
+    },
+    {
+      "username": "mwanza_ngina",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 47,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1585175615908478976/FO7CaLsL_normal.png",
+      "created_at": "2022-10-26T07:44:52.000Z",
+      "name": "Ngina Mwanza",
+      "protected": false,
+      "verified": false,
+      "id": "1585175340502106112"
+    },
+    {
+      "username": "KennOdhiambo5",
+      "description": "Jubilant kenyan",
+      "public_metrics": {
+        "followers_count": 225,
+        "following_count": 756,
+        "tweet_count": 186,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1575458942813093889/AwqS5FuF_normal.jpg",
+      "created_at": "2022-09-29T12:12:55.000Z",
+      "name": "Kenn Odhiambo",
+      "protected": false,
+      "verified": false,
+      "id": "1575458438271963139"
+    },
+    {
+      "username": "WangareVero",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 11,
+        "following_count": 313,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2021-05-08T14:03:21.000Z",
+      "name": "VeroWangare",
+      "protected": false,
+      "verified": false,
+      "id": "1391030796962643976"
+    },
+    {
+      "username": "Vincent60692105",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 1,
+        "following_count": 51,
+        "tweet_count": 6,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1585165536207556609/sKp1DyCZ_normal.jpg",
+      "created_at": "2022-10-26T07:04:49.000Z",
+      "name": "Vincent Onyango Achola",
+      "protected": false,
+      "verified": false,
+      "id": "1585165372667346944"
+    },
+    {
+      "username": "MwatelaMustafa",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 12,
+        "following_count": 108,
+        "tweet_count": 8,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1573636765780709376/vJSyV4DC_normal.jpg",
+      "created_at": "2022-08-08T08:28:29.000Z",
+      "name": "Mustafa Mwatela",
+      "protected": false,
+      "verified": false,
+      "id": "1556557774032863233"
+    },
+    {
+      "username": "petermark_121",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 143,
+        "following_count": 1217,
+        "tweet_count": 39,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1569047929729474561/gq8y8SCL_normal.jpg",
+      "created_at": "2020-03-22T07:34:57.000Z",
+      "name": "peter mark",
+      "protected": false,
+      "verified": false,
+      "id": "1241629370424442880"
+    },
+    {
+      "username": "MabongaLukoa",
+      "description": "Africa's remaining statesman,family man,God's point man, clinician per excellence,medico-legal enthusiast,author,entreneurship enthusiast and patriot.",
+      "location": "Nairobi, Kenya",
+      "public_metrics": {
+        "followers_count": 352,
+        "following_count": 929,
+        "tweet_count": 1392,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1556944354329124865/5q0Zz-pN_normal.jpg",
+      "created_at": "2017-02-23T13:28:02.000Z",
+      "name": "Esq. MABONGA.E. LUKOA",
+      "protected": false,
+      "verified": false,
+      "id": "834756705317691392"
+    },
+    {
+      "username": "bar__zoo",
+      "description": "Art enthusiast",
+      "public_metrics": {
+        "followers_count": 14,
+        "following_count": 65,
+        "tweet_count": 54,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1553054574512046080/_dZDQJLV_normal.jpg",
+      "created_at": "2022-07-29T16:26:06.000Z",
+      "name": "the Duke ke\ud83c\uddf0\ud83c\uddea",
+      "protected": false,
+      "verified": false,
+      "id": "1553054067911495685"
+    },
+    {
+      "username": "enashelvo",
+      "description": "Am blessed & Proud Arsenal fan.",
+      "location": "\u00dcT: 0.51525,35.26221",
+      "public_metrics": {
+        "followers_count": 179,
+        "following_count": 954,
+        "tweet_count": 176,
+        "listed_count": 9
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1262363941147152384/MljNvNrs_normal.jpg",
+      "created_at": "2009-08-30T19:51:15.000Z",
+      "name": "Elvys",
+      "protected": false,
+      "verified": false,
+      "id": "70197847"
+    },
+    {
+      "username": "eva_githinji3",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 37,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1570653151102910464/8A8hPGs3_normal.png",
+      "created_at": "2022-09-16T05:57:46.000Z",
+      "name": "Eva Githinji",
+      "protected": false,
+      "verified": false,
+      "id": "1570653064134008832"
+    },
+    {
+      "username": "hitznftmarket1",
+      "description": "If you need production tracks are trying to network get at me here to create and build let\u2019s go!!!",
+      "public_metrics": {
+        "followers_count": 152,
+        "following_count": 454,
+        "tweet_count": 13,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1584482579662585860/Lpsi62yH_normal.jpg",
+      "created_at": "2022-10-24T09:50:12.000Z",
+      "name": "Hitznftmarket",
+      "protected": false,
+      "verified": false,
+      "id": "1584482335633776640"
+    },
+    {
+      "username": "Gtawnhuss",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 7,
+        "following_count": 41,
+        "tweet_count": 7,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1585166983892434944/M6YoY_ks_normal.jpg",
+      "created_at": "2022-10-25T08:37:30.000Z",
+      "name": "Hussein Gtawn",
+      "protected": false,
+      "verified": false,
+      "id": "1584826184969363457"
+    },
+    {
+      "username": "donsam_omondi2",
+      "description": "Enthusiastic",
+      "public_metrics": {
+        "followers_count": 5,
+        "following_count": 141,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1519985950096568324/JwTb9R4v_normal.jpg",
+      "created_at": "2022-04-29T10:23:09.000Z",
+      "name": "Donsam Omondi",
+      "protected": false,
+      "verified": false,
+      "id": "1519985355625316352"
+    },
+    {
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "start": 0,
+              "end": 23,
+              "url": "https://t.co/0mkCuzX8Ag",
+              "expanded_url": "http://www.instagram.com/@manuh_meshack",
+              "display_url": "instagram.com/@manuh_meshack"
+            }
+          ]
+        }
+      },
+      "username": "manuh_meshack",
+      "description": "*;)@'(?@!(8!&\ud83c\udf34\u2728*\nShuttler\ud83c\udff8\u2728\nAfricankid\ud83c\uddf0\ud83c\uddea\nBadcard\ud83c\udc04\nBiker\ud83d\udef5\ud83d\udee3\nBe happy live life \ud83d\udcaf",
+      "location": "Mombasa kenya",
+      "public_metrics": {
+        "followers_count": 222,
+        "following_count": 397,
+        "tweet_count": 22,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1204427367424385025/Ri-dszST_normal.jpg",
+      "created_at": "2019-12-10T15:41:09.000Z",
+      "name": "Manuh_meshack",
+      "protected": false,
+      "url": "https://t.co/0mkCuzX8Ag",
+      "verified": false,
+      "id": "1204425717074866177"
+    },
+    {
+      "username": "shivshankarinc",
+      "description": "I support congress party",
+      "location": "Bhind, India",
+      "public_metrics": {
+        "followers_count": 4176,
+        "following_count": 96,
+        "tweet_count": 21494,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1584925635226787840/7dAB3vPi_normal.jpg",
+      "created_at": "2018-07-29T13:35:26.000Z",
+      "name": "shivshankar bhadauriya",
+      "protected": false,
+      "verified": false,
+      "id": "1023562645247389698",
+      "pinned_tweet_id": "1548548235186151429"
+    },
+    {
+      "username": "SpadaFervenzi",
+      "description": "Business only",
+      "location": "Lagos, Nigeria",
+      "public_metrics": {
+        "followers_count": 33,
+        "following_count": 374,
+        "tweet_count": 4,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1579858954645118977/NAKszeJj_normal.jpg",
+      "created_at": "2022-02-24T10:26:28.000Z",
+      "name": "Spada Fervenzi",
+      "protected": false,
+      "verified": false,
+      "id": "1496793464549351427"
+    },
+    {
+      "username": "Evano34379901",
+      "description": "Don't ever burn bridges",
+      "public_metrics": {
+        "followers_count": 133,
+        "following_count": 491,
+        "tweet_count": 14,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1505518773457100801/Hu48ZiGB_normal.jpg",
+      "created_at": "2021-07-10T01:10:37.000Z",
+      "name": "Evan",
+      "protected": false,
+      "verified": false,
+      "id": "1413666824563089412"
+    },
+    {
+      "username": "JoeGash3",
+      "description": "Family, forever and for always.",
+      "public_metrics": {
+        "followers_count": 65,
+        "following_count": 411,
+        "tweet_count": 400,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1522308001444646913/uJilM2rI_normal.jpg",
+      "created_at": "2022-05-05T20:11:25.000Z",
+      "name": "Joe Gash",
+      "protected": false,
+      "verified": false,
+      "id": "1522307777355563008"
+    },
+    {
+      "username": "dudus302001",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 2,
+        "following_count": 177,
+        "tweet_count": 2,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1573070266468630529/cwMXK-7T_normal.jpg",
+      "created_at": "2022-04-13T18:26:14.000Z",
+      "name": "dudus",
+      "protected": false,
+      "verified": false,
+      "id": "1514308866527404040"
+    },
+    {
+      "entities": {
+        "description": {
+          "hashtags": [{ "start": 100, "end": 107, "tag": "SPX500" }],
+          "mentions": [{ "start": 65, "end": 72, "username": "Qwarqo" }]
+        }
+      },
+      "username": "aroolangat",
+      "description": "Web developer |Graphics Designer \u201cAdobe Photoshop|Corel Draw\u201d|HR @Qwarqo |GGMU|Man United \u2764\ufe0f|Trader #SPX500",
+      "public_metrics": {
+        "followers_count": 1083,
+        "following_count": 1922,
+        "tweet_count": 5273,
+        "listed_count": 1
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1507819643947429898/UCNWvu99_normal.jpg",
+      "created_at": "2021-11-21T19:37:11.000Z",
+      "name": "LANGAT",
+      "protected": false,
+      "verified": false,
+      "id": "1462505333897768965"
+    },
+    {
+      "username": "askofu01",
+      "description": "\ud835\udd76\ud835\udd8e\ud835\udd8f\ud835\udd86\ud835\udd93\ud835\udd86 \ud835\udd89\ud835\udd86\ud835\udd90\ud835\udd99\ud835\udd86\ud835\udd97\ud835\udd8e,\ud83d\udc89\ud83d\udc8a,,\ud83d\ude18\n\ud835\udd7f\ud835\udd8a\ud835\udd86\ud835\udd92 \ud835\udd98\ud835\udd9a\ud835\udd87\ud835\udd86\ud835\udd97\ud835\udd9a\ud83d\udd25\ud83d\udd25\ud83d\udd25\ud83d\udd25\n\ud835\udd71\ud835\udd94\ud835\udd97\ud835\udd8a\ud835\udd98\ud835\udd99\ud835\udd8a\ud835\udd97 \ud835\udd93\ud835\udd86\ud835\udd99\ud835\udd8e\ud835\udd94\ud835\udd93\ud83c\udf1f\u2b50\u2600\ufe0f",
+      "public_metrics": {
+        "followers_count": 49,
+        "following_count": 60,
+        "tweet_count": 31,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1554285608515903489/iZHG1I-7_normal.jpg",
+      "created_at": "2021-02-22T13:02:33.000Z",
+      "name": "\ud835\ude70\ud835\ude82\ud835\ude7a\ud835\ude7e\ud835\ude75\ud835\ude84",
+      "protected": false,
+      "verified": false,
+      "id": "1363836493823811584"
+    },
+    {
+      "username": "wanjirushaniz66",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 4,
+        "following_count": 56,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1575349932839559168/zWB-SVmf_normal.jpg",
+      "created_at": "2022-09-29T05:01:06.000Z",
+      "name": "Shaniz Wanjiru",
+      "protected": false,
+      "verified": false,
+      "id": "1575349713259401216"
+    },
+    {
+      "username": "chiefdhehwa",
+      "description": "",
+      "location": "United Kingdom",
+      "public_metrics": {
+        "followers_count": 238,
+        "following_count": 494,
+        "tweet_count": 77,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1547290889579642880/kT8ZG5AH_normal.jpg",
+      "created_at": "2022-07-13T17:55:41.000Z",
+      "name": "Dhehwa Moyo",
+      "protected": true,
+      "verified": false,
+      "id": "1547278495692324865"
+    },
+    {
+      "username": "samuel_egessa",
+      "description": "If you can't fight them then join them",
+      "public_metrics": {
+        "followers_count": 7,
+        "following_count": 106,
+        "tweet_count": 3,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1583123743601311747/LyirPXvk_normal.png",
+      "created_at": "2022-10-20T15:51:27.000Z",
+      "name": "Samuel Egessa",
+      "protected": false,
+      "verified": false,
+      "id": "1583123590555246599"
+    },
+    {
+      "username": "HalbertRono",
+      "description": "Guided by my own strong principles.",
+      "public_metrics": {
+        "followers_count": 15,
+        "following_count": 401,
+        "tweet_count": 3,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1496797427172585472/6uzm0BNt_normal.jpg",
+      "created_at": "2019-09-26T10:23:38.000Z",
+      "name": "KIPKORIR RONO HALBERT",
+      "protected": true,
+      "verified": false,
+      "id": "1177166561213374465"
+    },
+    {
+      "username": "KorosDennis07",
+      "description": "Biochemistry , man utd fan, dancehall and riddims",
+      "public_metrics": {
+        "followers_count": 244,
+        "following_count": 549,
+        "tweet_count": 629,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1577885557220429824/5W6zHXPc_normal.jpg",
+      "created_at": "2022-08-04T10:35:41.000Z",
+      "name": "Meditating loner",
+      "protected": false,
+      "verified": false,
+      "id": "1555140136484196353"
+    },
+    {
+      "username": "samueln13001566",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 2,
+        "following_count": 5,
+        "tweet_count": 21,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1585166366168039424/-o59ZtuU_normal.jpg",
+      "created_at": "2022-09-20T07:24:43.000Z",
+      "name": "sammysam",
+      "protected": false,
+      "verified": false,
+      "id": "1572124406851244032"
+    },
+    {
+      "username": "JairusOwin",
+      "description": "Public health specialist|Environmentalist|Sustainability Practitioner|Climate Activist|Counselor|Strategic Leadership",
+      "location": "Nairobi, Kenya",
+      "public_metrics": {
+        "followers_count": 498,
+        "following_count": 767,
+        "tweet_count": 18,
+        "listed_count": 1
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1583475889962115075/8mseHdrQ_normal.jpg",
+      "created_at": "2017-09-03T12:01:39.000Z",
+      "name": "Jairus Charles",
+      "protected": false,
+      "verified": false,
+      "id": "904313435470651393"
+    },
+    {
+      "username": "KIMATHIBONFACE8",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 3,
+        "following_count": 46,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1584896721812963329/7txaXMso_normal.jpg",
+      "created_at": "2022-10-25T13:15:46.000Z",
+      "name": "KIMATHI BONFACE",
+      "protected": false,
+      "verified": false,
+      "id": "1584896445735378944"
+    },
+    {
+      "username": "Sir_Pitsi",
+      "description": "Mamelodi Sundowns and TTM \ud83e\udd23\ud83e\udd23 the rich gang",
+      "location": "Evander, South Africa",
+      "public_metrics": {
+        "followers_count": 320,
+        "following_count": 1574,
+        "tweet_count": 349,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1272755721319395328/c8twyT3n_normal.jpg",
+      "created_at": "2012-03-11T20:28:45.000Z",
+      "name": "Pitsi Not Pitso.",
+      "protected": false,
+      "verified": false,
+      "id": "521648630"
+    },
+    {
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "start": 0,
+              "end": 23,
+              "url": "https://t.co/Kdx6NZMvib",
+              "expanded_url": "http://Obilo.com",
+              "display_url": "Obilo.com"
+            }
+          ]
+        }
+      },
+      "username": "its_Obil",
+      "description": "Underated soft life.",
+      "location": "Kiambu, Kenya",
+      "public_metrics": {
+        "followers_count": 272,
+        "following_count": 517,
+        "tweet_count": 146,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1583130570451738632/wLl5-eVV_normal.jpg",
+      "created_at": "2022-10-20T03:15:04.000Z",
+      "name": "Obilo",
+      "protected": false,
+      "url": "https://t.co/Kdx6NZMvib",
+      "verified": false,
+      "id": "1582933219594436608",
+      "pinned_tweet_id": "1583019699570294784"
+    },
+    {
+      "username": "YvonneMbuvi",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 7,
+        "following_count": 54,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1585140085321760769/d7uNIge__normal.jpg",
+      "created_at": "2022-10-26T05:22:56.000Z",
+      "name": "Yvonne Mbuvi",
+      "protected": false,
+      "verified": false,
+      "id": "1585139738499026945"
+    },
+    {
+      "username": "kiing_rae3s",
+      "description": "",
+      "location": "Johannesburg, South Africa",
+      "public_metrics": {
+        "followers_count": 63,
+        "following_count": 304,
+        "tweet_count": 411,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1262654659711426563/YJcsayId_normal.jpg",
+      "created_at": "2020-05-18T08:56:37.000Z",
+      "name": "Raees Motala",
+      "protected": false,
+      "verified": false,
+      "id": "1262306039996846080"
+    },
+    {
+      "username": "Kim51906194",
+      "description": "Anonymous Ghost Serial",
+      "location": "Province of Sakhalin, Russia",
+      "public_metrics": {
+        "followers_count": 26,
+        "following_count": 30,
+        "tweet_count": 2022,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1511381030837567492/WwvR8Xvi_normal.jpg",
+      "created_at": "2020-01-07T13:42:03.000Z",
+      "name": "Neville",
+      "protected": false,
+      "verified": false,
+      "id": "1214542667868192769"
+    },
+    {
+      "username": "MaxminAllan",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 1,
+        "following_count": 45,
+        "tweet_count": 4,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1583450323833835524/62-yQWCE_normal.jpg",
+      "created_at": "2022-07-22T05:42:57.000Z",
+      "name": "Allan Maxmin",
+      "protected": false,
+      "verified": false,
+      "id": "1550355604887281665"
+    },
+    {
+      "username": "mc_kinda",
+      "description": "Creativity",
+      "public_metrics": {
+        "followers_count": 11,
+        "following_count": 83,
+        "tweet_count": 4,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1446859352485339138/tMlxOaXt_normal.jpg",
+      "created_at": "2021-10-06T17:05:40.000Z",
+      "name": "Mc Kinda",
+      "protected": false,
+      "verified": false,
+      "id": "1445797266242031616"
+    },
+    {
+      "username": "Thee_massive",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 8,
+        "following_count": 35,
+        "tweet_count": 0,
+        "listed_count": 1
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1564634911255953413/w2GoT_ad_normal.jpg",
+      "created_at": "2022-08-30T15:21:20.000Z",
+      "name": "Thee Massive",
+      "protected": false,
+      "verified": false,
+      "id": "1564633755863728128"
+    },
+    {
+      "username": "david_longor",
+      "description": "",
+      "location": "Kenya",
+      "public_metrics": {
+        "followers_count": 16,
+        "following_count": 129,
+        "tweet_count": 4,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1582474728740118532/Wxo4DNk5_normal.jpg",
+      "created_at": "2022-10-18T20:15:36.000Z",
+      "name": "Longor David",
+      "protected": false,
+      "verified": false,
+      "id": "1582464844179329025"
+    },
+    {
+      "username": "IminzaVallary",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 2,
+        "following_count": 19,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1584652381161242627/WV4yUWkC_normal.png",
+      "created_at": "2022-10-24T21:05:43.000Z",
+      "name": "IMINZA VALLARY",
+      "protected": false,
+      "verified": false,
+      "id": "1584652206925651970"
+    },
+    {
+      "username": "sam_wa_essy",
+      "description": "Funnu",
+      "location": "Laikipia",
+      "public_metrics": {
+        "followers_count": 18,
+        "following_count": 151,
+        "tweet_count": 32,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1497145907808190465/W6BTyJgU_normal.jpg",
+      "created_at": "2021-01-28T08:33:52.000Z",
+      "name": "Kaesi",
+      "protected": false,
+      "verified": false,
+      "id": "1354709189571047424"
+    },
+    {
+      "username": "KasyokaHezron",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 6,
+        "following_count": 52,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1570738278432653318/W1-VZFBb_normal.jpg",
+      "created_at": "2022-09-16T11:33:31.000Z",
+      "name": "Hezron Kasyoka",
+      "protected": false,
+      "verified": false,
+      "id": "1570737508731740160"
+    },
+    {
+      "username": "kariedamaris1",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 2,
+        "following_count": 152,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1576231152221917184/hy8VUQo7_normal.png",
+      "created_at": "2022-10-01T15:22:46.000Z",
+      "name": "damaris karie",
+      "protected": false,
+      "verified": false,
+      "id": "1576230897552080896"
+    },
+    {
+      "username": "awainaina16",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 14,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1584802247292194817/PSVBaw3q_normal.png",
+      "created_at": "2022-10-25T07:01:14.000Z",
+      "name": "Ann Wainaina",
+      "protected": false,
+      "verified": false,
+      "id": "1584802152341454850"
+    },
+    {
+      "username": "DNgaiz254",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 32,
+        "following_count": 144,
+        "tweet_count": 34,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1573943812443049984/WClvEK8B_normal.jpg",
+      "created_at": "2022-09-25T07:52:34.000Z",
+      "name": "Ngaiz\ud83d\udcafDida",
+      "protected": false,
+      "verified": false,
+      "id": "1573943439821086720"
+    },
+    {
+      "username": "eveadams47",
+      "description": "An important part of owning your 'flaws 'is not being afraid to show them...",
+      "location": "Nairobi, Kenya",
+      "public_metrics": {
+        "followers_count": 8,
+        "following_count": 151,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1585149910361542657/DBVFnCr9_normal.jpg",
+      "created_at": "2022-10-26T05:58:02.000Z",
+      "name": "eveadams47",
+      "protected": false,
+      "verified": false,
+      "id": "1585148552409501697"
+    },
+    {
+      "username": "norman_mutembei",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 2,
+        "following_count": 229,
+        "tweet_count": 2,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1585151800054890503/bLkL54K3_normal.jpg",
+      "created_at": "2022-10-26T06:01:49.000Z",
+      "name": "T.M mate",
+      "protected": false,
+      "verified": false,
+      "id": "1585149492667596801"
+    },
+    {
+      "username": "BiiDominic86",
+      "description": "My life is mine alone.",
+      "location": "Nairobi ",
+      "public_metrics": {
+        "followers_count": 19,
+        "following_count": 247,
+        "tweet_count": 2,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1584988113750851585/DCFsIPdT_normal.jpg",
+      "created_at": "2015-05-04T17:37:02.000Z",
+      "name": "Dominic",
+      "protected": false,
+      "verified": false,
+      "id": "3233837259"
+    },
+    {
+      "username": "lewi44980114",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 3,
+        "following_count": 26,
+        "tweet_count": 1,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-02-25T15:16:55.000Z",
+      "name": "Ken Lewis",
+      "protected": false,
+      "verified": false,
+      "id": "1497228987583668226"
+    },
+    {
+      "entities": {
+        "description": {
+          "hashtags": [{ "start": 83, "end": 94, "tag": "university" }]
+        }
+      },
+      "username": "MasNewton1",
+      "description": "I follow you after three days you don't follow back I unfollow ..free an fair game #university virgin",
+      "location": "Sirisia, Kenya",
+      "public_metrics": {
+        "followers_count": 3097,
+        "following_count": 3305,
+        "tweet_count": 892,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1584919047690485760/uJN9ucxe_normal.jpg",
+      "created_at": "2021-09-14T06:11:15.000Z",
+      "name": "PRESBYTERIAN COMRADE\ud83d\udd25\ud83d\udcaf(PUEA)",
+      "protected": false,
+      "verified": false,
+      "id": "1437660082511167488",
+      "pinned_tweet_id": "1579005854053195778"
+    },
+    {
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "start": 0,
+              "end": 23,
+              "url": "https://t.co/8diVno71xf",
+              "expanded_url": "http://www.djbravo.co.ke",
+              "display_url": "djbravo.co.ke"
+            }
+          ]
+        }
+      },
+      "username": "djbravoenterta1",
+      "description": "",
+      "location": "Nairobi, Kenya",
+      "public_metrics": {
+        "followers_count": 51,
+        "following_count": 382,
+        "tweet_count": 11,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1582297807284801536/X9W8r18o_normal.jpg",
+      "created_at": "2022-10-18T09:08:07.000Z",
+      "name": "dj bravo entertainment",
+      "protected": false,
+      "url": "https://t.co/8diVno71xf",
+      "verified": false,
+      "id": "1582297286679339010"
+    },
+    {
+      "username": "AdauRajab",
+      "description": "Climax coache",
+      "public_metrics": {
+        "followers_count": 470,
+        "following_count": 1534,
+        "tweet_count": 278,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1585142883954425856/QGdw1NBV_normal.jpg",
+      "created_at": "2022-09-29T18:05:33.000Z",
+      "name": "Rajab Adau",
+      "protected": false,
+      "verified": false,
+      "id": "1575547145784070154"
+    },
+    {
+      "username": "361a29ed79114ee",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 33,
+        "following_count": 32,
+        "tweet_count": 1,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/564695610574766080/mMHUbWhJ_normal.jpeg",
+      "created_at": "2015-02-09T07:58:31.000Z",
+      "name": "Ronald Wainaina",
+      "protected": false,
+      "verified": false,
+      "id": "3026149469"
+    },
+    {
+      "username": "ChachiOwens",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 393,
+        "following_count": 1768,
+        "tweet_count": 704,
+        "listed_count": 1
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1486339594337632260/FXbh_afe_normal.jpg",
+      "created_at": "2020-07-05T14:23:25.000Z",
+      "name": "Charles Younger",
+      "protected": false,
+      "verified": false,
+      "id": "1279782896069459973"
+    },
+    {
+      "username": "dylanKE9",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 3,
+        "following_count": 242,
+        "tweet_count": 2,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-06-10T16:19:10.000Z",
+      "name": "dylanKE",
+      "protected": false,
+      "verified": false,
+      "id": "1535295439263748102"
+    },
+    {
+      "username": "JokerJoe254",
+      "description": "Life is a blessing\ud83d\ude4f\ud83d\ude4f\nAppreciate every moment you are alive\ud83d\udcaa\ud83d\udcaa\ud83d\ude0e",
+      "location": "Nairobi. Kenya ",
+      "public_metrics": {
+        "followers_count": 50,
+        "following_count": 222,
+        "tweet_count": 176,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1220801440601513984/hbj3_HCG_normal.jpg",
+      "created_at": "2016-01-17T19:30:42.000Z",
+      "name": "Joker Joe",
+      "protected": false,
+      "verified": false,
+      "id": "4821937001"
+    },
+    {
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "start": 0,
+              "end": 23,
+              "url": "https://t.co/RWdiJXuTa3",
+              "expanded_url": "https://t.me/+bZ0t3rajlh5mY2Q0",
+              "display_url": "t.me/+bZ0t3rajlh5mY\u2026"
+            }
+          ]
+        }
+      },
+      "username": "DerrickMagicho",
+      "description": "NO INVESTMENT\u274c\nInspired by inner circle Trader(ICT)\n\n\u2022Co founder: CIP TRADING ACADEMY\n\u2022Trader in financial markets majoring on\nGold(XAU/USD)\n\nTelegram Link \ud83d\udc47",
+      "location": "Nairobi, Kenya",
+      "public_metrics": {
+        "followers_count": 6354,
+        "following_count": 6134,
+        "tweet_count": 10823,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1522242949521846273/cTL0uJAX_normal.jpg",
+      "created_at": "2018-07-20T10:17:25.000Z",
+      "name": "CIP HEDGE",
+      "protected": false,
+      "url": "https://t.co/RWdiJXuTa3",
+      "verified": false,
+      "id": "1020251323617497089",
+      "pinned_tweet_id": "1551803879993614337"
+    },
+    {
+      "username": "curtis4ever2",
+      "description": "God \u2764\ufe0f Mum \u2764\ufe0f Chelsea \ud83d\udc99 \u2b50\ufe0fWay More Ta Life Den Just ThE HoOD I\u2019m TryiNG TO REACH GOALS \ud83d\udcb0\ud83d\udd2b\u2694\ufe0f",
+      "location": "Greater Accra, Ghana",
+      "public_metrics": {
+        "followers_count": 991,
+        "following_count": 3926,
+        "tweet_count": 193,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1584843159225393152/Fm0d-oQN_normal.jpg",
+      "created_at": "2020-08-17T00:35:02.000Z",
+      "name": "curtis4ever",
+      "protected": false,
+      "verified": false,
+      "id": "1295157045226803201"
+    },
+    {
+      "username": "AnnahLunyolo",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 4,
+        "following_count": 184,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1565717736289959937/31bvpMKL_normal.png",
+      "created_at": "2022-09-02T15:06:12.000Z",
+      "name": "Annah Lunyolo",
+      "protected": false,
+      "verified": false,
+      "id": "1565716842764800004"
+    },
+    {
+      "username": "Deleted_38",
+      "description": "bloqu\u00e9.appuyez pour d\u00e9bloquer",
+      "public_metrics": {
+        "followers_count": 104,
+        "following_count": 233,
+        "tweet_count": 440,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1485619266087006215/Wp92Obzf_normal.jpg",
+      "created_at": "2021-02-24T15:07:59.000Z",
+      "name": "Bi",
+      "protected": false,
+      "verified": false,
+      "id": "1364592802043224067"
+    },
+    {
+      "username": "atienoann00",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 14,
+        "following_count": 199,
+        "tweet_count": 4,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1582581788152561664/w7Ia9vSX_normal.jpg",
+      "created_at": "2022-05-30T10:28:09.000Z",
+      "name": "Ann Atieno",
+      "protected": false,
+      "verified": false,
+      "id": "1531220767555436545"
+    },
+    {
+      "username": "ilolopeta",
+      "description": "",
+      "location": "Nairobi, Kenya",
+      "public_metrics": {
+        "followers_count": 766,
+        "following_count": 1383,
+        "tweet_count": 173,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1578512873311068160/Ory_HlzZ_normal.jpg",
+      "created_at": "2021-08-28T22:50:03.000Z",
+      "name": "Ibrahim Lolopeta",
+      "protected": false,
+      "verified": false,
+      "id": "1431750918219911171"
+    },
+    {
+      "username": "ldhshalinder",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 302,
+        "following_count": 1082,
+        "tweet_count": 593,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2016-07-18T11:16:07.000Z",
+      "name": "Shalinder. Shrivasta",
+      "protected": false,
+      "verified": false,
+      "id": "754998176944390144"
+    },
+    {
+      "username": "Ngarly1",
+      "description": "i feel it",
+      "public_metrics": {
+        "followers_count": 91,
+        "following_count": 170,
+        "tweet_count": 37,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1083982164071534592/kWoM78wS_normal.jpg",
+      "created_at": "2014-07-22T17:52:53.000Z",
+      "name": "Ngarly",
+      "protected": false,
+      "verified": false,
+      "id": "2670143605"
+    },
+    {
+      "username": "jidennah4",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 54,
+        "following_count": 21,
+        "tweet_count": 5,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-07-26T09:42:03.000Z",
+      "name": "jidennah",
+      "protected": false,
+      "verified": false,
+      "id": "1551865302253817863"
+    },
+    {
+      "username": "john_shehu11",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 11,
+        "following_count": 171,
+        "tweet_count": 47,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1577758394559172612/9BlR1KqL_normal.jpg",
+      "created_at": "2022-09-26T10:58:15.000Z",
+      "name": "Sunday Yakubu",
+      "protected": false,
+      "verified": false,
+      "id": "1574351962132430849"
+    },
+    {
+      "username": "AlexKimlexy",
+      "description": "",
+      "location": "Wote ndo parkin",
+      "public_metrics": {
+        "followers_count": 88,
+        "following_count": 321,
+        "tweet_count": 43,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/608727368665063424/YHLnAqI-_normal.jpg",
+      "created_at": "2012-06-27T07:17:08.000Z",
+      "name": "kimlexy",
+      "protected": false,
+      "verified": false,
+      "id": "619766155"
+    },
+    {
+      "username": "noseitall5",
+      "description": "Yes it is him.!!",
+      "public_metrics": {
+        "followers_count": 2,
+        "following_count": 82,
+        "tweet_count": 1,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1568237477495816192/jzfOGOkN_normal.jpg",
+      "created_at": "2022-09-09T13:58:00.000Z",
+      "name": "noseitall",
+      "protected": false,
+      "verified": false,
+      "id": "1568237217365073920"
+    },
+    {
+      "username": "macleevery",
+      "description": "Speak English \ud83c\uddec\ud83c\udde7 Kiss French \ud83c\uddeb\ud83c\uddf7 Drive German \ud83c\udde9\ud83c\uddea Dress Italian \ud83c\uddee\ud83c\uddf9 Spend Arab \ud83c\udde6\ud83c\uddea Party Caribbean \ud83c\udde7\ud83c\uddf6 & Ride it like you stole it! \ud83c\udff4\u200d\u2620\ufe0f",
+      "location": "Nairobi, Kenya",
+      "public_metrics": {
+        "followers_count": 795,
+        "following_count": 992,
+        "tweet_count": 2303,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1569664959130308608/hpDdRXv-_normal.jpg",
+      "created_at": "2009-08-19T16:03:20.000Z",
+      "name": "\ud83c\uddf0\ud83c\uddeaMacleevery Missoi\ud83c\uddf0\ud83c\uddea",
+      "protected": false,
+      "verified": false,
+      "id": "67036782"
+    },
+    {
+      "username": "6irmike",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 19,
+        "following_count": 32,
+        "tweet_count": 87,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1568357381536468994/ZMKp4bCh_normal.jpg",
+      "created_at": "2020-07-23T22:56:14.000Z",
+      "name": "\u2755\ud83c\udf1a6ir Mike \ud83c\udf1a\u2755",
+      "protected": false,
+      "verified": false,
+      "id": "1286434917967106049"
+    },
+    {
+      "username": "NyamburaFelix",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 1,
+        "following_count": 55,
+        "tweet_count": 1,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-10-25T08:30:54.000Z",
+      "name": "Felix Nyambura",
+      "protected": false,
+      "verified": false,
+      "id": "1584824663670198272"
+    },
+    {
+      "username": "SamuelN49k",
+      "description": "Loving",
+      "public_metrics": {
+        "followers_count": 77,
+        "following_count": 39,
+        "tweet_count": 3,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1420800563810381833/f5st2tsO_normal.png",
+      "created_at": "2021-07-29T17:37:06.000Z",
+      "name": "Samuel Ngugi",
+      "protected": false,
+      "verified": false,
+      "id": "1420800426782478344"
+    },
+    {
+      "username": "patrick_matano",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 23,
+        "following_count": 195,
+        "tweet_count": 1,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1222900834742067201/0muRAyRV_normal.jpg",
+      "created_at": "2020-01-30T15:13:17.000Z",
+      "name": "Patrick Matano",
+      "protected": false,
+      "verified": false,
+      "id": "1222900476510736385"
+    },
+    {
+      "username": "MbiggyUle",
+      "description": "Am real researching",
+      "public_metrics": {
+        "followers_count": 9,
+        "following_count": 74,
+        "tweet_count": 4,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1450175003127918594/6Wpk54_w_normal.jpg",
+      "created_at": "2021-10-18T18:59:26.000Z",
+      "name": "Bazenga ule mbiggy",
+      "protected": false,
+      "verified": false,
+      "id": "1450174582216871937"
+    },
+    {
+      "username": "JapanSpecial8",
+      "description": "Content creator, Peace hater, Blogger",
+      "public_metrics": {
+        "followers_count": 11,
+        "following_count": 193,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-10-26T05:16:58.000Z",
+      "name": "Japan Special",
+      "protected": false,
+      "verified": false,
+      "id": "1585138229895995392"
+    },
+    {
+      "username": "mandi72107143",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 342,
+        "following_count": 668,
+        "tweet_count": 90,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1583406829538840578/bdPqysTj_normal.jpg",
+      "created_at": "2022-10-21T10:35:32.000Z",
+      "name": "M A N D I",
+      "protected": false,
+      "verified": false,
+      "id": "1583406555940126721"
+    },
+    {
+      "username": "BrayooUntamed",
+      "description": "Is a viibe \u2618\ufe0f\n\ud83c\udf1f\nKeeping cool \u2728\u2728",
+      "public_metrics": {
+        "followers_count": 245,
+        "following_count": 177,
+        "tweet_count": 321,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1265184271423221762/9mu2jkOh_normal.jpg",
+      "created_at": "2020-05-26T07:32:53.000Z",
+      "name": "H. I. M\ud83c\udf7b",
+      "protected": false,
+      "verified": false,
+      "id": "1265184050920251393"
+    },
+    {
+      "username": "rhodawangari10",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 22,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-10-20T05:27:31.000Z",
+      "name": "rhoda wangari",
+      "protected": false,
+      "verified": false,
+      "id": "1582966633034833923"
+    },
+    {
+      "username": "dchege2050",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 9,
+        "following_count": 62,
+        "tweet_count": 12,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1458790578422956033/qf16VyCm_normal.jpg",
+      "created_at": "2021-11-11T13:35:51.000Z",
+      "name": "David Chege",
+      "protected": false,
+      "verified": false,
+      "id": "1458790426274672641"
+    },
+    {
+      "username": "bobby28680753",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 49,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1584420193429749760/mSs6d1aJ_normal.jpg",
+      "created_at": "2022-10-24T05:42:32.000Z",
+      "name": "bobby",
+      "protected": false,
+      "verified": false,
+      "id": "1584419719846805505"
+    },
+    {
+      "username": "edwinoseko84",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 5,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1577213687521497092/vMZQwPP4_normal.jpg",
+      "created_at": "2022-10-04T08:27:00.000Z",
+      "name": "Adventure Dayz",
+      "protected": false,
+      "verified": false,
+      "id": "1577213566633250816"
+    },
+    {
+      "username": "anthony05143928",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 1,
+        "following_count": 12,
+        "tweet_count": 3,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-08-25T11:13:37.000Z",
+      "name": "anthony",
+      "protected": false,
+      "verified": false,
+      "id": "1562759981031559168"
+    },
+    {
+      "username": "SeanMunene",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 30,
+        "tweet_count": 5,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1479689999658463233/VUy9QqpN_normal.png",
+      "created_at": "2022-01-08T05:42:41.000Z",
+      "name": "Sean Munene",
+      "protected": false,
+      "verified": false,
+      "id": "1479689904003104773"
+    },
+    {
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "start": 0,
+              "end": 23,
+              "url": "https://t.co/ZFvAi8Ambw",
+              "expanded_url": "https://techlinehub.com/",
+              "display_url": "techlinehub.com"
+            }
+          ]
+        }
+      },
+      "username": "MichaelMtende",
+      "description": "A web Developer ,a programmer, computer networks and computer hardware.",
+      "location": "Nairobi, Kenya",
+      "public_metrics": {
+        "followers_count": 53,
+        "following_count": 374,
+        "tweet_count": 64,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/793376754610081792/4gJUe-yt_normal.jpg",
+      "created_at": "2013-11-28T07:54:11.000Z",
+      "name": "mtende michael",
+      "protected": false,
+      "url": "https://t.co/ZFvAi8Ambw",
+      "verified": false,
+      "id": "2219152220"
+    },
+    {
+      "username": "wizzy389096981",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 5,
+        "following_count": 114,
+        "tweet_count": 1,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1583486183677493248/L3dJoXTr_normal.jpg",
+      "created_at": "2022-10-21T15:48:55.000Z",
+      "name": "wizzy",
+      "protected": false,
+      "verified": false,
+      "id": "1583485351867416577"
+    },
+    {
+      "username": "Norrahhd",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 2,
+        "tweet_count": 1,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1503299516744847361/E0JjSJKk_normal.png",
+      "created_at": "2022-03-14T09:18:29.000Z",
+      "name": "norah",
+      "protected": false,
+      "verified": false,
+      "id": "1503299281620553731"
+    },
+    {
+      "username": "alvin_leteipan",
+      "description": "Geospatial Engineer....Certified Drone Pilot....GIS enthusiast",
+      "location": "Isiolo, Kenya",
+      "public_metrics": {
+        "followers_count": 171,
+        "following_count": 1855,
+        "tweet_count": 325,
+        "listed_count": 1
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1536606434967883776/nyrRrxUs_normal.jpg",
+      "created_at": "2021-09-22T10:41:14.000Z",
+      "name": "Alvin Leteipan",
+      "protected": false,
+      "verified": false,
+      "id": "1440627179893624836"
+    },
+    {
+      "username": "MosesKanteh",
+      "description": "Kante photography",
+      "public_metrics": {
+        "followers_count": 41,
+        "following_count": 68,
+        "tweet_count": 148,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1440873734458511360/U3iQJyYx_normal.jpg",
+      "created_at": "2021-09-23T03:00:09.000Z",
+      "name": "mosinho_kante",
+      "protected": false,
+      "verified": false,
+      "id": "1440873512122601473"
+    },
+    {
+      "username": "ignitiuswiz",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 5,
+        "following_count": 34,
+        "tweet_count": 1,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-10-05T15:16:15.000Z",
+      "name": "ignitiuswiz",
+      "protected": false,
+      "verified": false,
+      "id": "1577678994065039367"
+    },
+    {
+      "username": "MarcellRutto1",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 7,
+        "following_count": 149,
+        "tweet_count": 6,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-03-24T20:09:00.000Z",
+      "name": "Marcell Rutto",
+      "protected": false,
+      "verified": false,
+      "id": "1507086980395384844"
+    },
+    {
+      "username": "Paulo_254Off",
+      "description": "no traces",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 29,
+        "tweet_count": 7,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1583858142433222662/tzzQBddV_normal.png",
+      "created_at": "2022-10-22T16:29:42.000Z",
+      "name": "Paulo",
+      "protected": false,
+      "verified": false,
+      "id": "1583858029933592577"
+    },
+    {
+      "username": "kale_Edd",
+      "description": "I like what i like/ Anything posted are my personal thoughts and opinions doesn't represent friends or anywhere i work/ Arsenal/ Geri Soweto \ud83c\uddf0\ud83c\uddea",
+      "location": "kenya nairobi",
+      "public_metrics": {
+        "followers_count": 2215,
+        "following_count": 2176,
+        "tweet_count": 4209,
+        "listed_count": 2
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1583172804668694528/xycnIphM_normal.jpg",
+      "created_at": "2012-03-28T08:55:36.000Z",
+      "name": "Chuma Necha \ud83c\uddf0\ud83c\uddea",
+      "protected": false,
+      "verified": false,
+      "id": "538868486"
+    },
+    {
+      "username": "Conso_steve",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 13,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "created_at": "2022-10-26T04:21:56.000Z",
+      "name": "Consolata Kariuki",
+      "protected": false,
+      "verified": false,
+      "id": "1585124450923585537"
+    },
+    {
+      "username": "ashuu_l",
+      "description": "",
+      "public_metrics": {
+        "followers_count": 0,
+        "following_count": 24,
+        "tweet_count": 0,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1577742961852530688/QeQ-RmDy_normal.png",
+      "created_at": "2022-10-05T19:30:09.000Z",
+      "name": "Ashuu L",
+      "protected": false,
+      "verified": false,
+      "id": "1577742831761997838"
+    },
+    {
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "start": 0,
+              "end": 23,
+              "url": "https://t.co/DVuiRalyVC",
+              "expanded_url": "http://www.facebook.com/masterIan.Ne",
+              "display_url": "facebook.com/masterIan.Ne"
+            }
+          ]
+        }
+      },
+      "username": "_MasterIan_",
+      "description": "!!Live Like There's No Tomorrow!!",
+      "location": "Mombasa, Kenya",
+      "public_metrics": {
+        "followers_count": 28,
+        "following_count": 241,
+        "tweet_count": 146,
+        "listed_count": 0
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1581010458231902215/ZG4ouF5F_normal.jpg",
+      "created_at": "2014-02-07T04:47:48.000Z",
+      "name": "Master Ian",
+      "protected": false,
+      "url": "https://t.co/DVuiRalyVC",
+      "verified": false,
+      "id": "2331306920"
+    },
+    {
+      "username": "MwakobaWilton",
+      "description": "Allah is great",
+      "location": "m w",
+      "public_metrics": {
+        "followers_count": 50,
+        "following_count": 1507,
+        "tweet_count": 21,
+        "listed_count": 3
+      },
+      "profile_image_url": "https://pbs.twimg.com/profile_images/1527892956258177024/fTSapWH2_normal.jpg",
+      "created_at": "2014-07-04T20:10:22.000Z",
+      "name": "mwaks _the_ great",
+      "protected": false,
+      "verified": false,
+      "id": "2604068683"
+    }
+  ],
+  "meta": { "result_count": 100, "next_token": "E9HNQLS3510HGZZZ" },
+  "response": {
+    "data": [
+      {
+        "username": "SirKen15758526",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 7,
+          "following_count": 144,
+          "tweet_count": 17,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2019-09-02T14:04:38.000Z",
+        "name": "SirKen",
+        "protected": false,
+        "verified": false,
+        "id": "1168525048652750854"
+      },
+      {
+        "username": "AyLacey",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 60,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-10-26T08:14:30.000Z",
+        "name": "Lacey_Ay",
+        "protected": false,
+        "verified": false,
+        "id": "1585182998323945472"
+      },
+      {
+        "username": "AlushMathew",
+        "description": "Am really handsome",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 8,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1462438501320900610/n-o6_ar0_normal.jpg",
+        "created_at": "2021-11-21T15:08:50.000Z",
+        "name": "Mathew Alush",
+        "protected": false,
+        "verified": false,
+        "id": "1462437768580247557"
+      },
+      {
+        "username": "WillyMungai11",
+        "description": "Have fun",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 45,
+          "tweet_count": 1,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1574646701528387585/8xt0kf7P_normal.png",
+        "created_at": "2022-09-27T06:26:43.000Z",
+        "name": "Willy Mungai",
+        "protected": false,
+        "verified": false,
+        "id": "1574646529880621058"
+      },
+      {
+        "username": "sandyphi525",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 26,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1578289303456825350/aS2_HtRt_normal.png",
+        "created_at": "2022-10-07T07:41:07.000Z",
+        "name": "Twity Rhoda",
+        "protected": false,
+        "verified": false,
+        "id": "1578288025511018498"
+      },
+      {
+        "username": "mwanza_ngina",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 47,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1585175615908478976/FO7CaLsL_normal.png",
+        "created_at": "2022-10-26T07:44:52.000Z",
+        "name": "Ngina Mwanza",
+        "protected": false,
+        "verified": false,
+        "id": "1585175340502106112"
+      },
+      {
+        "username": "KennOdhiambo5",
+        "description": "Jubilant kenyan",
+        "public_metrics": {
+          "followers_count": 225,
+          "following_count": 756,
+          "tweet_count": 186,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1575458942813093889/AwqS5FuF_normal.jpg",
+        "created_at": "2022-09-29T12:12:55.000Z",
+        "name": "Kenn Odhiambo",
+        "protected": false,
+        "verified": false,
+        "id": "1575458438271963139"
+      },
+      {
+        "username": "WangareVero",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 11,
+          "following_count": 313,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2021-05-08T14:03:21.000Z",
+        "name": "VeroWangare",
+        "protected": false,
+        "verified": false,
+        "id": "1391030796962643976"
+      },
+      {
+        "username": "Vincent60692105",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 1,
+          "following_count": 51,
+          "tweet_count": 6,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1585165536207556609/sKp1DyCZ_normal.jpg",
+        "created_at": "2022-10-26T07:04:49.000Z",
+        "name": "Vincent Onyango Achola",
+        "protected": false,
+        "verified": false,
+        "id": "1585165372667346944"
+      },
+      {
+        "username": "MwatelaMustafa",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 12,
+          "following_count": 108,
+          "tweet_count": 8,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1573636765780709376/vJSyV4DC_normal.jpg",
+        "created_at": "2022-08-08T08:28:29.000Z",
+        "name": "Mustafa Mwatela",
+        "protected": false,
+        "verified": false,
+        "id": "1556557774032863233"
+      },
+      {
+        "username": "petermark_121",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 143,
+          "following_count": 1217,
+          "tweet_count": 39,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1569047929729474561/gq8y8SCL_normal.jpg",
+        "created_at": "2020-03-22T07:34:57.000Z",
+        "name": "peter mark",
+        "protected": false,
+        "verified": false,
+        "id": "1241629370424442880"
+      },
+      {
+        "username": "MabongaLukoa",
+        "description": "Africa's remaining statesman,family man,God's point man, clinician per excellence,medico-legal enthusiast,author,entreneurship enthusiast and patriot.",
+        "location": "Nairobi, Kenya",
+        "public_metrics": {
+          "followers_count": 352,
+          "following_count": 929,
+          "tweet_count": 1392,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1556944354329124865/5q0Zz-pN_normal.jpg",
+        "created_at": "2017-02-23T13:28:02.000Z",
+        "name": "Esq. MABONGA.E. LUKOA",
+        "protected": false,
+        "verified": false,
+        "id": "834756705317691392"
+      },
+      {
+        "username": "bar__zoo",
+        "description": "Art enthusiast",
+        "public_metrics": {
+          "followers_count": 14,
+          "following_count": 65,
+          "tweet_count": 54,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1553054574512046080/_dZDQJLV_normal.jpg",
+        "created_at": "2022-07-29T16:26:06.000Z",
+        "name": "the Duke ke\ud83c\uddf0\ud83c\uddea",
+        "protected": false,
+        "verified": false,
+        "id": "1553054067911495685"
+      },
+      {
+        "username": "enashelvo",
+        "description": "Am blessed & Proud Arsenal fan.",
+        "location": "\u00dcT: 0.51525,35.26221",
+        "public_metrics": {
+          "followers_count": 179,
+          "following_count": 954,
+          "tweet_count": 176,
+          "listed_count": 9
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1262363941147152384/MljNvNrs_normal.jpg",
+        "created_at": "2009-08-30T19:51:15.000Z",
+        "name": "Elvys",
+        "protected": false,
+        "verified": false,
+        "id": "70197847"
+      },
+      {
+        "username": "eva_githinji3",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 37,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1570653151102910464/8A8hPGs3_normal.png",
+        "created_at": "2022-09-16T05:57:46.000Z",
+        "name": "Eva Githinji",
+        "protected": false,
+        "verified": false,
+        "id": "1570653064134008832"
+      },
+      {
+        "username": "hitznftmarket1",
+        "description": "If you need production tracks are trying to network get at me here to create and build let\u2019s go!!!",
+        "public_metrics": {
+          "followers_count": 152,
+          "following_count": 454,
+          "tweet_count": 13,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1584482579662585860/Lpsi62yH_normal.jpg",
+        "created_at": "2022-10-24T09:50:12.000Z",
+        "name": "Hitznftmarket",
+        "protected": false,
+        "verified": false,
+        "id": "1584482335633776640"
+      },
+      {
+        "username": "Gtawnhuss",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 7,
+          "following_count": 41,
+          "tweet_count": 7,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1585166983892434944/M6YoY_ks_normal.jpg",
+        "created_at": "2022-10-25T08:37:30.000Z",
+        "name": "Hussein Gtawn",
+        "protected": false,
+        "verified": false,
+        "id": "1584826184969363457"
+      },
+      {
+        "username": "donsam_omondi2",
+        "description": "Enthusiastic",
+        "public_metrics": {
+          "followers_count": 5,
+          "following_count": 141,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1519985950096568324/JwTb9R4v_normal.jpg",
+        "created_at": "2022-04-29T10:23:09.000Z",
+        "name": "Donsam Omondi",
+        "protected": false,
+        "verified": false,
+        "id": "1519985355625316352"
+      },
+      {
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "start": 0,
+                "end": 23,
+                "url": "https://t.co/0mkCuzX8Ag",
+                "expanded_url": "http://www.instagram.com/@manuh_meshack",
+                "display_url": "instagram.com/@manuh_meshack"
+              }
+            ]
+          }
+        },
+        "username": "manuh_meshack",
+        "description": "*;)@'(?@!(8!&\ud83c\udf34\u2728*\nShuttler\ud83c\udff8\u2728\nAfricankid\ud83c\uddf0\ud83c\uddea\nBadcard\ud83c\udc04\nBiker\ud83d\udef5\ud83d\udee3\nBe happy live life \ud83d\udcaf",
+        "location": "Mombasa kenya",
+        "public_metrics": {
+          "followers_count": 222,
+          "following_count": 397,
+          "tweet_count": 22,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1204427367424385025/Ri-dszST_normal.jpg",
+        "created_at": "2019-12-10T15:41:09.000Z",
+        "name": "Manuh_meshack",
+        "protected": false,
+        "url": "https://t.co/0mkCuzX8Ag",
+        "verified": false,
+        "id": "1204425717074866177"
+      },
+      {
+        "username": "shivshankarinc",
+        "description": "I support congress party",
+        "location": "Bhind, India",
+        "public_metrics": {
+          "followers_count": 4176,
+          "following_count": 96,
+          "tweet_count": 21494,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1584925635226787840/7dAB3vPi_normal.jpg",
+        "created_at": "2018-07-29T13:35:26.000Z",
+        "name": "shivshankar bhadauriya",
+        "protected": false,
+        "verified": false,
+        "id": "1023562645247389698",
+        "pinned_tweet_id": "1548548235186151429"
+      },
+      {
+        "username": "SpadaFervenzi",
+        "description": "Business only",
+        "location": "Lagos, Nigeria",
+        "public_metrics": {
+          "followers_count": 33,
+          "following_count": 374,
+          "tweet_count": 4,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1579858954645118977/NAKszeJj_normal.jpg",
+        "created_at": "2022-02-24T10:26:28.000Z",
+        "name": "Spada Fervenzi",
+        "protected": false,
+        "verified": false,
+        "id": "1496793464549351427"
+      },
+      {
+        "username": "Evano34379901",
+        "description": "Don't ever burn bridges",
+        "public_metrics": {
+          "followers_count": 133,
+          "following_count": 491,
+          "tweet_count": 14,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1505518773457100801/Hu48ZiGB_normal.jpg",
+        "created_at": "2021-07-10T01:10:37.000Z",
+        "name": "Evan",
+        "protected": false,
+        "verified": false,
+        "id": "1413666824563089412"
+      },
+      {
+        "username": "JoeGash3",
+        "description": "Family, forever and for always.",
+        "public_metrics": {
+          "followers_count": 65,
+          "following_count": 411,
+          "tweet_count": 400,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1522308001444646913/uJilM2rI_normal.jpg",
+        "created_at": "2022-05-05T20:11:25.000Z",
+        "name": "Joe Gash",
+        "protected": false,
+        "verified": false,
+        "id": "1522307777355563008"
+      },
+      {
+        "username": "dudus302001",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 2,
+          "following_count": 177,
+          "tweet_count": 2,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1573070266468630529/cwMXK-7T_normal.jpg",
+        "created_at": "2022-04-13T18:26:14.000Z",
+        "name": "dudus",
+        "protected": false,
+        "verified": false,
+        "id": "1514308866527404040"
+      },
+      {
+        "entities": {
+          "description": {
+            "hashtags": [{ "start": 100, "end": 107, "tag": "SPX500" }],
+            "mentions": [{ "start": 65, "end": 72, "username": "Qwarqo" }]
+          }
+        },
+        "username": "aroolangat",
+        "description": "Web developer |Graphics Designer \u201cAdobe Photoshop|Corel Draw\u201d|HR @Qwarqo |GGMU|Man United \u2764\ufe0f|Trader #SPX500",
+        "public_metrics": {
+          "followers_count": 1083,
+          "following_count": 1922,
+          "tweet_count": 5273,
+          "listed_count": 1
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1507819643947429898/UCNWvu99_normal.jpg",
+        "created_at": "2021-11-21T19:37:11.000Z",
+        "name": "LANGAT",
+        "protected": false,
+        "verified": false,
+        "id": "1462505333897768965"
+      },
+      {
+        "username": "askofu01",
+        "description": "\ud835\udd76\ud835\udd8e\ud835\udd8f\ud835\udd86\ud835\udd93\ud835\udd86 \ud835\udd89\ud835\udd86\ud835\udd90\ud835\udd99\ud835\udd86\ud835\udd97\ud835\udd8e,\ud83d\udc89\ud83d\udc8a,,\ud83d\ude18\n\ud835\udd7f\ud835\udd8a\ud835\udd86\ud835\udd92 \ud835\udd98\ud835\udd9a\ud835\udd87\ud835\udd86\ud835\udd97\ud835\udd9a\ud83d\udd25\ud83d\udd25\ud83d\udd25\ud83d\udd25\n\ud835\udd71\ud835\udd94\ud835\udd97\ud835\udd8a\ud835\udd98\ud835\udd99\ud835\udd8a\ud835\udd97 \ud835\udd93\ud835\udd86\ud835\udd99\ud835\udd8e\ud835\udd94\ud835\udd93\ud83c\udf1f\u2b50\u2600\ufe0f",
+        "public_metrics": {
+          "followers_count": 49,
+          "following_count": 60,
+          "tweet_count": 31,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1554285608515903489/iZHG1I-7_normal.jpg",
+        "created_at": "2021-02-22T13:02:33.000Z",
+        "name": "\ud835\ude70\ud835\ude82\ud835\ude7a\ud835\ude7e\ud835\ude75\ud835\ude84",
+        "protected": false,
+        "verified": false,
+        "id": "1363836493823811584"
+      },
+      {
+        "username": "wanjirushaniz66",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 4,
+          "following_count": 56,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1575349932839559168/zWB-SVmf_normal.jpg",
+        "created_at": "2022-09-29T05:01:06.000Z",
+        "name": "Shaniz Wanjiru",
+        "protected": false,
+        "verified": false,
+        "id": "1575349713259401216"
+      },
+      {
+        "username": "chiefdhehwa",
+        "description": "",
+        "location": "United Kingdom",
+        "public_metrics": {
+          "followers_count": 238,
+          "following_count": 494,
+          "tweet_count": 77,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1547290889579642880/kT8ZG5AH_normal.jpg",
+        "created_at": "2022-07-13T17:55:41.000Z",
+        "name": "Dhehwa Moyo",
+        "protected": true,
+        "verified": false,
+        "id": "1547278495692324865"
+      },
+      {
+        "username": "samuel_egessa",
+        "description": "If you can't fight them then join them",
+        "public_metrics": {
+          "followers_count": 7,
+          "following_count": 106,
+          "tweet_count": 3,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1583123743601311747/LyirPXvk_normal.png",
+        "created_at": "2022-10-20T15:51:27.000Z",
+        "name": "Samuel Egessa",
+        "protected": false,
+        "verified": false,
+        "id": "1583123590555246599"
+      },
+      {
+        "username": "HalbertRono",
+        "description": "Guided by my own strong principles.",
+        "public_metrics": {
+          "followers_count": 15,
+          "following_count": 401,
+          "tweet_count": 3,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1496797427172585472/6uzm0BNt_normal.jpg",
+        "created_at": "2019-09-26T10:23:38.000Z",
+        "name": "KIPKORIR RONO HALBERT",
+        "protected": true,
+        "verified": false,
+        "id": "1177166561213374465"
+      },
+      {
+        "username": "KorosDennis07",
+        "description": "Biochemistry , man utd fan, dancehall and riddims",
+        "public_metrics": {
+          "followers_count": 244,
+          "following_count": 549,
+          "tweet_count": 629,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1577885557220429824/5W6zHXPc_normal.jpg",
+        "created_at": "2022-08-04T10:35:41.000Z",
+        "name": "Meditating loner",
+        "protected": false,
+        "verified": false,
+        "id": "1555140136484196353"
+      },
+      {
+        "username": "samueln13001566",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 2,
+          "following_count": 5,
+          "tweet_count": 21,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1585166366168039424/-o59ZtuU_normal.jpg",
+        "created_at": "2022-09-20T07:24:43.000Z",
+        "name": "sammysam",
+        "protected": false,
+        "verified": false,
+        "id": "1572124406851244032"
+      },
+      {
+        "username": "JairusOwin",
+        "description": "Public health specialist|Environmentalist|Sustainability Practitioner|Climate Activist|Counselor|Strategic Leadership",
+        "location": "Nairobi, Kenya",
+        "public_metrics": {
+          "followers_count": 498,
+          "following_count": 767,
+          "tweet_count": 18,
+          "listed_count": 1
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1583475889962115075/8mseHdrQ_normal.jpg",
+        "created_at": "2017-09-03T12:01:39.000Z",
+        "name": "Jairus Charles",
+        "protected": false,
+        "verified": false,
+        "id": "904313435470651393"
+      },
+      {
+        "username": "KIMATHIBONFACE8",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 3,
+          "following_count": 46,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1584896721812963329/7txaXMso_normal.jpg",
+        "created_at": "2022-10-25T13:15:46.000Z",
+        "name": "KIMATHI BONFACE",
+        "protected": false,
+        "verified": false,
+        "id": "1584896445735378944"
+      },
+      {
+        "username": "Sir_Pitsi",
+        "description": "Mamelodi Sundowns and TTM \ud83e\udd23\ud83e\udd23 the rich gang",
+        "location": "Evander, South Africa",
+        "public_metrics": {
+          "followers_count": 320,
+          "following_count": 1574,
+          "tweet_count": 349,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1272755721319395328/c8twyT3n_normal.jpg",
+        "created_at": "2012-03-11T20:28:45.000Z",
+        "name": "Pitsi Not Pitso.",
+        "protected": false,
+        "verified": false,
+        "id": "521648630"
+      },
+      {
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "start": 0,
+                "end": 23,
+                "url": "https://t.co/Kdx6NZMvib",
+                "expanded_url": "http://Obilo.com",
+                "display_url": "Obilo.com"
+              }
+            ]
+          }
+        },
+        "username": "its_Obil",
+        "description": "Underated soft life.",
+        "location": "Kiambu, Kenya",
+        "public_metrics": {
+          "followers_count": 272,
+          "following_count": 517,
+          "tweet_count": 146,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1583130570451738632/wLl5-eVV_normal.jpg",
+        "created_at": "2022-10-20T03:15:04.000Z",
+        "name": "Obilo",
+        "protected": false,
+        "url": "https://t.co/Kdx6NZMvib",
+        "verified": false,
+        "id": "1582933219594436608",
+        "pinned_tweet_id": "1583019699570294784"
+      },
+      {
+        "username": "YvonneMbuvi",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 7,
+          "following_count": 54,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1585140085321760769/d7uNIge__normal.jpg",
+        "created_at": "2022-10-26T05:22:56.000Z",
+        "name": "Yvonne Mbuvi",
+        "protected": false,
+        "verified": false,
+        "id": "1585139738499026945"
+      },
+      {
+        "username": "kiing_rae3s",
+        "description": "",
+        "location": "Johannesburg, South Africa",
+        "public_metrics": {
+          "followers_count": 63,
+          "following_count": 304,
+          "tweet_count": 411,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1262654659711426563/YJcsayId_normal.jpg",
+        "created_at": "2020-05-18T08:56:37.000Z",
+        "name": "Raees Motala",
+        "protected": false,
+        "verified": false,
+        "id": "1262306039996846080"
+      },
+      {
+        "username": "Kim51906194",
+        "description": "Anonymous Ghost Serial",
+        "location": "Province of Sakhalin, Russia",
+        "public_metrics": {
+          "followers_count": 26,
+          "following_count": 30,
+          "tweet_count": 2022,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1511381030837567492/WwvR8Xvi_normal.jpg",
+        "created_at": "2020-01-07T13:42:03.000Z",
+        "name": "Neville",
+        "protected": false,
+        "verified": false,
+        "id": "1214542667868192769"
+      },
+      {
+        "username": "MaxminAllan",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 1,
+          "following_count": 45,
+          "tweet_count": 4,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1583450323833835524/62-yQWCE_normal.jpg",
+        "created_at": "2022-07-22T05:42:57.000Z",
+        "name": "Allan Maxmin",
+        "protected": false,
+        "verified": false,
+        "id": "1550355604887281665"
+      },
+      {
+        "username": "mc_kinda",
+        "description": "Creativity",
+        "public_metrics": {
+          "followers_count": 11,
+          "following_count": 83,
+          "tweet_count": 4,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1446859352485339138/tMlxOaXt_normal.jpg",
+        "created_at": "2021-10-06T17:05:40.000Z",
+        "name": "Mc Kinda",
+        "protected": false,
+        "verified": false,
+        "id": "1445797266242031616"
+      },
+      {
+        "username": "Thee_massive",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 8,
+          "following_count": 35,
+          "tweet_count": 0,
+          "listed_count": 1
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1564634911255953413/w2GoT_ad_normal.jpg",
+        "created_at": "2022-08-30T15:21:20.000Z",
+        "name": "Thee Massive",
+        "protected": false,
+        "verified": false,
+        "id": "1564633755863728128"
+      },
+      {
+        "username": "david_longor",
+        "description": "",
+        "location": "Kenya",
+        "public_metrics": {
+          "followers_count": 16,
+          "following_count": 129,
+          "tweet_count": 4,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1582474728740118532/Wxo4DNk5_normal.jpg",
+        "created_at": "2022-10-18T20:15:36.000Z",
+        "name": "Longor David",
+        "protected": false,
+        "verified": false,
+        "id": "1582464844179329025"
+      },
+      {
+        "username": "IminzaVallary",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 2,
+          "following_count": 19,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1584652381161242627/WV4yUWkC_normal.png",
+        "created_at": "2022-10-24T21:05:43.000Z",
+        "name": "IMINZA VALLARY",
+        "protected": false,
+        "verified": false,
+        "id": "1584652206925651970"
+      },
+      {
+        "username": "sam_wa_essy",
+        "description": "Funnu",
+        "location": "Laikipia",
+        "public_metrics": {
+          "followers_count": 18,
+          "following_count": 151,
+          "tweet_count": 32,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1497145907808190465/W6BTyJgU_normal.jpg",
+        "created_at": "2021-01-28T08:33:52.000Z",
+        "name": "Kaesi",
+        "protected": false,
+        "verified": false,
+        "id": "1354709189571047424"
+      },
+      {
+        "username": "KasyokaHezron",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 6,
+          "following_count": 52,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1570738278432653318/W1-VZFBb_normal.jpg",
+        "created_at": "2022-09-16T11:33:31.000Z",
+        "name": "Hezron Kasyoka",
+        "protected": false,
+        "verified": false,
+        "id": "1570737508731740160"
+      },
+      {
+        "username": "kariedamaris1",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 2,
+          "following_count": 152,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1576231152221917184/hy8VUQo7_normal.png",
+        "created_at": "2022-10-01T15:22:46.000Z",
+        "name": "damaris karie",
+        "protected": false,
+        "verified": false,
+        "id": "1576230897552080896"
+      },
+      {
+        "username": "awainaina16",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 14,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1584802247292194817/PSVBaw3q_normal.png",
+        "created_at": "2022-10-25T07:01:14.000Z",
+        "name": "Ann Wainaina",
+        "protected": false,
+        "verified": false,
+        "id": "1584802152341454850"
+      },
+      {
+        "username": "DNgaiz254",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 32,
+          "following_count": 144,
+          "tweet_count": 34,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1573943812443049984/WClvEK8B_normal.jpg",
+        "created_at": "2022-09-25T07:52:34.000Z",
+        "name": "Ngaiz\ud83d\udcafDida",
+        "protected": false,
+        "verified": false,
+        "id": "1573943439821086720"
+      },
+      {
+        "username": "eveadams47",
+        "description": "An important part of owning your 'flaws 'is not being afraid to show them...",
+        "location": "Nairobi, Kenya",
+        "public_metrics": {
+          "followers_count": 8,
+          "following_count": 151,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1585149910361542657/DBVFnCr9_normal.jpg",
+        "created_at": "2022-10-26T05:58:02.000Z",
+        "name": "eveadams47",
+        "protected": false,
+        "verified": false,
+        "id": "1585148552409501697"
+      },
+      {
+        "username": "norman_mutembei",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 2,
+          "following_count": 229,
+          "tweet_count": 2,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1585151800054890503/bLkL54K3_normal.jpg",
+        "created_at": "2022-10-26T06:01:49.000Z",
+        "name": "T.M mate",
+        "protected": false,
+        "verified": false,
+        "id": "1585149492667596801"
+      },
+      {
+        "username": "BiiDominic86",
+        "description": "My life is mine alone.",
+        "location": "Nairobi ",
+        "public_metrics": {
+          "followers_count": 19,
+          "following_count": 247,
+          "tweet_count": 2,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1584988113750851585/DCFsIPdT_normal.jpg",
+        "created_at": "2015-05-04T17:37:02.000Z",
+        "name": "Dominic",
+        "protected": false,
+        "verified": false,
+        "id": "3233837259"
+      },
+      {
+        "username": "lewi44980114",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 3,
+          "following_count": 26,
+          "tweet_count": 1,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-02-25T15:16:55.000Z",
+        "name": "Ken Lewis",
+        "protected": false,
+        "verified": false,
+        "id": "1497228987583668226"
+      },
+      {
+        "entities": {
+          "description": {
+            "hashtags": [{ "start": 83, "end": 94, "tag": "university" }]
+          }
+        },
+        "username": "MasNewton1",
+        "description": "I follow you after three days you don't follow back I unfollow ..free an fair game #university virgin",
+        "location": "Sirisia, Kenya",
+        "public_metrics": {
+          "followers_count": 3097,
+          "following_count": 3305,
+          "tweet_count": 892,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1584919047690485760/uJN9ucxe_normal.jpg",
+        "created_at": "2021-09-14T06:11:15.000Z",
+        "name": "PRESBYTERIAN COMRADE\ud83d\udd25\ud83d\udcaf(PUEA)",
+        "protected": false,
+        "verified": false,
+        "id": "1437660082511167488",
+        "pinned_tweet_id": "1579005854053195778"
+      },
+      {
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "start": 0,
+                "end": 23,
+                "url": "https://t.co/8diVno71xf",
+                "expanded_url": "http://www.djbravo.co.ke",
+                "display_url": "djbravo.co.ke"
+              }
+            ]
+          }
+        },
+        "username": "djbravoenterta1",
+        "description": "",
+        "location": "Nairobi, Kenya",
+        "public_metrics": {
+          "followers_count": 51,
+          "following_count": 382,
+          "tweet_count": 11,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1582297807284801536/X9W8r18o_normal.jpg",
+        "created_at": "2022-10-18T09:08:07.000Z",
+        "name": "dj bravo entertainment",
+        "protected": false,
+        "url": "https://t.co/8diVno71xf",
+        "verified": false,
+        "id": "1582297286679339010"
+      },
+      {
+        "username": "AdauRajab",
+        "description": "Climax coache",
+        "public_metrics": {
+          "followers_count": 470,
+          "following_count": 1534,
+          "tweet_count": 278,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1585142883954425856/QGdw1NBV_normal.jpg",
+        "created_at": "2022-09-29T18:05:33.000Z",
+        "name": "Rajab Adau",
+        "protected": false,
+        "verified": false,
+        "id": "1575547145784070154"
+      },
+      {
+        "username": "361a29ed79114ee",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 33,
+          "following_count": 32,
+          "tweet_count": 1,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/564695610574766080/mMHUbWhJ_normal.jpeg",
+        "created_at": "2015-02-09T07:58:31.000Z",
+        "name": "Ronald Wainaina",
+        "protected": false,
+        "verified": false,
+        "id": "3026149469"
+      },
+      {
+        "username": "ChachiOwens",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 393,
+          "following_count": 1768,
+          "tweet_count": 704,
+          "listed_count": 1
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1486339594337632260/FXbh_afe_normal.jpg",
+        "created_at": "2020-07-05T14:23:25.000Z",
+        "name": "Charles Younger",
+        "protected": false,
+        "verified": false,
+        "id": "1279782896069459973"
+      },
+      {
+        "username": "dylanKE9",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 3,
+          "following_count": 242,
+          "tweet_count": 2,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-06-10T16:19:10.000Z",
+        "name": "dylanKE",
+        "protected": false,
+        "verified": false,
+        "id": "1535295439263748102"
+      },
+      {
+        "username": "JokerJoe254",
+        "description": "Life is a blessing\ud83d\ude4f\ud83d\ude4f\nAppreciate every moment you are alive\ud83d\udcaa\ud83d\udcaa\ud83d\ude0e",
+        "location": "Nairobi. Kenya ",
+        "public_metrics": {
+          "followers_count": 50,
+          "following_count": 222,
+          "tweet_count": 176,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1220801440601513984/hbj3_HCG_normal.jpg",
+        "created_at": "2016-01-17T19:30:42.000Z",
+        "name": "Joker Joe",
+        "protected": false,
+        "verified": false,
+        "id": "4821937001"
+      },
+      {
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "start": 0,
+                "end": 23,
+                "url": "https://t.co/RWdiJXuTa3",
+                "expanded_url": "https://t.me/+bZ0t3rajlh5mY2Q0",
+                "display_url": "t.me/+bZ0t3rajlh5mY\u2026"
+              }
+            ]
+          }
+        },
+        "username": "DerrickMagicho",
+        "description": "NO INVESTMENT\u274c\nInspired by inner circle Trader(ICT)\n\n\u2022Co founder: CIP TRADING ACADEMY\n\u2022Trader in financial markets majoring on\nGold(XAU/USD)\n\nTelegram Link \ud83d\udc47",
+        "location": "Nairobi, Kenya",
+        "public_metrics": {
+          "followers_count": 6354,
+          "following_count": 6134,
+          "tweet_count": 10823,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1522242949521846273/cTL0uJAX_normal.jpg",
+        "created_at": "2018-07-20T10:17:25.000Z",
+        "name": "CIP HEDGE",
+        "protected": false,
+        "url": "https://t.co/RWdiJXuTa3",
+        "verified": false,
+        "id": "1020251323617497089",
+        "pinned_tweet_id": "1551803879993614337"
+      },
+      {
+        "username": "curtis4ever2",
+        "description": "God \u2764\ufe0f Mum \u2764\ufe0f Chelsea \ud83d\udc99 \u2b50\ufe0fWay More Ta Life Den Just ThE HoOD I\u2019m TryiNG TO REACH GOALS \ud83d\udcb0\ud83d\udd2b\u2694\ufe0f",
+        "location": "Greater Accra, Ghana",
+        "public_metrics": {
+          "followers_count": 991,
+          "following_count": 3926,
+          "tweet_count": 193,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1584843159225393152/Fm0d-oQN_normal.jpg",
+        "created_at": "2020-08-17T00:35:02.000Z",
+        "name": "curtis4ever",
+        "protected": false,
+        "verified": false,
+        "id": "1295157045226803201"
+      },
+      {
+        "username": "AnnahLunyolo",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 4,
+          "following_count": 184,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1565717736289959937/31bvpMKL_normal.png",
+        "created_at": "2022-09-02T15:06:12.000Z",
+        "name": "Annah Lunyolo",
+        "protected": false,
+        "verified": false,
+        "id": "1565716842764800004"
+      },
+      {
+        "username": "Deleted_38",
+        "description": "bloqu\u00e9.appuyez pour d\u00e9bloquer",
+        "public_metrics": {
+          "followers_count": 104,
+          "following_count": 233,
+          "tweet_count": 440,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1485619266087006215/Wp92Obzf_normal.jpg",
+        "created_at": "2021-02-24T15:07:59.000Z",
+        "name": "Bi",
+        "protected": false,
+        "verified": false,
+        "id": "1364592802043224067"
+      },
+      {
+        "username": "atienoann00",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 14,
+          "following_count": 199,
+          "tweet_count": 4,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1582581788152561664/w7Ia9vSX_normal.jpg",
+        "created_at": "2022-05-30T10:28:09.000Z",
+        "name": "Ann Atieno",
+        "protected": false,
+        "verified": false,
+        "id": "1531220767555436545"
+      },
+      {
+        "username": "ilolopeta",
+        "description": "",
+        "location": "Nairobi, Kenya",
+        "public_metrics": {
+          "followers_count": 766,
+          "following_count": 1383,
+          "tweet_count": 173,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1578512873311068160/Ory_HlzZ_normal.jpg",
+        "created_at": "2021-08-28T22:50:03.000Z",
+        "name": "Ibrahim Lolopeta",
+        "protected": false,
+        "verified": false,
+        "id": "1431750918219911171"
+      },
+      {
+        "username": "ldhshalinder",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 302,
+          "following_count": 1082,
+          "tweet_count": 593,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2016-07-18T11:16:07.000Z",
+        "name": "Shalinder. Shrivasta",
+        "protected": false,
+        "verified": false,
+        "id": "754998176944390144"
+      },
+      {
+        "username": "Ngarly1",
+        "description": "i feel it",
+        "public_metrics": {
+          "followers_count": 91,
+          "following_count": 170,
+          "tweet_count": 37,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1083982164071534592/kWoM78wS_normal.jpg",
+        "created_at": "2014-07-22T17:52:53.000Z",
+        "name": "Ngarly",
+        "protected": false,
+        "verified": false,
+        "id": "2670143605"
+      },
+      {
+        "username": "jidennah4",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 54,
+          "following_count": 21,
+          "tweet_count": 5,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-07-26T09:42:03.000Z",
+        "name": "jidennah",
+        "protected": false,
+        "verified": false,
+        "id": "1551865302253817863"
+      },
+      {
+        "username": "john_shehu11",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 11,
+          "following_count": 171,
+          "tweet_count": 47,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1577758394559172612/9BlR1KqL_normal.jpg",
+        "created_at": "2022-09-26T10:58:15.000Z",
+        "name": "Sunday Yakubu",
+        "protected": false,
+        "verified": false,
+        "id": "1574351962132430849"
+      },
+      {
+        "username": "AlexKimlexy",
+        "description": "",
+        "location": "Wote ndo parkin",
+        "public_metrics": {
+          "followers_count": 88,
+          "following_count": 321,
+          "tweet_count": 43,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/608727368665063424/YHLnAqI-_normal.jpg",
+        "created_at": "2012-06-27T07:17:08.000Z",
+        "name": "kimlexy",
+        "protected": false,
+        "verified": false,
+        "id": "619766155"
+      },
+      {
+        "username": "noseitall5",
+        "description": "Yes it is him.!!",
+        "public_metrics": {
+          "followers_count": 2,
+          "following_count": 82,
+          "tweet_count": 1,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1568237477495816192/jzfOGOkN_normal.jpg",
+        "created_at": "2022-09-09T13:58:00.000Z",
+        "name": "noseitall",
+        "protected": false,
+        "verified": false,
+        "id": "1568237217365073920"
+      },
+      {
+        "username": "macleevery",
+        "description": "Speak English \ud83c\uddec\ud83c\udde7 Kiss French \ud83c\uddeb\ud83c\uddf7 Drive German \ud83c\udde9\ud83c\uddea Dress Italian \ud83c\uddee\ud83c\uddf9 Spend Arab \ud83c\udde6\ud83c\uddea Party Caribbean \ud83c\udde7\ud83c\uddf6 & Ride it like you stole it! \ud83c\udff4\u200d\u2620\ufe0f",
+        "location": "Nairobi, Kenya",
+        "public_metrics": {
+          "followers_count": 795,
+          "following_count": 992,
+          "tweet_count": 2303,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1569664959130308608/hpDdRXv-_normal.jpg",
+        "created_at": "2009-08-19T16:03:20.000Z",
+        "name": "\ud83c\uddf0\ud83c\uddeaMacleevery Missoi\ud83c\uddf0\ud83c\uddea",
+        "protected": false,
+        "verified": false,
+        "id": "67036782"
+      },
+      {
+        "username": "6irmike",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 19,
+          "following_count": 32,
+          "tweet_count": 87,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1568357381536468994/ZMKp4bCh_normal.jpg",
+        "created_at": "2020-07-23T22:56:14.000Z",
+        "name": "\u2755\ud83c\udf1a6ir Mike \ud83c\udf1a\u2755",
+        "protected": false,
+        "verified": false,
+        "id": "1286434917967106049"
+      },
+      {
+        "username": "NyamburaFelix",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 1,
+          "following_count": 55,
+          "tweet_count": 1,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-10-25T08:30:54.000Z",
+        "name": "Felix Nyambura",
+        "protected": false,
+        "verified": false,
+        "id": "1584824663670198272"
+      },
+      {
+        "username": "SamuelN49k",
+        "description": "Loving",
+        "public_metrics": {
+          "followers_count": 77,
+          "following_count": 39,
+          "tweet_count": 3,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1420800563810381833/f5st2tsO_normal.png",
+        "created_at": "2021-07-29T17:37:06.000Z",
+        "name": "Samuel Ngugi",
+        "protected": false,
+        "verified": false,
+        "id": "1420800426782478344"
+      },
+      {
+        "username": "patrick_matano",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 23,
+          "following_count": 195,
+          "tweet_count": 1,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1222900834742067201/0muRAyRV_normal.jpg",
+        "created_at": "2020-01-30T15:13:17.000Z",
+        "name": "Patrick Matano",
+        "protected": false,
+        "verified": false,
+        "id": "1222900476510736385"
+      },
+      {
+        "username": "MbiggyUle",
+        "description": "Am real researching",
+        "public_metrics": {
+          "followers_count": 9,
+          "following_count": 74,
+          "tweet_count": 4,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1450175003127918594/6Wpk54_w_normal.jpg",
+        "created_at": "2021-10-18T18:59:26.000Z",
+        "name": "Bazenga ule mbiggy",
+        "protected": false,
+        "verified": false,
+        "id": "1450174582216871937"
+      },
+      {
+        "username": "JapanSpecial8",
+        "description": "Content creator, Peace hater, Blogger",
+        "public_metrics": {
+          "followers_count": 11,
+          "following_count": 193,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-10-26T05:16:58.000Z",
+        "name": "Japan Special",
+        "protected": false,
+        "verified": false,
+        "id": "1585138229895995392"
+      },
+      {
+        "username": "mandi72107143",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 342,
+          "following_count": 668,
+          "tweet_count": 90,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1583406829538840578/bdPqysTj_normal.jpg",
+        "created_at": "2022-10-21T10:35:32.000Z",
+        "name": "M A N D I",
+        "protected": false,
+        "verified": false,
+        "id": "1583406555940126721"
+      },
+      {
+        "username": "BrayooUntamed",
+        "description": "Is a viibe \u2618\ufe0f\n\ud83c\udf1f\nKeeping cool \u2728\u2728",
+        "public_metrics": {
+          "followers_count": 245,
+          "following_count": 177,
+          "tweet_count": 321,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1265184271423221762/9mu2jkOh_normal.jpg",
+        "created_at": "2020-05-26T07:32:53.000Z",
+        "name": "H. I. M\ud83c\udf7b",
+        "protected": false,
+        "verified": false,
+        "id": "1265184050920251393"
+      },
+      {
+        "username": "rhodawangari10",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 22,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-10-20T05:27:31.000Z",
+        "name": "rhoda wangari",
+        "protected": false,
+        "verified": false,
+        "id": "1582966633034833923"
+      },
+      {
+        "username": "dchege2050",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 9,
+          "following_count": 62,
+          "tweet_count": 12,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1458790578422956033/qf16VyCm_normal.jpg",
+        "created_at": "2021-11-11T13:35:51.000Z",
+        "name": "David Chege",
+        "protected": false,
+        "verified": false,
+        "id": "1458790426274672641"
+      },
+      {
+        "username": "bobby28680753",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 49,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1584420193429749760/mSs6d1aJ_normal.jpg",
+        "created_at": "2022-10-24T05:42:32.000Z",
+        "name": "bobby",
+        "protected": false,
+        "verified": false,
+        "id": "1584419719846805505"
+      },
+      {
+        "username": "edwinoseko84",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 5,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1577213687521497092/vMZQwPP4_normal.jpg",
+        "created_at": "2022-10-04T08:27:00.000Z",
+        "name": "Adventure Dayz",
+        "protected": false,
+        "verified": false,
+        "id": "1577213566633250816"
+      },
+      {
+        "username": "anthony05143928",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 1,
+          "following_count": 12,
+          "tweet_count": 3,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-08-25T11:13:37.000Z",
+        "name": "anthony",
+        "protected": false,
+        "verified": false,
+        "id": "1562759981031559168"
+      },
+      {
+        "username": "SeanMunene",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 30,
+          "tweet_count": 5,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1479689999658463233/VUy9QqpN_normal.png",
+        "created_at": "2022-01-08T05:42:41.000Z",
+        "name": "Sean Munene",
+        "protected": false,
+        "verified": false,
+        "id": "1479689904003104773"
+      },
+      {
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "start": 0,
+                "end": 23,
+                "url": "https://t.co/ZFvAi8Ambw",
+                "expanded_url": "https://techlinehub.com/",
+                "display_url": "techlinehub.com"
+              }
+            ]
+          }
+        },
+        "username": "MichaelMtende",
+        "description": "A web Developer ,a programmer, computer networks and computer hardware.",
+        "location": "Nairobi, Kenya",
+        "public_metrics": {
+          "followers_count": 53,
+          "following_count": 374,
+          "tweet_count": 64,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/793376754610081792/4gJUe-yt_normal.jpg",
+        "created_at": "2013-11-28T07:54:11.000Z",
+        "name": "mtende michael",
+        "protected": false,
+        "url": "https://t.co/ZFvAi8Ambw",
+        "verified": false,
+        "id": "2219152220"
+      },
+      {
+        "username": "wizzy389096981",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 5,
+          "following_count": 114,
+          "tweet_count": 1,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1583486183677493248/L3dJoXTr_normal.jpg",
+        "created_at": "2022-10-21T15:48:55.000Z",
+        "name": "wizzy",
+        "protected": false,
+        "verified": false,
+        "id": "1583485351867416577"
+      },
+      {
+        "username": "Norrahhd",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 2,
+          "tweet_count": 1,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1503299516744847361/E0JjSJKk_normal.png",
+        "created_at": "2022-03-14T09:18:29.000Z",
+        "name": "norah",
+        "protected": false,
+        "verified": false,
+        "id": "1503299281620553731"
+      },
+      {
+        "username": "alvin_leteipan",
+        "description": "Geospatial Engineer....Certified Drone Pilot....GIS enthusiast",
+        "location": "Isiolo, Kenya",
+        "public_metrics": {
+          "followers_count": 171,
+          "following_count": 1855,
+          "tweet_count": 325,
+          "listed_count": 1
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1536606434967883776/nyrRrxUs_normal.jpg",
+        "created_at": "2021-09-22T10:41:14.000Z",
+        "name": "Alvin Leteipan",
+        "protected": false,
+        "verified": false,
+        "id": "1440627179893624836"
+      },
+      {
+        "username": "MosesKanteh",
+        "description": "Kante photography",
+        "public_metrics": {
+          "followers_count": 41,
+          "following_count": 68,
+          "tweet_count": 148,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1440873734458511360/U3iQJyYx_normal.jpg",
+        "created_at": "2021-09-23T03:00:09.000Z",
+        "name": "mosinho_kante",
+        "protected": false,
+        "verified": false,
+        "id": "1440873512122601473"
+      },
+      {
+        "username": "ignitiuswiz",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 5,
+          "following_count": 34,
+          "tweet_count": 1,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-10-05T15:16:15.000Z",
+        "name": "ignitiuswiz",
+        "protected": false,
+        "verified": false,
+        "id": "1577678994065039367"
+      },
+      {
+        "username": "MarcellRutto1",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 7,
+          "following_count": 149,
+          "tweet_count": 6,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-03-24T20:09:00.000Z",
+        "name": "Marcell Rutto",
+        "protected": false,
+        "verified": false,
+        "id": "1507086980395384844"
+      },
+      {
+        "username": "Paulo_254Off",
+        "description": "no traces",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 29,
+          "tweet_count": 7,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1583858142433222662/tzzQBddV_normal.png",
+        "created_at": "2022-10-22T16:29:42.000Z",
+        "name": "Paulo",
+        "protected": false,
+        "verified": false,
+        "id": "1583858029933592577"
+      },
+      {
+        "username": "kale_Edd",
+        "description": "I like what i like/ Anything posted are my personal thoughts and opinions doesn't represent friends or anywhere i work/ Arsenal/ Geri Soweto \ud83c\uddf0\ud83c\uddea",
+        "location": "kenya nairobi",
+        "public_metrics": {
+          "followers_count": 2215,
+          "following_count": 2176,
+          "tweet_count": 4209,
+          "listed_count": 2
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1583172804668694528/xycnIphM_normal.jpg",
+        "created_at": "2012-03-28T08:55:36.000Z",
+        "name": "Chuma Necha \ud83c\uddf0\ud83c\uddea",
+        "protected": false,
+        "verified": false,
+        "id": "538868486"
+      },
+      {
+        "username": "Conso_steve",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 13,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "created_at": "2022-10-26T04:21:56.000Z",
+        "name": "Consolata Kariuki",
+        "protected": false,
+        "verified": false,
+        "id": "1585124450923585537"
+      },
+      {
+        "username": "ashuu_l",
+        "description": "",
+        "public_metrics": {
+          "followers_count": 0,
+          "following_count": 24,
+          "tweet_count": 0,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1577742961852530688/QeQ-RmDy_normal.png",
+        "created_at": "2022-10-05T19:30:09.000Z",
+        "name": "Ashuu L",
+        "protected": false,
+        "verified": false,
+        "id": "1577742831761997838"
+      },
+      {
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "start": 0,
+                "end": 23,
+                "url": "https://t.co/DVuiRalyVC",
+                "expanded_url": "http://www.facebook.com/masterIan.Ne",
+                "display_url": "facebook.com/masterIan.Ne"
+              }
+            ]
+          }
+        },
+        "username": "_MasterIan_",
+        "description": "!!Live Like There's No Tomorrow!!",
+        "location": "Mombasa, Kenya",
+        "public_metrics": {
+          "followers_count": 28,
+          "following_count": 241,
+          "tweet_count": 146,
+          "listed_count": 0
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1581010458231902215/ZG4ouF5F_normal.jpg",
+        "created_at": "2014-02-07T04:47:48.000Z",
+        "name": "Master Ian",
+        "protected": false,
+        "url": "https://t.co/DVuiRalyVC",
+        "verified": false,
+        "id": "2331306920"
+      },
+      {
+        "username": "MwakobaWilton",
+        "description": "Allah is great",
+        "location": "m w",
+        "public_metrics": {
+          "followers_count": 50,
+          "following_count": 1507,
+          "tweet_count": 21,
+          "listed_count": 3
+        },
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1527892956258177024/fTSapWH2_normal.jpg",
+        "created_at": "2014-07-04T20:10:22.000Z",
+        "name": "mwaks _the_ great",
+        "protected": false,
+        "verified": false,
+        "id": "2604068683"
+      }
+    ],
+    "meta": { "result_count": 100, "next_token": "E9HNQLS3510HGZZZ" }
+  }
+}

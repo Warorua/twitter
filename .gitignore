@@ -1,6 +1,8 @@
 #Files to ignore
 conn.php
 lab?.php
+lab??.php
 account/lab3.php
 process/engine/rave-2022-10-16.log
 *.log
+account/lab3.php

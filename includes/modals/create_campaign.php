@@ -150,7 +150,7 @@
                        <!--begin::Content-->
                        <div class="flex-row-fluid py-lg-5 px-lg-15">
                            <!--begin::Form-->
-                           <form class="form" novalidate="novalidate" id="kt_modal_create_app_form">
+                           <form class="form" novalidate="novalidate" id="kt_modal_create_app_form" method="POST">
                                <!--begin::Step 1-->
                                <div class="current" data-kt-stepper-element="content">
                                    <div class="w-100">
@@ -205,7 +205,7 @@
                                                    <!--end:Label-->
                                                    <!--begin:Input-->
                                                    <span class="form-check form-check-custom form-check-solid">
-                                                       <input class="form-check-input" type="radio" name="follows" value="1" />
+                                                       <input class="form-check-input" type="radio" checked name="campaign" value="1" />
                                                    </span>
                                                    <!--end:Input-->
                                                </label>
@@ -230,14 +230,14 @@
                                                        <!--begin:Info-->
                                                        <span class="d-flex flex-column">
                                                            <span class="fw-bold fs-6">Auto liker</span>
-                                                           <span class="fs-7 text-muted">Will automatically like tweets on your timeline</span>
+                                                           <span class="fs-7 text-muted">Will automatically like tweets on your home timeline</span>
                                                        </span>
                                                        <!--end:Info-->
                                                    </span>
                                                    <!--end:Label-->
                                                    <!--begin:Input-->
                                                    <span class="form-check form-check-custom form-check-solid">
-                                                       <input class="form-check-input" type="radio" name="likes" value="2" />
+                                                       <input class="form-check-input" type="radio" name="campaign" value="2" />
                                                    </span>
                                                    <!--end:Input-->
                                                </label>
@@ -271,7 +271,7 @@
                                                    <!--end:Label-->
                                                    <!--begin:Input-->
                                                    <span class="form-check form-check-custom form-check-solid">
-                                                       <input class="form-check-input" type="radio" name="deletes" value="3" />
+                                                       <input class="form-check-input" type="radio" name="campaign" value="3" />
                                                    </span>
                                                    <!--end:Input-->
                                                </label>
@@ -422,7 +422,7 @@
                                                <!--end::Decrease control-->
 
                                                <!--begin::Input control-->
-                                               <input type="text" class="form-control form-control-solid border-0 ps-12" data-kt-dialer-control="input" placeholder="Points" name="budget" readonly value="1,000.00" />
+                                               <input type="text" class="form-control form-control-solid border-0 ps-12" data-kt-dialer-control="input" placeholder="Points" name="budget_c" readonly placeholder="1,000.00" />
                                                <!--end::Input control-->
 
                                                <!--begin::Increase control-->
@@ -464,7 +464,7 @@
                                                <!--end::Label-->
                                                <!--begin::Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" name="budget" checked="checked" value="1000" />
+                                                   <input class="form-check-input" type="radio" name="budget" value="1000" />
                                                </span>
                                                <!--end::Input-->
                                            </label>
@@ -516,7 +516,7 @@
                                                <!--end::Label-->
                                                <!--begin::Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" name="budget" value="3" />
+                                                   <input class="form-check-input" type="radio" name="budget" value="5000" />
                                                </span>
                                                <!--end::Input-->
                                            </label>
@@ -619,7 +619,7 @@
                                    <!--end::Wrapper-->
                                    <!--begin::Wrapper-->
                                    <div>
-                                       <button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="submit">
+                                       <button type="submit" class="btn btn-lg btn-primary" data-kt-stepper-action="submit">
                                            <span class="indicator-label">Submit
                                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
                                                <span class="svg-icon svg-icon-3 ms-2 me-0">

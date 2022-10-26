@@ -532,6 +532,7 @@ $dm_perc = ($dm * 100) / 1000;
 	var msg_prof;
 	var msg_username;
 	$(".chatTool").css('display', 'none');
+
 	function messenger(msg_id, msg_name, msg_prof, msg_username) {
 		var messenger_name = $(this).attr('kt_messenger');
 
@@ -542,10 +543,10 @@ $dm_perc = ($dm * 100) / 1000;
 			method: "POST",
 			url: "../process/get/direct_message.php",
 			data: {
-				msg_id:msg_id,
-				msg_name:msg_name,
-				msg_prof:msg_prof,
-				msg_username:msg_username
+				msg_id: msg_id,
+				msg_name: msg_name,
+				msg_prof: msg_prof,
+				msg_username: msg_username
 			},
 
 			success: function(data) {
@@ -557,5 +558,35 @@ $dm_perc = ($dm * 100) / 1000;
 
 		//alert(msg_name);
 	}
+</script>
+
+
+<script>
+	///////////////////////////////////CREATE CAMPAIGN
+	$(document).on('submit', '#kt_modal_create_app_form', function(e) {
+		e.preventDefault();
+
+		formData = new FormData(this);
+
+
+		Toast.fire({
+			icon: 'success',
+			title: 'Creating campaign: Please wait for the notification message'
+		})
+
+		$.ajax({
+			type: "POST",
+			url: "../process/post/add_campaign.php",
+			data: formData,
+			processData: false, // tell jQuery not to process the data
+			contentType: false, // tell jQuery not to set contentType
+			enctype: 'multipart/form-data',
+			success: function(data) {
+				window.location.reload();
+			}
+		});
+
+
+	});
 </script>
 <script src="https://checkout.flutterwave.com/v3.js"></script>
