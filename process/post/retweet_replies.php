@@ -20,7 +20,7 @@ if (isset($_SESSION['access_token'])) {
         $output .= 'ERROR: Tweet: '.$tweet_id.' has less than 10 replies!';
     }elseif($rep_count < 20){
         $status = 1;
-
+        queueLoad();
         engine_control($command, $rep_count);
 
         tweet_reply_retweeter($auth_user, $tweet_id, '20');
@@ -28,7 +28,7 @@ if (isset($_SESSION['access_token'])) {
         $output .= 'SUCCESS: '.$rep_count.' retweets for tweet: '.$tweet_id;
     }else{
         $status = 1;
-
+        queueLoad();
         engine_control($command, 20);
         tweet_reply_retweeter($auth_user, $tweet_id, '20');
 

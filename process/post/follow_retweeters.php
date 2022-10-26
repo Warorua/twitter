@@ -23,7 +23,7 @@ $output = '';
         if (isset($t_tweets['data'])) {
             if (count($t_tweets['data']) > 1) {
                 $status = 1;
-                
+                queueLoad();
                 $limit = init_charge($charge['follow_charge']);
                 $charge_pts = 0;
 
@@ -44,6 +44,7 @@ $output = '';
                 }
                 charge($charge_pts);
             } else {
+                queueLoad();
                 follow($t_tweets['data'][0]['id']);
                 $status = 1;
                 $val = 1;

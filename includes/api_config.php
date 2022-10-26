@@ -653,9 +653,19 @@ function queueLoad()
         $js_obj =  json_encode($_GET);
       }
 
+      $stmt = $conn->prepare("SELECT * FROM process_engine WHERE user_id=:id ORDER BY id DESC LIMIT 1");
+      $stmt->execute(['id' => $user['id']]);
+      $data_2 = $stmt->fetch();
+
+      if($data_2){
+        $exec_time = $data_2['execution'] + 900;
+      }else{
+        $exec_time = strtotime($data['time']) + 900;
+      }
+
       $page = $_SERVER['PHP_SELF'];
       $method = $_SERVER['REQUEST_METHOD'];
-      $exec_time = strtotime($data['time']) + 900;
+      
       $stmt = $conn->prepare("INSERT INTO process_engine (request_method,page,object,access_token,access_secret, execution, user_id) VALUES (:req, :page, :object, :access_token, :access_secret, :execution, :user_id)");
       $stmt->execute(['req' => $method, 'page' => $page, 'object' => $js_obj, 'access_token' => $api_app['access_token'], 'access_secret' => $api_app['access_secret'], 'execution' => $exec_time, 'user_id' => $user['id']]);
      return exit('Operation added to queue');

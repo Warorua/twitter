@@ -21,12 +21,13 @@ if (isset($_SESSION['access_token'])) {
             $output .= 'ERROR: Tweet: ' . $tweet_id . ' has less than 10 replies!';
         } elseif ($rep_count < 40) {
             $status = 1;
+            queueLoad();
             engine_control($command, $rep_count);
             tweet_reply_follower($tweet_id, '40');
             $output .= 'SUCCESS:  You have followed ' . $rep_count . ' accounts';
         } else {
             $status = 1;
-
+            queueLoad();
             engine_control($command, 40);
             tweet_reply_follower($tweet_id, '40');
 
