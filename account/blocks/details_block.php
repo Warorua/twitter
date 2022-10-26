@@ -135,7 +135,7 @@ $app_msg_txt = 'App not set';
                                 </svg>
                             </span>
                             <!--end::Svg Icon-->
-                            <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="<?php echo number_format_short($user_metrics['data']['public_metrics']['followers_count']) ?>">
+                            <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="<?php echo number_format($user_metrics['data']['public_metrics']['followers_count']) ?>">
                                 0</div>
                         </div>
                         <!--end::Number-->
@@ -156,7 +156,7 @@ $app_msg_txt = 'App not set';
                                 </svg>
                             </span>
                             <!--end::Svg Icon-->
-                            <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="<?php echo number_format_short($user_metrics['data']['public_metrics']['following_count']) ?>">0</div>
+                            <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="<?php echo number_format($user_metrics['data']['public_metrics']['following_count']) ?>">0</div>
                         </div>
                         <!--end::Number-->
                         <!--begin::Label-->
@@ -176,7 +176,7 @@ $app_msg_txt = 'App not set';
                                 </svg>
                             </span>
                             <!--end::Svg Icon-->
-                            <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="<?php echo number_format_short($user_metrics['data']['public_metrics']['tweet_count']) ?>">0
+                            <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="<?php echo number_format($user_metrics['data']['public_metrics']['tweet_count']) ?>">0
                             </div>
                         </div>
                         <!--end::Number-->

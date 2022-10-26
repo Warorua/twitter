@@ -15,25 +15,29 @@ if (isset($_POST['campaign'])) {
         } elseif (!empty($_POST['budget_c'])) {
             $budget = $_POST['budget_c'];
         }
-       
-        $execution = time() + $frequency;
 
-        $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM campaign_engine WHERE user_id=:user_id AND campaign=:campaign");
-        $stmt->execute(['campaign' => $campaign, 'user_id' => $user['id']]);
-        $auth_6 = $stmt->fetch();
+        if ($api_app['numrows'] > 0) {
+            $execution = time() + $frequency;
 
-
-        if($auth_6['numrows'] < 1){
-            $_SESSION['error'] = 'Insufficient gas points to cover your budget!';
-            charge($budget);
-
-        $stmt = $conn->prepare("INSERT INTO campaign_engine (campaign, user_id, budget, execution, frequency) VALUES (:campaign, :user_id, :budget, :execution, :frequency)");
-        $stmt->execute(['campaign' => $campaign, 'user_id' => $user['id'], 'budget' => $budget, 'execution' => $execution, 'frequency' => $frequency]);
+            $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM campaign_engine WHERE user_id=:user_id AND campaign=:campaign");
+            $stmt->execute(['campaign' => $campaign, 'user_id' => $user['id']]);
+            $auth_6 = $stmt->fetch();
 
 
-        $_SESSION['success'] = 'Campaign successfully created!';
+            if ($auth_6['numrows'] < 1) {
+                $_SESSION['error'] = 'Insufficient gas points to cover your budget!';
+                charge($budget);
+
+                $stmt = $conn->prepare("INSERT INTO campaign_engine (campaign, user_id, budget, execution, frequency) VALUES (:campaign, :user_id, :budget, :execution, :frequency)");
+                $stmt->execute(['campaign' => $campaign, 'user_id' => $user['id'], 'budget' => $budget, 'execution' => $execution, 'frequency' => $frequency]);
+
+
+                $_SESSION['success'] = 'Campaign successfully created!';
+            } else {
+                $_SESSION['error'] = 'Campaign already created!';
+            }
         }else{
-            $_SESSION['error'] = 'Campaign already created!';
+            $_SESSION['error'] = 'Add your Twitter App details to automate!';
         }
 
 
