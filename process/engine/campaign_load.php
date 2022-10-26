@@ -1,4 +1,5 @@
 <?php
+ini_set('max_execution_time', 58);
 include '../../includes/conn.php';
 
 //*
