@@ -437,7 +437,7 @@ foreach ($data as $row) {
 
 
         $mode = 'T0';
-        $command = 'follow';
+        $command = 'unfollow';
         $output = $command . ' automation success';
         $status = 1;
         $auth_user = $client_load['id'];
