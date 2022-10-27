@@ -9,8 +9,8 @@ $link = 'https://www.tuko.co.ke/';
 $output = '';
 //Title
 $response = $httpClient->load($link);
-$title = $response->find('article.c-article-card  a span', 0)->plaintext . PHP_EOL . PHP_EOL;
-$text = $title.' ~Automated';
+//$title = $response->find('article.c-article-card  a span', 0)->plaintext . PHP_EOL . PHP_EOL;
+//$text = $title.' ~Automated';
 
 //$output .= sizeof($img).' - size of image array <br/>';
 //Link HREF
@@ -30,6 +30,10 @@ $image = $pic_1;
 $date = $content->find('div.c-article-info time.c-article-info__time');
 $dt_1 = $date[0]->datetime;
 $time = $dt_1;
+
+$title_1 = $content->find('meta[name="twitter:description"]');
+$title = $title_1[0]->content;
+$text = $title.' ~Automated';
 
 //echo $time.'<br/>';
 
