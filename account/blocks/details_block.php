@@ -36,7 +36,7 @@ if ($user_metrics['data']['verified']) {
                         </span>
                         <!--end::Svg Icon-->
                     </a>
-                    <a href="#" class="btn btn-sm btn-light-success fw-bold ms-2 fs-8 py-1 px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">Gas refill</a>
+                    <a href="#" class="btn btn-sm btn-light-success fw-bold ms-2 fs-8 py-1 px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">Refill Gas Points</a>
                 </div>
                 <!--end::Name-->
                 <!--begin::Info-->
@@ -50,7 +50,7 @@ if ($user_metrics['data']['verified']) {
                                 <rect x="7" y="6" width="4" height="4" rx="2" fill="currentColor" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon--><?php echo $user_occupation ?>
+                        <!--end::Svg Icon--><?php echo $t_user->getName() ?>
                     </a>
                     <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2">
                         <!--begin::Svg Icon | path: icons/duotune/general/gen018.svg-->
@@ -60,7 +60,15 @@ if ($user_metrics['data']['verified']) {
                                 <path d="M12.0624 13.0453C13.7193 13.0453 15.0624 11.7022 15.0624 10.0453C15.0624 8.38849 13.7193 7.04535 12.0624 7.04535C10.4056 7.04535 9.06241 8.38849 9.06241 10.0453C9.06241 11.7022 10.4056 13.0453 12.0624 13.0453Z" fill="currentColor" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon--><?php echo $user_address ?>
+                        <!--end::Svg Icon-->
+                        <?php 
+                        if($t_user->getLocation() != ''){
+                            echo $t_user->getLocation();
+                        }else{
+                            echo $user_address;
+                        }
+                        
+                         ?>
                     </a>
                     <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary mb-2">
                         <!--begin::Svg Icon | path: icons/duotune/communication/com011.svg-->
@@ -79,16 +87,16 @@ if ($user_metrics['data']['verified']) {
             <!--begin::Actions-->
             <div class="d-flex my-4">
                 <?php
-if ($api_app['numrows'] < 1) {
-$app_msg_bg = 'btn-color-danger';
-$app_msg_txt = 'App not set';
-}else{
-    $app_msg_bg = 'btn-color-primary';
-    $app_msg_txt = 'App set';
-}
+                if ($api_app['numrows'] < 1) {
+                    $app_msg_bg = 'btn-color-danger';
+                    $app_msg_txt = 'App not set';
+                } else {
+                    $app_msg_bg = 'btn-color-primary';
+                    $app_msg_txt = 'App set';
+                }
 
-?>
-                <button type="button" class="btn btn-flex btn-bg-light <?php echo $app_msg_bg ?> px-6 m-2" data-bs-toggle="tooltip" data-bs-html="true" title="sdgsdg">
+                ?>
+                <button type="button" class="btn btn-flex btn-bg-light <?php echo $app_msg_bg ?> px-6 m-2" data-bs-toggle="tooltip" data-bs-html="true" title="App Status">
                     <span class="svg-icon svg-icon-2x">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path opacity="0.3" d="M21 13H15V11H21C21.6 11 22 10.6 22 10C22 9.4 21.6 9 21 9H15V3C15 2.4 14.6 2 14 2C13.4 2 13 2.4 13 3V9H11V3C11 2.4 10.6 2 10 2C9.4 2 9 2.4 9 3V9H3C2.4 9 2 9.4 2 10C2 10.6 2.4 11 3 11H9V13H3C2.4 13 2 13.4 2 14C2 14.6 2.4 15 3 15H9V21C9 21.6 9.4 22 10 22C10.6 22 11 21.6 11 21V15H13V21C13 21.6 13.4 22 14 22C14.6 22 15 21.6 15 21V15H21C21.6 15 22 14.6 22 14C22 13.4 21.6 13 21 13Z" fill="currentColor" />
@@ -96,7 +104,7 @@ $app_msg_txt = 'App not set';
                         </svg>
                     </span>
                     <span class="d-flex flex-column align-items-start ms-2">
-                        <span class="fs-3 fw-bold">API v2</span>
+                        <span class="fs-3 fw-bold">Tw API</span>
                         <span class="fs-7"><?php echo $app_msg_txt ?></span>
                     </span>
                 </button>

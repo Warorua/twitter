@@ -1,34 +1,5 @@
 <?php
 include '../includes/head.php';
-if (isset($_GET['user'])) {
-	if (is_numeric($_GET['user'])) {
-		$abraham_client->setApiVersion('2');
-		$statues = array_convert($abraham_client->get("users", ["ids" => $_GET['user']]));
-
-		if (!isset($statues['data'])) {
-			$member_id = $user['t_id'];
-		} else {
-			$member_id = $_GET['user'];
-		}
-	} else {
-		$member_id = $user['t_id'];
-	}
-} else {
-	$member_id = $user['t_id'];
-}
-
-$member_data = user_metrics($member_id);
-
-if ($member_data['data']['verified']) {
-	$verif_icon = 'svg-icon-primary';
-	$verif_info = 'Twitter Verified';
-} else {
-	$verif_icon = 'svg-icon-warning';
-	$verif_info = 'KOT Verified';
-}
-
-
-$ajax_user_id = $member_id;
 ?>
 <!--begin::Body-->
 

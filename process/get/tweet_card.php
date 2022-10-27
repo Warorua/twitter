@@ -100,15 +100,13 @@ include '../../includes/api_config.php';
 											  <!--begin::Menu wrapper-->
 											  <div class="m-0">
 												  <!--begin::Menu toggle-->
-												  <button id="trigger_' . $row['id'] . '" class="btn btn-icon btn-color-gray-400 btn-active-color-primary me-n4" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-overflow="true">
+												  <button id="trigger_' . $row['id'] . '" class="btn btn-icon btn-color-info btn-active-color-primary me-n4" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-overflow="true">
 													  <!--begin::Svg Icon | path: icons/duotune/general/gen023.svg-->
-													  <span class="svg-icon svg-icon-1">
-														  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															  <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="4" fill="currentColor" />
-															  <rect x="11" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor" />
-															  <rect x="15" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor" />
-															  <rect x="7" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor" />
-														  </svg>
+													  <span class="svg-icon svg-icon-2x svg-icon-info">
+													  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" fill="currentColor"/>
+<path opacity="0.3" d="M14 12C14 13.1 13.1 14 12 14C10.9 14 10 13.1 10 12C10 10.9 10.9 10 12 10C13.1 10 14 10.9 14 12ZM4 10C2.9 10 2 10.9 2 12C2 13.1 2.9 14 4 14C5.1 14 6 13.1 6 12C6 10.9 5.1 10 4 10ZM20 10C18.9 10 18 10.9 18 12C18 13.1 18.9 14 20 14C21.1 14 22 13.1 22 12C22 10.9 21.1 10 20 10ZM12 2C10.9 2 10 2.9 10 4C10 5.1 10.9 6 12 6C13.1 6 14 5.1 14 4C14 2.9 13.1 2 12 2ZM20 2C18.9 2 18 2.9 18 4C18 5.1 18.9 6 20 6C21.1 6 22 5.1 22 4C22 2.9 21.1 2 20 2ZM12 18C10.9 18 10 18.9 10 20C10 21.1 10.9 22 12 22C13.1 22 14 21.1 14 20C14 18.9 13.1 18 12 18ZM4 18C2.9 18 2 18.9 2 20C2 21.1 2.9 22 4 22C5.1 22 6 21.1 6 20C6 18.9 5.1 18 4 18ZM20 18C18.9 18 18 18.9 18 20C18 21.1 18.9 22 20 22C21.1 22 22 21.1 22 20C22 18.9 21.1 18 20 18Z" fill="currentColor"/>
+</svg>
 													  </span>
 													  <!--end::Svg Icon-->
 												  </button>

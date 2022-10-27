@@ -135,8 +135,8 @@
                                        <!--end::Icon-->
                                        <!--begin::Label-->
                                        <div class="stepper-label">
-                                           <h3 class="stepper-title">Completed</h3>
-                                           <div class="stepper-desc">Review and Submit</div>
+                                           <h3 class="stepper-title">Automation Set</h3>
+                                           <div class="stepper-desc">Building your automation</div>
                                        </div>
                                        <!--end::Label-->
                                    </div>
@@ -286,9 +286,8 @@
                                                                <!--begin::Svg Icon | path: icons/duotune/general/gen013.svg-->
                                                                <span class="svg-icon svg-icon-1 svg-icon-info">
                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                       <path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor" />
-                                                                       <path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor" />
-                                                                       <path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor" />
+                                                                       <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
+                                                                       <rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
                                                                    </svg>
                                                                </span>
                                                                <!--end::Svg Icon-->
@@ -617,24 +616,6 @@
                                    </div>
                                </div>
                                <!--end::Step 4-->
-                               <!--begin::Step 5-->
-                               <div data-kt-stepper-element="content">
-                                   <div class="w-100 text-center">
-                                       <!--begin::Heading-->
-                                       <h1 class="fw-bold text-dark mb-3">Release!</h1>
-                                       <!--end::Heading-->
-                                       <!--begin::Description-->
-                                       <div class="text-muted fw-semibold fs-3">Submit your app to kickstart your
-                                           project.</div>
-                                       <!--end::Description-->
-                                       <!--begin::Illustration-->
-                                       <div class="text-center px-4 py-15">
-                                           <img src="../assets/media/illustrations/sketchy-1/9.png" alt="" class="mw-100 mh-300px" />
-                                       </div>
-                                       <!--end::Illustration-->
-                                   </div>
-                               </div>
-                               <!--end::Step 5-->
                                <!--begin::Actions-->
                                <div class="d-flex flex-stack pt-10">
                                    <!--begin::Wrapper-->
