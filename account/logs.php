@@ -102,6 +102,7 @@ include '../includes/head.php';
 											<!--begin::Thead-->
 											<thead class="border-gray-200 fs-5 fw-semibold bg-lighten">
 												<tr>
+												    <th class="min-w-250px">Id</th>
 													<th class="min-w-250px">Info</th>
 													<th class="min-w-100px">Status</th>
 													<th class="min-w-150px">Device</th>
@@ -125,6 +126,7 @@ include '../includes/head.php';
 													}
 													echo '
 													<tr>
+													<td>'.$row['id'].'</td>
 													<td>
 														<a href="#" class="text-hover-primary text-gray-600">'.$row['status_info'].'</a>
 													</td>
