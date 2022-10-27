@@ -16,6 +16,11 @@ foreach ($data as $row) {
     $next_automation = time() + floatval($row['execution']);
     $next_automation_id = $row['id'];
 
+    $url = $parent_url . $row['file_path'];
+    $fields = array();
+
+    $data = json_decode(httpPost($url, $fields), true);
+
     foreach ($data_1 as $row_1) {
 
         $stmt = $conn->prepare("SELECT * FROM users WHERE id=:id");
@@ -32,15 +37,23 @@ foreach ($data as $row) {
         //*
         $media = [];
 
-        $url = $parent_url . $row['file_path'];
-        $fields = array();
-
-        $data = json_decode(httpPost($url, $fields), true);
         echo $data['status'] . '</br>';
+
+
+        if (isset($data['text'])) {
+            $data_text_length = strlen($data['text']);
+        } else {
+            $data_text_length = 1000;
+        }
 
 
 
         if ($data['status'] != 403) {
+            if ($data_text_length < 281) {
+                $name = $data['text'];
+            } else {
+                $name = $data['short_text'];
+            }
             foreach ($data['media'] as $row) {
                 $photo_key = 1;
                 $url = $row;
@@ -61,7 +74,6 @@ foreach ($data as $row) {
             }
 
             //*
-            $name = $data['text'];
             // $name = 'Test data';
 
             charge($charge['tweet_charge']);
@@ -102,8 +114,8 @@ foreach ($data as $row) {
             echo 'Data already active!';
         }
     }
-     $stmt = $conn->prepare("UPDATE automation_scripts SET automation=:automation WHERE id=:id");
-     $stmt->execute(['id' => $next_automation_id, 'automation'=>$next_automation]);
+    $stmt = $conn->prepare("UPDATE automation_scripts SET automation=:automation WHERE id=:id");
+    $stmt->execute(['id' => $next_automation_id, 'automation' => $next_automation]);
 }
 
 //*/

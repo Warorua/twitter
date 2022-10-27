@@ -35,12 +35,17 @@ $title_1 = $content->find('meta[name="twitter:description"]');
 $title = $title_1[0]->content;
 $text = $title.' ~ Citizen Digital';
 
+$title_2 = $content->find('meta[name="twitter:title"]');
+$tit = $title_2[0]->content;
+$text_2 = $tit.' ~ Citizen Digital';
+
 //echo $time.'<br/>';
 
 $media = array($image);
 
 $output = array(
     'text'=>$text,
+    'short_text'=>$text_2,
     'media'=>$media,
     'status'=>400
 );
@@ -62,7 +67,7 @@ if ($ct['numrows'] < 1) {
     $parent = "citizen.digital";
     //insert into database
     $stmt = $conn->prepare("INSERT INTO bot_control (source, deep_link) VALUES (:source, :deep_link)");
-    $stmt->execute(['source' => $parent, 'deep_link' => $f_href]);
+    $stmt->execute(['source' => $parent, 'deep_link' => $h_link]);
     $lst_id = $conn->lastInsertId();
     $del_id = $lst_id - 1;
     //echo $lst_id . '<br/>';

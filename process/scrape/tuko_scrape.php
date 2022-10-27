@@ -33,7 +33,11 @@ $time = $dt_1;
 
 $title_1 = $content->find('meta[name="twitter:description"]');
 $title = $title_1[0]->content;
-$text = $title.' ~Automated';
+$text = $title.' ~ Tuko News';
+
+$title_2 = $content->find('meta[name="twitter:title"]');
+$tit = $title_2[0]->content;
+$text_2 = $tit.' ~ Tuko News';
 
 //echo $time.'<br/>';
 
@@ -41,6 +45,7 @@ $media = array($image);
 
 $output = array(
     'text'=>$text,
+    'short_text'=>$text_2,
     'media'=>$media,
     'status'=>400
 );
