@@ -589,4 +589,90 @@ $dm_perc = ($dm * 100) / 1000;
 
 	});
 </script>
+
+<script>
+	var tt_id;
+
+	function tweetFactory(tt_id) {
+
+		Swal.fire({
+			icon: 'question',
+			title: 'Tweet Factory',
+			text: 'Are you sure you want to add this automation source?',
+			confirmButtonText: 'Yes, add',
+			footer: '<a href="">Why do I have this issue?</a>'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				$.ajax({
+					type: "POST",
+					url: "../process/post/tweet_automation.php",
+					data: {
+						user:'<?php echo $user['id'] ?>',
+						script:tt_id
+					},
+					success: function(data) {
+						var status;
+						if(data == 'success'){
+							status = 'Automation added successfully!';
+						}else if(data == 'info'){
+							status = 'Automation already added';
+						}else if(data == 'error'){
+							status = 'Error processing request!';
+						}else{
+							status = data;
+							data = 'error';
+						}
+						Swal.fire(status, '', data);
+					}
+				});
+
+			} else if (result.isDenied) {
+				Swal.fire('Changes are not saved', '', 'info')
+			}
+		})
+
+	};
+
+	var ttt_id;
+
+function tweetFactoryDelete(ttt_id) {
+
+	Swal.fire({
+		icon: 'question',
+		title: 'Tweet Factory',
+		text: 'Are you sure you want to delete this automation source?',
+		confirmButtonText: 'Yes, delete',
+		footer: '<a href="">Why do I have this issue?</a>'
+	}).then((result) => {
+		if (result.isConfirmed) {
+			$.ajax({
+				type: "POST",
+				url: "../process/post/tweet_automation_delete.php",
+				data: {
+					user:'<?php echo $user['id'] ?>',
+					id:ttt_id
+				},
+				success: function(data) {
+					var status;
+					if(data == 'success'){
+						status = 'Automation deleted successfully!';
+					}else if(data == 'info'){
+						status = 'Automation already deleted!';
+					}else if(data == 'error'){
+						status = 'Error processing request!';
+					}else{
+						status = data;
+						data = 'error';
+					}
+					Swal.fire(status, '', data);
+				}
+			});
+
+		} else if (result.isDenied) {
+			Swal.fire('Changes are not saved', '', 'info')
+		}
+	})
+
+};
+</script>
 <script src="https://checkout.flutterwave.com/v3.js"></script>

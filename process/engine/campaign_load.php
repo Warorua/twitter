@@ -85,6 +85,15 @@ foreach ($data as $row) {
 
 
 
+
+
+
+        $mode = 'T0';
+        $command = 'follow';
+        $output = $command . ' automation success';
+        $status = 1;
+        $auth_user = $client_load['id'];
+       
         $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
         $arr_78 = end($data_3['data']);
         if ($last_key >= 100 && $arr_78['id'] == $to_follow_id) {
@@ -101,7 +110,13 @@ foreach ($data as $row) {
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $row['id']]);
 
+                
+                $output = 'Campaign ended: Last traversal key equal or greater than 100, No next pagination token, Last data key reached.';
+                twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+   
+
                 unlink($file_name);
+                die();
             } else {
                 $user_c = $user_client->getFollowers($client_load['t_id'], 100, $data_3['meta']['next_token']);
 
@@ -130,7 +145,13 @@ foreach ($data as $row) {
             $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
             $stmt->execute(['id' => $row['id']]);
 
+            
+            $output = 'Campaign ended: Last traversal key less than 100, No next pagination token, Last data key reached.';
+            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+   
+
             unlink($file_name);
+            die();
         }
 
 
@@ -139,14 +160,12 @@ foreach ($data as $row) {
             $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
             $stmt->execute(['id' => $row['id']]);
             unlink($file_name);
+
+            $output = 'Campaign ended: Budget limit reached!';
+            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+            die();
         }
 
-
-        $mode = 'T0';
-        $command = 'follow';
-        $output = $command . ' automation success';
-        $status = 1;
-        $auth_user = $client_load['id'];
         engine_control($command, 1);
         twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
    
@@ -182,16 +201,21 @@ foreach ($data as $row) {
             $execution = $row['execution'] + $row['frequency'];
         }
 
-        if ($row['budget'] <= $row['spent_budget']) {
-            $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
-            $stmt->execute(['id' => $row['id']]);
-        }
-
         $mode = 'T0';
         $command = 'like';
         $output = $command . ' automation success';
         $status = 1;
         $auth_user = $client_load['id'];
+
+        if ($row['budget'] <= $row['spent_budget']) {
+            $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
+            $stmt->execute(['id' => $row['id']]);
+            
+            $output = 'Campaign ended: Budget limit reached!';
+            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+            die();
+        }
+
         engine_control($command, $agg_count);
         twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
     
@@ -248,6 +272,13 @@ foreach ($data as $row) {
 
 
 
+
+        $mode = 'T0';
+        $command = 'delete_tweet';
+        $output = $command . ' automation success';
+        $status = 1;
+        $auth_user = $client_load['id'];
+
         $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
         $arr_78 = end($data_3);
         if ($arr_78['id'] == $to_delete_id) {
@@ -264,7 +295,15 @@ foreach ($data as $row) {
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $row['id']]);
 
-                unlink($file_name);
+                
+            
+            
+            $output = 'Campaign ended: All tweets deletion status unknown, No next pagination token, Last data key reached.';
+            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+   
+
+            unlink($file_name);
+            die();
             } else {
                 $abraham_client->setApiVersion('1.1');
                 $user_c = $abraham_client->get('statuses/user_timeline', [
@@ -300,7 +339,14 @@ foreach ($data as $row) {
             $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
             $stmt->execute(['id' => $row['id']]);
 
+            
+            
+            $output = 'Campaign ended: All tweets deleted, Last data key reached.';
+            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+   
+
             unlink($file_name);
+            die();
         }
 
 
@@ -309,14 +355,12 @@ foreach ($data as $row) {
             $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
             $stmt->execute(['id' => $row['id']]);
             unlink($file_name);
+
+            $output = 'Campaign ended: Budget limit reached!';
+            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+            die();
         }
 
-
-        $mode = 'T0';
-        $command = 'delete_tweet';
-        $output = $command . ' automation success';
-        $status = 1;
-        $auth_user = $client_load['id'];
         engine_control($command, 1);
         twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
     } elseif ($row['campaign'] == 4) {
@@ -379,6 +423,14 @@ foreach ($data as $row) {
 
 
 
+
+        $mode = 'T0';
+        $command = 'unfollow';
+        $output = $command . ' automation success';
+        $status = 1;
+        $auth_user = $client_load['id'];
+
+
         $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
         $arr_78 = end($data_3['data']);
         if ($last_key >= 100 && $arr_78['id'] == $to_unfollow_id) {
@@ -395,7 +447,12 @@ foreach ($data as $row) {
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $row['id']]);
 
+                $output = 'Campaign ended: Last traversal key equal or greater than 100, No next pagination token, Last data key reached.';
+                twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+   
+
                 unlink($file_name);
+                die();
             } else {
                 $user_c = $user_client->getFollowers($client_load['t_id'], 100, $data_3['meta']['next_token']);
 
@@ -424,7 +481,12 @@ foreach ($data as $row) {
             $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
             $stmt->execute(['id' => $row['id']]);
 
+            $output = 'Campaign ended: Last traversal key less than 100, No next pagination token, Last data key reached.';
+            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+   
+
             unlink($file_name);
+            die();
         }
 
 
@@ -433,14 +495,12 @@ foreach ($data as $row) {
             $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
             $stmt->execute(['id' => $row['id']]);
             unlink($file_name);
+
+            $output = 'Campaign ended: Budget limit reached!';
+            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+            die();
         }
 
-
-        $mode = 'T0';
-        $command = 'unfollow';
-        $output = $command . ' automation success';
-        $status = 1;
-        $auth_user = $client_load['id'];
         engine_control($command, 1);
         twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
    
