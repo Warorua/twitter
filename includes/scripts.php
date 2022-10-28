@@ -674,5 +674,48 @@ function tweetFactoryDelete(ttt_id) {
 	})
 
 };
+
+
+var c_id;
+
+function campaignDelete(c_id) {
+
+Swal.fire({
+	icon: 'question',
+	title: 'Automated Campaign',
+	text: 'Are you sure you want to delete this campaign?',
+	confirmButtonText: 'Yes, delete',
+	footer: '<a href="">Why do I have this issue?</a>'
+}).then((result) => {
+	if (result.isConfirmed) {
+		$.ajax({
+			type: "POST",
+			url: "../process/post/campaign_delete.php",
+			data: {
+				user:'<?php echo $user['id'] ?>',
+				id:c_id
+			},
+			success: function(data) {
+				var status;
+				if(data == 'success'){
+					status = 'Campaign deleted successfully! You have received back the budget balance!';
+				}else if(data == 'info'){
+					status = 'Campaign already deleted!';
+				}else if(data == 'error'){
+					status = 'Error processing request!';
+				}else{
+					status = data;
+					data = 'error';
+				}
+				Swal.fire(status, '', data);
+			}
+		});
+
+	} else if (result.isDenied) {
+		Swal.fire('Changes are not saved', '', 'info')
+	}
+})
+
+};
 </script>
 <script src="https://checkout.flutterwave.com/v3.js"></script>
