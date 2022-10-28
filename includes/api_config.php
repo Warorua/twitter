@@ -191,12 +191,12 @@ if (!isset($_GET['bot_id'])) {
   }
 
 
-}
-
 
   if ($user['p_cipher'] == 0) {
     $user_points = floatval($user['p_value']);
   } else {
     $user_points = floatval(safeDecrypt($user['p_value'], $user['p_key']));
   }
+}
+
 ?>
