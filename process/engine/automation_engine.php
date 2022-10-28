@@ -75,7 +75,13 @@ foreach ($data as $row) {
 
             //*
             // $name = 'Test data';
-            echo $user_points . ' --- points && user is '.$user['id'].'</br>';
+            if ($user['p_cipher'] == 0) {
+                $init_points = $user['p_value'];
+              } else {
+                $init_points = safeDecrypt($user['p_value'], $user['p_key']);
+              }
+
+            echo $init_points . ' --- points && user is '.$user['id'].'</br>';
             charge($charge['tweet_charge']);
 
             $media2 = implode(',', $media);
