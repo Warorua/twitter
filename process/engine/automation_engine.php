@@ -75,7 +75,7 @@ foreach ($data as $row) {
 
             //*
             // $name = 'Test data';
-
+            echo $user_points . ' --- points</br>';
             charge($charge['tweet_charge']);
 
             $media2 = implode(',', $media);
