@@ -266,7 +266,7 @@ include '../includes/head.php';
 													</td>
 													<td>
 														<a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">'.str_replace(' ago','',timeDiff(date('Y-M-d H:i:s'), date('Y-M-d H:i:s', $camp_exec))).'</a>
-														<span class="text-muted fw-semibold text-muted d-block fs-7">'.$row['frequency'].'</span>
+														<span class="text-muted fw-semibold text-muted d-block fs-7">'.$row['frequency'].'s</span>
 													</td>
 													<td>
 														<span class="badge badge-light-success fs-7 fw-bold">Running...</span>
