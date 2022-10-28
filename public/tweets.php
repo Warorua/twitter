@@ -653,9 +653,13 @@ if ($tweet_data['data']['verified']) {
 																					<path d="M11.9343 12.5657L9.53696 14.963C9.22669 15.2733 9.18488 15.7619 9.43792 16.1204C9.7616 16.5789 10.4211 16.6334 10.8156 16.2342L14.3054 12.7029C14.6903 12.3134 14.6903 11.6866 14.3054 11.2971L10.8156 7.76582C10.4211 7.3666 9.7616 7.42107 9.43792 7.87962C9.18488 8.23809 9.22669 8.72669 9.53696 9.03696L11.9343 11.4343C12.2467 11.7467 12.2467 12.2533 11.9343 12.5657Z" fill="currentColor" />
 																				</svg>
 																			</span>
-																			<!--end::Svg Icon-->Location: <span class="badge badge-light-primary"><?php if (isset($tweeter['data']['location'])) {
-																																						echo $tweeter['data']['location'];
-																																					} ?></span>
+																			<!--end::Svg Icon-->Location: <span class="badge badge-light-primary">
+																				<?php
+																				if (isset($tweeter['data']['location'])) {
+																					echo $tweeter['data']['location'];
+																				}
+																				?>
+																			</span>
 																		</span>
 																		<!--end::Section-->
 																		<!--begin::Section-->
@@ -667,7 +671,17 @@ if ($tweet_data['data']['verified']) {
 																					<path d="M11.9343 12.5657L9.53696 14.963C9.22669 15.2733 9.18488 15.7619 9.43792 16.1204C9.7616 16.5789 10.4211 16.6334 10.8156 16.2342L14.3054 12.7029C14.6903 12.3134 14.6903 11.6866 14.3054 11.2971L10.8156 7.76582C10.4211 7.3666 9.7616 7.42107 9.43792 7.87962C9.18488 8.23809 9.22669 8.72669 9.53696 9.03696L11.9343 11.4343C12.2467 11.7467 12.2467 12.2533 11.9343 12.5657Z" fill="currentColor" />
 																				</svg>
 																			</span>
-																			<!--end::Svg Icon-->URL: <span class="badge badge-success"><?php echo $tweeter['data']['url'] ?></span>
+																			<!--end::Svg Icon-->URL:
+																			<span class="badge badge-success">
+																				<?php
+																				if (isset($tweeter['data']['url'])) {
+																					echo $tweeter['data']['url'];
+																				} else {
+																					echo 'No url';
+																				}
+
+																				?>
+																			</span>
 																		</span>
 																		<!--end::Section-->
 																	</div>
@@ -708,9 +722,9 @@ if ($tweet_data['data']['verified']) {
 											</div>
 											<!--end::Title-->
 											<!--begin::Action-->
-											<div class="mb-3">
-												<div kt_tweet_link="FL" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>" class="btn btn-danger fw-semibold me-2">Follow likers</div>
-												<div kt_tweet_link="LR" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>" class="btn btn-color-white bg-white bg-opacity-15 bg-hover-opacity-25 fw-semibold">Like replies</div>
+											<div class="mb-3" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+												<li kt_tweet_link="L" class="btn btn-danger fw-semibold me-2">Like Tweet</li>
+												<li kt_tweet_link="UL" class="btn btn-color-white bg-white bg-opacity-15 bg-hover-opacity-25 fw-semibold">Disike tweet</li>
 											</div>
 											<!--begin::Action-->
 										</div>
@@ -722,6 +736,126 @@ if ($tweet_data['data']['verified']) {
 									<!--end::Body-->
 								</div>
 								<!--end::Engage widget 4-->
+								<!--begin::Tweet actions -->
+								<div class="card shadow-sm mt-5">
+									<div class="card-header collapsible cursor-pointer rotate" data-bs-toggle="collapse" data-bs-target="#kt_docs_card_collapsible">
+										<h3 class="card-title">
+											<!--begin::Svg Icon | path: /var/www/preview.keenthemes.com/kt-products/docs/metronic/html/releases/2022-10-09-043348/core/html/src/media/icons/duotune/social/soc006.svg-->
+											<span class="svg-icon svg-icon-primary svg-icon-2hx">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path opacity="0.3" d="M19.0003 4.40002C18.2003 3.50002 17.1003 3 15.8003 3C14.1003 3 12.5003 3.99998 11.8003 5.59998C11.0003 7.39998 11.9004 9.49993 11.2004 11.2999C10.1004 14.2999 7.80034 16.9 4.90034 17.9C4.50034 18 3.80035 18.2 3.10035 18.2C2.60035 18.3 2.40034 19 2.90034 19.2C4.40034 19.8 6.00033 20.2 7.80033 20.2C15.8003 20.2 20.2004 13.5999 20.2004 7.79993C20.2004 7.59993 20.2004 7.39995 20.2004 7.19995C20.8004 6.69995 21.4003 6.09993 21.9003 5.29993C22.2003 4.79993 21.9003 4.19998 21.4003 4.09998C20.5003 4.19998 19.7003 4.20002 19.0003 4.40002Z" fill="currentColor" />
+													<path d="M11.5004 8.29997C8.30036 8.09997 5.60034 6.80004 3.30034 4.50004C2.90034 4.10004 2.30037 4.29997 2.20037 4.79997C1.60037 6.59997 2.40035 8.40002 3.90035 9.60002C3.50035 9.60002 3.10037 9.50007 2.70037 9.40007C2.40037 9.30007 2.00036 9.60004 2.10036 10C2.50036 11.8 3.60035 12.9001 5.40035 13.4001C5.10035 13.5001 4.70034 13.5 4.30034 13.6C3.90034 13.6 3.70035 14.1001 3.90035 14.4001C4.70035 15.7001 5.90036 16.5 7.50036 16.5C8.80036 16.5 10.1004 16.5 11.2004 15.8C12.7004 14.9 13.9003 13.2001 13.8003 11.4001C13.9003 10.0001 13.1004 8.39997 11.5004 8.29997Z" fill="currentColor" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+											Tweet Magic Box
+										</h3>
+										<div class="card-toolbar rotate-180">
+											<span class="svg-icon svg-icon-info svg-icon-2x">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path opacity="0.5" d="M11.4343 14.3657L7.25 18.55C6.83579 18.9643 6.16421 18.9643 5.75 18.55C5.33579 18.1358 5.33579 17.4643 5.75 17.05L11.2929 11.5072C11.6834 11.1166 12.3166 11.1166 12.7071 11.5072L18.25 17.05C18.6642 17.4643 18.6642 18.1358 18.25 18.55C17.8358 18.9643 17.1642 18.9643 16.75 18.55L12.5657 14.3657C12.2533 14.0533 11.7467 14.0533 11.4343 14.3657Z" fill="currentColor" />
+													<path d="M11.4343 8.36573L7.25 12.55C6.83579 12.9643 6.16421 12.9643 5.75 12.55C5.33579 12.1358 5.33579 11.4643 5.75 11.05L11.2929 5.50716C11.6834 5.11663 12.3166 5.11663 12.7071 5.50715L18.25 11.05C18.6642 11.4643 18.6642 12.1358 18.25 12.55C17.8358 12.9643 17.1642 12.9643 16.75 12.55L12.5657 8.36573C12.2533 8.05331 11.7467 8.05332 11.4343 8.36573Z" fill="currentColor" />
+												</svg>
+											</span>
+										</div>
+									</div>
+									<div id="kt_docs_card_collapsible" class="collapse show">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+													<div kt_tweet_link="LR" class="btn btn-flex btn-danger px-6 w-100">
+														<span class="svg-icon svg-icon-2x">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
+																<path opacity="0.5" d="M12.4343 12.4343L10.75 10.75C10.3358 10.3358 9.66421 10.3358 9.25 10.75C8.83579 11.1642 8.83579 11.8358 9.25 12.25L12.2929 15.2929C12.6834 15.6834 13.3166 15.6834 13.7071 15.2929L19.25 9.75C19.6642 9.33579 19.6642 8.66421 19.25 8.25C18.8358 7.83579 18.1642 7.83579 17.75 8.25L13.5657 12.4343C13.2533 12.7467 12.7467 12.7467 12.4343 12.4343Z" fill="currentColor" />
+																<path d="M8.43431 12.4343L6.75 10.75C6.33579 10.3358 5.66421 10.3358 5.25 10.75C4.83579 11.1642 4.83579 11.8358 5.25 12.25L8.29289 15.2929C8.68342 15.6834 9.31658 15.6834 9.70711 15.2929L15.25 9.75C15.6642 9.33579 15.6642 8.66421 15.25 8.25C14.8358 7.83579 14.1642 7.83579 13.75 8.25L9.56569 12.4343C9.25327 12.7467 8.74673 12.7467 8.43431 12.4343Z" fill="currentColor" />
+															</svg>
+														</span>
+														<span class="d-flex flex-column align-items-start ms-2">
+															<span class="fs-3 fw-bold">Like</span>
+															<span class="fs-7">Like Replies</span>
+														</span>
+													</div>
+												</div>
+												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+													<div kt_tweet_link="RR" class="btn btn-flex btn-primary px-6 w-100">
+														<span class="svg-icon svg-icon-2x">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M14.5 20.7259C14.6 21.2259 14.2 21.826 13.7 21.926C13.2 22.026 12.6 22.0259 12.1 22.0259C9.5 22.0259 6.9 21.0259 5 19.1259C1.4 15.5259 1.09998 9.72592 4.29998 5.82592L5.70001 7.22595C3.30001 10.3259 3.59999 14.8259 6.39999 17.7259C8.19999 19.5259 10.8 20.426 13.4 19.926C13.9 19.826 14.4 20.2259 14.5 20.7259ZM18.4 16.8259L19.8 18.2259C22.9 14.3259 22.7 8.52593 19 4.92593C16.7 2.62593 13.5 1.62594 10.3 2.12594C9.79998 2.22594 9.4 2.72595 9.5 3.22595C9.6 3.72595 10.1 4.12594 10.6 4.02594C13.1 3.62594 15.7 4.42595 17.6 6.22595C20.5 9.22595 20.7 13.7259 18.4 16.8259Z" fill="currentColor" />
+																<path opacity="0.3" d="M2 3.62592H7C7.6 3.62592 8 4.02592 8 4.62592V9.62589L2 3.62592ZM16 14.4259V19.4259C16 20.0259 16.4 20.4259 17 20.4259H22L16 14.4259Z" fill="currentColor" />
+															</svg>
+														</span>
+														<span class="d-flex flex-column align-items-start ms-2">
+															<span class="fs-3 fw-bold">Retweet</span>
+															<span class="fs-7">Retweet Replies</span>
+														</span>
+													</div>
+												</div>
+												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+													<div kt_tweet_link="SR" class="btn btn-flex btn-info px-6 w-100">
+														<span class="svg-icon svg-icon-2x">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M11.425 7.325C12.925 5.825 15.225 5.825 16.725 7.325C18.225 8.825 18.225 11.125 16.725 12.625C15.225 14.125 12.925 14.125 11.425 12.625C9.92501 11.225 9.92501 8.825 11.425 7.325ZM8.42501 4.325C5.32501 7.425 5.32501 12.525 8.42501 15.625C11.525 18.725 16.625 18.725 19.725 15.625C22.825 12.525 22.825 7.425 19.725 4.325C16.525 1.225 11.525 1.225 8.42501 4.325Z" fill="currentColor" />
+																<path d="M11.325 17.525C10.025 18.025 8.425 17.725 7.325 16.725C5.825 15.225 5.825 12.925 7.325 11.425C8.825 9.92498 11.125 9.92498 12.625 11.425C13.225 12.025 13.625 12.925 13.725 13.725C14.825 13.825 15.925 13.525 16.725 12.625C17.125 12.225 17.425 11.825 17.525 11.325C17.125 10.225 16.525 9.22498 15.625 8.42498C12.525 5.32498 7.425 5.32498 4.325 8.42498C1.225 11.525 1.225 16.625 4.325 19.725C7.425 22.825 12.525 22.825 15.625 19.725C16.325 19.025 16.925 18.225 17.225 17.325C15.425 18.125 13.225 18.225 11.325 17.525Z" fill="currentColor" />
+															</svg>
+														</span>
+														<span class="d-flex flex-column align-items-start ms-2">
+															<span class="fs-3 fw-bold">Retweet</span>
+															<span class="fs-7">Silent Retweet</span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<div class="row">
+												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+													<div kt_tweet_link="FL" class="btn btn-flex btn-light-danger px-6 w-100">
+														<span class="svg-icon svg-icon-2x">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor" />
+																<path d="M22 12C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2C17.5 2 22 6.5 22 12ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor" />
+															</svg>
+														</span>
+														<span class="d-flex flex-column align-items-start ms-2">
+															<span class="fs-3 fw-bold">Follow</span>
+															<span class="fs-7">Follow Likers</span>
+														</span>
+													</div>
+												</div>
+												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+													<div kt_tweet_link="FR" class="btn btn-flex btn-light-primary px-6 w-100">
+														<span class="svg-icon svg-icon-2x">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor" />
+																<path d="M22 12C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2C17.5 2 22 6.5 22 12ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor" />
+															</svg>
+														</span>
+														<span class="d-flex flex-column align-items-start ms-2">
+															<span class="fs-3 fw-bold">Follow</span>
+															<span class="fs-7">Follow Repliers</span>
+														</span>
+													</div>
+												</div>
+												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+													<div kt_tweet_link="FR_2" class="btn btn-flex btn-light-success px-6 w-100">
+														<span class="svg-icon svg-icon-2x">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M11 13H7C6.4 13 6 12.6 6 12C6 11.4 6.4 11 7 11H11V13ZM17 11H13V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor" />
+																<path d="M22 12C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2C17.5 2 22 6.5 22 12ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z" fill="currentColor" />
+															</svg>
+														</span>
+														<span class="d-flex flex-column align-items-start ms-2">
+															<span class="fs-3 fw-bold">Follow</span>
+															<span class="fs-7">Follow Retweeters</span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--end::Tweet actions -->
 							</div>
 							<!--end::Col-->
 						</div>
@@ -837,7 +971,7 @@ if ($tweet_data['data']['verified']) {
 								}
 								$form_action = '/process/post/tweet.php';
 								$form_id = 'tweet_process_09';
-								$rep_status = '<input type="hidden" value="'.$tweet_id.'" name="tweet_id" />';
+								$rep_status = '<input type="hidden" value="' . $tweet_id . '" name="tweet_id" />';
 								$rep_text = 'reply';
 								include '../includes/elements/tweet_form.php';
 								?>
@@ -1007,8 +1141,8 @@ if ($tweet_data['data']['verified']) {
 	//$_SESSION['error'] = $fbemail;
 	?>
 
-	
-<script>
+
+	<script>
 		// set the dropzone container id
 		const id = "#kt_dropzonejs_example_3";
 		const dropzone = document.querySelector(id);
