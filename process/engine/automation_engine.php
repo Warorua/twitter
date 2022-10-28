@@ -16,7 +16,10 @@ foreach ($data as $row) {
     $next_automation = time() + floatval($row['execution']);
     $next_automation_id = $row['id'];
 
-    
+    $url = $parent_url . $row['file_path'];
+    $fields = array();
+    include_once '../../includes/functions.php';
+    $data = json_decode(httpPost($url, $fields), true);
 
     foreach ($data_1 as $row_1) {
 
@@ -31,10 +34,6 @@ foreach ($data as $row) {
         require '../../vendor/autoload.php';
         include '../../includes/api_config.php';
 
-$url = $parent_url . $row['file_path'];
-    $fields = array();
-  //  include_once '../../includes/functions.php';
-    $data = json_decode(httpPost($url, $fields), true);
         //*
         $media = [];
 
