@@ -75,55 +75,75 @@ foreach ($data as $row) {
 
             //*
             // $name = 'Test data';
+
+            //  echo $init_points . ' --- points && user is '.$user['id'].'</br>';
+
+            $charge_points  =    $charge['tweet_charge'];
             if ($user['p_cipher'] == 0) {
                 $init_points = $user['p_value'];
-              } else {
-                $init_points = safeDecrypt($user['p_value'], $user['p_key']);
-              }
-
-          //  echo $init_points . ' --- points && user is '.$user['id'].'</br>';
-            charge($charge['tweet_charge']);
-
-            $media2 = implode(',', $media);
-
-            $t_topic = '';
-
-
-            $parameters = [
-                'status' => $name . ' ' . $t_topic,
-                'media_ids' => $media2
-            ];
-
-            $mode = 'T0';
-            $status = 1;
-            $command = 'tweet';
-            $result = $abraham_client->post('statuses/update', $parameters);
-
-            //        
-            $out_sys = array_convert($result);
-            if (isset($out_sys['error'])) {
-                $message = $out_sys['error'];
-            } elseif (isset($out_sys['errors'])) {
-                $message = $out_sys['errors'][0]['message'];
             } else {
-                $message = 'Tweet success!';
+                $init_points = safeDecrypt($user['p_value'], $user['p_key']);
             }
-            $output =  $message;
+
+            if ($init_points < $charge_points) {
+                $output =  'Gas points depleted or insufficient!';
+                //header('location: ' . $parent_url . '/account/overview.php');
+                $mode = 'T0';
+                $status = 0;
+                $command = 'tweet';
+            } else {
+                $raw_points = floatval($init_points) - $charge_points;
+
+                if ($user['p_cipher'] == 0) {
+                    $cipher_points = $raw_points;
+                } else {
+                    $cipher_points = safeEncrypt($raw_points, $user['p_key']);
+                }
+
+                $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_cipher=:p_cipher WHERE id=:id");
+                $stmt->execute(['id' => $user['id'], 'p_value' => $cipher_points, 'p_cipher' => $user['p_cipher']]);
+                //////////////////////////////////////////////////////////////////////////////////////////////////
+
+                $media2 = implode(',', $media);
+
+                $t_topic = '';
+
+
+                $parameters = [
+                    'status' => $name . ' ' . $t_topic,
+                    'media_ids' => $media2
+                ];
+
+                $mode = 'T0';
+                $status = 1;
+                $command = 'tweet';
+                $result = $abraham_client->post('statuses/update', $parameters);
+
+                //        
+                $out_sys = array_convert($result);
+                if (isset($out_sys['error'])) {
+                    $message = $out_sys['error'];
+                } elseif (isset($out_sys['errors'])) {
+                    $message = $out_sys['errors'][0]['message'];
+                } else {
+                    $message = 'Tweet success!';
+                }
+                $output =  $message;
+            }
+
 
             $auth_user = $user['t_id'];
 
             engine_control($command, 1);
             twitter_log($user['email'], '', $status, $mode, $user['id'], $auth_user, $output);
 
-            echo $message;
+            echo $output;
         } else {
             echo 'Data already active!';
         }
     }
     $stmt = $conn->prepare("UPDATE automation_scripts SET automation=:automation WHERE id=:id");
     $stmt->execute(['id' => $next_automation_id, 'automation' => $next_automation]);
-
-    
 }
 
 //*/
