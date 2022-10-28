@@ -19,7 +19,7 @@
                 </button>
                 <!--end::Aside toggle-->
                 <!--begin::Header Logo-->
-                <a href="../index-2.html">
+                <a href="../account/overview.php">
                     <img alt="Logo" src="../assets/media/svg/brand-logos/twitter.svg" class="h-30px h-lg-35px" />
                 </a>
                 <!--end::Header Logo-->

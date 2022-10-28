@@ -9,7 +9,7 @@ $Token_URL = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=clien
 $phone_number = $_POST['phone_number'];
 $OnlinePayment = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 $total_amount = $_POST['amount'];
-$CallBackURL = 'https://farajiproperties.co/callback.php?key=your password';
+$CallBackURL = 'https://tweetbot.site/callback.php?key=your password';
 $Time_Stamp = date("Ymdhis");
 $password = base64_encode($Business_Code . $Passkey . $Time_Stamp);
 
@@ -64,7 +64,7 @@ echo json_encode($curl_Tranfer2_response, JSON_PRETTY_PRINT);
    </br></br>
    <button class="contact2-form-btn" style="margin-bottom: 30px;">Confirm Payment is Complete</button>
 </form>
-https://farajiproperties.co/ - We are a company offering brokerage services to clients interested in investing in various property projects in the country.
+https://tweetbot.site/ - We are a company offering brokerage services to clients interested in investing in various property projects in the country.
 Our customer journey:
 1. Awareness:We advertise various properties available via various advertisement channels 
 2.Engagement: On ad channels used we engage with potential clients who show interest in the advertised properties

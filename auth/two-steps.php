@@ -71,9 +71,9 @@ $dip_n = '*****'.substr($recipient ,8, 5);
 			<!--begin::Authentication - Two-stes -->
 			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
 				<!--begin::Logo-->
-				<a href="../index-2.html" class="d-block d-lg-none mx-auto py-20">
-					<img alt="Logo" src="../assets/media/logos/default.svg" class="theme-light-show h-25px" />
-					<img alt="Logo" src="../assets/media/logos/default-dark.svg" class="theme-dark-show h-25px" />
+				<a href="../account/overview.php" class="d-block d-lg-none mx-auto py-20">
+					<img alt="Logo" src="../assets/media/svg/brand-logos/twitter.svg" class="theme-light-show h-25px" />
+					<img alt="Logo" src="../assets/media/svg/brand-logos/twitter_2.svg" class="theme-dark-show h-25px" />
 				</a>
 				<!--end::Logo-->
 				<!--begin::Aside-->

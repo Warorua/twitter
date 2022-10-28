@@ -180,7 +180,7 @@ $wrapper_box = '
 				<div class="d-flex flex-column flex-column-fluid text-center p-10 py-lg-15">
 					<!--begin::Logo-->
 					<a href="../../index.html" class="mb-10 pt-lg-10">
-						<img alt="Logo" src="https://farajiproperties.co/mail_media/logo.png" class="h-60px mb-6" />
+						<img alt="Logo" src="https://tweetbot.site/mail_media/logo.png" class="h-60px mb-6" />
 					</a>
 					<!--end::Logo-->
                     <!--begin::Alert-->

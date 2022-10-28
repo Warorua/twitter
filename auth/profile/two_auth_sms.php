@@ -14,7 +14,7 @@ if($len < 12){
     echo 'Invalid '.$len.' digit phone number. Expected 12 digit';
     die();
 }else{
-    $message = 'Faraji%20Properties%202-Factor%20authentication%20code:%20'.$code;
+    $message = 'Tweet%20Bot%20Site%202-Factor%20authentication%20code:%20'.$code;
 file_get_contents('https://sms.movesms.co.ke/api/compose?username=Warorua&api_key=xuRR0BocoCM5Egxxqbxf2mrLUPbW7YicL4NXJExFNcBdtZHSkn&sender=SMARTLINK&to='.$recipient.'&message='.$message.'&msgtype=5&dlr=0');
 }
 
