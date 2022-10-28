@@ -23,8 +23,8 @@ $content = $httpClient->load($h_link);
 
 
 //Image
-$img = $content->find('div.post__content img.article-image__picture');
-$pic_1 = $img[0]->src;
+$img = $content->find('meta[name="twitter:image"]');
+$pic_1 = $img[0]->content;
 $image = $pic_1;
 
 $date = $content->find('div.c-article-info time.c-article-info__time');

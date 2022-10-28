@@ -116,6 +116,8 @@ foreach ($data as $row) {
     }
     $stmt = $conn->prepare("UPDATE automation_scripts SET automation=:automation WHERE id=:id");
     $stmt->execute(['id' => $next_automation_id, 'automation' => $next_automation]);
+
+    
 }
 
 //*/
