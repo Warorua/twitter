@@ -1,32 +1,117 @@
 <?php
 include '../includes/head.php';
-if (isset($_GET['user'])) {
-    if (is_numeric($_GET['user'])) {
-        //$abraham_client->setApiVersion('2');
-        try {
-            $user_2 = $user_client->getUserById($_GET['user']);
-            $tweets_user_id = $user_2->getId();
-        } catch (Exception $e) {
-            $tweets_user_id = $t_user->getId();
-        }
-    } else {
-        $tweets_user_id = $t_user->getId();
+// include '../includes/conn.php';
+// include '../includes/session.php';
+if (isset($_POST['search'])) {
+    if(isset($_POST['query'])){
+   $full_query = $_POST['query'];
+    }else{
+           $query_inc = $_POST['query_inc'];
+    $query_exc = $_POST['query_exc'];
+    $reply_to = $_POST['reply_to'];
+    if(isset($_POST['from'])){
+        $from = $_POST['from'];
+    }else{
+        $from = '';
     }
+    
+    if(isset($_POST['filter_out'])){
+        $filter_out = $_POST['filter_out'];
+    }else{
+        $filter_out = '';
+    }
+
+    if(isset($_POST['attitude'])){
+        $attitude = $_POST['attitude'];
+    }else{
+        $attitude = '';
+    }
+    
+    if(isset($_POST['sensitivity'])){
+        $sensitivity = $_POST['sensitivity'];
+    }else{
+        $sensitivity = '';
+    }
+   
+    $url = $_POST['url'];
+    $date_range = $_POST['date_range'];
+
+    $full_query = '';
+
+    if ($query_inc != '') {
+        $full_query  .= $query_inc . ' ';
+    }
+    if ($query_exc != '') {
+        $full_query  .= '-' . $query_exc . ' ';
+    }
+    if ($reply_to != '') {
+        $full_query  .= 'to:' . $reply_to . ' ';
+    }
+    if ($from != '') {
+        $full_query  .= 'from:' . $from . ' ';
+    }
+ 
+    if ($filter_out != '') {
+        $f_out = count($filter_out);
+        if ($f_out > 1) {
+            foreach ($filter_out as $f_out) {
+                $full_query  .= '-filter:' . $f_out . ' ';
+            }
+        } else {
+            $full_query  .= '-filter:' . $filter_out[0] . ' ';
+        }
+    }
+    if ($attitude != '') {
+        if ($attitude == '1') {
+            $full_query  .= ':) ';
+        } else {
+            $full_query  .= ':( ';
+        }
+    }
+    if ($url != '') {
+        $full_query  .= 'url:' . $url . ' ';
+    }
+    if ($sensitivity != '') {
+        if ($sensitivity == '1') {
+            $full_query  .= 'filter:safe ';
+        } else {
+            $full_query  .= 'filter:unsafe ';
+        }
+    }
+    if ($date_range != '') {
+        $str_arr3 = explode("-", $date_range);
+
+        $since = date("Y-m-d", strtotime($str_arr3[0]));
+        $until = date("Y-m-d", strtotime($str_arr3[1]));
+
+        $full_query  .= 'since:' . $since . ' ';
+        $full_query  .= 'until:' . $until . ' ';
+    } 
+    }
+
+
+   // echo json_encode($_POST).'<br/><br/><br/><br/>';
+
+   // echo $full_query.'<br/><br/><br/><br/>';
+    
+    $full_1 = urlencode($full_query);
+    $search_data = $abraham_client->get('search/tweets', [
+        "q"=>$full_query,
+         "count" => 3200,
+        // 'id' => $user['t_id'],
+       
+       ]);
+    
+  //  echo json_encode($search_data);
+  //  echo $full_1;
+
+
 } else {
-    $tweets_user_id = $t_user->getId();
+    $_SESSION['error'] = 'Empty search query';
+    redirect($parent_url.'/account/overview.php');
 }
-
-/*
-if ($tweet_data['data']['verified']) {
-	$verif_icon = 'svg-icon-primary';
-	$verif_info = 'Twitter Verified';
-} else {
-	$verif_icon = 'svg-icon-warning';
-	$verif_info = 'KOT Verified';
-}
-*/
-
-
+$page_sub_1 = 'Advanced';
+$page_sub_2 = 'Search';
 ?>
 <!--end::Head-->
 <!--begin::Body-->
@@ -82,7 +167,7 @@ if ($tweet_data['data']['verified']) {
                         <div class="card">
                             <!--begin::Card header-->
                             <div class="card-header">
-                                <h2 class="card-title fw-bold">User tweets (3,200 max)</h2>
+                                <h2 class="card-title fw-bold">Max search results (100 max)</h2>
                                 <div class="card-toolbar">
                                 </div>
                             </div>
@@ -95,6 +180,7 @@ if ($tweet_data['data']['verified']) {
                                         <tr class="fw-bold fs-6 text-gray-800 px-7">
                                             <th>Tweed ID</th>
                                             <th>Tweet</th>
+                                            <th>From:</th>
                                             <th>Date</th>
 
                                             <th>Source label</th>
@@ -104,7 +190,6 @@ if ($tweet_data['data']['verified']) {
                                             <th>Have you retweeted?</th>
 
                                             <th>Have you liked?</th>
-                                            <th>Have you quoted?</th>
 
                                             
                                             <th></th>
@@ -114,13 +199,6 @@ if ($tweet_data['data']['verified']) {
                                     <tbody>
                                         <?php
                                         //*
-                                        $abraham_client->setApiVersion('1.1');
-                                        $data = $abraham_client->get('statuses/user_timeline', [
-                                            "id" => $tweets_user_id,
-                                            "count" => 3200,
-                                            //'id' => '1581999085875331076'
-                                        ]);
-                                        $data_2 = array_convert($data);
                                         $yes_icon = '
                                            <!--begin::Symbol-->
                                                 <div class="symbol symbol-50px me-5">
@@ -154,7 +232,8 @@ if ($tweet_data['data']['verified']) {
                                                 </div>
                                                 <!--end::Symbol-->
                                                   ';
-                                        foreach ($data_2 as $row) {
+                                         $data1 = array_convert($search_data);
+                                        foreach ($data1['statuses'] as $row) {
                                             $source_label = '<span class="badge badge-light-info">' . $row['source'] . '</span>';
                                             $tweet_id = '<span class="badge badge-light-success">' . $row['id'] . '</span>';
                                             $arr = array("a" => "info", "b" => "danger", "c" => "success", "d" => "warning", "e" => "primary", "f" => "dark");
@@ -179,7 +258,27 @@ if ($tweet_data['data']['verified']) {
                                             echo '
                                         <tr>
                                           <td>' . $tweet_id . '</td>
+
                                             <td>' . $row['text'] . '</td>
+                                           
+                                            
+                                            <td>
+														<div class="d-flex align-items-center">
+															<!--begin::Avatar-->
+															<div class="symbol symbol-45px me-5">
+																<img alt="Pic" src="'.pic_fix($row['user']['profile_image_url']).'" />
+															</div>
+															<!--end::Avatar-->
+															<!--begin::Name-->
+															<div class="d-flex justify-content-start flex-column">
+																<a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">'.$row['user']['name'].'</a>
+																<a href="#" class="text-muted text-hover-primary fw-semibold text-muted d-block fs-7">
+																<span class="text-dark"></span>'.$row['user']['screen_name'].'</a>
+															</div>
+															<!--end::Name-->
+														</div>
+													</td>
+                                            </td>
                                             <td>' . timeDiff($row['created_at'], date("c")) . '</td>
 
                                             <td>' . $source_label . '</td>
@@ -189,7 +288,7 @@ if ($tweet_data['data']['verified']) {
                                             <td>' . $retweet_status . '</td>
 
                                             <td>' . $like_status . '</td>
-                                            <td>' . $quoted_status . '</td>
+                                            
 
                                            
                                             <td><a href="../public/tweets.php?tweet=' . $row['id'] . '" target="_blank" class="btn btn-light-' . $arr[$key] . '">View 

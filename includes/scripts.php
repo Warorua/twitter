@@ -591,6 +591,13 @@ $dm_perc = ($dm * 100) / 1000;
 </script>
 
 <script>
+	$("#kt_daterangepicker_1").daterangepicker({
+		drops:'auto',
+		showDropdowns:true,
+		autoUpdateInput:true,
+		autoApply:true,
+	});
+
 	var tt_id;
 
 	function tweetFactory(tt_id) {
