@@ -39,7 +39,7 @@
 
 		if($password != $repassword){
 			$_SESSION['error'] = 'Passwords did not match';
-			header('location: https://tweetbot.site/auth/sign-up.php#');
+			header('location: https://tweetbot.site/v2/new#');
 		}
 		
 		else{
@@ -57,20 +57,20 @@
      if($row['source'] == 'G0'){
       $_SESSION['error'] = 'User already registered with Google.';
       unset($_SESSION['access_token']);
-      redirect($parent_url.'/auth/sign-up.php');
+      redirect($parent_url.'/v2/new');
      
      }elseif($row['source'] == 'F0'){
          $_SESSION['error'] = 'User already registered with Facebook.';
          unset($_SESSION['access_token']);
-         redirect($parent_url.'/auth/sign-up.php');
+         redirect($parent_url.'/v2/new');
      }elseif($row['source'] == 'T0'){
         $_SESSION['error'] = 'User already registered with Twitter.';
         unset($_SESSION['access_token']);
-        redirect($parent_url.'/auth/sign-up.php');
+        redirect($parent_url.'/v2/new');
     }else{
          $_SESSION['error'] = 'User already registered.';
          unset($_SESSION['access_token']);
-         redirect($parent_url.'/auth/sign-up.php');
+         redirect($parent_url.'/v2/new');
      }
  }
  ////////////////////////////////////////////////////////////////////////////////////////
@@ -291,13 +291,13 @@
 				        unset($_SESSION['email']);
 
 				        {$_SESSION['success'] = 'Account created. Check your email to activate.';
-				        header('location: https://tweetbot.site/auth/sign-up.php#');}
+				        header('location: https://tweetbot.site/v2/new#');}
 
 				    } 
 									
 				    catch (Exception $e) {
 				        $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
-				        header('location: https://tweetbot.site/auth/sign-up.php#');
+				        header('location: https://tweetbot.site/v2/new#');
 				    }
 
 				}
@@ -315,5 +315,5 @@
 	}
 	else{
 		$_SESSION['error'] = 'Complete filling the signup form first';
-		header('location: https://tweetbot.site/auth/sign-up.php#');
+		header('location: https://tweetbot.site/v2/new#');
 	}

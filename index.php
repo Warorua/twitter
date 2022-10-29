@@ -149,7 +149,7 @@ include 'includes/conn.php';
 								<!--end::Menu wrapper-->
 								<!--begin::Toolbar-->
 								<div class="flex-equal text-end ms-1">
-									<a href="auth/sign-in.php" class="btn btn-success">Sign In</a>
+									<a href="v2/login" class="btn btn-success">Sign In</a>
 								</div>
 								<!--end::Toolbar-->
 							</div>
@@ -170,7 +170,7 @@ include 'includes/conn.php';
 							</span></h1>
 							<!--end::Title-->
 							<!--begin::Action-->
-							<a href="auth/sign-up.php" class="btn btn-primary">Try Tweet.Site</a>
+							<a href="v2/new" class="btn btn-primary">Try Tweet.Site</a>
 							<!--end::Action-->
 						</div>
 						<!--end::Heading-->

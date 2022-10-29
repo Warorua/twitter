@@ -25,45 +25,6 @@ Header set Cache-Control "max-age=2592000"
 
 
 RewriteEngine on  
-  
-RewriteRule ^Welcome  login.php [NC,L]
-RewriteRule ^lostPassword  password_forgot.php [NC,L]
-RewriteRule ^AccountActivation  activate.php [NC,L]
-RewriteRule ^Item product.php [NC,L] 
-RewriteRule ^CONTACT  contact.php [NC,L]
-RewriteRule ^NewAccount  signup.php [NC,L]
-RewriteRule ^Home  index.php [NC,L]
-RewriteRule ^TsavoShop  supplier.php [NC,L]
-RewriteRule ^MyCart  cart_view.php [NC,L]
-RewriteRule ^MyWishlist  wishlist_view.php [NC,L]
-RewriteRule ^MyMessages  message_view.php [NC,L]
-RewriteRule ^TsavoCategory  main-categories.php [NC,L]
-RewriteRule ^TsavoCategoryD  main-categories-desc.php [NC,L]
-RewriteRule ^TsavoCategoryA  main-categories-asc.php [NC,L]
-RewriteRule ^Pay  cart_checkout.php [NC,L]
-RewriteRule ^MyProfile  profile.php [NC,L]
-RewriteRule ^ItemNotFound  product-not-found.php [NC,L]
-RewriteRule ^ProductRatingReviews  show_rating.php [NC,L]
-RewriteRule ^Groceries  group_grocery.php [NC,L]
-RewriteRule ^Phones  group_phone.php [NC,L]
-RewriteRule ^Fashion  group_fashion.php [NC,L]
-RewriteRule ^Kitchen  group_kitchen.php [NC,L]
-RewriteRule ^Furniture  group_furniture.php [NC,L]
-RewriteRule ^SmartTV  group_television.php [NC,L]
-RewriteRule ^RecentlyViewed  last_viewed.php [NC,L]
-RewriteRule ^AboutUs_Tsavo  about_us.php [NC,L]
-RewriteRule ^PrivacyPolicy  privacy_policy.php [NC,L]
-RewriteRule ^Terms&Conditions  terms_conditions.php [NC,L]
-RewriteRule ^ReturnPolicy  return_policy.php [NC,L]
-RewriteRule ^ReturnItem  help/return.php [NC,L]
-RewriteRule ^ContactUs  contact.php [NC,L]
-
-RewriteRule ^IQ2VSL2xEiRZdzerxJ9E  cart_delete.php [NC,L]
-RewriteRule ^vkNROVMktga2L0JlVuKL  cart_update.php [NC,L]
-RewriteRule ^CzDdOrj771nl5jNwD26o  checkout_details.php [NC,L]
-RewriteRule ^QVRsGKpo4O8CtEX5FuSS  cart_total.php [NC,L]
-RewriteRule ^y3of28l36wNMYFzi0a8X  cart_details.php [NC,L]
-
 
 RewriteRule ^account/user account/overview.php [NC,L]
 RewriteRule ^account/security account/security.php [NC,L]
@@ -79,6 +40,10 @@ RewriteRule ^v1/tweets public/all_tweets.php [NC,L]
 RewriteRule ^v1/user_mentions public/user_mentions.php [NC,L]
 RewriteRule ^v1/followers public/followers.php [NC,L]
 RewriteRule ^v1/following public/following.php [NC,L]
+
+RewriteRule ^v2/login auth/sign-in.php [NC,L]
+RewriteRule ^v2/new auth/sign-up.php [NC,L]
+RewriteRule ^v2/password auth/reset-password.php [NC,L]
 
 php_value max_execution_time 120000
 

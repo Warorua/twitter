@@ -134,7 +134,7 @@ $email =  $user->email;
       // session_start();
 
       $_SESSION['success'] = 'Configuration done. Kindly login again.';
-      redirect($parent_url . '/auth/sign-in.php');
+      redirect($parent_url . '/v2/login');
       // setcookie("Auction_Item", "Luxury Car", time()+60*60*24*30);
     } else {
 */
@@ -149,7 +149,7 @@ $email =  $user->email;
     $_SESSION['error'] = $status_info = 'User not account not found! Sign up to login.';
     unset($_SESSION['access_token']);
     login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
-    redirect($parent_url . '/auth/sign-up.php');
+    redirect($parent_url . '/v2/new');
   }
 
 

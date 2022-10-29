@@ -150,7 +150,7 @@ include './fb_1.php' ?>
 										<!--end::Symbol-->
 															<!--begin::Symbol-->
 <?php 
-$tw_url = $parent_url.'/auth/sign-up.php';
+$tw_url = $parent_url.'/v2/new';
 include './tww/tw_1.php' ?>
 
 

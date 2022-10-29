@@ -3,7 +3,7 @@ include '../includes/conn.php';
 
 	if(!isset($_GET['code']) OR !isset($_GET['user'])){
         $_SESSION['error'] = 'Wrong request syntax!';
-		header('location: https://tweetbot.site/auth/sign-in.php');
+		header('location: https://tweetbot.site/v2/login');
 	    exit(); 
 	}
 
@@ -32,7 +32,7 @@ include '../includes/conn.php';
 					$stmt->execute(['password'=>$password, 'id'=>$row['id']]);
 
 					$_SESSION['success'] = 'Password successfully reset';
-					header('location: https://tweetbot.site/auth/sign-in.php');
+					header('location: https://tweetbot.site/v2/login');
 				}
 				catch(PDOException $e){
 					$_SESSION['error'] = $e->getMessage();

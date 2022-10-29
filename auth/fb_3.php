@@ -161,7 +161,7 @@ if($row['numrows'] > 0 && $row['source'] == 'F0'){
     $_SESSION['error'] = $status_info = 'User not account not found! Sign up to login.';
     login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
         unset($_SESSION['access_token']);
-        redirect($parent_url.'/auth/sign-up.php');
+        redirect($parent_url.'/v2/new');
 }
 
 

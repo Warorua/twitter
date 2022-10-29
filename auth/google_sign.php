@@ -23,7 +23,7 @@ require_once '../vendor/autoload.php';
 $clientID = '167208180500-p33dejrdqld6261j1inueg9p0sr9fqig.apps.googleusercontent.com';
 $clientSecret = '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';
 //$redirectUri = $parent_url.'/account/user';
-$redirectUri = $parent_url.'/auth/sign-up.php';
+$redirectUri = $parent_url.'/v2/new';
    
 // create Client Request to access Google API
 $client = new Google_Client();
@@ -68,16 +68,16 @@ if($row['numrows'] > 0){
     if($row['source'] == 'T0'){
      $_SESSION['error'] = 'User already registered with Twitter.';
      unset($_SESSION['access_token']);
-     redirect($parent_url.'/auth/sign-up.php');
+     redirect($parent_url.'/v2/new');
     
     }elseif($row['source'] == 'F0'){
         $_SESSION['error'] = 'User already registered with Facebook.';
         unset($_SESSION['access_token']);
-        redirect($parent_url.'/auth/sign-up.php');
+        redirect($parent_url.'/v2/new');
     }else{
         $_SESSION['error'] = 'User already registered. Login instead.';
         unset($_SESSION['access_token']);
-        redirect($parent_url.'/auth/sign-up.php');
+        redirect($parent_url.'/v2/new');
     }
 }
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -88,7 +88,7 @@ $stmt->execute(['g_id'=>$g_id]);
 $row = $stmt->fetch();
 if($row['numrows'] > 0){
      $_SESSION['error'] = 'User already registered';
-     redirect($parent_url.'/auth/sign-up.php');
+     redirect($parent_url.'/v2/new');
 }else{
     $stmt = $conn->prepare("INSERT INTO users (source, email, firstname, lastname, photo, g_id, status, type, created_on) VALUES (:source, :email, :firstname, :lastname, :photo, :g_id, :status, :type, :created_on)");
   $stmt->execute(['source'=>$source, 'email'=>$email, 'firstname'=>$firstname, 'lastname'=>$lastname, 'photo'=>$photo, 'g_id'=>$g_id, 'status'=>$status, 'type'=>$type, 'created_on'=>$create_on]);

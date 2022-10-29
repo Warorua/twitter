@@ -22,7 +22,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 
 define('CONSUMER_KEY', $system['consumer_key']);
 define('CONSUMER_SECRET', $system['consumer_secret']);
-define('OAUTH_CALLBACK', $parent_url.'/auth/sign-in.php');
+define('OAUTH_CALLBACK', $parent_url.'/v2/login');
 
 $settings = [
   'account_id' => $user['t_id'],

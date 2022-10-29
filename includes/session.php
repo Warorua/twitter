@@ -10,7 +10,7 @@ if(isset($_GET['bot_id'])){
 
 }elseif(!isset($_SESSION['user_id'])){
     $_SESSION['error'] = 'User not logged in!';
-   header('location:https://tweetbot.site/auth/sign-in.php ');
+   header('location:https://tweetbot.site/v2/login ');
 }else{
     $conn = $pdo->open();
     $stmt = $conn->prepare("SELECT * FROM users WHERE id=:id");

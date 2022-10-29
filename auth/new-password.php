@@ -1,7 +1,7 @@
 <?php
   if(!isset($_GET['code']) OR !isset($_GET['user'])){
 	$_SESSION['error'] = 'Invalid action!';
-    header('location: https://tweetbot.site/auth/sign-in.php');
+    header('location: https://tweetbot.site/v2/login');
     exit(); 
   }
 

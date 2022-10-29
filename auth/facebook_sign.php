@@ -154,7 +154,7 @@ session_destroy();
 // redirecting user back to app login page
 
 //header("Location: ./");
-redirect($parent_url.'/auth/sign-up.php');
+redirect($parent_url.'/v2/new');
 
 exit;
 

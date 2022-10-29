@@ -98,6 +98,6 @@
 
 	login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
 
-	header('location: https://tweetbot.site/auth/sign-in.php');
+	header('location: https://tweetbot.site/v2/login');
 
 ?>
