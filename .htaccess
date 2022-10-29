@@ -33,7 +33,7 @@ RewriteRule ^account/billing account/billing.php [NC,L]
 RewriteRule ^account/statements account/statements.php [NC,L]
 RewriteRule ^account/referrals account/referrals.php [NC,L]
 RewriteRule ^account/logs account/logs.php [NC,L]
-RewriteRule ^account/logout account/logout.php [NC,L]
+RewriteRule ^account/logout includes/logout.php [NC,L]
 
 RewriteRule ^v1/tweet_factory public/tweet_factory.php [NC,L]
 RewriteRule ^v1/tweets public/all_tweets.php [NC,L]
