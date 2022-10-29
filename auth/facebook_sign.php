@@ -106,7 +106,7 @@ $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 if (isset($_GET['code'])) {
    // $_SESSION['fb_email'] = 'fbpic';
   
-    redirect($parent_url.'/account/overview.php');
+    redirect($parent_url.'/account/user');
 //header('Location: profile.php');
 
 }

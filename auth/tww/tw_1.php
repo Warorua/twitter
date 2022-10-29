@@ -61,7 +61,7 @@ echo "<b>Tweets : </b>" ;
     echo "<b>Account suspension :</b>";									//username
     echo $user->suspended;echo "<br>";
 //    echo $user->profile_image_url;echo "<br>";
-      echo "<a href='logout.php'>Log out</a>";
+      echo "<a href='logout'>Log out</a>";
 
       echo "<hr>";
        echo "<b>User profile property :</b><br>";
@@ -140,7 +140,7 @@ redirect($parent_url.'/auth/sign-up.php');
  $_SESSION['user_id'] = $conn->lastInsertId();
  $_SESSION['success'] =  'Welcome! Registration successful.';
 
- redirect('../account/overview.php');
+ redirect('../account/user');
 
 }
 }

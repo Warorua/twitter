@@ -64,7 +64,7 @@ echo "<b>Tweets : </b>" ;
     echo "<b>Account suspension :</b>";									//username
     echo $user->suspended;echo "<br>";
 //    echo $user->profile_image_url;echo "<br>";
-      echo "<a href='logout.php'>Log out</a>";
+      echo "<a href='logout'>Log out</a>";
 
       echo "<hr>";
        echo "<b>User profile property :</b><br>";
@@ -142,7 +142,7 @@ $email =  $user->email;
       $_SESSION['info'] = 'Login successful';
       login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
 
-      redirect($parent_url . '/account/overview.php');
+      redirect($parent_url . '/account/user');
  //   }
  
   } else {

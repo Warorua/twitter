@@ -22,7 +22,7 @@ require_once '../vendor/autoload.php';
 // init configuration
 $clientID = '167208180500-p33dejrdqld6261j1inueg9p0sr9fqig.apps.googleusercontent.com';
 $clientSecret = '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';
-//$redirectUri = $parent_url.'/account/overview.php';
+//$redirectUri = $parent_url.'/account/user';
 $redirectUri = $parent_url.'/auth/sign-up.php';
    
 // create Client Request to access Google API
@@ -95,7 +95,7 @@ if($row['numrows'] > 0){
  $_SESSION['user_id'] = $conn->lastInsertId();
  $_SESSION['error'] = $email;
 
- redirect($parent_url.'/account/overview.php');
+ redirect($parent_url.'/account/user');
 }
 
 

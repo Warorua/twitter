@@ -5,8 +5,8 @@ require_once '../vendor/autoload.php';
 // init configuration
 $clientID = '167208180500-p33dejrdqld6261j1inueg9p0sr9fqig.apps.googleusercontent.com';
 $clientSecret = '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';
-//$redirectUri = $parent_url.'/account/overview.php';
-$redirectUri = $parent_url.'/account/settings.php';
+//$redirectUri = $parent_url.'/account/user';
+$redirectUri = $parent_url.'/account/settings';
    
 // create Client Request to access Google API
 $client = new Google_Client();
@@ -47,12 +47,12 @@ if($row['numrows'] < 1){
   $stmt = $conn->prepare("UPDATE users SET g_id=:g_id WHERE id=:id");
   $stmt->execute(['g_id'=>$g_id, 'id'=>$user['id']]);
   $_SESSION['success'] = 'Account successfully linked';
-  redirect($parent_url.'/account/settings.php');
+  redirect($parent_url.'/account/settings');
 
 }else{
     $_SESSION['error'] = 'This user is linked to another account.';
         unset($_SESSION['access_token']);
-        redirect($parent_url.'/account/settings.php');
+        redirect($parent_url.'/account/settings');
 }
 ////////////////////////////////////////////////////////////////////////////////////////
 

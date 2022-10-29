@@ -15,7 +15,7 @@
  
    if ($init_points < $charge_points) {
      echo 'Gas points depleted or insufficient!';
-     //header('location: ' . $parent_url . '/account/overview.php');
+     //header('location: ' . $parent_url . '/account/user');
      return exit();
    } else {
      $raw_points = floatval($init_points) - $charge_points;

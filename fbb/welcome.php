@@ -90,7 +90,7 @@ if(!isset($_SESSION['fbUserId']) and $_SESSION['fbUserId']==""){
 				?>
 				<p>Welcome <em class="text-danger"><?php echo $_SESSION['fbUserName']?></em></p>
 				<?php /*?><a href="<?php echo $logoutUrl;?>" class="btn btn-lg btn-danger"><i class="fa fa-fw fa-power-off"></i> Logout</a><?php */?>
-				<a href="logout.php" class="btn btn-lg btn-danger"><i class="fa fa-fw fa-power-off"></i> Logout</a>
+				<a href="logout" class="btn btn-lg btn-danger"><i class="fa fa-fw fa-power-off"></i> Logout</a>
 			</div>
 		</div>
     </div> <!--/.container-->

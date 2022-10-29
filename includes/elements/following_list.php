@@ -18,7 +18,7 @@
             }
 
             ?>
-            <a href="../public/following.php?user=<?php echo $mb_lnk ?>" class="btn btn-sm btn-light">View more</a>
+            <a href="../v1/following?user=<?php echo $mb_lnk ?>" class="btn btn-sm btn-light">View more</a>
         </div>
         <!--end::Toolbar-->
     </div>

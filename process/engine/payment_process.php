@@ -116,12 +116,12 @@ $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_ciphe
 $stmt->execute(['id'=>$user['id'], 'p_value'=>$cipher_points, 'p_key'=>$key, 'p_cipher'=>1]);
 
 $_SESSION['success'] = 'Recharge successful. New gas points balance is '.safeDecrypt($cipher_points, $key);
-header('location: '.$parent_url.'/account/billing.php');
+header('location: '.$parent_url.'/account/billing');
  }
 
 }else{
      $_SESSION['error'] = 'Payment not verified!';
-     header('location: '.$parent_url.'/account/overview.php');
+     header('location: '.$parent_url.'/account/user');
 }
 
 
@@ -129,7 +129,7 @@ header('location: '.$parent_url.'/account/billing.php');
 
 }else{
      $_SESSION['error'] = 'Payment not unsuccessful!';
-     header('location: '.$parent_url.'/account/overview.php');
+     header('location: '.$parent_url.'/account/user');
 }
 
 

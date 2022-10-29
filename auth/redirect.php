@@ -7,7 +7,7 @@ require_once '../vendor/autoload.php';
 // init configuration
 $clientID = '167208180500-p33dejrdqld6261j1inueg9p0sr9fqig.apps.googleusercontent.com';
 $clientSecret = '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';
-//$redirectUri = $parent_url.'/account/overview.php';
+//$redirectUri = $parent_url.'/account/user';
 $redirectUri = $parent_url.'/auth/redirect.php';
    
 // create Client Request to access Google API
@@ -52,7 +52,7 @@ if($row['numrows'] > 0){
     $stmt = $conn->prepare("INSERT INTO users (email, firstname, lastname, photo, g_id, status, type, created_on) VALUES (:email, :firstname, :lastname, :photo, :g_id, :status, :type, :created_on)");
   $stmt->execute(['email'=>$email, 'firstname'=>$firstname, 'lastname'=>$lastname, 'photo'=>$photo, 'g_id'=>$g_id, 'status'=>$status, 'type'=>$type, 'created_on'=>$create_on]);
  $_SESSION['user_id'] = $conn->lastInsertId();
-header('location:https://tweetbot.site/account/overview.php');
+header('location:https://tweetbot.site/account/user');
 }
 
 

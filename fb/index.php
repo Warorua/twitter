@@ -64,7 +64,7 @@ if(isset($accessToken)){
     $_SESSION['userData'] = $userData;
     
     // Get logout url
-    $logoutURL = $helper->getLogoutUrl($accessToken, FB_REDIRECT_URL.'logout.php');
+    $logoutURL = $helper->getLogoutUrl($accessToken, FB_REDIRECT_URL.'logout');
     
     // Render Facebook profile data
     if(!empty($userData)){

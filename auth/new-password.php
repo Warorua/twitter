@@ -23,7 +23,7 @@ include '../includes/plain_head.php';
 			<!--begin::Authentication - New password -->
 			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
 				<!--begin::Logo-->
-				<a href="../account/overview.php" class="d-block d-lg-none mx-auto py-20">
+				<a href="../account/user" class="d-block d-lg-none mx-auto py-20">
 					<img alt="Logo" src="../assets/media/svg/brand-logos/twitter.svg" class="theme-light-show h-25px" />
 					<img alt="Logo" src="../assets/media/svg/brand-logos/twitter_2.svg" class="theme-dark-show h-25px" />
 				</a>

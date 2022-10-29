@@ -87,7 +87,7 @@ foreach ($data as $row) {
 
             if ($init_points < $charge_points) {
                 $output =  'Gas points depleted or insufficient!';
-                //header('location: ' . $parent_url . '/account/overview.php');
+                //header('location: ' . $parent_url . '/account/user');
                 $mode = 'T0';
                 $status = 0;
                 $command = 'tweet';

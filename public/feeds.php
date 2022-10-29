@@ -144,7 +144,7 @@ $page_sub_2 = 'View';
 												<!--end::Nav item-->
 												<!--begin::Nav item-->
 												<li class="nav-item mt-5">
-													<a href="../public/all_tweets.php?user=<?php echo $member_id ?>" class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0" id="usTweets">
+													<a href="../v1/tweets?user=<?php echo $member_id ?>" class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0" id="usTweets">
 														<!--begin::Svg Icon | path: icons/duotune/arrows/arr070.svg-->
 														<span class="svg-icon svg-icon-3 svg-icon-muted me-3">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -171,7 +171,7 @@ $page_sub_2 = 'View';
 												<!--end::Nav item-->
 												<!--begin::Nav item-->
 												<li class="nav-item mt-5">
-													<a class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0" href="../public/followers.php?user=<?php echo $mb_lnk ?>">
+													<a class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0" href="../v1/followers?user=<?php echo $mb_lnk ?>">
 														<!--begin::Svg Icon | path: icons/duotune/communication/com006.svg-->
 														<span class="svg-icon svg-icon-3 svg-icon-muted me-3">
 															<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,7 +189,7 @@ $page_sub_2 = 'View';
 												<!--end::Nav item-->
 												<!--begin::Nav item-->
 												<li class="nav-item mt-5">
-													<a class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0" href="../public/following.php?user=<?php echo $mb_lnk ?>">
+													<a class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0" href="../v1/following?user=<?php echo $mb_lnk ?>">
 														<!--begin::Svg Icon | path: icons/duotune/coding/cod001.svg-->
 														<span class="svg-icon svg-icon-3 svg-icon-muted me-3">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

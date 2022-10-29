@@ -53,7 +53,7 @@
 							 }else{
 								$_SESSION['user_id'] = $row['id'];
 							$_SESSION['info'] = $row['email'];
-								header('location: https://tweetbot.site/account/overview.php');
+								header('location: https://tweetbot.site/account/user');
 							 }
 
 							

@@ -108,7 +108,7 @@ if (isset($_POST['search'])) {
 
 } else {
     $_SESSION['error'] = 'Empty search query';
-    redirect($parent_url.'/account/overview.php');
+    redirect($parent_url.'/account/user');
 }
 $page_sub_1 = 'Advanced';
 $page_sub_2 = 'Search';

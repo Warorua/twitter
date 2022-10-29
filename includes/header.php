@@ -19,7 +19,7 @@
                 </button>
                 <!--end::Aside toggle-->
                 <!--begin::Header Logo-->
-                <a href="../account/overview.php">
+                <a href="../account/user">
                     <img alt="Logo" src="../assets/media/svg/brand-logos/twitter.svg" class="h-30px h-lg-35px" />
                 </a>
                 <!--end::Header Logo-->
@@ -350,13 +350,13 @@
                     <!--end::Menu separator-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-5">
-                        <a href="../account/overview.php" class="menu-link px-5">My Profile</a>
+                        <a href="../account/user" class="menu-link px-5">My Profile</a>
                     </div>
                     <!--end::Menu item-->
 
                     <!--begin::Menu item-->
                     <div class="menu-item px-5">
-                        <a href="../account/statements.php" class="menu-link px-5">My Statements</a>
+                        <a href="../account/statements" class="menu-link px-5">My Statements</a>
                     </div>
                     <!--end::Menu item-->
                     <!--begin::Menu separator-->
@@ -373,7 +373,7 @@
                         <div class="menu-sub menu-sub-dropdown w-175px py-4">
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="../account/settings.php" class="menu-link d-flex px-5 active">
+                                <a href="../account/settings" class="menu-link d-flex px-5 active">
                                     <span class="symbol symbol-20px me-4">
                                         <img class="rounded-1" src="../assets/media/flags/united-states.svg" alt="" />
                                     </span>English</a>
@@ -381,7 +381,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="../account/settings.php" class="menu-link d-flex px-5">
+                                <a href="../account/settings" class="menu-link d-flex px-5">
                                     <span class="symbol symbol-20px me-4">
                                         <img class="rounded-1" src="../assets/media/flags/spain.svg" alt="" />
                                     </span>Spanish</a>
@@ -389,7 +389,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="../account/settings.php" class="menu-link d-flex px-5">
+                                <a href="../account/settings" class="menu-link d-flex px-5">
                                     <span class="symbol symbol-20px me-4">
                                         <img class="rounded-1" src="../assets/media/flags/germany.svg" alt="" />
                                     </span>German</a>
@@ -397,7 +397,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="../account/settings.php" class="menu-link d-flex px-5">
+                                <a href="../account/settings" class="menu-link d-flex px-5">
                                     <span class="symbol symbol-20px me-4">
                                         <img class="rounded-1" src="../assets/media/flags/japan.svg" alt="" />
                                     </span>Japanese</a>
@@ -405,7 +405,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="../account/settings.php" class="menu-link d-flex px-5">
+                                <a href="../account/settings" class="menu-link d-flex px-5">
                                     <span class="symbol symbol-20px me-4">
                                         <img class="rounded-1" src="../assets/media/flags/france.svg" alt="" />
                                     </span>French</a>
@@ -417,12 +417,12 @@
                     <!--end::Menu item-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-5 my-1">
-                        <a href="../account/settings.php" class="menu-link px-5">Account Settings</a>
+                        <a href="../account/settings" class="menu-link px-5">Account Settings</a>
                     </div>
                     <!--end::Menu item-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-5">
-                        <a href="<?php echo $parent_url ?>/includes/logout.php#" class="menu-link px-5">Sign Out</a>
+                        <a href="<?php echo $parent_url ?>/includes/logout#" class="menu-link px-5">Sign Out</a>
                     </div>
                     <!--end::Menu item-->
                 </div>

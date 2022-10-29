@@ -53,12 +53,12 @@ if($row['numrows'] < 1){
     $stmt->execute(['t_id'=>$t_id, 'id'=>$_SESSION['user_id']]);
     $_SESSION['success'] = 'Account successfully linked';
     unset($_SESSION['access_token']);
-    redirect($parent_url.'/account/settings.php');
+    redirect($parent_url.'/account/settings');
   
   }else{
       $_SESSION['error'] = 'This user is linked to another account.';
           unset($_SESSION['access_token']);
-          redirect($parent_url.'/account/settings.php');
+          redirect($parent_url.'/account/settings');
   }
   ////////////////////////////////////////////////////////////////////////////////////////
   

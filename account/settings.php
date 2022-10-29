@@ -62,37 +62,37 @@ include '../includes/head.php';
 								<ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="overview.php">Overview</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="user">Overview</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="settings.php">Settings</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="settings">Settings</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="security.php">Security</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="security">Security</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="billing.php">Billing</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="billing">Billing</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="statements.php">Statements</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="statements">Statements</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="referrals.php">Referrals</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="referrals">Referrals</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="logs.php">Logs</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="logs">Logs</a>
 									</li>
 									<!--end::Nav item-->
 								</ul>
@@ -1151,7 +1151,7 @@ include '../includes/head.php';
 											}
 											$t_btn = '<input class="form-check-input w-45px h-30px" type="checkbox" ' . $t_btnC . ' />';
 										} else {
-											$tw_url = $parent_url.'/account/settings.php';
+											$tw_url = $parent_url.'/account/settings';
 											include '../auth/tww/tw_3.php';
 											$t_btn = '<a class="btn btn-success" href="' . $url . '" id="twitterswitch">Connect</a>';
 										}

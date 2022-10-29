@@ -43,37 +43,37 @@ include '../includes/head.php';
 									<ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
 										<!--begin::Nav item-->
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="overview.php">Overview</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="user">Overview</a>
 										</li>
 										<!--end::Nav item-->
 										<!--begin::Nav item-->
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="settings.php">Settings</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="settings">Settings</a>
 										</li>
 										<!--end::Nav item-->
 										<!--begin::Nav item-->
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="security.php">Security</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="security">Security</a>
 										</li>
 										<!--end::Nav item-->
 										<!--begin::Nav item-->
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="billing.php">Billing</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="billing">Billing</a>
 										</li>
 										<!--end::Nav item-->
 										<!--begin::Nav item-->
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="statements.php">Statements</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="statements">Statements</a>
 										</li>
 										<!--end::Nav item-->
 										<!--begin::Nav item-->
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="referrals.php">Referrals</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="referrals">Referrals</a>
 										</li>
 										<!--end::Nav item-->
 										<!--begin::Nav item-->
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="logs.php">Logs</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="logs">Logs</a>
 										</li>
 										<!--end::Nav item-->
 									</ul>
@@ -370,5 +370,5 @@ include '../includes/head.php';
 	</body>
 	<!--end::Body-->
 <?php include '../includes/alert.php';?>
-<!-- account/billing.php 22:56:20 GMT -->
+<!-- account/billing 22:56:20 GMT -->
 </html>

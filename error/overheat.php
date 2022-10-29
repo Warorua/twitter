@@ -37,7 +37,7 @@ include '../includes/plain_head.php';
 							<!--end::Illustration-->
 							<!--begin::Link-->
 							<div class="mb-0">
-								<a href="../account/overview.php" class="btn btn-sm btn-primary">Return Home</a>
+								<a href="../account/user" class="btn btn-sm btn-primary">Return Home</a>
 							</div>
 							<!--end::Link-->
 						</div>

@@ -37,37 +37,37 @@ $ajax_user_id = $user['t_id'];
 								<ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="overview.php">Overview</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="user">Overview</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="settings.php">Settings</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="settings">Settings</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="security.php">Security</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="security">Security</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="billing.php">Billing</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="billing">Billing</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="statements.php">Statements</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="statements">Statements</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="referrals.php">Referrals</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="referrals">Referrals</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="logs.php">Logs</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5" href="logs">Logs</a>
 									</li>
 									<!--end::Nav item-->
 								</ul>
@@ -280,7 +280,7 @@ $ajax_user_id = $user['t_id'];
 										</div>
 										<!--end::Card title-->
 										<!--begin::Action-->
-										<a href="settings.php" class="btn btn-primary align-self-center">Edit Profile</a>
+										<a href="settings" class="btn btn-primary align-self-center">Edit Profile</a>
 										<!--end::Action-->
 									</div>
 									<!--begin::Card header-->
@@ -710,7 +710,7 @@ $ajax_user_id = $user['t_id'];
 </body>
 <!--end::Body-->
 
-<!-- account/overview.php 22:56:11 GMT -->
+<!-- account/user 22:56:11 GMT -->
 <?php include '../includes/alert.php';
 //session_destroy();
 

@@ -155,7 +155,7 @@ if($row['numrows'] > 0){
  $_SESSION['user_id'] = $conn->lastInsertId();
  $_SESSION['error'] = $fbfullname;
 
- header('location:../account/overview.php');
+ header('location:../account/user');
 }
 
 
