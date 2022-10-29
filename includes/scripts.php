@@ -607,18 +607,18 @@ $dm_perc = ($dm * 100) / 1000;
 					type: "POST",
 					url: "../process/post/tweet_automation.php",
 					data: {
-						user:'<?php echo $user['id'] ?>',
-						script:tt_id
+						user: '<?php echo $user['id'] ?>',
+						script: tt_id
 					},
 					success: function(data) {
 						var status;
-						if(data == 'success'){
+						if (data == 'success') {
 							status = 'Automation added successfully!';
-						}else if(data == 'info'){
+						} else if (data == 'info') {
 							status = 'Automation already added';
-						}else if(data == 'error'){
+						} else if (data == 'error') {
 							status = 'Error processing request!';
-						}else{
+						} else {
 							status = data;
 							data = 'error';
 						}
@@ -635,87 +635,165 @@ $dm_perc = ($dm * 100) / 1000;
 
 	var ttt_id;
 
-function tweetFactoryDelete(ttt_id) {
+	function tweetFactoryDelete(ttt_id) {
 
-	Swal.fire({
-		icon: 'question',
-		title: 'Tweet Factory',
-		text: 'Are you sure you want to delete this automation source?',
-		confirmButtonText: 'Yes, delete',
-		footer: '<a href="">Why do I have this issue?</a>'
-	}).then((result) => {
-		if (result.isConfirmed) {
-			$.ajax({
-				type: "POST",
-				url: "../process/post/tweet_automation_delete.php",
-				data: {
-					user:'<?php echo $user['id'] ?>',
-					id:ttt_id
-				},
-				success: function(data) {
-					var status;
-					if(data == 'success'){
-						status = 'Automation deleted successfully!';
-					}else if(data == 'info'){
-						status = 'Automation already deleted!';
-					}else if(data == 'error'){
-						status = 'Error processing request!';
-					}else{
-						status = data;
-						data = 'error';
+		Swal.fire({
+			icon: 'question',
+			title: 'Tweet Factory',
+			text: 'Are you sure you want to delete this automation source?',
+			confirmButtonText: 'Yes, delete',
+			footer: '<a href="">Why do I have this issue?</a>'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				$.ajax({
+					type: "POST",
+					url: "../process/post/tweet_automation_delete.php",
+					data: {
+						user: '<?php echo $user['id'] ?>',
+						id: ttt_id
+					},
+					success: function(data) {
+						var status;
+						if (data == 'success') {
+							status = 'Automation deleted successfully!';
+						} else if (data == 'info') {
+							status = 'Automation already deleted!';
+						} else if (data == 'error') {
+							status = 'Error processing request!';
+						} else {
+							status = data;
+							data = 'error';
+						}
+						Swal.fire(status, '', data);
 					}
-					Swal.fire(status, '', data);
-				}
-			});
+				});
 
-		} else if (result.isDenied) {
-			Swal.fire('Changes are not saved', '', 'info')
-		}
-	})
-
-};
-
-
-var c_id;
-
-function campaignDelete(c_id) {
-
-Swal.fire({
-	icon: 'question',
-	title: 'Automated Campaign',
-	text: 'Are you sure you want to delete this campaign?',
-	confirmButtonText: 'Yes, delete',
-	footer: '<a href="">Why do I have this issue?</a>'
-}).then((result) => {
-	if (result.isConfirmed) {
-		$.ajax({
-			type: "POST",
-			url: "../process/post/campaign_delete.php",
-			data: {
-				user:'<?php echo $user['id'] ?>',
-				id:c_id
-			},
-			success: function(data) {
-				var status;
-				if(data == 'success'){
-					status = 'Campaign deleted successfully! You have received back the budget balance!';
-				}else if(data == 'info'){
-					status = 'Campaign already deleted!';
-				}else if(data == 'error'){
-					status = 'Error processing request!';
-				}else{
-					status = data;
-					data = 'error';
-				}
-				Swal.fire(status, '', data);
+			} else if (result.isDenied) {
+				Swal.fire('Changes are not saved', '', 'info')
 			}
-		});
+		})
 
-	} else if (result.isDenied) {
-		Swal.fire('Changes are not saved', '', 'info')
-	}
-})
+	};
 
-};
+
+	var c_id;
+
+	function campaignDelete(c_id) {
+
+		Swal.fire({
+			icon: 'question',
+			title: 'Automated Campaign',
+			text: 'Are you sure you want to delete this campaign?',
+			confirmButtonText: 'Yes, delete',
+			footer: '<a href="">Why do I have this issue?</a>'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				$.ajax({
+					type: "POST",
+					url: "../process/post/campaign_delete.php",
+					data: {
+						user: '<?php echo $user['id'] ?>',
+						id: c_id
+					},
+					success: function(data) {
+						var status;
+						if (data == 'success') {
+							status = 'Campaign deleted successfully! You have received back the budget balance!';
+						} else if (data == 'info') {
+							status = 'Campaign already deleted!';
+						} else if (data == 'error') {
+							status = 'Error processing request!';
+						} else {
+							status = data;
+							data = 'error';
+						}
+						Swal.fire(status, '', data);
+					}
+				});
+
+			} else if (result.isDenied) {
+				Swal.fire('Changes are not saved', '', 'info')
+			}
+		})
+
+	};
+
+
+
+	function automationDownload() {
+
+		var campaignName = $('.CampaignExport').find(":selected").val();
+		//alert(campaignName);
+		//*
+		if (campaignName == '') {
+			Swal.fire('Select campaign to export', '', 'error');
+		} else {
+			Swal.fire({
+				icon: 'question',
+				title: 'Automated Campaign',
+				text: 'Are you sure you want to download this object?',
+				confirmButtonText: 'Yes, download',
+				footer: '<a href="">Why do I have this issue?</a>'
+			}).then((result) => {
+				if (result.isConfirmed) {
+					$.ajax({
+						type: "POST",
+						url: "../process/post/campaign_export.php",
+						data: {
+							user: '<?php echo $user['id'] ?>',
+							id: campaignName
+						},
+						success: function(arr) {
+							var status;
+							data = $.parseJSON(arr);
+							if (data[0] == 'success') {
+								status = 'Campaign downloaded successfully!';
+							} else if (data[0] == 'info') {
+								status = 'Campaign already deleted!';
+							} else if (data[0] == 'error') {
+								status = 'Error processing request!';
+							} else {
+								status = data[0];
+								data[0] = 'error';
+							}
+
+							if (data[0] == 'success') {
+								Swal.fire({
+									icon: data[0],
+									title: 'Automation Object Ready',
+									html: '<a class="btn btn-light-info DownloadNow">Download Now</a>',
+									confirmButtonText: 'I have downloaded',
+									footer: '<a href="">Why do I have this issue?</a>'
+								});
+
+								function downloadObjectAsJson(exportObj, exportName) {
+									var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+									var downloadAnchorNode = document.createElement('a');
+									downloadAnchorNode.setAttribute("href", dataStr);
+									downloadAnchorNode.setAttribute("download", exportName + ".json");
+									document.body.appendChild(downloadAnchorNode); // required for firefox
+									downloadAnchorNode.click();
+									downloadAnchorNode.remove();
+								}
+
+								$('.DownloadNow').click(function(e) {
+									e.preventDefault();
+									downloadObjectAsJson( data[1], '<?php echo $user['t_id'] ?>_'+ data[2]);
+								});
+							} else {
+								Swal.fire(status, '', data[0]);
+							}
+
+						}
+					});
+
+				} else if (result.isDenied) {
+					Swal.fire('Changes are not saved', '', 'info')
+				}
+			})
+		}
+
+		//*/
+	};
 </script>
 <script src="https://checkout.flutterwave.com/v3.js"></script>

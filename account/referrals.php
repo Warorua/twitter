@@ -103,7 +103,7 @@ include '../includes/head.php';
 											<p class="fs-6 fw-semibold text-gray-600 py-4 m-0">Plan your blog post by choosing a topic, creating an outline conduct 
 											<br />research, and checking facts</p>
 											<div class="d-flex">
-												<input id="kt_referral_link_input" type="text" class="form-control form-control-solid me-3 flex-grow-1" name="search" value="https://tweetbot.site/reffer/?refid=345re66787k8" />
+												<input id="kt_referral_link_input" type="text" class="form-control form-control-solid me-3 flex-grow-1" name="search" value="https://tweetbot.site/refer?refid=<?php echo $user['id'].'_'.substr(str_shuffle('123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-'), 0, 12); ?>" />
 												<button id="kt_referral_program_link_copy_btn" class="btn btn-light btn-active-light-primary fw-bold flex-shrink-0" data-clipboard-target="#kt_referral_link_input">Copy Link</button>
 											</div>
 										</div>
@@ -116,8 +116,8 @@ include '../includes/head.php';
 										<div class="col">
 											<div class="card card-dashed flex-center min-w-175px my-3 p-6">
 												<span class="fs-4 fw-semibold text-info pb-1 px-2">Net Earnings</span>
-												<span class="fs-lg-2tx fw-bold d-flex justify-content-center">$
-												<span data-kt-countup="true" data-kt-countup-value="63,240.00">0</span></span>
+												<span class="fs-lg-2tx fw-bold d-flex justify-content-center">KES.
+												<span data-kt-countup="true" data-kt-countup-value="0.00">0</span></span>
 											</div>
 										</div>
 										<!--end::Col-->
@@ -125,8 +125,8 @@ include '../includes/head.php';
 										<div class="col">
 											<div class="card card-dashed flex-center min-w-175px my-3 p-6">
 												<span class="fs-4 fw-semibold text-success pb-1 px-2">Balance</span>
-												<span class="fs-lg-2tx fw-bold d-flex justify-content-center">$
-												<span data-kt-countup="true" data-kt-countup-value="8,530.00">0</span></span>
+												<span class="fs-lg-2tx fw-bold d-flex justify-content-center">KES.
+												<span data-kt-countup="true" data-kt-countup-value="0">0</span></span>
 											</div>
 										</div>
 										<!--end::Col-->
@@ -134,8 +134,8 @@ include '../includes/head.php';
 										<div class="col">
 											<div class="card card-dashed flex-center min-w-175px my-3 p-6">
 												<span class="fs-4 fw-semibold text-danger pb-1 px-2">Avg Deal Size</span>
-												<span class="fs-lg-2tx fw-bold d-flex justify-content-center">$
-												<span data-kt-countup="true" data-kt-countup-value="2,600">0</span></span>
+												<span class="fs-lg-2tx fw-bold d-flex justify-content-center">KES.
+												<span data-kt-countup="true" data-kt-countup-value="0">0</span></span>
 											</div>
 										</div>
 										<!--end::Col-->
@@ -143,8 +143,8 @@ include '../includes/head.php';
 										<div class="col">
 											<div class="card card-dashed flex-center min-w-175px my-3 p-6">
 												<span class="fs-4 fw-semibold text-primary pb-1 px-2">Referral Signups</span>
-												<span class="fs-lg-2tx fw-bold d-flex justify-content-center">$
-												<span data-kt-countup="true" data-kt-countup-value="783&quot;">0</span></span>
+												<span class="fs-lg-2tx fw-bold d-flex justify-content-center">KES.
+												<span data-kt-countup="true" data-kt-countup-value="0">0</span></span>
 											</div>
 										</div>
 										<!--end::Col-->
@@ -170,7 +170,7 @@ include '../includes/head.php';
 											<!--begin::Content-->
 											<div class="mb-3 mb-md-0 fw-semibold">
 												<h4 class="text-gray-900 fw-bold">Withdraw Your Money to a Bank Account</h4>
-												<div class="fs-6 text-gray-700 pe-7">Withdraw money securily to your bank account. Commision is $25 per transaction under $50,000</div>
+												<div class="fs-6 text-gray-700 pe-7">Withdraw money securily to your bank account. Commision is KES.25 per transaction under KES.5,000</div>
 											</div>
 											<!--end::Content-->
 											<!--begin::Action-->
@@ -193,23 +193,7 @@ include '../includes/head.php';
 										<h3>Referred Users</h3>
 									</div>
 									<!--end::Title-->
-									<!--begin::Toolbar-->
-									<div class="card-toolbar">
-										<!--begin::Tab nav-->
-										<ul class="nav nav-stretch fs-5 fw-semibold nav-line-tabs border-transparent" role="tablist">
-											<li class="nav-item" role="presentation">
-												<a id="kt_referrals_tab_1" class="nav-link text-active-gray-800 me-4 active" data-bs-toggle="tab" role="tab" href="#kt_referrals_1">Month</a>
-											</li>
-											<li class="nav-item" role="presentation">
-												<a id="kt_referrals_tab_2" class="nav-link text-active-gray-800 me-4" data-bs-toggle="tab" role="tab" href="#kt_referrals_2">2020</a>
-											</li>
-											<li class="nav-item" role="presentation">
-												<a id="kt_referrals_tab_3" class="nav-link text-active-gray-800" data-bs-toggle="tab" role="tab" href="#kt_referrals_3">2019</a>
-											</li>
-										</ul>
-										<!--end::Tab nav-->
-									</div>
-									<!--end::Toolbar-->
+								
 								</div>
 								<!--end::Header-->
 								<!--begin::Tab content-->
@@ -233,244 +217,15 @@ include '../includes/head.php';
 												<!--begin::Tbody-->
 												<tbody class="fs-6 fw-semibold text-gray-600">
 													<tr>
-														<td class="ps-9">678935899</td>
+														<td class="ps-9">00000000</td>
 														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Marcus Harris</a>
+															<a href="#" class="text-gray-600 text-hover-primary">Null User</a>
 														</td>
-														<td>Nov 24, 2020</td>
-														<td>26%</td>
-														<td class="text-success">$1,200.00</td>
+														<td>Jan 1, 1970</td>
+														<td>0%</td>
+														<td class="text-success">KES.00.00</td>
 													</tr>
-													<tr>
-														<td class="ps-9">578433345</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Maria Garcia</a>
-														</td>
-														<td>Aug 10, 2020</td>
-														<td>35%</td>
-														<td class="text-success">$2,400.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">678935899</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Robert Smith</a>
-														</td>
-														<td>May 06, 2020</td>
-														<td>18%</td>
-														<td class="text-success">$940.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">098669322</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Williams Brown</a>
-														</td>
-														<td>Apr 30, 2020</td>
-														<td>43%</td>
-														<td class="text-success">$200.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">245899092</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Paul Johnson</a>
-														</td>
-														<td>Feb 29, 2020</td>
-														<td>21%</td>
-														<td class="text-success">$380.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">505432578</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Sarah Jones</a>
-														</td>
-														<td>Jan 08, 2020</td>
-														<td>47%</td>
-														<td class="text-success">$2,050.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">256899235</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Juan Carlos</a>
-														</td>
-														<td>Jan 02, 2020</td>
-														<td>35%</td>
-														<td class="text-success">$820.00</td>
-													</tr>
-												</tbody>
-												<!--end::Tbody-->
-											</table>
-											<!--end::Table-->
-										</div>
-									</div>
-									<!--end::Tab panel-->
-									<!--begin::Tab panel-->
-									<div id="kt_referrals_2" class="card-body p-0 tab-pane fade" role="tabpanel">
-										<div class="table-responsive">
-											<!--begin::Table-->
-											<table class="table table-row-bordered table-flush align-middle gy-6">
-												<!--begin::Thead-->
-												<thead class="border-bottom border-gray-200 fs-6 fw-bold bg-lighten">
-													<tr>
-														<th class="min-w-125px ps-9">Order ID</th>
-														<th class="min-w-125px px-0">User</th>
-														<th class="min-w-125px">Date</th>
-														<th class="min-w-125px">Bonus</th>
-														<th class="min-w-125px ps-0">Profit</th>
-													</tr>
-												</thead>
-												<!--end::Thead-->
-												<!--begin::Tbody-->
-												<tbody class="fs-6 fw-semibold text-gray-600">
-													<tr>
-														<td class="ps-9">256899235</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Juan Carlos</a>
-														</td>
-														<td>Jan 02, 2020</td>
-														<td>35%</td>
-														<td class="text-success">$820.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">245899092</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Paul Johnson</a>
-														</td>
-														<td>Feb 29, 2020</td>
-														<td>21%</td>
-														<td class="text-success">$380.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">505432578</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Sarah Jones</a>
-														</td>
-														<td>Jan 08, 2020</td>
-														<td>47%</td>
-														<td class="text-success">$2,050.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">678935899</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Robert Smith</a>
-														</td>
-														<td>May 06, 2020</td>
-														<td>18%</td>
-														<td class="text-success">$940.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">578433345</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Maria Garcia</a>
-														</td>
-														<td>Aug 10, 2020</td>
-														<td>35%</td>
-														<td class="text-success">$2,400.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">098669322</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Williams Brown</a>
-														</td>
-														<td>Apr 30, 2020</td>
-														<td>43%</td>
-														<td class="text-success">$200.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">678935899</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Marcus Harris</a>
-														</td>
-														<td>Nov 24, 2020</td>
-														<td>26%</td>
-														<td class="text-success">$1,200.00</td>
-													</tr>
-												</tbody>
-												<!--end::Tbody-->
-											</table>
-											<!--end::Table-->
-										</div>
-									</div>
-									<!--end::Tab panel-->
-									<!--begin::Tab panel-->
-									<div id="kt_referrals_3" class="card-body p-0 tab-pane fade" role="tabpanel">
-										<div class="table-responsive">
-											<!--begin::Table-->
-											<table class="table table-row-bordered table-flush align-middle gy-6">
-												<!--begin::Thead-->
-												<thead class="border-bottom border-gray-200 fs-6 fw-bold bg-lighten">
-													<tr>
-														<th class="min-w-125px ps-9">Order ID</th>
-														<th class="min-w-125px px-0">User</th>
-														<th class="min-w-125px">Date</th>
-														<th class="min-w-125px">Bonus</th>
-														<th class="min-w-125px ps-0">Profit</th>
-													</tr>
-												</thead>
-												<!--end::Thead-->
-												<!--begin::Tbody-->
-												<tbody class="fs-6 fw-semibold text-gray-600">
-													<tr>
-														<td class="ps-9">578433345</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Maria Garcia</a>
-														</td>
-														<td>Aug 10, 2020</td>
-														<td>35%</td>
-														<td class="text-success">$2,400.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">678935899</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Robert Smith</a>
-														</td>
-														<td>May 06, 2020</td>
-														<td>18%</td>
-														<td class="text-success">$940.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">256899235</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Juan Carlos</a>
-														</td>
-														<td>Jan 02, 2020</td>
-														<td>35%</td>
-														<td class="text-success">$820.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">245899092</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Paul Johnson</a>
-														</td>
-														<td>Feb 29, 2020</td>
-														<td>21%</td>
-														<td class="text-success">$380.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">505432578</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Sarah Jones</a>
-														</td>
-														<td>Jan 08, 2020</td>
-														<td>47%</td>
-														<td class="text-success">$2,050.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">098669322</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Williams Brown</a>
-														</td>
-														<td>Apr 30, 2020</td>
-														<td>43%</td>
-														<td class="text-success">$200.00</td>
-													</tr>
-													<tr>
-														<td class="ps-9">678935899</td>
-														<td class="ps-0">
-															<a href="#" class="text-gray-600 text-hover-primary">Marcus Harris</a>
-														</td>
-														<td>Nov 24, 2020</td>
-														<td>26%</td>
-														<td class="text-success">$1,200.00</td>
-													</tr>
+													
 												</tbody>
 												<!--end::Tbody-->
 											</table>
