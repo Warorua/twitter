@@ -1197,7 +1197,7 @@ include '../includes/head.php';
 										<!--begin::Item-->
 										<div class="d-flex flex-stack">
 											<div class="d-flex">
-												<img src="../assets/media/svg/brand-logos/twitter.svg" class="w-30px me-6" alt="" />
+												<img src="../assets/media/svg/brand-logos/twitter_2.svg" class="w-30px me-6" alt="" />
 												<div class="d-flex flex-column">
 													<a href="#" class="fs-5 text-dark text-hover-primary fw-bold">Twitter</a>
 													<div class="fs-6 fw-semibold text-gray-400">Connect to your followers and circles</div>
