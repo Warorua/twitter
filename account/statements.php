@@ -130,7 +130,12 @@ include '../includes/head.php';
 												$usage += (int)$row['spent_budget'];
 
 											}
-											$perc_used = ($usage*100)/$budget;
+											if($usage == 0){
+												$perc_used = 0;
+											}else{
+												$perc_used = ($usage*100)/$budget;
+											}
+											
 											$budget_used = $budget*0.05;
 											$usage_used = $usage*0.05;
 											?>
