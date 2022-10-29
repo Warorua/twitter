@@ -22,7 +22,7 @@ require_once '../vendor/autoload.php';
 $clientID = '167208180500-p33dejrdqld6261j1inueg9p0sr9fqig.apps.googleusercontent.com';
 $clientSecret = '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';
 //$redirectUri = $parent_url.'/account/user';
-$redirectUri = $parent_url.'/v2/login';
+$redirectUri = $parent_url.'/auth/sign-in.php';
    
 // create Client Request to access Google API
 $client = new Google_Client();

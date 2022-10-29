@@ -131,7 +131,7 @@ include '../includes/plain_head.php';
 										<!--end::Symbol-->
 										<!--begin::Symbol-->
 										<?php
-										$tw_url = $parent_url . '/v2/login';
+										$tw_url = $parent_url . '/auth/sign-in.php';
 										include './tww/tw_2.php' ?>
 
 
