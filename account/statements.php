@@ -275,6 +275,11 @@ include '../includes/head.php';
 														$camp_image = '../assets/media/icons/unfollow.png';
 													}
 													$camp_exec = (int)$row['execution'];
+													if($row['spent_budget'] == ''){
+														$spent_budget = 0;
+													}else{
+														$spent_budget = (int)$row['spent_budget'];
+													}
 													echo '
 														<tr>
 													<td>
@@ -293,7 +298,7 @@ include '../includes/head.php';
 														<span class="text-muted fw-semibold text-muted d-block fs-7">Points</span>
 													</td>
 													<td>
-														<a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">' . number_format($row['spent_budget']) . '</a>
+														<a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">' . number_format($spent_budget) . '</a>
 														<span class="text-muted fw-semibold text-muted d-block fs-7">Points</span>
 													</td>
 													<td>
