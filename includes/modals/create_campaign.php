@@ -374,7 +374,7 @@
                                                <!--end:Label-->
                                                <!--begin:Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" name="frequency" value="10" />
+                                                   <input class="form-check-input" type="radio" name="frequency" value="1" />
                                                </span>
                                                <!--end:Input-->
                                            </label>
