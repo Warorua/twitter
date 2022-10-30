@@ -243,49 +243,58 @@ foreach ($data as $row) {
 
             $data_3 = json_decode($followers_data, true);
         }
+        ////////////////////////////////////////////////////////////////////////////////////////////////
 
-        if ($row['last_key'] == '') {
-            $to_delete_id = $data_3[0]['id'];
+        if ($row['frequency'] == 30) {
+            $run_lap = 1;
         } else {
-            $to_delete_id = $data_3[$row['last_key']]['id'];
+            $run_lap = 0;
         }
 
+        for ($i = 0; $i <= $run_lap; $i++) {
+
+            if ($row['last_key'] == '') {
+                $to_delete_id = $data_3[0]['id'];
+            } else {
+                $to_delete_id = $data_3[$row['last_key']]['id'];
+            }
+
             $tweet_client->deleteTweet($to_delete_id);
-            
-          //  charge($charge['follow_charge']);
+
+            //  charge($charge['follow_charge']);
             if ($row['spent_budget'] == '') {
                 $spent_budget = $charge['tweet_charge'];
             } else {
                 $spent_budget = intval($row['spent_budget']) + $charge['tweet_charge'];
             }
-       
-
-
-
-        $last_key = floatval($row['last_key']) + 1;
-
-        if ($row['execution'] == '') {
-            $execution = time() + $row['frequency'];
-        } else {
-            $execution = $row['execution'] + $row['frequency'];
-        }
 
 
 
 
-        $mode = 'T0';
-        $command = 'delete_tweet';
-        $output = $command . ' automation success';
-        $status = 1;
-        $auth_user = $client_load['id'];
+            $last_key = floatval($row['last_key']) + 1;
 
-        $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
-        $arr_78 = end($data_3);
-
+            if ($row['execution'] == '') {
+                $execution = time() + $row['frequency'];
+            } else {
+                $execution = $row['execution'] + $row['frequency'];
+            }
 
 
-/*
-        if ($arr_78['id'] == $to_delete_id) {
+
+
+            $mode = 'T0';
+            $command = 'delete_tweet';
+            $output = $command . ' automation success';
+            $status = 1;
+            $auth_user = $client_load['id'];
+
+            $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
+            $arr_78 = end($data_3);
+
+
+
+             /*
+           if ($arr_78['id'] == $to_delete_id) {
             if (!isset($data_3['meta']['next_token'])) {
                 $added_points = $row['budget'] - intval($row['spent_budget']);
                 $raw_points = floatval($init_points) + $added_points;
@@ -328,18 +337,18 @@ foreach ($data as $row) {
 
                 fclose($file_data);
             }
-        }
-*/
+           }
+            */
 
 
 
-        
-        if ($arr_78['id'] == $to_delete_id) {
+
+            if ($arr_78['id'] == $to_delete_id) {
                 $abraham_client->setApiVersion('1.1');
                 $user_c = $abraham_client->get('statuses/user_timeline', [
                     "count" => 3200,
                     'id' => $client_load['t_id'],
-    
+
                 ]);
 
                 unlink($file_name);
@@ -354,54 +363,62 @@ foreach ($data as $row) {
 
                 fclose($file_data);
 
-       
-                $output = 'First batch traversal done. Progressed to the next batch. Campaign ID: '.$row['id'];
-                twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);        
-        }
-        
-        
-        
+
+                $output = 'First batch traversal done. Progressed to the next batch. Campaign ID: ' . $row['id'];
+                twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+            }
 
 
 
-        $file_surv = count(json_decode(file_get_contents($file_name), true));
-        if ($arr_78['id'] == $to_delete_id && $file_surv == 0 || $file_surv == NULL || $file_surv == FALSE) {
-            $added_points = $row['budget'] - intval($row['spent_budget']);
-            $raw_points = floatval($init_points) + $added_points;
 
-            $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
-            $cipher_points = safeEncrypt($raw_points, $key);
 
-            $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
-            $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
 
-            $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
-            $stmt->execute(['id' => $row['id']]);
+            $file_surv = count(json_decode(file_get_contents($file_name), true));
+            if ($arr_78['id'] == $to_delete_id && $file_surv == 0 || $file_surv == NULL || $file_surv == FALSE) {
+                $added_points = $row['budget'] - intval($row['spent_budget']);
+                $raw_points = floatval($init_points) + $added_points;
 
-            
-            
-            $output = 'Campaign ended: All tweets deleted, Last data key reached.';
+                $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
+                $cipher_points = safeEncrypt($raw_points, $key);
+
+                $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
+                $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
+
+                $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
+                $stmt->execute(['id' => $row['id']]);
+
+
+
+                $output = 'Campaign ended: All tweets deleted, Last data key reached.';
+                twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+
+
+                unlink($file_name);
+                die();
+            }
+
+
+
+            if ($row['budget'] <= $row['spent_budget']) {
+                $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
+                $stmt->execute(['id' => $row['id']]);
+                unlink($file_name);
+
+                $output = 'Campaign ended: Budget limit reached!';
+                twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+                die();
+            }
+
+            engine_control($command, 1);
             twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
-   
-
-            unlink($file_name);
-            die();
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
 
 
 
-        if ($row['budget'] <= $row['spent_budget']) {
-            $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
-            $stmt->execute(['id' => $row['id']]);
-            unlink($file_name);
 
-            $output = 'Campaign ended: Budget limit reached!';
-            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
-            die();
-        }
 
-        engine_control($command, 1);
-        twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+
     } elseif ($row['campaign'] == 4) {
         $path = $parent_url . '/process/post/follow_user.php';
 

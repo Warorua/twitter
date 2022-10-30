@@ -340,15 +340,15 @@
                                                    <!--end:Icon-->
                                                    <!--begin:Info-->
                                                    <span class="d-flex flex-column">
-                                                       <span class="fw-bold fs-6">2 Minutes</span>
-                                                       <span class="fs-7 text-muted">Runs automation every 2mins</span>
+                                                       <span class="fw-bold fs-6">30 Seconds</span>
+                                                       <span class="fs-7 text-muted">Runs automation every 30sec</span>
                                                    </span>
                                                    <!--end:Info-->
                                                </span>
                                                <!--end:Label-->
                                                <!--begin:Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" checked name="frequency" value="2" />
+                                                   <input class="form-check-input" type="radio" checked name="frequency" value="0.5" />
                                                </span>
                                                <!--end:Input-->
                                            </label>
@@ -366,8 +366,8 @@
                                                    <!--end:Icon-->
                                                    <!--begin:Info-->
                                                    <span class="d-flex flex-column">
-                                                       <span class="fw-bold fs-6">10 Minutes</span>
-                                                       <span class="fs-7 text-muted">Runs automation every 10mins</span>
+                                                       <span class="fw-bold fs-6">1 Minute</span>
+                                                       <span class="fs-7 text-muted">Runs automation every minute</span>
                                                    </span>
                                                    <!--end:Info-->
                                                </span>
@@ -392,15 +392,15 @@
                                                    <!--end:Icon-->
                                                    <!--begin:Info-->
                                                    <span class="d-flex flex-column">
-                                                       <span class="fw-bold fs-6">30 Minutes</span>
-                                                       <span class="fs-7 text-muted">Runs automation every 30mins</span>
+                                                       <span class="fw-bold fs-6">5 Minutes</span>
+                                                       <span class="fs-7 text-muted">Runs automation every 5mins</span>
                                                    </span>
                                                    <!--end:Info-->
                                                </span>
                                                <!--end:Label-->
                                                <!--begin:Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" name="frequency" value="30" />
+                                                   <input class="form-check-input" type="radio" name="frequency" value="5" />
                                                </span>
                                                <!--end:Input-->
                                            </label>
@@ -418,15 +418,15 @@
                                                    <!--end:Icon-->
                                                    <!--begin:Info-->
                                                    <span class="d-flex flex-column">
-                                                       <span class="fw-bold fs-6">60 Minutes</span>
-                                                       <span class="fs-7 text-muted">Runs automation every 60mins</span>
+                                                       <span class="fw-bold fs-6">15 Minutes</span>
+                                                       <span class="fs-7 text-muted">Runs automation every 15mins</span>
                                                    </span>
                                                    <!--end:Info-->
                                                </span>
                                                <!--end:Label-->
                                                <!--begin:Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" name="frequency" value="60" />
+                                                   <input class="form-check-input" type="radio" name="frequency" value="15" />
                                                </span>
                                                <!--end:Input-->
                                            </label>
