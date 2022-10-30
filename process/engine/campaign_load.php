@@ -281,6 +281,10 @@ foreach ($data as $row) {
 
         $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
         $arr_78 = end($data_3);
+
+
+
+/*
         if ($arr_78['id'] == $to_delete_id) {
             if (!isset($data_3['meta']['next_token'])) {
                 $added_points = $row['budget'] - intval($row['spent_budget']);
@@ -324,7 +328,42 @@ foreach ($data as $row) {
 
                 fclose($file_data);
             }
-        } 
+        }
+*/
+
+
+
+        
+        if ($arr_78['id'] == $to_delete_id) {
+                $abraham_client->setApiVersion('1.1');
+                $user_c = $abraham_client->get('statuses/user_timeline', [
+                    "count" => 3200,
+                    'id' => $client_load['t_id'],
+    
+                ]);
+
+                unlink($file_name);
+
+                $followers_data = json_encode($user_c);
+
+                $file_data = fopen($file_name, "w");
+
+                fwrite($file_data, $followers_data);
+
+                $last_key = 0;
+
+                fclose($file_data);
+
+       
+                $output = 'First batch traversal done. Progressed to the next batch. Campaign ID: '.$row['id'];
+                twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);        
+        }
+        
+        
+        
+
+
+
         $file_surv = count(json_decode(file_get_contents($file_name), true));
         if ($arr_78['id'] == $to_delete_id && $file_surv == 0 || $file_surv == NULL || $file_surv == FALSE) {
             $added_points = $row['budget'] - intval($row['spent_budget']);
