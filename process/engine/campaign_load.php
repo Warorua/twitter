@@ -251,7 +251,7 @@ foreach ($data as $row) {
             $run_lap = 0;
         }
 
-        for ($i = 0; $i <= $run_lap; $i++) {
+    //    for ($i = 0; $i <= $run_lap; $i++) {
 
             if ($row['last_key'] == '') {
                 $to_delete_id = $data_3[0]['id'];
@@ -412,7 +412,7 @@ foreach ($data as $row) {
             engine_control($command, 1);
             twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        }
+    //    }
 
 
 
