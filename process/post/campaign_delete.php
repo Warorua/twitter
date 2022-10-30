@@ -27,6 +27,23 @@ try {
                 $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
                 $stmt->execute(['id' => $user_id, 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
 
+
+
+                if($data['campaign'] == 1){
+                    $file_path = 'followers';
+                }elseif($data['campaign'] == 3){
+                    $file_path = 'tweets';
+                }else{
+                    $file_path = 'following';
+                }
+
+                $file_name = "../../process/client/".$file_path."/" . $user['t_id'] . ".json";
+
+                if (file_exists($file_name)) {
+                    unlink($file_name);
+                }
+
+
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $id]);
 

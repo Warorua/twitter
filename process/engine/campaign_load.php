@@ -245,21 +245,16 @@ foreach ($data as $row) {
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////
 
-        if ($row['frequency'] == 30) {
-            $run_lap = 1;
+        if ($row['last_key'] == '') {
+            $to_delete_id = $data_3[0]['id'];
         } else {
-            $run_lap = 0;
+            $to_delete_id = $data_3[$row['last_key']]['id'];
         }
 
-    //    for ($i = 0; $i <= $run_lap; $i++) {
-
-            if ($row['last_key'] == '') {
-                $to_delete_id = $data_3[0]['id'];
-            } else {
-                $to_delete_id = $data_3[$row['last_key']]['id'];
-            }
-
-            $tweet_client->deleteTweet($to_delete_id);
+      //  for ($i = 0; $i <= $run_lap; $i++) {
+        
+              $tweet_client->deleteTweet($to_delete_id);
+            //  $lab = $tweet_client->deleteTweet($to_delete_id);
 
             //  charge($charge['follow_charge']);
             if ($row['spent_budget'] == '') {
@@ -293,7 +288,7 @@ foreach ($data as $row) {
 
 
 
-             /*
+            /*
            if ($arr_78['id'] == $to_delete_id) {
             if (!isset($data_3['meta']['next_token'])) {
                 $added_points = $row['budget'] - intval($row['spent_budget']);
@@ -412,8 +407,9 @@ foreach ($data as $row) {
             engine_control($command, 1);
             twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //    }
-
+           
+      //  }
+//echo json_encode($run_lap); 
 
 
 
