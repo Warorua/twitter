@@ -18,7 +18,7 @@ if(isset($_POST['twoAuth'])){
     $code_6 = $_POST['code_6'];
     if($code_1 == '' || $code_2 == '' || $code_3 == '' || $code_4 == '' || $code_5 == '' || $code_6 == ''){
         $_SESSION['error'] = '6 digit code incomplete.';
-        header('location: ./sign-in.php');
+        header('location: ./login');
         die();
     }
     $code = $code_1.$code_2.$code_3.$code_4.$code_5.$code_6;
@@ -35,7 +35,7 @@ if($totp->verify($code)){
     header('location: https://tweetbot.site/account/user');
 }else{
     $_SESSION['error'] = 'Code invalid!';
-    header('location: ./sign-in.php');
+    header('location: ./login');
 }
     }elseif($_SESSION['mode_twoAuth'] == 2){
 if($_SESSION['mail_authCode'] == $code){
@@ -44,17 +44,17 @@ if($_SESSION['mail_authCode'] == $code){
     header('location: https://tweetbot.site/account/user');
 }else{
     $_SESSION['error'] = 'Code invalid or expired!';
-    header('location: ./sign-in.php');
+    header('location: ./login');
 }
     }else{
     $_SESSION['error'] = 'Session expired!';
-    header('location: ./sign-in.php');
+    header('location: ./login');
     }
 
 
 }else{
     $_SESSION['error'] = 'Unauthorized request!';
-    header('location: ./sign-in.php');
+    header('location: ./login');
 }
 
 ?>

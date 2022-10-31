@@ -9,15 +9,15 @@ var KTAuthI18nDemo = (function () {
         German: "Registrarse",
         Japanese: "ログイン",
         French: "S'identifier",
-        Swahili: "",
+        Swahili: "Tafadhali subiri...",
       },
       "general-desc": {
-        English: "Get unlimited access & earn money",
-        Spanish: "Obtenga acceso ilimitado y gane dinero",
-        German: "Erhalten Sie unbegrenzten Zugriff und verdienen Sie Geld",
-        Japanese: "無制限のアクセスを取得してお金を稼ぐ",
-        French: "Obtenez un accès illimité et gagnez de l'argent",
-        Swahili: "",
+        English: "Use Twitter to sign in or sign up",
+        Spanish: "Usa Twitter para iniciar sesión o registrarte",
+        German: "Verwenden Sie Twitter, um sich anzumelden oder zu registrieren",
+        Japanese: "Twitter を使用してサインインまたはサインアップする",
+        French: "Utilisez Twitter pour vous connecter ou vous inscrire",
+        Swahili: "Tumia Twitter kuingia au kujiandikisha",
       },
       "general-or": {
         English: "Or",
@@ -25,7 +25,7 @@ var KTAuthI18nDemo = (function () {
         German: "Oder",
         Japanese: "または",
         French: "Ou",
-        Swahili: "",
+        Swahili: "Au",
       },
       "sign-in-head-desc": {
         English: "Not a Member yet?",
@@ -33,7 +33,7 @@ var KTAuthI18nDemo = (function () {
         German: "Noch kein Mitglied?",
         Japanese: "まだメンバーではありませんか？",
         French: "Pas encore membre?",
-        Swahili: "",
+        Swahili: "Je, bado si Mwanachama?",
       },
       "sign-in-head-link": {
         English: "Sign Up",
@@ -41,7 +41,7 @@ var KTAuthI18nDemo = (function () {
         German: "Anmeldung",
         Japanese: "サインアップ",
         French: "S'S'inscrire",
-        Swahili: "",
+        Swahili: "Jisajili",
       },
       "sign-in-title": {
         English: "Sign In",
@@ -49,7 +49,7 @@ var KTAuthI18nDemo = (function () {
         German: "Registrarse",
         Japanese: "ログイン",
         French: "S'identifier",
-        Swahili: "",
+        Swahili: "Weka sahihi",
       },
       "sign-in-input-email": {
         English: "Email",
@@ -57,7 +57,7 @@ var KTAuthI18nDemo = (function () {
         German: "Email",
         Japanese: "Eメール",
         French: "E-mail",
-        Swahili: "",
+        Swahili: "Barua pepe",
       },
       "sign-in-input-password": {
         English: "Password",
@@ -65,7 +65,7 @@ var KTAuthI18nDemo = (function () {
         German: "Passwort",
         Japanese: "パスワード",
         French: "Mot de passe",
-        Swahili: "",
+        Swahili: "Nenosiri",
       },
       "sign-in-forgot-password": {
         English: "Forgot Password ?",
@@ -73,7 +73,7 @@ var KTAuthI18nDemo = (function () {
         German: "Passwort vergessen ?",
         Japanese: "パスワードをお忘れですか ？",
         French: "Mot de passe oublié ?",
-        Swahili: "",
+        Swahili: "Umesahau nywila ?",
       },
       "sign-in-submit": {
         English: "Sign In",
@@ -81,7 +81,7 @@ var KTAuthI18nDemo = (function () {
         German: "Registrarse",
         Japanese: "ログイン",
         French: "S'identifier",
-        Swahili: "",
+        Swahili: "Weka sahihi",
       },
       "sign-up-head-desc": {
         English: "Already a member ?",
@@ -97,7 +97,7 @@ var KTAuthI18nDemo = (function () {
         German: "Registrarse",
         Japanese: "ログイン",
         French: "S'identifier",
-        Swahili: "",
+        Swahili: "Je, tayari ni mwanachama?",
       },
       "sign-up-title": {
         English: "Sign Up",
@@ -105,7 +105,7 @@ var KTAuthI18nDemo = (function () {
         German: "Anmeldung",
         Japanese: "サインアップ",
         French: "S'S'inscrire",
-        Swahili: "",
+        Swahili: "Jisajili",
       },
       "sign-up-input-first-name": {
         English: "First Name",
@@ -113,7 +113,7 @@ var KTAuthI18nDemo = (function () {
         German: "Vorname",
         Japanese: "ファーストネーム",
         French: "Prénom",
-        Swahili: "",
+        Swahili: "Jina la kwanza",
       },
       "sign-up-input-last-name": {
         English: "Last Name",
@@ -121,7 +121,7 @@ var KTAuthI18nDemo = (function () {
         German: "Nachname",
         Japanese: "苗字",
         French: "Nom de famille",
-        Swahili: "",
+        Swahili: "Jina la familia",
       },
       "sign-up-input-email": {
         English: "Email",
@@ -129,7 +129,7 @@ var KTAuthI18nDemo = (function () {
         German: "Email",
         Japanese: "Eメール",
         French: "E-mail",
-        Swahili: "",
+        Swahili: "Barua pepe",
       },
       "sign-up-input-password": {
         English: "Password",
@@ -137,7 +137,7 @@ var KTAuthI18nDemo = (function () {
         German: "Passwort",
         Japanese: "パスワード",
         French: "Mot de passe",
-        Swahili: "",
+        Swahili: "Nenosiri",
       },
       "sign-up-input-confirm-password": {
         English: "Password",
@@ -145,7 +145,7 @@ var KTAuthI18nDemo = (function () {
         German: "Passwort",
         Japanese: "パスワード",
         French: "Mot de passe",
-        Swahili: "",
+        Swahili: "Nenosiri",
       },
       "sign-up-submit": {
         English: "Submit",
@@ -153,7 +153,7 @@ var KTAuthI18nDemo = (function () {
         German: "Registrarse",
         Japanese: "ログイン",
         French: "S'identifier",
-        Swahili: "",
+        Swahili: "Wasilisha",
       },
       "sign-up-hint": {
         English:
@@ -165,7 +165,7 @@ var KTAuthI18nDemo = (function () {
         Japanese: "文字、数字、記号を組み合わせた8文字以上を使用してください。",
         French:
           "Utilisez 8 caractères ou plus avec un mélange de lettres, de chiffres et de symboles.",
-        Swahili: "",
+        Swahili: "Tumia herufi 8 au zaidi zilizo na mchanganyiko wa herufi, nambari na alama.",
       },
       "new-password-head-desc": {
         English: "Already a member ?",
@@ -173,7 +173,7 @@ var KTAuthI18nDemo = (function () {
         German: "Schon ein Mitglied ?",
         Japanese: "すでにメンバーですか？",
         French: "Déjà membre ?",
-        Swahili: "",
+        Swahili: "Je, tayari ni mwanachama?",
       },
       "new-password-head-link": {
         English: "Sign In",
@@ -181,7 +181,7 @@ var KTAuthI18nDemo = (function () {
         German: "Registrarse",
         Japanese: "ログイン",
         French: "S'identifier",
-        Swahili: "",
+        Swahili: "Weka sahihi",
       },
       "new-password-title": {
         English: "Setup New Password",
@@ -189,7 +189,7 @@ var KTAuthI18nDemo = (function () {
         German: "Neues Passwort einrichten",
         Japanese: "新しいパスワードを設定する",
         French: "Configurer un nouveau mot de passe",
-        Swahili: "",
+        Swahili: "Sanidi Nenosiri Jipya",
       },
       "new-password-desc": {
         English: "Have you already reset the password ?",
@@ -197,7 +197,7 @@ var KTAuthI18nDemo = (function () {
         German: "Hast du das Passwort schon zurückgesetzt?",
         Japanese: "すでにパスワードをリセットしましたか？",
         French: "Avez-vous déjà réinitialisé le mot de passe ?",
-        Swahili: "",
+        Swahili: "Je, tayari umeweka upya nenosiri?",
       },
       "new-password-input-password": {
         English: "Password",
@@ -205,7 +205,7 @@ var KTAuthI18nDemo = (function () {
         German: "Passwort",
         Japanese: "パスワード",
         French: "Mot de passe",
-        Swahili: "",
+        Swahili: "Nenosiri",
       },
       "new-password-hint": {
         English:
@@ -217,7 +217,7 @@ var KTAuthI18nDemo = (function () {
         Japanese: "文字、数字、記号を組み合わせた8文字以上を使用してください。",
         French:
           "Utilisez 8 caractères ou plus avec un mélange de lettres, de chiffres et de symboles.",
-          Swahili: "",
+          Swahili: "Tumia herufi 8 au zaidi zilizo na mchanganyiko wa herufi, nambari na alama.",
       },
       "new-password-confirm-password": {
         English: "Confirm Password",
@@ -225,7 +225,7 @@ var KTAuthI18nDemo = (function () {
         German: "Passwort bestätigen",
         Japanese: "パスワードを認証する",
         French: "Confirmez le mot de passe",
-        Swahili: "",
+        Swahili: "Thibitisha Nenosiri",
       },
       "new-password-submit": {
         English: "Submit",
@@ -233,7 +233,7 @@ var KTAuthI18nDemo = (function () {
         German: "Registrarse",
         Japanese: "ログイン",
         French: "S'identifier",
-        Swahili: "",
+        Swahili: "Wasilisha",
       },
       "password-reset-head-desc": {
         English: "Already a member ?",
@@ -241,7 +241,7 @@ var KTAuthI18nDemo = (function () {
         German: "Schon ein Mitglied ?",
         Japanese: "すでにメンバーですか？",
         French: "Déjà membre ?",
-        Swahili: "",
+        Swahili: "Je, tayari ni mwanachama?",
       },
       "password-reset-head-link": {
         English: "Sign In",
@@ -249,7 +249,7 @@ var KTAuthI18nDemo = (function () {
         German: "Registrarse",
         Japanese: "ログイン",
         French: "S'identifier",
-        Swahili: "",
+        Swahili: "Weka sahihi",
       },
       "password-reset-title": {
         English: "Forgot Password ?",
@@ -257,7 +257,7 @@ var KTAuthI18nDemo = (function () {
         German: "Passwort vergessen ?",
         Japanese: "パスワードをお忘れですか ？",
         French: "Mot de passe oublié ?",
-        Swahili: "",
+        Swahili: "Umesahau nywila ?",
       },
       "password-reset-desc": {
         English: "Enter your email to reset your password.",
@@ -267,7 +267,7 @@ var KTAuthI18nDemo = (function () {
           "Geben Sie Ihre E-Mail-Adresse ein, um Ihr Passwort zurückzusetzen.",
         Japanese: "メールアドレスを入力してパスワードをリセットしてください。",
         French: "Entrez votre e-mail pour réinitialiser votre mot de passe.",
-        Swahili: "",
+        Swahili: "Weka barua pepe yako ili kuweka upya nenosiri lako.",
       },
       "password-reset-input-email": {
         English: "Email",
@@ -275,7 +275,7 @@ var KTAuthI18nDemo = (function () {
         German: "Email",
         Japanese: "Eメール",
         French: "E-mail",
-        Swahili: "",
+        Swahili: "Barua pepe",
       },
       "password-reset-submit": {
         English: "Submit",
@@ -283,7 +283,7 @@ var KTAuthI18nDemo = (function () {
         German: "Registrarse",
         Japanese: "ログイン",
         French: "S'identifier",
-        Swahili: "",
+        Swahili: "Wasilisha",
       },
       "password-reset-cancel": {
         English: "Cancel",
@@ -291,7 +291,7 @@ var KTAuthI18nDemo = (function () {
         German: "Absagen",
         Japanese: "キャンセル",
         French: "Annuler",
-        Swahili: "",
+        Swahili: "Ghairi",
       },
       "two-step-head-desc": {
         English: "Didn’t get the code ?",
@@ -299,7 +299,7 @@ var KTAuthI18nDemo = (function () {
         German: "Code nicht erhalten?",
         Japanese: "コードを取得できませんでしたか？",
         French: "Vous n'avez pas reçu le code ?",
-        Swahili: "",
+        Swahili: "Hukupata msimbo?",
       },
       "two-step-head-resend": {
         English: "Resend",
@@ -307,7 +307,7 @@ var KTAuthI18nDemo = (function () {
         German: "Erneut senden",
         Japanese: "再送",
         French: "Renvoyer",
-        Swahili: "",
+        Swahili: "Tuma tena",
       },
       "two-step-head-or": {
         English: "Or",
@@ -315,7 +315,7 @@ var KTAuthI18nDemo = (function () {
         German: "Oder",
         Japanese: "または",
         French: "Ou",
-        Swahili: "",
+        Swahili: "Au",
       },
       "two-step-head-call-us": {
         English: "Call Us",
@@ -323,7 +323,7 @@ var KTAuthI18nDemo = (function () {
         German: "Rufen Sie uns an",
         Japanese: "お電話ください",
         French: "Appelez-nous",
-        Swahili: "",
+        Swahili: "Tupigie",
       },
       "two-step-submit": {
         English: "Submit",
@@ -331,7 +331,7 @@ var KTAuthI18nDemo = (function () {
         German: "Registrarse",
         Japanese: "ログイン",
         French: "S'identifier",
-        Swahili: "",
+        Swahili: "Wasilisha",
       },
       "two-step-title": {
         English: "Two Step Verification",
@@ -339,7 +339,7 @@ var KTAuthI18nDemo = (function () {
         German: "Verifizierung in zwei Schritten",
         Japanese: "2段階認証",
         French: "Vérification en deux étapes",
-        Swahili: "",
+        Swahili: "Uthibitishaji wa Hatua Mbili",
       },
       "two-step-deck": {
         English: "Enter the verification code we sent to",
@@ -347,7 +347,7 @@ var KTAuthI18nDemo = (function () {
         German: "Geben Sie den von uns gesendeten Bestätigungscode ein",
         Japanese: "送信した確認コードを入力してください",
         French: "Entrez le code de vérification que nous avons envoyé à",
-        Swahili: "",
+        Swahili: "Weka nambari ya kuthibitisha tuliyotuma",
       },
       "two-step-label": {
         English: "Type your 6 digit security code",
@@ -355,7 +355,7 @@ var KTAuthI18nDemo = (function () {
         German: "Geben Sie Ihren 6-stelligen Sicherheitscode ein",
         Japanese: "6桁のセキュリティコードを入力します",
         French: "Tapez votre code de sécurité à 6 chiffres",
-        Swahili: "",
+        Swahili: "Andika nambari yako ya kuthibitisha yenye tarakimu 6",
       },
     },
     s = function (e) {

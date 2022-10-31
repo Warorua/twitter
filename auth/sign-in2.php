@@ -74,20 +74,75 @@ include '../includes/plain_head.php';
 									<!--end::Link-->
 								</div>
 								<!--begin::Heading-->
-							
+								<!--begin::Input group=-->
+								<div class="fv-row mb-8">
+									<!--begin::Email-->
+									<input readonly type="text" placeholder="Email" name="email" autocomplete="off" data-kt-translate="sign-in-input-email" class="form-control form-control-solid" />
+									<!--end::Email-->
+								</div>
+								<!--end::Input group=-->
+								<div class="fv-row mb-7">
+									<!--begin::Password-->
+									<input readonly type="password" placeholder="Password" name="password" autocomplete="off" data-kt-translate="sign-in-input-password" class="form-control form-control-solid" />
+									<!--end::Password-->
+								</div>
+								<!--end::Input group=-->
+								<!--begin::Wrapper-->
+								<div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-10">
+									<div></div>
+									<!--begin::Link-->
+									<a href="password" class="link-primary" data-kt-translate="sign-in-forgot-password">Forgot Password ?</a>
+									<!--end::Link-->
+								</div>
+								<!--end::Wrapper-->
 								<!--begin::Actions-->
 								<div class="d-flex flex-stack">
+									<!--begin::Submit-->
+									<button type="submit" class="btn btn-primary me-2 flex-shrink-0">
+										<!--begin::Indicator label-->
+										<span class="indicator-label" data-kt-translate="sign-in-submit">Sign In</span>
+										<!--end::Indicator label-->
+										<!--begin::Indicator progress-->
+										<span class="indicator-progress">
+											<span data-kt-translate="general-progress">Please wait...</span>
+											<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+										</span>
+										<!--end::Indicator progress-->
+										<input readonly name="login" type="hidden" value="" />
+									</button>
+									<!--end::Submit-->
 									<!--begin::Social-->
 									<div class="d-flex align-items-center">
+										<div class="text-gray-400 fw-semibold fs-6 me-3 me-md-6" data-kt-translate="general-or">Or</div>
+										<!--begin::Symbol-->
+<!----------
+										<?php //include './google_login.php'; ?>
+										<a href="<?php //echo $client->createAuthUrl() ?>" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
+											<img alt="Logo" src="../assets/media/svg/brand-logos/google-icon.svg" class="p-4" />
+										</a>
 										
+										<?php
+										//$fb_url = $parent_url . '/auth/fb_3.php';
+									//	include './fb_1.php' ?>
+										<a href="<?php //echo $loginUrl ?>" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
+											<img alt="Logo" src="../assets/media/svg/brand-logos/facebook-3.svg" class="p-4" />
+										</a>
+										end::Symbol-->
+
 										<!--begin::Symbol-->
 										<?php
 										$tw_url = $parent_url . '/auth/sign-in.php';
 										include './tww/tw_2.php' ?>
 
 
-										<a href="<?php echo $url ?>" class="btn btn-secondary w-100">
-											<img alt="Logo" src="../assets/media/svg/brand-logos/twitter_2.svg" /> Sign In
+										<a href="<?php echo $url ?>" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
+											<img alt="Logo" src="../assets/media/svg/brand-logos/twitter_2.svg" class="p-4" />
+										</a>
+										<!--end::Symbol-->
+										<!--begin::Symbol-->
+										<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light">
+											<img alt="Logo" src="../assets/media/svg/brand-logos/apple-black.svg" class="theme-light-show p-4" />
+											<img alt="Logo" src="../assets/media/svg/brand-logos/apple-black-dark.svg" class="theme-dark-show p-4" />
 										</a>
 										<!--end::Symbol-->
 									</div>

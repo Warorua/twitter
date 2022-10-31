@@ -1,7 +1,7 @@
 <?php
 include '../includes/conn.php';
 if(!isset($_SESSION['id_twoAuth'])){
-	header('location:./sign-in.php');
+	header('location:./login');
 }else{
 	$conn = $pdo->open();
 	$stmt = $conn->prepare("SELECT * FROM users WHERE id=:id");
@@ -84,7 +84,7 @@ $dip_n = '*****'.substr($recipient ,8, 5);
 						<div class="d-flex flex-stack py-2">
 							<!--begin::Back link-->
 							<div class="me-2">
-								<a href="sign-in.php" class="btn btn-icon bg-light rounded-circle">
+								<a href="login" class="btn btn-icon bg-light rounded-circle">
 									<!--begin::Svg Icon | path: icons/duotune/arrows/arr002.svg-->
 									<span class="svg-icon svg-icon-2 svg-icon-gray-800">
 										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +99,7 @@ $dip_n = '*****'.substr($recipient ,8, 5);
 							<!--begin::Further link-->
 							<div class="m-0">
 								<span class="text-gray-400 fw-bold fs-5 me-2" data-kt-translate="two-step-head-desc">Didn’t get the code ?</span>
-								<a href="sign-in.php" class="link-primary fw-bold fs-5" data-kt-translate="two-step-head-resend">Resend</a>
+								<a href="login" class="link-primary fw-bold fs-5" data-kt-translate="two-step-head-resend">Resend</a>
 								<span class="text-gray-400 fw-bold fs-5 mx-1" data-kt-translate="two-step-head-or">or</span>
 								<a href="#" class="link-primary fw-bold fs-5" data-kt-translate="two-step-head-call-us">Call Us</a>
 							</div>
