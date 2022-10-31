@@ -56,7 +56,15 @@ if(!isset($_FILES['file']['name'])) {
 
   if (isset($_POST['text'])) {
     if ($_POST['text'] != '') {
-      $name = $_POST['text'];
+      if (isset($_POST['font'])) {
+        if ($_POST['font'] != 'NO') {
+          $name = tweetfont($fontsMap[$_POST['font']], $_POST['text']);
+        } else {
+          $name = $_POST['text'];
+        }
+      } else {
+        $name = $_POST['text'];
+      }
     } else {
       $name = '';
     }

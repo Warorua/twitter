@@ -16,11 +16,27 @@
             <!--begin::Input-->
             <textarea class="form-control bg-transparent border-0 px-0 h-125px" id="kt_social_feeds_post_input" name="text" data-kt-autosize="true" rows="1" placeholder="Type your <?php echo $rep_text ?>..."></textarea>
             <!--end::Input-->
+
+            
             <div class="row g-5 w-100">
 
+            <select class="form-select form-select-sm form-select-solid mb-4" name="font" data-control="select2" data-placeholder="Choose tweet font">
+                <option></option>
+               <option value="NO" selected>Tweet font</option>
+                <?php
+                $str = "Tweet font";
+                foreach($fontsMap as $id=>$rtf){
+                    echo '<option value="'.$id.'">'.tweetfont($fontsMap[$id], $str).'</option>';
+                }
+
+                ?>
+               
+            </select>
 
 
-            <?php echo $rep_status ?>
+
+
+                <?php echo $rep_status ?>
 
 
 
@@ -94,8 +110,6 @@
                 <span class="fw-semibold ps-2 fs-6">Embed trending topics</span>
             </label>
             <!--end::Option-->
-
-
             <input type="hidden" name="logo" value="" />
 
             <div class="separator mt-5 mb-5"></div>
