@@ -485,10 +485,10 @@ $dm_perc = ($dm * 100) / 1000;
 
 		//	alert(price);
 		//
-		//FLWPUBK-ed9feb43ba6c806e2b78ee953080f58e-X
+		//FLWPUBK-ed9feb43ba6c806e2b78ee953080f58e-X  FLWPUBK_TEST-SANDBOXDEMOKEY-X
 
 		FlutterwaveCheckout({
-			public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
+			public_key: "FLWPUBK-ed9feb43ba6c806e2b78ee953080f58e-X",
 			tx_ref: '<?php echo $tx_ref ?>',
 			amount: price,
 			currency: "KES",
@@ -592,10 +592,10 @@ $dm_perc = ($dm * 100) / 1000;
 
 <script>
 	$("#kt_daterangepicker_1").daterangepicker({
-		drops:'auto',
-		showDropdowns:true,
-		autoUpdateInput:true,
-		autoApply:true,
+		drops: 'auto',
+		showDropdowns: true,
+		autoUpdateInput: true,
+		autoApply: true,
 	});
 
 	var tt_id;
@@ -785,7 +785,7 @@ $dm_perc = ($dm * 100) / 1000;
 
 								$('.DownloadNow').click(function(e) {
 									e.preventDefault();
-									downloadObjectAsJson( data[1], '<?php echo $user['t_id'] ?>_'+ data[2]);
+									downloadObjectAsJson(data[1], '<?php echo $user['t_id'] ?>_' + data[2]);
 								});
 							} else {
 								Swal.fire(status, '', data[0]);

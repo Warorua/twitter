@@ -337,6 +337,7 @@ include '../../includes/api_config.php';
 										   
 										 
 										  </script>
+										  
 									  ';
 								  
 									  

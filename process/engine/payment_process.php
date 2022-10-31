@@ -18,8 +18,8 @@ if(isset($_GET['status']) == 'successful'){
 $overrideRef = false;
 
 $id = $_GET['transaction_id'];
-
-$payment = new Rave('FLWSECK_TEST-SANDBOXDEMOKEY-X',  $overrideRef);
+//FLWSECK_TEST-SANDBOXDEMOKEY-X
+$payment = new Rave('FLWSECK-45c3f0fcde405fef8db636b9103626bc-X',  $overrideRef);
 
 $verify = $payment->verifyTransaction($id);
 

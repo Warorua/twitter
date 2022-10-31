@@ -30,6 +30,8 @@ include '../includes/api_config.php';
 	<!--begin::Global Stylesheets Bundle(used by all pages)-->
 	<link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
 	<!--end::Global Stylesheets Bundle-->
 	<!--Begin::Google Tag Manager -->
 	<script>
