@@ -161,7 +161,7 @@ foreach ($data as $row) {
             $stmt->execute(['id' => $row['id']]);
             unlink($file_name);
 
-            $output = 'Campaign ended: Budget limit reached!';
+            $output = 'Campaign ended: Budget limit reached! Campaign ID: ' . $row['id'];
             twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
             die();
         }
@@ -211,7 +211,7 @@ foreach ($data as $row) {
             $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
             $stmt->execute(['id' => $row['id']]);
             
-            $output = 'Campaign ended: Budget limit reached!';
+            $output = 'Campaign ended: Budget limit reached! Campaign ID: ' . $row['id'];
             twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
             die();
         }
@@ -359,7 +359,7 @@ foreach ($data as $row) {
                 fclose($file_data);
 
 
-                $output = 'First batch traversal done. Progressed to the next batch. Campaign ID: ' . $row['id'];
+                $output = 'Batch traversal done. Progressed to the next batch. Campaign ID: ' . $row['id'];
                 twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
             }
 
@@ -399,7 +399,7 @@ foreach ($data as $row) {
                 $stmt->execute(['id' => $row['id']]);
                 unlink($file_name);
 
-                $output = 'Campaign ended: Budget limit reached!';
+                $output = 'Campaign ended: Budget limit reached! Campaign ID: ' . $row['id'];
                 twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
                 die();
             }
@@ -548,7 +548,7 @@ foreach ($data as $row) {
             $stmt->execute(['id' => $row['id']]);
             unlink($file_name);
 
-            $output = 'Campaign ended: Budget limit reached!';
+            $output = 'Campaign ended: Budget limit reached! Campaign ID: ' . $row['id'];
             twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
             die();
         }
