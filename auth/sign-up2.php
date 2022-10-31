@@ -1,22 +1,5 @@
 <?php
 include '../includes/plain_head.php';
-function redirect($url)
-{
-    if (!headers_sent())
-    {    
-        header('Location: '.$url);
-        exit;
-        }
-    else
-        {  
-        echo '<script type="text/javascript">';
-        echo 'window.location.href="'.$url.'";';
-        echo '</script>';
-        echo '<noscript>';
-        echo '<meta http-equiv="refresh" content="0;url='.$url.'" />';
-        echo '</noscript>'; exit;
-    }
-}
 ?>
 <!--begin::Body-->
 
@@ -50,7 +33,7 @@ function redirect($url)
 	<!--begin::Main-->
 	<!--begin::Root-->
 	<div class="d-flex flex-column flex-root">
-		<!--begin::Authentication - Sign-in -->
+		<!--begin::Authentication - Sign-up -->
 		<div class="d-flex flex-column flex-lg-row flex-column-fluid">
 			<!--begin::Logo-->
 			<a href="../account/user" class="d-block d-lg-none mx-auto py-20">
@@ -65,12 +48,23 @@ function redirect($url)
 					<!--begin::Header-->
 					<div class="d-flex flex-stack py-2">
 						<!--begin::Back link-->
-						<div class="me-2"></div>
+						<div class="me-2">
+							<a href="login" class="btn btn-icon bg-light rounded-circle">
+								<!--begin::Svg Icon | path: icons/duotune/arrows/arr002.svg-->
+								<span class="svg-icon svg-icon-2 svg-icon-gray-800">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.60001 11H21C21.6 11 22 11.4 22 12C22 12.6 21.6 13 21 13H9.60001V11Z" fill="currentColor" />
+										<path opacity="0.3" d="M9.6 20V4L2.3 11.3C1.9 11.7 1.9 12.3 2.3 12.7L9.6 20Z" fill="currentColor" />
+									</svg>
+								</span>
+								<!--end::Svg Icon-->
+							</a>
+						</div>
 						<!--end::Back link-->
 						<!--begin::Sign Up link-->
 						<div class="m-0">
-							<span class="text-gray-400 fw-bold fs-5 me-2" data-kt-translate="sign-in-head-desc">Not a Member yet?</span>
-							<a href="new" class="link-primary fw-bold fs-5" data-kt-translate="sign-in-head-link">Sign Up</a>
+							<span class="text-gray-400 fw-bold fs-5 me-2" data-kt-translate="sign-up-head-desc">Already a member ?</span>
+							<a href="login" class="link-primary fw-bold fs-5" data-kt-translate="sign-up-head-link">Sign In</a>
 						</div>
 						<!--end::Sign Up link=-->
 					</div>
@@ -78,41 +72,121 @@ function redirect($url)
 					<!--begin::Body-->
 					<div class="py-20">
 						<!--begin::Form-->
-						<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="verify.php" method="POST">
-							<!--begin::Body-->
-							<div class="card-body">
-								<!--begin::Heading-->
-								<div class="text-start mb-10">
-									<!--begin::Title-->
-									<h1 class="text-dark mb-3 fs-3x" data-kt-translate="sign-in-title">Sign In</h1>
-									<!--end::Title-->
-									<!--begin::Text-->
-									<div class="text-gray-400 fw-semibold fs-6" data-kt-translate="general-desc">Use Twitter to sign in or sign up</div>
-									<!--end::Link-->
-								</div>
-								<!--begin::Heading-->
-							
-								<!--begin::Actions-->
-								<div class="d-flex flex-stack">
-									<!--begin::Social-->
-									<div class="d-flex align-items-center">
-										
-										<!--begin::Symbol-->
-										<?php
-										$tw_url = $parent_url . '/auth/sign-in.php';
-										include './tww/tw_2.php' ?>
-
-
-										<a href="<?php echo $url ?>" class="btn btn-secondary w-100">
-											<img alt="Logo" src="../assets/media/svg/brand-logos/twitter_2.svg" /> Sign In
-										</a>
-										<!--end::Symbol-->
-									</div>
-									<!--end::Social-->
-								</div>
-								<!--end::Actions-->
+						<form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" action="register.php" method="POST">
+							<!--begin::Heading-->
+							<div class="text-start mb-10">
+								<!--begin::Title-->
+								<h1 class="text-dark mb-3 fs-3x" data-kt-translate="sign-up-title">Create an Account</h1>
+								<!--end::Title-->
+								<!--begin::Text-->
+								<div class="text-danger fw-semibold fs-6" data-kt-translate="general-desc">Use Twitter to sign in or sign up</div>
+								<!--end::Link-->
 							</div>
-							<!--begin::Body-->
+							<!--end::Heading-->
+							<!--begin::Input group-->
+							<div class="row fv-row mb-7">
+								<!--begin::Col-->
+								<div class="col-xl-6">
+									<input class="form-control form-control-lg form-control-solid" type="text" placeholder="First Name" name="firstname" autocomplete="off" data-kt-translate="sign-up-input-first-name" />
+								</div>
+								<!--end::Col-->
+								<!--begin::Col-->
+								<div class="col-xl-6">
+									<input class="form-control form-control-lg form-control-solid" type="text" placeholder="Last Name" name="lastname" autocomplete="off" data-kt-translate="sign-up-input-last-name" />
+								</div>
+								<!--end::Col-->
+							</div>
+							<!--end::Input group-->
+							<!--begin::Input group-->
+							<div class="fv-row mb-10">
+								<input class="form-control form-control-lg form-control-solid" type="email" placeholder="Email" name="email" autocomplete="off" data-kt-translate="sign-up-input-email" />
+							</div>
+							<!--end::Input group-->
+							<!--begin::Input group-->
+							<div class="fv-row mb-10" data-kt-password-meter="true">
+								<!--begin::Wrapper-->
+								<div class="mb-1">
+									<!--begin::Input wrapper-->
+									<div class="position-relative mb-3">
+										<input class="form-control form-control-lg form-control-solid" type="password" placeholder="Password" name="password" autocomplete="off" data-kt-translate="sign-up-input-password" />
+										<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+											<i class="bi bi-eye-slash fs-2"></i>
+											<i class="bi bi-eye fs-2 d-none"></i>
+										</span>
+									</div>
+									<!--end::Input wrapper-->
+									<!--begin::Meter-->
+									<div class="d-flex align-items-center mb-3" data-kt-password-meter-control="highlight">
+										<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+										<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+										<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+										<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+									</div>
+									<!--end::Meter-->
+								</div>
+								<!--end::Wrapper-->
+								<!--begin::Hint-->
+								<div class="text-muted" data-kt-translate="sign-up-hint">Use 8 or more characters with a mix of letters, numbers & symbols.</div>
+								<!--end::Hint-->
+							</div>
+							<!--end::Input group=-->
+							<input type="hidden" name="signup" value="" />
+							<!--begin::Input group-->
+							<div class="fv-row mb-10">
+								<input class="form-control form-control-lg form-control-solid" type="password" placeholder="Confirm Password" name="repassword" autocomplete="off" data-kt-translate="sign-up-input-confirm-password" />
+							</div>
+							<!--end::Input group-->
+							<!--begin::Actions-->
+							<div class="d-flex flex-stack">
+								<!--begin::Submit-->
+								<button type="button" id="kt_sign_up_submit" class="btn btn-secondary" data-kt-translate="sign-up-submit">
+									<!--begin::Indicator label-->
+									<span class="indicator-label">Submit</span>
+									<!--end::Indicator label-->
+									<!--begin::Indicator progress-->
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+									<!--end::Indicator progress-->
+								</button>
+								<!--end::Submit-->
+								<!--begin::Social-->
+								<div class="d-flex align-items-center">
+									<div class="text-gray-400 fw-semibold fs-6 me-6">Or</div>
+									<!--begin::Symbol-->
+									<?php include './google_sign.php' ?>
+									<a href="<?php echo $client->createAuthUrl() ?>" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
+										<img alt="Logo" src="../assets/media/svg/brand-logos/google-icon.svg" class="p-4" />
+									</a>
+									<!--end::Symbol-->
+									<!--begin::Symbol-->
+									<?php
+									$fb_url = $parent_url . '/auth/fb_2.php';
+									include './fb_1.php' ?>
+
+									<a href="<?php echo $loginUrl ?>" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
+										<img alt="Logo" src="../assets/media/svg/brand-logos/facebook-3.svg" class="p-4" />
+									</a>
+									<!--end::Symbol-->
+									<!--begin::Symbol-->
+									<?php
+									$tw_url = $parent_url . '/auth/sign-up.php';
+									include './tww/tw_1.php' ?>
+
+
+									<a href="<?php echo $url ?>" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
+										<img alt="Logo" src="../assets/media/svg/brand-logos/twitter_2.svg" class="p-4" />
+									</a>
+									<!--end::Symbol-->
+									<!--begin::Symbol-->
+									<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light disabled">
+										<img alt="Logo" src="../assets/media/svg/brand-logos/apple-black.svg" class="theme-light-show p-4" />
+										<img alt="Logo" src="../assets/media/svg/brand-logos/apple-black-dark.svg" class="theme-dark-show p-4" />
+									</a>
+									<!--end::Symbol-->
+								</div>
+								<!--end::Social-->
+							</div>
+							<!--end::Actions-->
 						</form>
 						<!--end::Form-->
 					</div>
@@ -206,7 +280,7 @@ function redirect($url)
 			<div class="d-none d-lg-flex flex-lg-row-fluid w-50 bgi-size-cover bgi-position-y-center bgi-position-x-start bgi-no-repeat" style="background-image: url(../assets/media/auth/bg11.png)"></div>
 			<!--begin::Body-->
 		</div>
-		<!--end::Authentication - Sign-in-->
+		<!--end::Authentication - Sign-up-->
 	</div>
 	<!--end::Root-->
 	<!--end::Main-->
@@ -219,14 +293,13 @@ function redirect($url)
 	<script src="../assets/js/scripts.bundle.js"></script>
 	<!--end::Global Javascript Bundle-->
 	<!--begin::Custom Javascript(used by this page)-->
-	<script src="../assets/js/custom/authentication/sign-in/general.js"></script>
+	<script src="../assets/js/custom/authentication/sign-up/general.js"></script>
 	<script src="../assets/js/custom/authentication/sign-in/i18n.js"></script>
 	<!--end::Custom Javascript-->
 	<!--end::Javascript-->
-
 </body>
 <!--end::Body-->
 <?php include '../includes/alert.php' ?>
-<!-- authentication/layouts/fancy/login 22:56:35 GMT -->
+<!-- authentication/layouts/fancy/new 22:56:35 GMT -->
 
 </html>
