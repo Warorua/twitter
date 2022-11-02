@@ -142,12 +142,7 @@ $tx_ref = substr(str_shuffle($set), 0, 36);
 								toolbar: {
 									show: !1
 								},
-								zoom: {
-									enabled: !1
-								},
-								sparkline: {
-									enabled: !0
-								},
+								
 							},
 							plotOptions: {},
 							legend: {
@@ -176,7 +171,7 @@ $tx_ref = substr(str_shuffle($set), 0, 36);
 									show: !1
 								},
 								labels: {
-									show: !1,
+									//show: !1,
 									style: {
 										colors: o,
 										fontSize: "12px"
@@ -202,7 +197,7 @@ $tx_ref = substr(str_shuffle($set), 0, 36);
 							},
 							yaxis: {
 								min: 0,
-								max: 60,
+								//max: 60,
 								labels: {
 									show: !1,
 									style: {

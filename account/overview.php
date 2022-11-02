@@ -100,7 +100,7 @@ $ajax_user_id = $user['t_id'];
 								$form_action = '/process/post/tweet.php';
 								$form_id = 'tweet_process_09';
 								$rep_status = '';
-								$rep_text = 'message';
+								$rep_text = 'tweet';
 								include '../includes/elements/tweet_form.php';
 								?>
 
