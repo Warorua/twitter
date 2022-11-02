@@ -44,7 +44,7 @@
                     </div>
                     <!--end::Tablet and mobile search toggle-->
                     <!--begin::Form(use d-none d-lg-block classes for responsive search)-->
-                    <form data-kt-search-element="form" class="d-none d-lg-block w-100 position-relative mb-5 mb-lg-0" autocomplete="off" action="../public/search_page.php" method="POST">
+                    <form data-kt-search-element="form" class="d-none d-lg-block w-100 position-relative mb-5 mb-lg-0" autocomplete="off" action="../v3/search" method="POST">
                         <!--begin::Hidden input(Added to disable form autocomplete)-->
                         <input name="search" type="hidden" />
                         <!--end::Hidden input-->

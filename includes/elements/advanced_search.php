@@ -1,5 +1,5 @@
   <!--begin::Preferences-->
-  <form data-kt-search-element="advanced-options-form" class="pt-1 d-none" action="../public/search_page.php" method="POST">
+  <form data-kt-search-element="advanced-options-form" class="pt-1 d-none" action="../v3/search" method="POST">
   <input name="search" type="hidden" />
       <!--begin::Heading-->
       <h3 class="fw-semibold text-dark mb-7">Advanced Search</h3>
