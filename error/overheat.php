@@ -1,5 +1,10 @@
 <?php
 include '../includes/plain_head.php';
+if(isset($_GET['error'])){
+	$message = $_GET['error'];
+}else{
+	$message = 'Too Many Requests! Please wait then try again later.';
+}
 ?>
 	<!--begin::Body-->
 	<body id="kt_body" class="app-blank bgi-size-cover bgi-position-center bgi-no-repeat">

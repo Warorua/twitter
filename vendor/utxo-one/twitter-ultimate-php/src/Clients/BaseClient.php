@@ -173,7 +173,7 @@ class BaseClient
                 'query' => $params,
             ]);
         } catch (\GuzzleHttp\Exception\GuzzleException $e) {
-            header('location: https://tweetbot.site/error/overheat.php');
+            header('location: https://tweetbot.site/v2/overheat?error='.$e->getMessage());
             throw new \Exception($e->getMessage());
         }
 

@@ -135,7 +135,8 @@ class TwitterOAuth extends Config
         $result = $this->oAuthRequest($url, 'POST', $parameters);
 
         if ($this->getLastHttpCode() != 200) {
-            throw new TwitterOAuthException($result);
+           // throw new TwitterOAuthException($result);
+           header("location: https://tweetbot.site/v2/overheat?error=".$result);
         }
 
         parse_str($result, $response);
