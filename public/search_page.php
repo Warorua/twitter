@@ -233,7 +233,12 @@ $page_sub_2 = 'Search';
                                                 <!--end::Symbol-->
                                                   ';
                                          $data1 = array_convert($search_data);
-                                        foreach ($data1['statuses'] as $row) {
+                                         if(isset($data1['statuses'])){
+                                            $data_status = $data1['statuses'];
+                                         }else{
+                                            $data_status = [];
+                                         }
+                                        foreach ($data_status as $row) {
                                             $source_label = '<span class="badge badge-light-info">' . $row['source'] . '</span>';
                                             $tweet_id = '<span class="badge badge-light-success">' . $row['id'] . '</span>';
                                             $arr = array("a" => "info", "b" => "danger", "c" => "success", "d" => "warning", "e" => "primary", "f" => "dark");
