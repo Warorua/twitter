@@ -94,7 +94,7 @@
         $t_date_1 = $t_date - 1;
         $t_date_2 = $t_date + 1;
 
-        $s_date = $t_date_1.'/'.$t_month.'/'.$t_year.' - '.$t_date_2.'/'.$t_month.'/'.$t_year
+        $s_date = $t_month.'/'.$t_date_1.'/'.$t_year.' - '.$t_month.'/'.$t_date_2.'/'.$t_year
 
         ?>
           <input class="form-control form-control-solid" name="date_range" value="<?php echo $s_date ?>" placeholder="Pick tweet date rage" id="kt_daterangepicker_1" readonly />
