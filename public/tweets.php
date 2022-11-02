@@ -971,7 +971,10 @@ if ($tweet_data['data']['verified']) {
 								}
 								$form_action = '/process/post/tweet.php';
 								$form_id = 'tweet_process_09';
-								$rep_status = '<input type="hidden" value="' . $tweet_id . '" name="tweet_id" />';
+								$rep_status = '
+								<input type="hidden" value="' . $tweet_id . '" name="tweet_id" />
+								<input type="hidden" value="@' . $tweeter['data']['username'] . '" name="tweet_username" />
+								';
 								$rep_text = 'reply';
 								include '../includes/elements/tweet_form.php';
 								?>
@@ -1028,14 +1031,14 @@ if ($tweet_data['data']['verified']) {
 																		</div>
 																	</td>
 																	<td>
-																		<a href="../public/feeds.php?user=' . $rep_user['data']['id'] . '" class="text-dark fw-bold text-hover-primary mb-1 fs-6">' . $rep_user['data']['name'] . '</a>
+																		<a href="../v3/account?user=' . $rep_user['data']['id'] . '" class="text-dark fw-bold text-hover-primary mb-1 fs-6">' . $rep_user['data']['name'] . '</a>
 																		<span class="text-muted fw-semibold d-block fs-7">' . $rep_user['data']['username'] . '</span>
 																	</td>
 																	<td>
 																	' . $row['text'] . '
 																	</td>
 																	<td class="text-end">
-																	<a href="../public/tweets.php?tweet=' . $row['id'] . '" target="_blank" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+																	<a href="../v3/tweets?tweet=' . $row['id'] . '" target="_blank" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
 																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
 																		<span class="svg-icon svg-icon-5 svg-icon-gray-700">
 																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

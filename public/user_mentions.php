@@ -168,7 +168,7 @@ if ($tweet_data['data']['verified']) {
 												<div class="d-flex align-items-center flex-row-fluid flex-wrap">
 													<!--begin:Author-->
 													<div class="flex-grow-1 me-2">
-														<a href="../public/feeds.php?user=' . $row['user']['id'] . '" target="_blank"  class="text-gray-800 text-hover-primary fs-6 fw-bold">' . $row['user']['name'] . '</a>
+														<a href="../v3/account?user=' . $row['user']['id'] . '" target="_blank"  class="text-gray-800 text-hover-primary fs-6 fw-bold">' . $row['user']['name'] . '</a>
 														<span class="text-muted fw-semibold d-block fs-7">' . $row['user']['screen_name'] . '</span>
 													</div>
 													<!--end:Author-->
@@ -212,7 +212,7 @@ if ($tweet_data['data']['verified']) {
                                             <td>' . $quoted_status . '</td>
 
                                            
-                                            <td><a href="../public/tweets.php?tweet=' . $row['id'] . '" target="_blank" class="btn btn-light-' . $arr[$key] . '">View 
+                                            <td><a href="../v3/tweets?tweet=' . $row['id'] . '" target="_blank" class="btn btn-light-' . $arr[$key] . '">View 
                                             <span class="svg-icon svg-icon-' . $arr[$key] . '"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 4L18 12L10 20H14L21.3 12.7C21.7 12.3 21.7 11.7 21.3 11.3L14 4H10Z" fill="currentColor"/>
 <path opacity="0.3" d="M3 4L11 12L3 20H7L14.3 12.7C14.7 12.3 14.7 11.7 14.3 11.3L7 4H3Z" fill="currentColor"/>

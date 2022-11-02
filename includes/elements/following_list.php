@@ -128,7 +128,7 @@
                                  <span class="text-gray-600 fw-bold fs-6">'.number_format($row['public_metrics']['following_count']).'</span>
                              </td>
                              <td class="text-end">
-                                 <a href="../public/feeds.php?user='.$row['id'].'" target="_blank" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                 <a href="../v3/account?user='.$row['id'].'" target="_blank" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,7 +189,7 @@
                             <span class="text-gray-600 fw-bold fs-6">'.number_format($following_list_data['data'][$i]['public_metrics']['following_count']).'</span>
                         </td>
                         <td class="text-end">
-                            <a href="../public/feeds.php?user='.$following_list_data['data'][$i]['id'].'" target="_blank" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                            <a href="../v3/account?user='.$following_list_data['data'][$i]['id'].'" target="_blank" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
                                 <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
                                 <span class="svg-icon svg-icon-5 svg-icon-gray-700">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

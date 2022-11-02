@@ -79,6 +79,12 @@ if(!isset($_FILES['file']['name'])) {
   }else{
     $rep_id = '';
   }
+
+  if(isset($_POST['tweet_username'])){
+    $rep_user = $_POST['tweet_username'];
+  }else{
+    $rep_user = '';
+  }
   
 
 if(isset($_SESSION['tweetMedia'])){
@@ -123,7 +129,8 @@ if(isset($_POST['t_topic'])){
 
 
   $parameters = [
-    'status' => $name . ' ' . $t_topic,
+    'status' => $rep_user.' '.$name . ' 
+    ' . $t_topic,
     'media_ids' => $media,
     'in_reply_to_status_id'=> $rep_id,
   ];

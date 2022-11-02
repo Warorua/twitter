@@ -279,7 +279,7 @@ $ajax_user_id = $member_id;
 												<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
 													<!--begin::Menu item-->
 													<div class="menu-item px-3">
-														<a href="../public/feeds.php?user=' . $row['id'] . '" class="menu-link px-3">View Here</a>
+														<a href="../v3/account?user=' . $row['id'] . '" class="menu-link px-3">View Here</a>
 													</div>
 													<!--end::Menu item-->
 													<!--begin::Menu item-->

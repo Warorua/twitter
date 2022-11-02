@@ -171,7 +171,7 @@ include '../../includes/api_config.php';
 													  <!--begin::Menu item-->
 													  <div '.$app_auth_tweet_link.'="D" class="menu-item px-3">
 														  <div class="menu-content px-3 py-3">
-															  <a href="'.$parent_url.'/public/tweets.php?tweet='.$row['id'].'" target="_blank" class="btn btn-success btn-sm px-4">View Tweet</a>
+															  <a href="'.$parent_url.'/v3/tweets?tweet='.$row['id'].'" target="_blank" class="btn btn-success btn-sm px-4">View Tweet</a>
 														  </div>
 													  </div>
 													  <!--end::Menu item-->

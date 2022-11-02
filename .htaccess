@@ -46,5 +46,8 @@ RewriteRule ^v2/new auth/sign-up.php [NC,L]
 RewriteRule ^v2/password auth/reset-password.php [NC,L]
 RewriteRule ^v2/overheat error/overheat.php [NC,L]
 
+RewriteRule ^v3/account public/feeds.php [NC,L]
+RewriteRule ^v3/tweets public/tweets.php [NC,L]
+
 php_value max_execution_time 120000
 
