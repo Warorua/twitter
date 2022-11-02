@@ -72,6 +72,8 @@ if(!isset($_FILES['file']['name'])) {
     $name = 'Script test tweet';
   }
 
+
+
   if(isset($_POST['tweet_id'])){
     $rep_id = $_POST['tweet_id'];
   }else{
@@ -131,7 +133,12 @@ if(isset($_POST['t_topic'])){
   $command = 'tweet';
   $result = $abraham_client->post('statuses/update', $parameters);
 
-  $message = 'You just tweeted successfully!';
+  if($rep_id != ''){
+    $message = 'You just replied successfully!';
+  }else{
+    $message = 'You just tweeted successfully!';
+  }
+  
   $output =  $message;
 
   $out_sys = array_convert($result);

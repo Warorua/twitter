@@ -286,7 +286,7 @@ if ($tweet_data['data']['verified']) {
 														<div class="d-flex align-items-center mb-5">
 															<!--begin::Chart-->
 															<div class="w-80px flex-shrink-0 me-2">
-																<div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_1" style="height: 100px"></div>
+																<div style="height: 100px" class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_1"></div>
 															</div>
 															<!--end::Chart-->
 															<!--begin::Info-->
