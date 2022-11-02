@@ -86,7 +86,18 @@
       <!--end::Input group-->
       <!--begin::Input group-->
       <div class="mb-5">
-          <input class="form-control form-control-solid" name="date_range" placeholder="Pick tweet date rage" id="kt_daterangepicker_1" readonly />
+        <?php
+        $t_date = date("d");
+        $t_month = date("m");
+        $t_year = date("Y");
+
+        $t_date_1 = $t_date - 1;
+        $t_date_2 = $t_date + 1;
+
+        $s_date = $t_date_1.'/'.$t_month.'/'.$t_year.' - '.$t_date_2.'/'.$t_month.'/'.$t_year
+
+        ?>
+          <input class="form-control form-control-solid" name="date_range" value="<?php echo $s_date ?>" placeholder="Pick tweet date rage" id="kt_daterangepicker_1" readonly />
       </div>
       <!--end::Input group-->
       <!--begin::Actions-->
