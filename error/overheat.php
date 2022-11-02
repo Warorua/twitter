@@ -32,7 +32,7 @@ if(isset($_GET['error'])){
 							<h1 class="fw-bolder fs-2qx text-gray-900 mb-4">System Error</h1>
 							<!--end::Title-->
 							<!--begin::Text-->
-							<div class="fw-semibold fs-6 text-gray-500 mb-7">Too Many Requests! Please wait then try again later.</div>
+							<div class="fw-semibold fs-6 text-gray-500 mb-7"><?php echo $message ?></div>
 							<!--end::Text-->
 							<!--begin::Illustration-->
 							<div class="mb-11">
