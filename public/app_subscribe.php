@@ -5,6 +5,14 @@ if (isset($_GET['app'])) {
     $stmt->execute(['id' => $_GET['app']]);
     $app = $stmt->fetch();
     if (count($app) > 0) {
+        $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM client_api WHERE user_id=:user_id AND consumer_key=:consumer_key AND level=:level");
+        $stmt->execute(['user_id' => $user['id'], 'consumer_key'=>$app['consumer_key'], 'level'=>1]);
+        $verif_us = $stmt->fetch();
+        if($verif_us['numrows'] > 0){
+            $_SESSION['error'] = 'You are already subscribed to this app!';
+            redirect($parent_url . '/account/user');
+        }
+
         try {
 
             if ($app['user_id'] != $user['id']) {
