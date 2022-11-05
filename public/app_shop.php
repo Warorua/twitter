@@ -81,19 +81,19 @@ $page_sub_2 = 'Listing';
             </svg>
            </span>
 	';
-								if ($row['like_charge'] > $charge['like_charge']) {
+								if ($row['like_charge'] > $system_charge['like_charge']) {
 									$like_status = $st_neg;
 								} else {
 									$like_status = $st_pos;
 								}
 
-								if ($row['follow_charge'] > $charge['follow_charge']) {
+								if ($row['follow_charge'] > $system_charge['follow_charge']) {
 									$follow_status = $st_neg;
 								} else {
 									$follow_status = $st_pos;
 								}
 
-								if ($row['tweet_charge'] > $charge['tweet_charge']) {
+								if ($row['tweet_charge'] > $system_charge['tweet_charge']) {
 									$tweet_status = $st_neg;
 								} else {
 									$tweet_status = $st_pos;

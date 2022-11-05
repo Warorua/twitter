@@ -26,6 +26,12 @@ if (isset($_POST['id']) && isset($_POST['user'])) {
                     $_SESSION['error'] = 'App users should be more than 1!';
                 } else {
 
+                    $stmt = $conn->prepare("SELECT * FROM client_api WHERE id=:id AND user_id=:user_id AND level=:level");
+                    $stmt->execute(['id' => $_POST['id'], 'user_id' => $_POST['user'], 'level' => 0]);
+                    $data3 = $stmt->fetch();
+                    $stmt = $conn->prepare("DELETE FROM client_api WHERE  consumer_key=:consumer_key AND level=:level");
+                    $stmt->execute(['consumer_key' => $data3['consumer_key'], 'level' => 1]);
+
                     $stmt = $conn->prepare("UPDATE api_shop SET like_charge=:like_charge, follow_charge=:follow_charge, tweet_charge=:tweet_charge, max_user=:max_user WHERE app_id=:app_id");
                     $stmt->execute(['app_id' => $_POST['id'], 'like_charge' => $_POST['like_charge'], 'follow_charge' => $_POST['follow_charge'], 'tweet_charge' => $_POST['tweet_charge'], 'max_user' => $_POST['max_user']]);
 

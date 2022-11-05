@@ -25,19 +25,19 @@ if (isset($_GET['app'])) {
                 </span>
 	         ';
 
-                if ($app['like_charge'] > $charge['like_charge']) {
+                if ($app['like_charge'] > $system_charge['like_charge']) {
                     $like_status = $st_neg;
                 } else {
                     $like_status = $st_pos;
                 }
 
-                if ($app['follow_charge'] > $charge['follow_charge']) {
+                if ($app['follow_charge'] > $system_charge['follow_charge']) {
                     $follow_status = $st_neg;
                 } else {
                     $follow_status = $st_pos;
                 }
 
-                if ($app['tweet_charge'] > $charge['tweet_charge']) {
+                if ($app['tweet_charge'] > $system_charge['tweet_charge']) {
                     $tweet_status = $st_neg;
                 } else {
                     $tweet_status = $st_pos;
@@ -198,7 +198,7 @@ $page_sub_2 = 'Subscribe';
                                                             <div class="d-flex align-items-center">
                                                                 <span class="text-dark fw-bolder fs-2x"><span class="fs-8 fw-light text-muted">PTS.</span><?php echo number_format($app['like_charge'])  ?></span>
                                                                 <span class="fw-semibold fs-2 text-gray-600 mx-1 pt-1">/</span>
-                                                                <span class="text-gray-600 fw-semibold fs-2 me-3 pt-2"><span class="fs-8 fw-light text-muted">PTS.</span><?php echo number_format($charge['like_charge'])  ?></span>
+                                                                <span class="text-gray-600 fw-semibold fs-2 me-3 pt-2"><span class="fs-8 fw-light text-muted">PTS.</span><?php echo number_format($system_charge['like_charge'])  ?></span>
                                                                 <span class="badge badge-lg badge-light-dark align-self-center px-2"><?php echo $like_status  ?></span>
                                                             </div>
                                                             <!--end::Info-->
@@ -235,7 +235,7 @@ $page_sub_2 = 'Subscribe';
                                                             <div class="d-flex align-items-center">
                                                                 <span class="text-dark fw-bolder fs-2x"><span class="fs-8 fw-light text-muted">PTS.</span><?php echo number_format($app['tweet_charge'])  ?></span>
                                                                 <span class="fw-semibold fs-2 text-gray-600 mx-1 pt-1">/</span>
-                                                                <span class="text-gray-600 fw-semibold fs-2 me-3 pt-2"><span class="fs-8 fw-light text-muted">PTS.</span><?php echo number_format($charge['tweet_charge'])  ?></span>
+                                                                <span class="text-gray-600 fw-semibold fs-2 me-3 pt-2"><span class="fs-8 fw-light text-muted">PTS.</span><?php echo number_format($system_charge['tweet_charge'])  ?></span>
                                                                 <span class="badge badge-lg badge-light-dark align-self-center px-2"><?php echo $tweet_status  ?></span>
                                                             </div>
                                                             <!--end::Info-->
@@ -271,7 +271,7 @@ $page_sub_2 = 'Subscribe';
                                                             <div class="d-flex align-items-center">
                                                                 <span class="text-dark fw-bolder fs-2x"><span class="fs-8 fw-light text-muted">PTS.</span><?php echo number_format($app['follow_charge'])  ?></span>
                                                                 <span class="fw-semibold fs-2 text-gray-600 mx-1 pt-1">/</span>
-                                                                <span class="text-gray-600 fw-semibold fs-2 me-3 pt-2"><span class="fs-8 fw-light text-muted">PTS.</span><?php echo number_format($charge['follow_charge'])  ?></span>
+                                                                <span class="text-gray-600 fw-semibold fs-2 me-3 pt-2"><span class="fs-8 fw-light text-muted">PTS.</span><?php echo number_format($system_charge['follow_charge'])  ?></span>
                                                                 <span class="badge badge-lg badge-light-dark align-self-center px-2"><?php echo $follow_status  ?></span>
                                                             </div>
                                                             <!--end::Info-->

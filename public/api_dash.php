@@ -140,14 +140,13 @@ $page_sub_2 = 'View';
                                                         $app_user_badge = '<span class="badge badge-light-primary fs-7 fw-bold">Active</span>';
                                                         $app_user_control_function = 'deactivateUser';
                                                         $app_user_title = 'Deactivate';
-
                                                     } else {
                                                         $app_user_badge = '<span class="badge badge-light-danger fs-7 fw-bold">Inactive</span>';
                                                         $app_user_control_function = 'activateUser';
                                                         $app_user_title = 'Activate';
                                                     }
                                                     $agg_net_usage += $app_user_net_usage;
-                                                    $con_key = "'".$row['consumer_key']."'";
+                                                    $con_key = "'" . $row['consumer_key'] . "'";
                                                     echo '
                                                    <tr>
                                                 <td>
@@ -169,13 +168,13 @@ $page_sub_2 = 'View';
                                                    ' . $app_user_badge . '
                                                 </td>
                                                 <td>
-                                                   <a onclick="'.$app_user_control_function.'('.$con_key.', '.$row['c_api_id'].')" class="btn btn-bg-light btn-active-color-primary btn-sm">
-                                                   '.$app_user_title.'
+                                                   <a onclick="' . $app_user_control_function . '(' . $con_key . ', ' . $row['c_api_id'] . ')" class="btn btn-bg-light btn-active-color-primary btn-sm">
+                                                   ' . $app_user_title . '
                                                   </a>
                                                 </td>
                                                 <td class="text-end">
                                              
-                                                    <a onclick="removeUser('.$con_key.', '.$row['c_api_id'].')" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                                                    <a onclick="removeUser(' . $con_key . ', ' . $row['c_api_id'] . ')" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
                                                         <!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
                                                         <span class="svg-icon svg-icon-3">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -217,7 +216,7 @@ $page_sub_2 = 'View';
                                         </h3>
                                         <!--end::Title-->
                                         <div class="card-toolbar">
-                                            <a href="../process/post/api_unlisting.php?id=<?php echo $app_id ?>&user=<?php echo $user['id'] ?>" class="btn btn-flex btn-danger px-6">
+                                            <a class="btn btn-flex btn-danger px-6" data-bs-toggle="modal" data-bs-target="#sys_listing_remove">
                                                 <span class="svg-icon svg-icon-2x">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path opacity="0.3" d="M5 22H19C19.6 22 20 21.6 20 21V8L14 2H5C4.4 2 4 2.4 4 3V21C4 21.6 4.4 22 5 22Z" fill="currentColor" />
@@ -283,9 +282,67 @@ $page_sub_2 = 'View';
                                             <input type="hidden" name="id" value="<?php echo $app_id ?>" />
                                             <input type="hidden" name="user" value="<?php echo $user['id'] ?>" />
 
-                                            <button type="submit" class="btn btn-primary hover-elevate-up mt-7">Update listing</button>
+                                            <button type="button" class="btn btn-primary hover-elevate-up mt-7" data-bs-toggle="modal" data-bs-target="#sys_listing_update">Update listing</button>
 
+
+                                            <div class="modal fade" tabindex="-1" id="sys_listing_update">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title">Update Listing</h3>
+
+                                                            <!--begin::Close-->
+                                                            <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                                                                <span class="svg-icon svg-icon-1"></span>
+                                                            </div>
+                                                            <!--end::Close-->
+                                                        </div>
+
+                                                        <div class="modal-body">
+                                                            <div class="rounded w-100 bg-light-danger p-4">
+                                                                <p class="fs-4 text-danger fw-bold text-center">Are you sure you want to update the listing charges? All subscribed users will be unsubscribed automatically after this action!</p>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-primary">Update</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </form>
+
+                                        <div class="modal fade" tabindex="-1" id="sys_listing_remove">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h3 class="modal-title">Delete Listing</h3>
+
+                                                        <!--begin::Close-->
+                                                        <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                                                            <span class="svg-icon svg-icon-1"></span>
+                                                        </div>
+                                                        <!--end::Close-->
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <div class="rounded w-100 bg-light-danger p-4">
+                                                            <p class="fs-4 text-danger fw-bold text-center">Are you sure you want to unlist this app? All subscribed users will be unsubscribed automatically after this action!</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                                                        <a href="../process/post/api_unlisting.php?id=<?php echo $app_id ?>&user=<?php echo $user['id'] ?>" class="btn btn-primary">Unlist</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
                                         <!--end::form-->
                                     </div>
                                     <!--end::Card body-->

@@ -163,7 +163,12 @@ if ($api_app['numrows'] < 1) {
     ];
     $noweh_client = new Client($settings);
   
-  
+  if($api_app_level == 1){
+    $stmt = $conn->prepare("SELECT * FROM api_shop LEFT JOIN client_api ON api_shop.app_id=client_api.id WHERE consumer_key=:consumer_key");
+    $stmt->execute(['consumer_key'=>$api_consumer_key]);
+    $new_charge = $stmt->fetch();
+    $charge = array('tweet_charge'=>$new_charge['tweet_charge'], 'follow_charge'=>$new_charge['follow_charge'], 'like_charge'=>$new_charge['like_charge']);
+  }
    
   
 }
