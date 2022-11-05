@@ -10,8 +10,8 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 use Noweh\TwitterApi\Client;
 use Noweh\TwitterApi\Enum\Modes;
 
-$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM client_api WHERE user_id=:user_id");
-$stmt->execute(['user_id' => $user['id']]);
+$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM client_api WHERE user_id=:user_id AND status=:status");
+$stmt->execute(['user_id' => $user['id'], 'status'=>1]);
 $api_app = $stmt->fetch();
 if ($api_app['numrows'] < 1) {
   if (isset($_SESSION['access_token'])) {
@@ -89,6 +89,8 @@ if ($api_app['numrows'] < 1) {
   $api_bearer_token = $api_app['bearer_token'];
   $api_access_token = $api_app['access_token'];
   $api_access_secret = $api_app['access_secret'];
+  $api_app_status = $api_app['status'];
+  $api_app_level = $api_app['level'];
   
    // define('CONSUMER_KEY', $api_consumer_key);
    // define('CONSUMER_SECRET', $api_consumer_secret);

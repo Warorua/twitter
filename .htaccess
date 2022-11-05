@@ -49,6 +49,10 @@ RewriteRule ^v2/overheat error/overheat.php [NC,L]
 RewriteRule ^v3/account public/feeds.php [NC,L]
 RewriteRule ^v3/tweets public/tweets.php [NC,L]
 RewriteRule ^v3/search public/search_page.php [NC,L]
+RewriteRule ^v3/app public/api_dash.php [NC,L]
+RewriteRule ^v3/shop public/app_shop.php [NC,L]
+RewriteRule ^v3/subscribe public/app_subscribe.php [NC,L]
+
 
 php_value max_execution_time 120000
 

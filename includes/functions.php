@@ -1,5 +1,47 @@
 <?php
- 
+function redirect($url)
+{
+    if (!headers_sent())
+    {    
+        header('Location: '.$url);
+        exit;
+        }
+    else
+        {  
+        echo '<script type="text/javascript">';
+        echo 'window.location.href="'.$url.'";';
+        echo '</script>';
+        echo '<noscript>';
+        echo '<meta http-equiv="refresh" content="0;url='.$url.'" />';
+        echo '</noscript>'; exit;
+    }
+}
+
+function usageTrack($points, $action)
+{
+  global $user;
+  global $pdo;
+  global $api_consumer_key;
+  global $system;
+  global $api_app_level;
+  $conn = $pdo->open();
+  $time = time();
+  if (isset($api_consumer_key)) {
+    $con_key = $api_consumer_key;
+  } else {
+    $con_key = $system['consumer_key'];
+  }
+
+  if (isset($api_app_level)) {
+    $con_level = $api_app_level;
+  } else {
+    $con_level = 2;
+  }
+
+  $stmt = $conn->prepare("INSERT INTO usage_track (time, points, user_id, action, consumer_key, level) VALUES (:time, :points, :user_id, :action, :consumer_key, :level)");
+  $stmt->execute(['time' => $time, 'points' => $points, 'user_id' => $user['id'], 'action' => $action, 'consumer_key' => $con_key, 'level' => $con_level]);
+}
+
  function charge($charge_points)
  {
    global $user;
@@ -26,10 +68,12 @@
        $cipher_points = safeEncrypt($raw_points, $user['p_key']);
      }
  
- 
+  
  
      $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_cipher=:p_cipher WHERE id=:id");
      $stmt->execute(['id' => $user['id'], 'p_value' => $cipher_points, 'p_cipher' => $user['p_cipher']]);
+
+    usageTrack($charge_points, '');
    }
  }
  

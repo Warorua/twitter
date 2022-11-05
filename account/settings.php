@@ -127,13 +127,13 @@ include '../includes/head.php';
 												<!--begin::Image input-->
 												<div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('../assets/media/svg/avatars/blank.svg')">
 													<!--begin::Preview existing avatar-->
-													<div class="image-input-wrapper w-125px h-125px" style="background-image: url(<?php echo $user['photo'] ?>)"></div>
+													<div class="image-input-wrapper w-125px h-125px" style="background-image: url(<?php echo pic_fix($user['photo']) ?>)"></div>
 													<!--end::Preview existing avatar-->
 													<!--begin::Label-->
 													<label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
 														<i class="bi bi-pencil-fill fs-7"></i>
 														<!--begin::Inputs-->
-														<input id="upload_file_fr" type="file" value="<?php echo $user['photo'] ?>" name="avatar" accept=".png, .jpg, .jpeg" />
+														<input id="upload_file_fr" type="file" value="<?php echo pic_fix($user['photo']) ?>" name="avatar" accept=".png, .jpg, .jpeg" />
 														<input type="hidden" name="avatar_remove" />
 														<!--end::Inputs-->
 													</label>
@@ -793,12 +793,12 @@ include '../includes/head.php';
 							<!--end::Content-->
 						</div>
 						<!--end::Basic info-->
-						<!--begin::Sign-in Method-->
+						<!--begin::API Method-->
 						<div class="card mb-5 mb-xl-10">
 							<!--begin::Card header-->
 							<div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_signin_method">
 								<div class="card-title m-0">
-									<h3 class="fw-bold m-0">Account enhancements</h3>
+									<h3 class="fw-bold m-0">API App Setup</h3>
 								</div>
 							</div>
 							<!--end::Card header-->
@@ -810,24 +810,33 @@ include '../includes/head.php';
 									<div class="d-flex flex-wrap align-items-center">
 										<!--begin::Label-->
 										<div id="kt_app">
-											<div class="fs-6 fw-bold mb-1">Self App Set-up</div>
+											<div class="fs-6 fw-bold mb-1">Active App Set-up</div>
 											<?php
-											$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM client_api WHERE user_id=:user_id");
-											$stmt->execute(['user_id' => $user['id']]);
+											$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM client_api WHERE user_id=:user_id AND status=:status");
+											$stmt->execute(['user_id' => $user['id'], 'status' => 1]);
 											$api_app = $stmt->fetch();
 											if ($api_app['numrows'] < 1) {
 												$api_badge = '<span class="badge badge-light-danger">You have not added your app</span>';
-												$api_mess = 'Add app';
-												
-											} else {
+												$api_mess = 'Add App';
+											} elseif($api_app['level'] == 1){
+												$api_badge = '<span class="badge badge-light-info">You are a subscriber to an app</span>';
+												$api_mess = 'Add My App';
+												$api_consumer_key = '';
+												$api_consumer_secret = '';
+												$api_bearer_token = '';
+												$api_access_token = '';
+												$api_access_secret = '';
+												$api_title = '';
+											}
+											else {
 												$api_badge = '<span class="badge badge-light-success">Your app is added</span>';
-												$api_mess = 'Change app';
+												$api_mess = 'Change App';
 												$api_consumer_key = $api_app['consumer_key'];
-												$api_consumer_secret =$api_app['consumer_secret'];
+												$api_consumer_secret = $api_app['consumer_secret'];
 												$api_bearer_token = $api_app['bearer_token'];
 												$api_access_token = $api_app['access_token'];
 												$api_access_secret = $api_app['access_secret'];
-
+												$api_title = $api_app['title'];
 											}
 
 											?>
@@ -838,37 +847,61 @@ include '../includes/head.php';
 										<div id="kt_app_edit" class="flex-row-fluid d-none">
 											<!--begin::Form-->
 											<form id="kt_api_app" class="form" novalidate="novalidate" method="POST">
+												<div class="col-lg-12">
+													<div class="fv-row mb-3">
+														<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">App Title/Name</label>
+														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter App display Title" name="app_title" value="<?php if (isset($api_title)) {
+																																																		echo $api_title;
+																																																	}; ?>" required />
+													</div>
+												</div>
 												<div class="row mb-6">
 													<div class="col-lg-6 mb-4 mb-lg-0">
 														<div class="fv-row mb-0">
 															<label for="emailaddress" class="form-label fs-6 fw-bold mb-3">Enter consumer key/API key</label>
-															<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your consumer key" name="consumer_key" value="<?php if (isset($api_consumer_key)) {echo $api_consumer_key;}; ?>" required />
+															<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your consumer key" name="consumer_key" value="<?php if (isset($api_consumer_key)) {
+																																																			echo $api_consumer_key;
+																																																		}; ?>" required />
 														</div>
 													</div>
 													<input name="edit" type="hidden" value="" />
 													<div class="col-lg-6">
 														<div class="fv-row mb-0">
 															<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter consumer secret/API secret</label>
-															<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your consumer secret" name="consumer_secret" value="<?php if (isset($api_consumer_secret)) {echo $api_consumer_secret;}; ?>" required/>
+															<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your consumer secret" name="consumer_secret" value="<?php if (isset($api_consumer_secret)) {
+																																																					echo $api_consumer_secret;
+																																																				}; ?>" required />
 														</div>
 													</div>
 												</div>
 												<div class="col-lg-12">
 													<div class="fv-row mb-3">
 														<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter Bearer token</label>
-														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Bearer token" name="bearer_token" value="<?php if (isset($api_bearer_token)) {echo $api_bearer_token;}; ?>" required/>
+														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Bearer token" name="bearer_token" value="<?php if (isset($api_bearer_token)) {
+																																																		echo $api_bearer_token;
+																																																	}; ?>" required />
 													</div>
 												</div>
 												<div class="col-lg-12">
 													<div class="fv-row mb-3">
 														<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter Access token</label>
-														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Access token" name="access_token" value="<?php if (isset($api_access_token)) {echo $api_access_token;}; ?>" required/>
+														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Access token" name="access_token" value="<?php if (isset($api_access_token)) {
+																																																		echo $api_access_token;
+																																																	}; ?>" required />
 													</div>
 												</div>
 												<div class="col-lg-12">
 													<div class="fv-row mb-3">
 														<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter Access secret</label>
-														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Access secret" name="access_secret" value="<?php if (isset($api_access_secret)) {echo $api_access_secret;}; ?>" required/>
+														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Access secret" name="access_secret" value="<?php if (isset($api_access_secret)) {
+																																																			echo $api_access_secret;
+																																																		}; ?>" required />
+
+
+														<input type="hidden" name="app_id" value="<?php if (isset($api_app['id'])) {
+																										echo $api_app['id'];
+																									}; ?>" required />
+
 													</div>
 												</div>
 
@@ -890,6 +923,259 @@ include '../includes/head.php';
 									<!--begin::Separator-->
 									<div class="separator separator-dashed my-6"></div>
 									<!--end::Separator-->
+									<?php
+									if ($api_app['numrows'] > 0) {
+									?>
+										<!--begin::API Config-->
+										<div class="d-flex flex-wrap align-items-center">
+											<!--begin::Label-->
+											<div id="kt_app2">
+												<div class="fs-6 fw-bold mb-1">New App Set-up</div>
+
+												<div class="fw-semibold text-gray-600"><span class="badge badge-light-info">Add a new app</span></div>
+											</div>
+											<!--end::Label-->
+											<!--begin::Edit-->
+											<div id="kt_app_edit2" class="flex-row-fluid d-none">
+												<!--begin::Form-->
+												<form id="kt_api_app" class="form" novalidate="novalidate" method="POST">
+													<div class="col-lg-12">
+														<div class="fv-row mb-3">
+															<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">App Title/Name</label>
+															<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter App display Title" name="app_title" value="" required />
+														</div>
+													</div>
+													<div class="row mb-6">
+														<div class="col-lg-6 mb-4 mb-lg-0">
+															<div class="fv-row mb-0">
+																<label for="emailaddress" class="form-label fs-6 fw-bold mb-3">Enter consumer key/API key</label>
+																<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your consumer key" name="consumer_key" value="" required />
+															</div>
+														</div>
+														<input name="edit" type="hidden" value="" />
+														<div class="col-lg-6">
+															<div class="fv-row mb-0">
+																<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter consumer secret/API secret</label>
+																<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your consumer secret" name="consumer_secret" value="" required />
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-12">
+														<div class="fv-row mb-3">
+															<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter Bearer token</label>
+															<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Bearer token" name="bearer_token" value="" required />
+														</div>
+													</div>
+													<div class="col-lg-12">
+														<div class="fv-row mb-3">
+															<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter Access token</label>
+															<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Access token" name="access_token" value="" required />
+														</div>
+													</div>
+													<div class="col-lg-12">
+														<div class="fv-row mb-3">
+															<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Enter Access secret</label>
+															<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter your Access secret" name="access_secret" value="" required />
+
+															<input type="hidden" name="app_id" value="NULL" required />
+
+														</div>
+													</div>
+
+													<div class="d-flex">
+														<button id="kt_addApp2" type="submit" class="btn btn-primary me-2 px-6">Add New App</button>
+														<button id="kt_app_cancel2" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">Cancel</button>
+													</div>
+												</form>
+												<!--end::Form-->
+											</div>
+											<!--end::Edit-->
+											<!--begin::Action-->
+											<div id="kt_app_button2" class="ms-auto">
+												<button class="btn btn-light btn-active-light-primary">Add New App</button>
+											</div>
+											<!--end::Action-->
+										</div>
+										<!--end::API Config-->
+									<?php
+									}
+									?>
+									<!--begin::Separator-->
+									<div class="separator separator-dashed my-6"></div>
+									<!--end::Separator-->
+									<!--begin::Table container-->
+									<div class="table-responsive mt-4">
+										<!--begin::Table-->
+										<table class="table align-middle gs-0 gy-4">
+											<!--begin::Table head-->
+											<thead>
+												<tr class="fw-bold text-muted bg-light">
+													<th class="ps-4 min-w-100px rounded-start">API App</th>
+													<th class="min-w-150px">App Title</th>
+													<th class="min-w-150px">API Key</th>
+													<th class="min-w-150px">Status</th>
+													<th class="min-w-150px">Listing</th>
+													<th class="min-w-150px">List</th>
+													<th class="min-w-150px">Activate</th>
+													<th class="min-w-50px">Delete</th>
+												</tr>
+											</thead>
+											<!--end::Table head-->
+											<!--begin::Table body-->
+											<tbody>
+												<?php
+												$stmt = $conn->prepare("SELECT * FROM client_api WHERE user_id=:user_id");
+												$stmt->execute(['user_id' => $user['id']]);
+												$api_app_2 = $stmt->fetchAll();
+
+												$stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM client_api WHERE user_id=:user_id");
+												$stmt->execute(['user_id' => $user['id']]);
+												$api_app_3 = $stmt->fetch();
+
+
+												foreach ($api_app_2 as $row) {
+
+													if ($api_app_3['numrows'] <= 1) {
+														$app_delete_status = "'NO'";
+													} elseif ($row['status'] == 1 && $api_app_3['numrows'] > 1) {
+														$app_delete_status = "'NO_2'";
+													} else {
+														$app_delete_status = $row['id'];
+													}
+
+													$stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM api_shop WHERE app_id=:app_id");
+													$stmt->execute(['app_id' => $row['id']]);
+													$api_app_4 = $stmt->fetch();
+													if ($api_app_4['numrows'] > 0) {
+														$app_list = "'LISTED'";
+														$app_list_title = "View";
+														$app_status_3 = '<span class="badge badge-warning fs-7 fw-bold">LISTED</span>';
+													
+													} else {
+														$app_list = $row['id'];
+														$app_list_title = "List";
+														$app_status_3 = '<span class="badge badge-light-dark fs-7 fw-bold">UNLISTED</span>';
+													
+													}
+													if ($row['level'] == 1) {
+														$app_list = "'SUBSCRIBER'";
+														$app_list_title = "View";
+														$app_status_3 = '<span class="badge badge-danger fs-7 fw-bold">SUBSCRIBER</span>';
+													
+													
+													}
+
+
+													if ($row['status'] == 1) {
+														$app_status_2 = '<span class="badge badge-light-primary fs-7 fw-bold">Active</span>';
+														$app_activate = "'NO'";
+														
+													} else {
+														$app_status_2 = '<span class="badge badge-light-danger fs-7 fw-bold">Inactive</span>';
+														$app_activate = $row['id'];
+														
+													}
+
+
+
+													echo '
+													<tr>
+													<td>
+														<div class="symbol symbol-50px me-2">
+															<span class="symbol-label bg-light-info">
+																<!--begin::Svg Icon | path: icons/duotune/coding/cod002.svg-->
+																<span class="svg-icon svg-icon-2x svg-icon-info">
+																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path opacity="0.3" d="M21 10.7192H3C2.4 10.7192 2 11.1192 2 11.7192C2 12.3192 2.4 12.7192 3 12.7192H6V14.7192C6 18.0192 8.7 20.7192 12 20.7192C15.3 20.7192 18 18.0192 18 14.7192V12.7192H21C21.6 12.7192 22 12.3192 22 11.7192C22 11.1192 21.6 10.7192 21 10.7192Z" fill="currentColor" />
+																		<path d="M11.6 21.9192C11.4 21.9192 11.2 21.8192 11 21.7192C10.6 21.4192 10.5 20.7191 10.8 20.3191C11.7 19.1191 12.3 17.8191 12.7 16.3191C12.8 15.8191 13.4 15.4192 13.9 15.6192C14.4 15.7192 14.8 16.3191 14.6 16.8191C14.2 18.5191 13.4 20.1192 12.4 21.5192C12.2 21.7192 11.9 21.9192 11.6 21.9192ZM8.7 19.7192C10.2 18.1192 11 15.9192 11 13.7192V8.71917C11 8.11917 11.4 7.71917 12 7.71917C12.6 7.71917 13 8.11917 13 8.71917V13.0192C13 13.6192 13.4 14.0192 14 14.0192C14.6 14.0192 15 13.6192 15 13.0192V8.71917C15 7.01917 13.7 5.71917 12 5.71917C10.3 5.71917 9 7.01917 9 8.71917V13.7192C9 15.4192 8.4 17.1191 7.2 18.3191C6.8 18.7191 6.9 19.3192 7.3 19.7192C7.5 19.9192 7.7 20.0192 8 20.0192C8.3 20.0192 8.5 19.9192 8.7 19.7192ZM6 16.7192C6.5 16.7192 7 16.2192 7 15.7192V8.71917C7 8.11917 7.1 7.51918 7.3 6.91918C7.5 6.41918 7.2 5.8192 6.7 5.6192C6.2 5.4192 5.59999 5.71917 5.39999 6.21917C5.09999 7.01917 5 7.81917 5 8.71917V15.7192V15.8191C5 16.3191 5.5 16.7192 6 16.7192ZM9 4.71917C9.5 4.31917 10.1 4.11918 10.7 3.91918C11.2 3.81918 11.5 3.21917 11.4 2.71917C11.3 2.21917 10.7 1.91916 10.2 2.01916C9.4 2.21916 8.59999 2.6192 7.89999 3.1192C7.49999 3.4192 7.4 4.11916 7.7 4.51916C7.9 4.81916 8.2 4.91918 8.5 4.91918C8.6 4.91918 8.8 4.81917 9 4.71917ZM18.2 18.9192C18.7 17.2192 19 15.5192 19 13.7192V8.71917C19 5.71917 17.1 3.1192 14.3 2.1192C13.8 1.9192 13.2 2.21917 13 2.71917C12.8 3.21917 13.1 3.81916 13.6 4.01916C15.6 4.71916 17 6.61917 17 8.71917V13.7192C17 15.3192 16.8 16.8191 16.3 18.3191C16.1 18.8191 16.4 19.4192 16.9 19.6192C17 19.6192 17.1 19.6192 17.2 19.6192C17.7 19.6192 18 19.3192 18.2 18.9192Z" fill="currentColor" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->
+															</span>
+														</div>
+													</td>
+													<td>
+														<span class="text-muted fs-7 fw-bold">' . $row['title'] . '</span>
+													</td>
+													<td>
+														<span class="text-muted fs-7 fw-bold">' . $row['consumer_key'] . '</span>
+													</td>
+													<td>
+														' . $app_status_2 . '
+													</td>
+													<td>
+													' . $app_status_3 . '
+													</td>
+													<td>
+														<a onclick="appList(' . $app_list . ', '.$row['id'].')" class="btn btn-bg-light btn-active-color-info btn-sm me-1">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
+															<span class="svg-icon svg-icon-2x">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path opacity="0.3" d="M18 22H6C5.4 22 5 21.6 5 21V8C6.6 6.4 7.4 5.6 9 4H15C16.6 5.6 17.4 6.4 19 8V21C19 21.6 18.6 22 18 22ZM12 5.5C11.2 5.5 10.5 6.2 10.5 7C10.5 7.8 11.2 8.5 12 8.5C12.8 8.5 13.5 7.8 13.5 7C13.5 6.2 12.8 5.5 12 5.5Z" fill="currentColor" />
+																	<path d="M12 7C11.4 7 11 6.6 11 6V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V6C13 6.6 12.6 7 12 7ZM15.1 10.6C15.1 10.5 15.1 10.4 15 10.3C14.9 10.2 14.8 10.2 14.7 10.2C14.6 10.2 14.5 10.2 14.4 10.3C14.3 10.4 14.3 10.5 14.2 10.6L9 19.1C8.9 19.2 8.89999 19.3 8.89999 19.4C8.89999 19.5 8.9 19.6 9 19.7C9.1 19.8 9.2 19.8 9.3 19.8C9.5 19.8 9.6 19.7 9.8 19.5L15 11.1C15 10.8 15.1 10.7 15.1 10.6ZM11 11.6C10.9 11.3 10.8 11.1 10.6 10.8C10.4 10.6 10.2 10.4 10 10.3C9.8 10.2 9.50001 10.1 9.10001 10.1C8.60001 10.1 8.3 10.2 8 10.4C7.7 10.6 7.49999 10.9 7.39999 11.2C7.29999 11.6 7.2 12 7.2 12.6C7.2 13.1 7.3 13.5 7.5 13.9C7.7 14.3 7.9 14.5 8.2 14.7C8.5 14.9 8.8 14.9 9.2 14.9C9.8 14.9 10.3 14.7 10.6 14.3C11 13.9 11.1 13.3 11.1 12.5C11.1 12.3 11.1 11.9 11 11.6ZM9.8 13.8C9.7 14.1 9.5 14.2 9.2 14.2C9 14.2 8.8 14.1 8.7 14C8.6 13.9 8.5 13.7 8.5 13.5C8.5 13.3 8.39999 13 8.39999 12.6C8.39999 12.2 8.4 11.9 8.5 11.7C8.5 11.5 8.6 11.3 8.7 11.2C8.8 11.1 9 11 9.2 11C9.5 11 9.7 11.1 9.8 11.4C9.9 11.7 10 12 10 12.6C10 13.2 9.9 13.6 9.8 13.8ZM16.5 16.1C16.4 15.8 16.3 15.6 16.1 15.4C15.9 15.2 15.7 15 15.5 14.9C15.3 14.8 15 14.7 14.6 14.7C13.9 14.7 13.4 14.9 13.1 15.3C12.8 15.7 12.6 16.3 12.6 17.1C12.6 17.6 12.7 18 12.9 18.4C13.1 18.7 13.3 19 13.6 19.2C13.9 19.4 14.2 19.5 14.6 19.5C15.2 19.5 15.7 19.3 16 18.9C16.4 18.5 16.5 17.9 16.5 17.1C16.7 16.8 16.6 16.4 16.5 16.1ZM15.3 18.4C15.2 18.7 15 18.8 14.7 18.8C14.4 18.8 14.2 18.7 14.1 18.4C14 18.1 13.9 17.7 13.9 17.2C13.9 16.8 13.9 16.5 14 16.3C14.1 16.1 14.1 15.9 14.2 15.8C14.3 15.7 14.5 15.6 14.7 15.6C15 15.6 15.2 15.7 15.3 16C15.4 16.2 15.5 16.6 15.5 17.2C15.5 17.7 15.4 18.1 15.3 18.4Z" fill="currentColor" />
+																</svg>
+																' . $app_list_title . '
+															</span> 
+															<!--end::Svg Icon-->
+														</a>
+													</td>
+													<td>
+														<a onclick="appActivate(' . $app_activate . ')" class="btn btn-bg-light btn-active-color-primary btn-sm me-1">
+															<!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+															<span class="svg-icon svg-icon-2x">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path opacity="0.5" d="M12.8956 13.4982L10.7949 11.2651C10.2697 10.7068 9.38251 10.7068 8.85731 11.2651C8.37559 11.7772 8.37559 12.5757 8.85731 13.0878L12.7499 17.2257C13.1448 17.6455 13.8118 17.6455 14.2066 17.2257L21.1427 9.85252C21.6244 9.34044 21.6244 8.54191 21.1427 8.02984C20.6175 7.47154 19.7303 7.47154 19.2051 8.02984L14.061 13.4982C13.7451 13.834 13.2115 13.834 12.8956 13.4982Z" fill="currentColor" />
+																	<path d="M7.89557 13.4982L5.79487 11.2651C5.26967 10.7068 4.38251 10.7068 3.85731 11.2651C3.37559 11.7772 3.37559 12.5757 3.85731 13.0878L7.74989 17.2257C8.14476 17.6455 8.81176 17.6455 9.20663 17.2257L16.1427 9.85252C16.6244 9.34044 16.6244 8.54191 16.1427 8.02984C15.6175 7.47154 14.7303 7.47154 14.2051 8.02984L9.06096 13.4982C8.74506 13.834 8.21146 13.834 7.89557 13.4982Z" fill="currentColor" />
+																</svg>
+																Activate
+															</span>
+															<!--end::Svg Icon-->
+														</a>
+													</td>
+													<td>
+														<a onclick="appDelete(' . $app_delete_status . ')" class="btn btn-bg-light btn-active-color-danger btn-sm">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+															<span class="svg-icon svg-icon-2x">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor" />
+																	<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor" />
+																	<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor" />
+																</svg>
+																Delete
+															</span>
+															<!--end::Svg Icon-->
+														</a>
+													</td>
+												</tr>
+													';
+												}
+												?>
+
+											</tbody>
+											<!--end::Table body-->
+										</table>
+										<!--end::Table-->
+									</div>
+									<!--end::Table container-->
+								</div>
+								<!--end::Card body-->
+							</div>
+							<!--end::Content-->
+						</div>
+						<!--end::API Method-->
+						<!--begin::Sign-in Method-->
+						<div class="card mb-5 mb-xl-10">
+							<!--begin::Card header-->
+							<div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_signin_method">
+								<div class="card-title m-0">
+									<h3 class="fw-bold m-0">Account enhancements</h3>
+								</div>
+							</div>
+							<!--end::Card header-->
+							<!--begin::Content-->
+							<div id="kt_account_settings_signin_method" class="collapse show">
+								<!--begin::Card body-->
+								<div class="card-body border-top p-9">
 									<!--begin::Email Address-->
 									<div class="d-flex flex-wrap align-items-center">
 										<!--begin::Label-->
@@ -1105,21 +1391,6 @@ include '../includes/head.php';
 
 									<div class="py-2">
 										<?php
-										function redirect($url)
-										{
-											if (!headers_sent()) {
-												header('Location: ' . $url);
-												exit;
-											} else {
-												echo '<script type="text/javascript">';
-												echo 'window.location.href="' . $url . '";';
-												echo '</script>';
-												echo '<noscript>';
-												echo '<meta http-equiv="refresh" content="0;url=' . $url . '" />';
-												echo '</noscript>';
-												exit;
-											}
-										}
 										if ($user['g_id'] != '') {
 											if ($user['source'] == 'G0') {
 												$g_btnC = ' checked="checked" disabled';
@@ -1139,7 +1410,7 @@ include '../includes/head.php';
 											}
 											$f_btn = '<input class="form-check-input w-45px h-30px" type="checkbox" ' . $f_btnC . ' />';
 										} else {
-											$fb_url = $parent_url.'/auth/fb_4.php';
+											$fb_url = $parent_url . '/auth/fb_4.php';
 											include '../auth/fb_1.php';
 											$f_btn = '<a class="btn btn-success" href="' . $loginUrl . '" id="facebookswitch">Connect</a>';
 										}
@@ -1151,7 +1422,7 @@ include '../includes/head.php';
 											}
 											$t_btn = '<input class="form-check-input w-45px h-30px" type="checkbox" ' . $t_btnC . ' />';
 										} else {
-											$tw_url = $parent_url.'/account/settings';
+											$tw_url = $parent_url . '/account/settings';
 											include '../auth/tww/tw_3.php';
 											$t_btn = '<a class="btn btn-success" href="' . $url . '" id="twitterswitch">Connect</a>';
 										}
