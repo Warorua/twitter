@@ -20,7 +20,7 @@
                 <!--end::Aside toggle-->
                 <!--begin::Header Logo-->
                 <a href="../account/user">
-                    <img alt="Logo" src="../assets/media/svg/brand-logos/twitter.svg" class="h-30px h-lg-35px" />
+                    <img alt="Logo" src="../assets/media/logos/logo_full_bold.png" class="h-30px h-lg-35px" />
                 </a>
                 <!--end::Header Logo-->
             </div>

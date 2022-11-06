@@ -22,7 +22,7 @@ include '../includes/api_config.php';
 	<meta name="twitter:image" content="https://tweetbot.site/assets/media/icons/twitter.png">
 	<meta name="twitter:card" content="summary_large_image">
 	<link rel="canonical" href="https://tweetbot.site/" />
-	<link rel="shortcut icon" href="../assets/media/icons/twitter.png" />
+	<link rel="shortcut icon" href="../assets/media/logos/icon_b.png" />
 	<!--begin::Fonts-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 	<!--end::Fonts-->
