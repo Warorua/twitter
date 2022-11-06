@@ -13,10 +13,10 @@ include 'includes/conn.php';
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="Grow and manage your Twitter account." />
-	<meta property="og:url" content="https://kotnova.com/metronic" />
+	<meta property="og:url" content="https://kotnova.com/" />
 	<meta property="og:site_name" content="Kotnova" />
-	<link rel="canonical" href="https://preview.Kotnova.com/metronic8" />
-	<link rel="shortcut icon" href="assets/media/icons/twitter.png" />
+	<link rel="canonical" href="https://kotnova.com/" />
+	<link rel="shortcut icon" href="aassets/media/logos/icon_b.png" />
 	<!--begin::Fonts-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 	<!--end::Fonts-->
