@@ -5,7 +5,7 @@ include 'includes/conn.php';
 <html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-	<title>The Tweet Bot Site | Kenyans On Twitter</title>
+	<title>Kotnova</title>
 	<meta charset="utf-8" />
 	<meta name="description" content="Grow and manage your Twitter account. Let us give you content for your Twitter account. Mass like tweets and replies. Mass delete old tweets from your account. Mass follow accounts on Twitter. Get to use a source label of your choice." />
 	<meta name="keywords" content="Twitter, gain followers, twitter grow, likes, follows, tweets, auto-follow, auto-reply, twitter manage, follow for follow, KOT, Kenyans on twitter, Kenyan twitter" />
@@ -14,7 +14,7 @@ include 'includes/conn.php';
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="Grow and manage your Twitter account." />
 	<meta property="og:url" content="https://kotnova.com/metronic" />
-	<meta property="og:site_name" content="The Tweet Bot Site | Kenyans On Twitter" />
+	<meta property="og:site_name" content="Kotnova" />
 	<link rel="canonical" href="https://preview.Kotnova.com/metronic8" />
 	<link rel="shortcut icon" href="assets/media/icons/twitter.png" />
 	<!--begin::Fonts-->
