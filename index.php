@@ -16,7 +16,7 @@ include 'includes/conn.php';
 	<meta property="og:url" content="https://kotnova.com/" />
 	<meta property="og:site_name" content="Kotnova" />
 	<link rel="canonical" href="https://kotnova.com/" />
-	<link rel="shortcut icon" href="aassets/media/logos/icon_b.png" />
+	<link rel="shortcut icon" href="assets/media/logos/icon_b.png" />
 	<!--begin::Fonts-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 	<!--end::Fonts-->
