@@ -49,11 +49,11 @@ include '../includes/api_config.php';
 				j = d.createElement(s),
 				dl = l != 'dataLayer' ? '&l=' + l : '';
 			j.async = true;
-			j.src = '../../../../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
 			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-5FS8GGP');
+		})(window, document, 'script', 'dataLayer', 'GTM-MDKZXTL');
 	</script>
 	<link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
 	<link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
-	<!--End::Google Tag Manager -->
+	<!--End::Google Tag Manager www.googletagmanager.com/ns.html?id=GTM-PVW2LQ2-->
 </head>

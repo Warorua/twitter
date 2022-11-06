@@ -29,7 +29,7 @@ include '../includes/head.php';
 	<!--end::Theme mode setup on page load-->
 	<!--Begin::Google Tag Manager (noscript) -->
 	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.php?id=GTM-5FS8GGP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		<iframe src="https://www.googletagmanager.com/ns.php?id=GTM-MDKZXTL" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
 	<!--End::Google Tag Manager (noscript) -->
 	<!--begin::Main-->
