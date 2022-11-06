@@ -89,8 +89,8 @@ include 'includes/conn.php';
 									<!--end::Mobile menu toggle-->
 									<!--begin::Logo image-->
 									<a href="landing.html">
-										<img alt="Logo" src="assets/media/logos/icon.png" class="logo-default h-35px h-lg-40px" />
-										<img alt="Logo" src="assets/media/logos/icon.png" class="logo-sticky h-30px h-lg-35px" />
+										<img alt="Logo" src="assets/media/logos/logo_full_bold.png" class="logo-default h-35px h-lg-40px" />
+										<img alt="Logo" src="assets/media/logos/logo_full_bold.png" class="logo-sticky h-30px h-lg-35px" />
 									</a>
 									<!--end::Logo image-->
 								</div>
