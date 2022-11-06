@@ -31,7 +31,7 @@ $dip_n = '*****'.substr($recipient ,8, 5);
 <!-- authentication/layouts/fancy/two-steps.html 22:56:35 GMT -->
 <!--  --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- / -->
 <head>
-		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular & Laravel by TweetBotSite</title>
+		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular & Laravel by Kotnova</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Blazor, Django, Flask & Laravel versions. Grab your copy now and get life-time updates for free." />
 		<meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Blazor, Django, Flask & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
@@ -39,9 +39,9 @@ $dip_n = '*****'.substr($recipient ,8, 5);
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="Metronic | Bootstrap HTML, VueJS, React, Angular, Asp.Net Core, Blazor, Django, Flask & Laravel Admin Dashboard Theme" />
-		<meta property="og:url" content="https://tweetbot.site/metronic" />
-		<meta property="og:site_name" content="TweetBotSite | Metronic" />
-		<link rel="canonical" href="https://preview.TweetBotSite.com/metronic8" />
+		<meta property="og:url" content="https://kotnova.com/metronic" />
+		<meta property="og:site_name" content="Kotnova | Metronic" />
+		<link rel="canonical" href="https://preview.Kotnova.com/metronic8" />
 		<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
@@ -72,7 +72,7 @@ $dip_n = '*****'.substr($recipient ,8, 5);
 			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
 				<!--begin::Logo-->
 				<a href="../account/user" class="d-block d-lg-none mx-auto py-20">
-					<img alt="Logo" src="../assets/media/svg/brand-logos/twitter.svg" class="theme-light-show h-25px" />
+					<img alt="Logo" src="../assets/media/logos/icon.png" class="theme-light-show h-25px" />
 					<img alt="Logo" src="../assets/media/svg/brand-logos/twitter_2.svg" class="theme-dark-show h-25px" />
 				</a>
 				<!--end::Logo-->

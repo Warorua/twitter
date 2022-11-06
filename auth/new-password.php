@@ -1,7 +1,7 @@
 <?php
 if (!isset($_GET['code']) or !isset($_GET['user'])) {
 	$_SESSION['error'] = 'Invalid action!';
-	header('location: https://tweetbot.site/v2/login');
+	header('location: https://kotnova.com/v2/login');
 	exit();
 }
 

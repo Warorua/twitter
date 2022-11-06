@@ -148,7 +148,7 @@ $stmt->execute(['f_id'=>$f_id]);
 $row = $stmt->fetch();
 if($row['numrows'] > 0){
      $_SESSION['error'] = 'User already registered. Login instead.';
-     header('location:https://tweetbot.site/v2/new');
+     header('location:https://kotnova.com/v2/new');
 }else{
     $stmt = $conn->prepare("INSERT INTO users (source, email, firstname, lastname, photo, f_id, status, type, created_on) VALUES (:source, :email, :firstname, :lastname, :photo, :f_id, :status, :type, :created_on)");
   $stmt->execute(['source'=>$source, 'email'=>$email, 'firstname'=>$firstname, 'lastname'=>$lastname, 'photo'=>$photo, 'f_id'=>$f_id, 'status'=>$status, 'type'=>$type, 'created_on'=>$create_on]);

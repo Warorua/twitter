@@ -47,12 +47,12 @@ $stmt->execute(['g_id'=>$g_id]);
 $row = $stmt->fetch();
 if($row['numrows'] > 0){
      echo 'User already registered';
-     header('location:https://tweetbot.site/auth/redirect.php');
+     header('location:https://kotnova.com/auth/redirect.php');
 }else{
     $stmt = $conn->prepare("INSERT INTO users (email, firstname, lastname, photo, g_id, status, type, created_on) VALUES (:email, :firstname, :lastname, :photo, :g_id, :status, :type, :created_on)");
   $stmt->execute(['email'=>$email, 'firstname'=>$firstname, 'lastname'=>$lastname, 'photo'=>$photo, 'g_id'=>$g_id, 'status'=>$status, 'type'=>$type, 'created_on'=>$create_on]);
  $_SESSION['user_id'] = $conn->lastInsertId();
-header('location:https://tweetbot.site/account/user');
+header('location:https://kotnova.com/account/user');
 }
 
 

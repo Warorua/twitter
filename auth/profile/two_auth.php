@@ -28,14 +28,14 @@ $message = '
                         <div style="text-align:center; margin:0 60px 34px 60px">
                             <!--begin:Logo-->
                             <div style="margin-bottom: 10px">
-                                <a href="https://tweetbot.site/" rel="noopener" target="_blank">
-                                    <img alt="Logo" src="https://tweetbot.site/mail_media/logo.png" style="height: 75px" />
+                                <a href="https://kotnova.com/" rel="noopener" target="_blank">
+                                    <img alt="Logo" src="https://kotnova.com/mail_media/logo.png" style="height: 75px" />
                                 </a>
                             </div>
                             <!--end:Logo-->
                             <!--begin:Media-->
                             <div style="margin-bottom: 15px">
-                                <img alt="Logo" src="https://tweetbot.site/mail_media/sigma/png/like.png" style="height: 185px" />
+                                <img alt="Logo" src="https://kotnova.com/mail_media/sigma/png/like.png" style="height: 185px" />
                             </div>
                             <!--end:Media-->
                             <!--begin:Text-->
@@ -63,7 +63,7 @@ $message = '
                             <div style="display:flex">
                                 <!--begin::Media-->
                                 <div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-                                    <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-polygon.png" />
+                                    <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-polygon.png" />
                                     <span style="position: absolute">
                                         <!--begin::Svg Icon | path: icons/duotune/general/gen025.png-->
                                         <span class="svg-icon svg-icon-3 svg-icon-success">
@@ -101,7 +101,7 @@ $message = '
                             <div style="display:flex">
                                 <!--begin::Media-->
                                 <div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-                                    <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-polygon.png" />
+                                    <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-polygon.png" />
                                     <span style="position: absolute">
                                         <!--begin::Svg Icon | path: icons/duotune/communication/com012.png-->
                                         <span class="svg-icon svg-icon-3 svg-icon-success">
@@ -138,7 +138,7 @@ $message = '
                             <div style="display:flex">
                                 <!--begin::Media-->
                                 <div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-                                    <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-polygon.png" />
+                                    <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-polygon.png" />
                                     <span style="position: absolute">
                                         <!--begin::Svg Icon | path: icons/duotune/general/gen014.png-->
                                         <span class="svg-icon svg-icon-3 svg-icon-success">
@@ -177,30 +177,30 @@ $message = '
                         <p style="color:#181C32; font-size: 16px; font-weight: 600; margin-bottom:9px">Its all about customers!</p>
                         <p style="margin-bottom:2px">Call our customer care number: +31 6 3344 55 56</p>
                         <p style="margin-bottom:4px">You may reach us at 
-                        <a href="https://tweetbot.site/" rel="noopener" target="_blank" style="font-weight: 600">support@farajiproperties.co</a>.</p>
+                        <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600">support@farajiproperties.co</a>.</p>
                         <p>We serve Mon-Fri, 9AM-18AM</p>
                     </td>
                 </tr>
                 <tr>
                     <td align="center" valign="center" style="text-align:center; padding-bottom: 20px;">
                         <a href="#" style="margin-right:10px">
-                            <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-linkedin.png" />
+                            <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-linkedin.png" />
                         </a>
                         <a href="#" style="margin-right:10px">
-                            <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-dribbble.png" />
+                            <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-dribbble.png" />
                         </a>
                         <a href="#" style="margin-right:10px">
-                            <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-facebook.png" />
+                            <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-facebook.png" />
                         </a>
                         <a href="#">
-                            <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-twitter.png" />
+                            <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-twitter.png" />
                         </a>
                     </td>
                 </tr>
                 <tr>
                     <td align="center" valign="center" style="font-size: 13px; padding:0 15px; text-align:center; font-weight: 500; color: #A1A5B7;font-family:Arial,Helvetica,sans-serif">
                         <p>&copy; Copyright FarajiProperties. 
-                        <a href="https://tweetbot.site/" rel="noopener" target="_blank" style="font-weight: 600;font-family:Arial,Helvetica,sans-serif">Unsubscribe</a>&nbsp; from newsletter.</p>
+                        <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600;font-family:Arial,Helvetica,sans-serif">Unsubscribe</a>&nbsp; from newsletter.</p>
                     </td>
                 </tr>
             </tbody>
@@ -264,14 +264,14 @@ $message = '
                             <div style="text-align:center; margin:0 60px 34px 60px">
                                 <!--begin:Logo-->
                                 <div style="margin-bottom: 10px">
-                                    <a href="https://tweetbot.site/" rel="noopener" target="_blank">
-                                        <img alt="Logo" src="https://tweetbot.site/mail_media/logo.png" style="height: 75px" />
+                                    <a href="https://kotnova.com/" rel="noopener" target="_blank">
+                                        <img alt="Logo" src="https://kotnova.com/mail_media/logo.png" style="height: 75px" />
                                     </a>
                                 </div>
                                 <!--end:Logo-->
                                 <!--begin:Media-->
                                 <div style="margin-bottom: 15px">
-                                    <img alt="Logo" src="https://tweetbot.site/mail_media/sigma/png/like.png" style="height: 185px" />
+                                    <img alt="Logo" src="https://kotnova.com/mail_media/sigma/png/like.png" style="height: 185px" />
                                 </div>
                                 <!--end:Media-->
                                 <!--begin:Text-->
@@ -299,7 +299,7 @@ $message = '
                                 <div style="display:flex">
                                     <!--begin::Media-->
                                     <div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-                                        <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-polygon.png" />
+                                        <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-polygon.png" />
                                         <span style="position: absolute">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen025.png-->
                                             <span class="svg-icon svg-icon-3 svg-icon-success">
@@ -337,7 +337,7 @@ $message = '
                                 <div style="display:flex">
                                     <!--begin::Media-->
                                     <div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-                                        <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-polygon.png" />
+                                        <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-polygon.png" />
                                         <span style="position: absolute">
                                             <!--begin::Svg Icon | path: icons/duotune/communication/com012.png-->
                                             <span class="svg-icon svg-icon-3 svg-icon-success">
@@ -374,7 +374,7 @@ $message = '
                                 <div style="display:flex">
                                     <!--begin::Media-->
                                     <div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-                                        <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-polygon.png" />
+                                        <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-polygon.png" />
                                         <span style="position: absolute">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen014.png-->
                                             <span class="svg-icon svg-icon-3 svg-icon-success">
@@ -413,30 +413,30 @@ $message = '
                             <p style="color:#181C32; font-size: 16px; font-weight: 600; margin-bottom:9px">Its all about customers!</p>
                             <p style="margin-bottom:2px">Call our customer care number: +31 6 3344 55 56</p>
                             <p style="margin-bottom:4px">You may reach us at 
-                            <a href="https://tweetbot.site/" rel="noopener" target="_blank" style="font-weight: 600">support@farajiproperties.co</a>.</p>
+                            <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600">support@farajiproperties.co</a>.</p>
                             <p>We serve Mon-Fri, 9AM-18AM</p>
                         </td>
                     </tr>
                     <tr>
                         <td align="center" valign="center" style="text-align:center; padding-bottom: 20px;">
                             <a href="#" style="margin-right:10px">
-                                <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-linkedin.png" />
+                                <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-linkedin.png" />
                             </a>
                             <a href="#" style="margin-right:10px">
-                                <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-dribbble.png" />
+                                <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-dribbble.png" />
                             </a>
                             <a href="#" style="margin-right:10px">
-                                <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-facebook.png" />
+                                <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-facebook.png" />
                             </a>
                             <a href="#">
-                                <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-twitter.png" />
+                                <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-twitter.png" />
                             </a>
                         </td>
                     </tr>
                     <tr>
                         <td align="center" valign="center" style="font-size: 13px; padding:0 15px; text-align:center; font-weight: 500; color: #A1A5B7;font-family:Arial,Helvetica,sans-serif">
                             <p>&copy; Copyright FarajiProperties. 
-                            <a href="https://tweetbot.site/" rel="noopener" target="_blank" style="font-weight: 600;font-family:Arial,Helvetica,sans-serif">Unsubscribe</a>&nbsp; from newsletter.</p>
+                            <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600;font-family:Arial,Helvetica,sans-serif">Unsubscribe</a>&nbsp; from newsletter.</p>
                         </td>
                     </tr>
                 </tbody>

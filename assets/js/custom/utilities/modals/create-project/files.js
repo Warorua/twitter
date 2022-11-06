@@ -12,7 +12,7 @@ var KTModalCreateProjectFiles = (function () {
           '[data-kt-element="files-previous"]'
         )),
         new Dropzone("#kt_modal_create_project_files_upload", {
-          url: "https://tweetbot.site/scripts/void.php",
+          url: "https://kotnova.com/scripts/void.php",
           paramName: "file",
           maxFiles: 10,
           maxFilesize: 10,

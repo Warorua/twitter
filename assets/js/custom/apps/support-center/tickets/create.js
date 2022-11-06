@@ -9,7 +9,7 @@ var KTModalNewTicket = (function () {
         (t = document.getElementById("kt_modal_new_ticket_submit")),
         (e = document.getElementById("kt_modal_new_ticket_cancel")),
         new Dropzone("#kt_modal_create_ticket_attachments", {
-          url: "https://tweetbot.site/scripts/void.php",
+          url: "https://kotnova.com/scripts/void.php",
           paramName: "file",
           maxFiles: 10,
           maxFilesize: 10,

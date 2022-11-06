@@ -4,7 +4,7 @@ require '../vendor/autoload.php';
 $totp = PedroSancao\OTP\TOTP::create();
 
 // example using Google API, it's recommended to use a local library
-$uri_auth = $totp->getUri($user_email, 'TweetBotSite');
+$uri_auth = $totp->getUri($user_email, 'Kotnova');
 $src_auth = 'https://chart.googleapis.com/chart?chs=200x200&chld=M|0&cht=qr&chl=' . urlencode($uri_auth);
 
 $secret = $totp->getRawSecret();

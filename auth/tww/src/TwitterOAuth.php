@@ -136,7 +136,7 @@ class TwitterOAuth extends Config
 
         if ($this->getLastHttpCode() != 200) {
            // throw new TwitterOAuthException($result);
-           header("location: https://tweetbot.site/v2/overheat?error=".$result);
+           header("location: https://kotnova.com/v2/overheat?error=".$result);
         }
 
         parse_str($result, $response);

@@ -7,7 +7,7 @@ include '../includes/api_config.php';
 ?>
 
 <head>
-	<title>The Tweet Bot Site | Kenyans On Twitter</title>
+	<title>Kotnova</title>
 	<meta charset="utf-8" />
 	<meta name="description" content="Grow and manage your Twitter account. Let us give you content for your Twitter account. Mass like tweets and replies. Mass delete old tweets from your account. Mass follow accounts on Twitter. Get to use a source label of your choice." />
 	<meta name="keywords" content="Twitter, gain followers, twitter grow, likes, follows, tweets, auto-follow, auto-reply, twitter manage, follow for follow, KOT, Kenyans on twitter, Kenyan twitter" />
@@ -15,13 +15,13 @@ include '../includes/api_config.php';
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="Grow and manage your Twitter account." />
-	<meta property="og:url" content="https://tweetbot.site/" />
-	<meta property="og:site_name" content="The Tweet Bot Site | Kenyans On Twitter" />
+	<meta property="og:url" content="https://kotnova.com/" />
+	<meta property="og:site_name" content="Kotnova" />
 	<meta name="twitter:title" content="The Twitter Manager and Growth Expert">
 	<meta name="twitter:description" content="Grow and manage your Twitter account.">
-	<meta name="twitter:image" content="https://tweetbot.site/assets/media/icons/twitter.png">
+	<meta name="twitter:image" content="https://kotnova.com/assets/media/logos/logo_full_bold.png">
 	<meta name="twitter:card" content="summary_large_image">
-	<link rel="canonical" href="https://tweetbot.site/" />
+	<link rel="canonical" href="https://kotnova.com/" />
 	<link rel="shortcut icon" href="../assets/media/logos/icon_b.png" />
 	<!--begin::Fonts-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />

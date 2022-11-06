@@ -48,7 +48,7 @@ var KTAccountSettingsDeactivateAccount = (function () {
                      //   t.preventDefault();
 $.ajax({
 method:"POST",
-url: "https://tweetbot.site/auth/profile/account_deactivate.php",
+url: "https://kotnova.com/auth/profile/account_deactivate.php",
 data:{auth:'auth'},
 success: function(data){
 

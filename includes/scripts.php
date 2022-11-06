@@ -511,7 +511,7 @@ $dm_perc = ($dm * 100) / 1000;
 			customizations: {
 				title: "KOT Tweet Admin",
 				description: "Refill your gas points",
-				logo: "https://tweetbot.site/assets/media/svg/brand-logos/twitter.svg",
+				logo: "https://kotnova.com/assets/media/logos/icon.png",
 			},
 		});
 

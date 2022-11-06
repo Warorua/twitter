@@ -39,7 +39,7 @@
 
 		if($password != $repassword){
 			$_SESSION['error'] = 'Passwords did not match';
-			header('location: https://tweetbot.site/v2/new#');
+			header('location: https://kotnova.com/v2/new#');
 		}
 		
 		else{
@@ -102,14 +102,14 @@
                          <div style="text-align:center; margin:0 15px 34px 15px">
                              <!--begin:Logo-->
                              <div style="margin-bottom: 10px">
-                                 <a href="https://tweetbot.site/" rel="noopener" target="_blank">
-                                     <img alt="Logo" src="https://tweetbot.site/mail_media/logo.png" style="height: 55px" />
+                                 <a href="https://kotnova.com/" rel="noopener" target="_blank">
+                                     <img alt="Logo" src="https://kotnova.com/mail_media/logo.png" style="height: 55px" />
                                  </a>
                              </div>
                              <!--end:Logo-->
                              <!--begin:Media-->
                              <div style="margin-bottom: 15px">
-                                 <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-positive-vote-1.png" />
+                                 <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-positive-vote-1.png" />
                              </div>
                              <!--end:Media-->
                              <!--begin:Text-->
@@ -121,7 +121,7 @@
                              </div>
                              <!--end:Text-->
                              <!--begin:Action-->
-                             <a href="https://tweetbot.site/auth/activate.php?code='.$code.'&user='.$userid.'" target="_blank" style="background-color:#50CD89; border-radius:6px;display:inline-block; padding:11px 19px; color: #FFFFFF; font-size: 14px; font-weight:500;">Activate Account</a>
+                             <a href="https://kotnova.com/auth/activate.php?code='.$code.'&user='.$userid.'" target="_blank" style="background-color:#50CD89; border-radius:6px;display:inline-block; padding:11px 19px; color: #FFFFFF; font-size: 14px; font-weight:500;">Activate Account</a>
                              <!--begin:Action-->
                          </div>
                          <!--end:Email content-->
@@ -136,7 +136,7 @@
                              <div style="display:flex">
                                  <!--begin::Media-->
                                  <div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-                                     <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-polygon.png" />
+                                     <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-polygon.png" />
                                      <span style="position: absolute; color:#50CD89; font-size: 16px; font-weight: 600;">1</span>
                                  </div>
                                  <!--end::Media-->
@@ -163,7 +163,7 @@
                              <div style="display:flex">
                                  <!--begin::Media-->
                                  <div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-                                     <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-polygon.png" />
+                                     <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-polygon.png" />
                                      <span style="position: absolute; color:#50CD89; font-size: 16px; font-weight: 600;">2</span>
                                  </div>
                                  <!--end::Media-->
@@ -190,7 +190,7 @@
                              <div style="display:flex">
                                  <!--begin::Media-->
                                  <div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-                                     <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-polygon.png" />
+                                     <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-polygon.png" />
                                      <span style="position: absolute; color:#50CD89; font-size: 16px; font-weight: 600;">3</span>
                                  </div>
                                  <!--end::Media-->
@@ -219,30 +219,30 @@
                          <p style="color:#181C32; font-size: 16px; font-weight: 600; margin-bottom:9px">It’s all about customers!</p>
                          <p style="margin-bottom:2px">Call our customer care number: +31 6 3344 55 56</p>
                          <p style="margin-bottom:4px">You may reach us at 
-                         <a href="https://tweetbot.site/" rel="noopener" target="_blank" style="font-weight: 600">support@farajiproperties.co</a>.</p>
+                         <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600">support@farajiproperties.co</a>.</p>
                          <p>We serve Mon-Fri, 9AM-18AM</p>
                      </td>
                  </tr>
                  <tr>
                      <td align="center" valign="center" style="text-align:center; padding-bottom: 20px;">
                          <a href="#" style="margin-right:10px">
-                             <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-linkedin.png" />
+                             <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-linkedin.png" />
                          </a>
                          <a href="#" style="margin-right:10px">
-                             <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-dribbble.png" />
+                             <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-dribbble.png" />
                          </a>
                          <a href="#" style="margin-right:10px">
-                             <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-facebook.png" />
+                             <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-facebook.png" />
                          </a>
                          <a href="#">
-                             <img alt="Logo" src="https://tweetbot.site/mail_media/media/email/icon-twitter.png" />
+                             <img alt="Logo" src="https://kotnova.com/mail_media/media/email/icon-twitter.png" />
                          </a>
                      </td>
                  </tr>
                  <tr>
                      <td align="center" valign="center" style="font-size: 13px; padding:0 15px; text-align:center; font-weight: 500; color: #A1A5B7;font-family:Arial,Helvetica,sans-serif">
                          <p>&copy; Copyright FarajiProperties. 
-                         <a href="https://tweetbot.site/" rel="noopener" target="_blank" style="font-weight: 600;font-family:Arial,Helvetica,sans-serif">Unsubscribe</a>&nbsp; from newsletter.</p>
+                         <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600;font-family:Arial,Helvetica,sans-serif">Unsubscribe</a>&nbsp; from newsletter.</p>
                      </td>
                  </tr>
              </tbody>
@@ -291,13 +291,13 @@
 				        unset($_SESSION['email']);
 
 				        {$_SESSION['success'] = 'Account created. Check your email to activate.';
-				        header('location: https://tweetbot.site/v2/new#');}
+				        header('location: https://kotnova.com/v2/new#');}
 
 				    } 
 									
 				    catch (Exception $e) {
 				        $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
-				        header('location: https://tweetbot.site/v2/new#');
+				        header('location: https://kotnova.com/v2/new#');
 				    }
 
 				}
@@ -315,5 +315,5 @@
 	}
 	else{
 		$_SESSION['error'] = 'Complete filling the signup form first';
-		header('location: https://tweetbot.site/v2/new#');
+		header('location: https://kotnova.com/v2/new#');
 	}

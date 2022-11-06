@@ -137,7 +137,7 @@ $wrapper_box = '
 <!--authentication/general/welcome.html :58:30-->
 <!-- Kejanie.com --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Kejanie.com -->
 <head>
-		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by TweetBotSite</title>
+		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by Kotnova</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
 		<meta name="keywords" content="" />
@@ -145,9 +145,9 @@ $wrapper_box = '
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
-		<meta property="og:url" content="https://tweetbot.site/metronic" />
-		<meta property="og:site_name" content="TweetBotSite | Metronic" />
-		<link rel="canonical" href="https://preview.TweetBotSite.com/metronic8" />
+		<meta property="og:url" content="https://kotnova.com/metronic" />
+		<meta property="og:site_name" content="Kotnova | Metronic" />
+		<link rel="canonical" href="https://preview.Kotnova.com/metronic8" />
 		<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
@@ -180,7 +180,7 @@ $wrapper_box = '
 				<div class="d-flex flex-column flex-column-fluid text-center p-10 py-lg-15">
 					<!--begin::Logo-->
 					<a href="../../index.html" class="mb-10 pt-lg-10">
-						<img alt="Logo" src="https://tweetbot.site/mail_media/logo.png" class="h-60px mb-6" />
+						<img alt="Logo" src="https://kotnova.com/mail_media/logo.png" class="h-60px mb-6" />
 					</a>
 					<!--end::Logo-->
                     <!--begin::Alert-->
@@ -195,8 +195,8 @@ $wrapper_box = '
 				<div class="d-flex flex-center flex-column-auto p-10">
 					<!--begin::Links-->
 					<div class="d-flex align-items-center fw-bold fs-6">
-						<a href="https://tweetbot.site/" class="text-muted text-hover-primary px-2">About</a>
-						<a href="mailto:support@TweetBotSite.com" class="text-muted text-hover-primary px-2">Contact</a>
+						<a href="https://kotnova.com/" class="text-muted text-hover-primary px-2">About</a>
+						<a href="mailto:support@Kotnova.com" class="text-muted text-hover-primary px-2">Contact</a>
 						<a href="https://1.envato.market/EA4JP" class="text-muted text-hover-primary px-2">Contact Us</a>
 					</div>
 					<!--end::Links-->
