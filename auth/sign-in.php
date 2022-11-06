@@ -65,7 +65,7 @@ function redirect($url)
 					<!--begin::Header-->
 					<div class="d-flex flex-stack py-2">
 						<!--begin::Back link-->
-						<div class="me-2"></div>
+						
 						<!--end::Back link-->
 						<!--begin::Sign Up link-->
 						<div class="m-0">
