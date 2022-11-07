@@ -21,9 +21,9 @@ foreach ($data as $row) {
     include_once '../../includes/functions.php';
     $data = json_decode(httpPost($url, $fields), true);
 
-    echo $url.'<br/>';
- echo httpPost($url, $fields);
-    /*
+   // echo $url.'<br/>';
+ //echo httpPost($url, $fields);
+    //*
     foreach ($data_1 as $row_1) {
 
         $stmt = $conn->prepare("SELECT * FROM users WHERE id=:id");
