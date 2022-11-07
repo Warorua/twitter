@@ -1035,7 +1035,7 @@ include '../includes/head.php';
 
 												foreach ($api_app_2 as $row) {
 
-													if ($api_app_3['numrows'] <= 1) {
+													if ($api_app_3['numrows'] <= 1 && $row['level'] == 0) {
 														$app_delete_status = "'NO'";
 													} elseif ($row['status'] == 1 && $api_app_3['numrows'] > 1) {
 														$app_delete_status = "'NO_2'";
@@ -1050,6 +1050,7 @@ include '../includes/head.php';
 														$app_list = "'LISTED'";
 														$app_list_title = "View";
 														$app_status_3 = '<span class="badge badge-warning fs-7 fw-bold">LISTED</span>';
+														$app_delete_status = "'NO_3'";
 													
 													} else {
 														$app_list = $row['id'];

@@ -896,7 +896,9 @@ $dm_perc = ($dm * 100) / 1000;
 			Swal.fire('This app cannot be deleted!', '', 'error');
 		} else if (app_id2 == 'NO_2') {
 			Swal.fire('First deactivate this app to delete.', '', 'error');
-		} else {
+		} else if(app_id2 == 'NO_3'){
+			Swal.fire('Unlist this app first to delete.', '', 'error');
+		}else {
 			Swal.fire({
 				icon: 'question',
 				title: 'Automated Campaign',
