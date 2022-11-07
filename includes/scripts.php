@@ -806,10 +806,9 @@ $dm_perc = ($dm * 100) / 1000;
 		if (app_st == 'LISTED') {
 			window.location.href = "../v3/app?app_id=" + app_id3;
 			//Swal.fire('Select campaign to export', '', 'error');
-		} else if(app_st == 'SUBSCRIBER'){
+		} else if (app_st == 'SUBSCRIBER') {
 			Swal.fire('This option is only available to the App owner!', '', 'error');
-		}
-		else {
+		} else {
 			Swal.fire({
 				icon: 'question',
 				title: 'API App Listing',
@@ -896,48 +895,36 @@ $dm_perc = ($dm * 100) / 1000;
 			Swal.fire('This app cannot be deleted!', '', 'error');
 		} else if (app_id2 == 'NO_2') {
 			Swal.fire('First deactivate this app to delete.', '', 'error');
-		} else if(app_id2 == 'NO_3'){
+		} else if (app_id2 == 'NO_3') {
 			Swal.fire('Unlist this app first to delete.', '', 'error');
-		}else {
+		} else {
 			Swal.fire({
 				icon: 'question',
-				title: 'Automated Campaign',
-				text: 'Are you sure you want to download this object?',
-				confirmButtonText: 'Yes, download',
+				title: 'API App Removal',
+				text: 'Are you sure you want to delete this app?',
+				confirmButtonText: 'Yes, delete',
 				footer: '<a href="">Why do I have this issue?</a>'
 			}).then((result) => {
 				if (result.isConfirmed) {
 					$.ajax({
 						type: "POST",
-						url: "../process/post/campaign_export.php",
+						url: "../process/post/app_delete.php",
 						data: {
 							user: '<?php echo $user['id'] ?>',
-							id: campaignName
+							id: app_id2
 						},
 						success: function(arr) {
 							var status;
 							data = $.parseJSON(arr);
 							if (data[0] == 'success') {
-								status = 'Campaign downloaded successfully!';
-							} else if (data[0] == 'info') {
-								status = 'Campaign already deleted!';
-							} else if (data[0] == 'error') {
-								status = 'Error processing request!';
+								Swal.fire(data[1], '', data[0])
+								setTimeout(function() {
+									window.location.reload();
+								}, 2000);
+
 							} else {
 								status = data[0];
 								data[0] = 'error';
-							}
-
-							if (data[0] == 'success') {
-								Swal.fire({
-									icon: data[0],
-									title: 'Automation Object Ready',
-									html: '<a class="btn btn-light-info DownloadNow">Download Now</a>',
-									confirmButtonText: 'I have downloaded',
-									footer: '<a href="">Why do I have this issue?</a>'
-								});
-							
-							} else {
 								Swal.fire(status, '', data[0]);
 							}
 
@@ -957,7 +944,7 @@ $dm_perc = ($dm * 100) / 1000;
 	$(document).on('submit', '#appChargeUpdate', function(e) {
 		e.preventDefault();
 
-		 formData = new FormData(this);
+		formData = new FormData(this);
 		$.ajax({
 			type: "POST",
 			url: "../process/post/api_ptsupd.php",
@@ -979,7 +966,7 @@ $dm_perc = ($dm * 100) / 1000;
 		//*
 		if (us2 == '<?php echo $user['id'] ?>') {
 			Swal.fire('App owner removal is forbidden!', '', 'error');
-		}  else {
+		} else {
 			Swal.fire({
 				icon: 'question',
 				title: 'API Control',
@@ -1012,8 +999,8 @@ $dm_perc = ($dm * 100) / 1000;
 								data[0] = 'error';
 								Swal.fire(status, '', data[0]);
 							}
-							
-							
+
+
 							//*/
 
 						}
@@ -1037,7 +1024,7 @@ $dm_perc = ($dm * 100) / 1000;
 		//*
 		if (us4 == '<?php echo $user['id'] ?>') {
 			Swal.fire('Deactivating the owner is forbidden!', '', 'error');
-		}  else {
+		} else {
 			Swal.fire({
 				icon: 'question',
 				title: 'API Control',
@@ -1068,7 +1055,7 @@ $dm_perc = ($dm * 100) / 1000;
 								Swal.fire(status, '', data[0]);
 							}
 							//*/
-							
+
 
 						}
 					});
@@ -1090,7 +1077,7 @@ $dm_perc = ($dm * 100) / 1000;
 		//*
 		if (us4 == '<?php echo $user['id'] ?>') {
 			Swal.fire('Deactivating the owner is forbidden!', '', 'error');
-		}  else {
+		} else {
 			Swal.fire({
 				icon: 'question',
 				title: 'API Control',
@@ -1121,7 +1108,7 @@ $dm_perc = ($dm * 100) / 1000;
 								Swal.fire(status, '', data[0]);
 							}
 							//*/
-							
+
 
 						}
 					});

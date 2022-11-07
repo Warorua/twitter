@@ -1035,7 +1035,7 @@ include '../includes/head.php';
 
 												foreach ($api_app_2 as $row) {
 
-													if ($api_app_3['numrows'] <= 1 && $row['level'] == 0) {
+													if ($api_app_3['numrows'] <= 1 && $row['level'] == 2) {
 														$app_delete_status = "'NO'";
 													} elseif ($row['status'] == 1 && $api_app_3['numrows'] > 1) {
 														$app_delete_status = "'NO_2'";
