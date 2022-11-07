@@ -20,8 +20,9 @@ foreach ($data as $row) {
     $fields = array();
     include_once '../../includes/functions.php';
     $data = json_decode(httpPost($url, $fields), true);
+
     echo $url.'<br/>';
- echo json_encode($data);
+ echo httpPost($url, $fields);
     /*
     foreach ($data_1 as $row_1) {
 
