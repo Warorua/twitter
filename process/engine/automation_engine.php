@@ -20,7 +20,8 @@ foreach ($data as $row) {
     $fields = array();
     include_once '../../includes/functions.php';
     $data = json_decode(httpPost($url, $fields), true);
-
+ echo json_encode($data);
+    /*
     foreach ($data_1 as $row_1) {
 
         $stmt = $conn->prepare("SELECT * FROM users WHERE id=:id");
@@ -142,6 +143,7 @@ foreach ($data as $row) {
             echo 'Data already active!';
         }
     }
+    //*/
     $stmt = $conn->prepare("UPDATE automation_scripts SET automation=:automation WHERE id=:id");
     $stmt->execute(['id' => $next_automation_id, 'automation' => $next_automation]);
 }
