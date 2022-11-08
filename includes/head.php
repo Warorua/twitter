@@ -56,4 +56,12 @@ include '../includes/api_config.php';
 	<link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
 	<link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
 	<!--End::Google Tag Manager www.googletagmanager.com/ns.html?id=GTM-PVW2LQ2-->
+	<style>
+		@media screen and (max-width: 600px) {
+			#tweetRef {
+				visibility: hidden;
+				display: none;
+			}
+		}
+	</style>
 </head>
