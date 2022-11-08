@@ -226,7 +226,7 @@ include '../includes/head.php';
                                                                 <div class="d-flex flex-column flex-grow-1 my-lg-0 my-2 pe-3">
                                                                     <a href="#" class="fs-5 text-gray-800 text-hover-primary fw-bold">Tweet Automation</a>
                                                                     <span class="text-gray-400 fw-semibold fs-7 my-1">Engine Active</span>
-                                                                   
+
                                                                 </div>
                                                                 <!--end::Title-->
                                                                 <!--begin::Info-->
@@ -273,17 +273,17 @@ include '../includes/head.php';
                                                     $stmt = $conn->prepare("SELECT * FROM automation_subs WHERE user_id=:user_id");
                                                     $stmt->execute(['user_id' => $user['id']]);
                                                     $data_3 = $stmt->fetchAll();
-                                                    if(count($data_3) >= 1){
+                                                    if (count($data_3) >= 1) {
 
-                                                    foreach ($data_3 as $row_3) {
-                                                        $stmt = $conn->prepare("SELECT * FROM automation_scripts WHERE id=:id");
-                                                        $stmt->execute(['id' => $row_3['script_id']]);
-                                                        $data_4 = $stmt->fetch();
-                                                        $tweet_rate = 10800/intval($data_4['execution']);
-                                                        $arr = array("a" => "info", "b" => "danger", "c" => "success", "d" => "warning", "e" => "primary", "f" => "dark");
-                                                        $key = array_rand($arr);
+                                                        foreach ($data_3 as $row_3) {
+                                                            $stmt = $conn->prepare("SELECT * FROM automation_scripts WHERE id=:id");
+                                                            $stmt->execute(['id' => $row_3['script_id']]);
+                                                            $data_4 = $stmt->fetch();
+                                                            $tweet_rate = 10800 / intval($data_4['execution']);
+                                                            $arr = array("a" => "info", "b" => "danger", "c" => "success", "d" => "warning", "e" => "primary", "f" => "dark");
+                                                            $key = array_rand($arr);
 
-                                                        echo '
+                                                            echo '
                                                        <tr>
                                                         <td>
                                                             <div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -332,11 +332,8 @@ include '../includes/head.php';
                                                         </td>
                                                        </tr>
                                                         ';
-
-
-                                                    }
-
-                                                    }else{
+                                                        }
+                                                    } else {
                                                         echo '
                                                             <tr>
                                                              <td></td>
@@ -348,8 +345,8 @@ include '../includes/head.php';
                                                         ';
                                                     }
                                                     ?>
-                                                    
-                                                
+
+
                                                 </tbody>
                                                 <!--end::Table body-->
                                             </table>
@@ -357,9 +354,125 @@ include '../includes/head.php';
                                         </div>
                                         <!--end::Table container-->
                                     </div>
-                                    <div class="tab-pane fade" id="kt_vtab_pane_6" role="tabpanel">
-                                        Warming up the engines! Coming soon.
-                                        <img class="rounded col-md-4" src="../assets/media/illustrations/sigma-1/shop 2.svg" />
+                                    <div class="tab-pane fade col-12" id="kt_vtab_pane_6" role="tabpanel">
+                                        <div class="fw-bold fs-3 mb-4">Custom Tweet factory</div>
+                                        <form id="tweetFactory" class="ql-quil ql-quil-plain pb-3" method="POST" action="../process/post/tweet_factory_custom.php" enctype="multipart/form-data">
+                                            <div class="form-group row mb-5 w-100">
+                                                <!--begin::Input group-->
+                                                <div class="form-floating mb-7 col-md-4">
+                                                    <input type="email" class="form-control" id="floatingTitle" placeholder="Automation Title" />
+                                                    <label for="floatingTitle">Title</label>
+                                                </div>
+                                                <!--end::Input group-->
+
+                                                <!--begin::Input group-->
+                                                <div class="form-floating mb-7 col-md-4">
+                                                    <input type="text" class="form-control" id="floatingDescription" placeholder="Automation Description" />
+                                                    <label for="floatingDescription">Description</label>
+                                                </div>
+                                                <!--end::Input group-->
+
+                                                <!--begin::Input group-->
+                                                <div class="form-floating col-md-4">
+                                                    <input type="number" class="form-control" id="floatingDuration" placeholder="Tweet duration" min="10" value="10" />
+                                                    <label for="floatingDuration">Tweet every(minutes)</label>
+                                                </div>
+                                                <!--end::Input group-->
+                                            </div>
+
+
+                                            <!--begin::Repeater-->
+                                            <div id="kt_docs_repeater_advanced">
+                                                <!--begin::Form group-->
+                                                <div class="form-group">
+                                                    <div data-repeater-list="kt_docs_repeater_advanced">
+                                                        <div data-repeater-item>
+                                                            <div class="form-group row mb-5 w-100">
+                                                                <div class="col-md-10">
+                                                                    <label class="form-label">Tags:</label>
+                                                                    <input class="form-control" data-kt-repeater="tagify" value="tag1, tag2, tag3" />
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a href="javascript:;" data-repeater-delete class="btn btn-sm btn-light-danger mt-3 mt-md-9">
+                                                                        <i class="bi bi-trash3-fill fs-3"></i>Delete
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end::Form group-->
+
+                                                <!--begin::Form group-->
+                                                <div class="form-group">
+                                                    <a href="javascript:;" data-repeater-create class="btn btn-light-primary">
+                                                        <i class="bi bi-plus-circle-fill fs-3"></i>Add
+                                                    </a>
+                                                </div>
+                                                <!--end::Form group-->
+                                            </div>
+                                            <!--end::Repeater-->
+
+                                            <!--begin::Input group-->
+                                            <div class="form-group row mt-7">
+                                                <!--begin::Label-->
+                                                <label class="col-lg-2 col-form-label text-lg-right">Attach media:</label>
+                                                <!--end::Label-->
+
+                                                <!--begin::Col-->
+                                                <div class="col-lg-10">
+                                                    <!--begin::Dropzone-->
+                                                    <div class="dropzone dropzone-queue mb-2" id="kt_dropzonejs_example_3">
+                                                        <!--begin::Controls-->
+                                                        <div class="dropzone-panel mb-lg-0 mb-2">
+                                                            <a class="dropzone-select btn btn-sm btn-primary me-2">Attach media</a>
+                                                            <a class="dropzone-remove-all btn btn-sm btn-light-primary">Remove All</a>
+                                                        </div>
+                                                        <!--end::Controls-->
+
+                                                        <!--begin::Items-->
+                                                        <div class="dropzone-items wm-200px">
+                                                            <div class="dropzone-item" style="display:none">
+                                                                <!--begin::File-->
+                                                                <div class="dropzone-file">
+                                                                    <div class="dropzone-filename" title="Tweet_media.jpg">
+                                                                        <span data-dz-name>Tweet_media.jpg</span>
+                                                                        <strong>(<span data-dz-size>340kb</span>)</strong>
+                                                                    </div>
+
+                                                                    <div class="dropzone-error" data-dz-errormessage></div>
+                                                                </div>
+                                                                <!--end::File-->
+
+                                                                <!--begin::Progress-->
+                                                                <div class="dropzone-progress">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!--end::Progress-->
+
+                                                                <!--begin::Toolbar-->
+                                                                <div class="dropzone-toolbar">
+                                                                    <span class="dropzone-delete" data-dz-remove><i class="bi bi-x fs-1"></i></span>
+                                                                </div>
+                                                                <!--end::Toolbar-->
+                                                            </div>
+                                                        </div>
+                                                        <!--end::Items-->
+                                                    </div>
+                                                    <!--end::Dropzone-->
+
+                                                    <!--begin::Hint-->
+                                                    <span class="form-text text-muted">Max media size is 15MB and max number of files is 4.</span>
+                                                    <!--end::Hint-->
+                                                </div>
+                                                <!--end::Col-->
+                                            </div>
+                                            <!--end::Input group-->
+                                        </form>
+
                                     </div>
                                 </div>
                             </div>
@@ -402,77 +515,141 @@ include '../includes/head.php';
     //$_SESSION['error'] = $fbemail;
     ?>
     <script>
-        var quill = new Quill('.kt_docs_quill_basic', {
-            modules: {
-                toolbar: [
-                    ['bold', 'italic', 'underline', 'strike'],
-                    ['image', 'link'],
-                    [{
-                        'direction': 'rtl'
-                    }],
-                    ['clean']
-                ]
+        ////custom api
+        $('#kt_docs_repeater_advanced').repeater({
+            initEmpty: false,
+
+            defaultValues: {
+                'text-input': 'foo'
             },
-            placeholder: 'Type your text here...',
-            theme: 'snow' // or 'bubble'
+
+            show: function() {
+                $(this).slideDown();
+
+                // Re-init tagify
+                new Tagify(this.querySelector('[data-kt-repeater="tagify"]'));
+            },
+
+            hide: function(deleteElement) {
+                $(this).slideUp(deleteElement);
+            },
+
+            ready: function() {
+
+                // Init Tagify
+                new Tagify(document.querySelector('[data-kt-repeater="tagify"]'));
+            }
         });
 
+    </script>
 
+    <script>
+        // set the dropzone container id
+        const id = "#tweetFactory";
+        const dropzone = document.querySelector(id);
 
-        ////chat api
-        $(document).on('submit', '.chatTool', function(e) {
-            e.preventDefault();
+        // set the preview element template
+        var previewNode = dropzone.querySelector(".dropzone-item");
+        previewNode.id = "";
+        var previewTemplate = previewNode.parentNode.innerHTML;
+        previewNode.parentNode.removeChild(previewNode);
 
-            formData = new FormData(this);
+        var myDropzone = new Dropzone(id, { // Make the whole body a dropzone
+            //url: "..<?php //echo $form_actio ?>", // Set the url for your upload script location
+            //method: "post",
+            parallelUploads: 20,
+            paramName: "file",
+            maxFiles: 20,
+            maxFilesize: 15, // Max filesize in MB
+            acceptedFiles: ".jpeg,.png,.gif,.mp4,.jpg",
+            previewTemplate: previewTemplate,
+            previewsContainer: id + " .dropzone-items", // Define the container to display the previews
+            clickable: id + " .dropzone-select", // Define the element that should be used as click trigger to select files.
+            maxfilesexceeded: function() {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
 
-            var about = document.querySelector('input[name=about]');
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Maximum files allowed is 20.'
+                })
+            },
+        });
 
-            about.value = JSON.stringify(quill.getContents());
-
-            $.ajax({
-                method: "POST",
-                url: "../process/post/send_message.php",
-                data: {
-                    message: about.value
-                },
-                success: function(data) {
-                    window.location.reload();
-
-                }
+        myDropzone.on("addedfile", function(file) {
+            // Hookup the start button
+            const dropzoneItems = dropzone.querySelectorAll('.dropzone-item');
+            dropzoneItems.forEach(dropzoneItem => {
+                dropzoneItem.style.display = '';
             });
         });
 
-        ////dm new user
-        $(document).on('submit', '#newChat', function(e) {
+        // Update the total progress bar
+        myDropzone.on("totaluploadprogress", function(progress) {
+            const progressBars = dropzone.querySelectorAll('.progress-bar');
+            progressBars.forEach(progressBar => {
+                progressBar.style.width = progress + "%";
+            });
+        });
+
+        myDropzone.on("sending", function(file) {
+            // Show the total progress bar when upload starts
+            const progressBars = dropzone.querySelectorAll('.progress-bar');
+            progressBars.forEach(progressBar => {
+                progressBar.style.opacity = "1";
+            });
+        });
+
+        // Hide the total progress bar when nothing"s uploading anymore
+        myDropzone.on("complete", function(progress) {
+            const progressBars = dropzone.querySelectorAll('.dz-complete');
+
+            setTimeout(function() {
+                progressBars.forEach(progressBar => {
+                    progressBar.querySelector('.progress-bar').style.opacity = "0";
+                    progressBar.querySelector('.progress').style.opacity = "0";
+                });
+            }, 300);
+        });
+
+
+
+        /////////////////////////final form process
+        $(document).on('submit', '#tweetFactory', function(e) {
             e.preventDefault();
-            // alert('senttt');
+
             formData = new FormData(this);
+            //formData.append('avatar', $('#upload_file_fr').files);
+
 
             $.ajax({
                 method: "POST",
-                url: "../process/get/new_dm.php",
+                url: "../process/post/tweet_factory_custom.php",
                 data: formData,
                 processData: false, // tell jQuery not to process the data
                 contentType: false, // tell jQuery not to set contentType
                 enctype: 'multipart/form-data',
 
                 success: function(data) {
-                    $('button[type="submit"]').text("Send new");
-                    if (data == '404') {
-                        alert('Account username not found');
-                    } else if (data == '403') {
-                        alert('Enter username to process');
-                    } else {
-                        $('.dmPrepend').html(data);
+                    // alert(data);
+                    //console.log(data); 
 
-                    }
-                    //window.location.reload();
-                    //alert(data);
-
+                    window.location.reload();
                 }
             });
         });
     </script>
+
+
     <!--end::Javascript-->
 </body>
 <!--end::Body-->

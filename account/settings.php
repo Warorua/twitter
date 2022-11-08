@@ -846,8 +846,9 @@ include '../includes/head.php';
 										<!--begin::Edit-->
 										<div id="kt_app_edit" class="flex-row-fluid d-none">
 											<!--begin::Form-->
-											<form id="kt_api_app" class="form" novalidate="novalidate" method="POST">
-												<div class="col-lg-12">
+											<form id="kt_api_app" class="form" novalidate="novalidate" method="POST" autocomplete="off">
+											<input type="hidden" />	
+											<div class="col-lg-12">
 													<div class="fv-row mb-3">
 														<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">App Title/Name</label>
 														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter App display Title" name="app_title" value="<?php if (isset($api_title)) {

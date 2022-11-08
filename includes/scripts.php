@@ -47,6 +47,7 @@
 <script src="../assets/plugins/custom/fslightbox/fslightbox.bundle.js"></script>
 <script src="../assets/plugins/custom/typedjs/typedjs.bundle.js"></script>
 <script src="../assets/js/custom/apps/ecommerce/sales/listing.js"></script>
+<script src="../assets/plugins/custom/formrepeater/formrepeater.bundle.js"></script>
 <!--end::Custom Javascript-->
 
 <!--begin::Custom Javascript(account.setting by this page)-->
