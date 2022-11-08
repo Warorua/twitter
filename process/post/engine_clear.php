@@ -31,13 +31,18 @@ foreach($data as $row){
     if($tim >= 24){
         $stmt = $conn->prepare("DELETE FROM engine_monitor WHERE id=:id");
         $stmt->execute(['id'=>$row['id']]);
+
+        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='Hostinger International Limited'");
+        $stmt->execute();
+
+
         echo 'Yes<br/>';
     }else{
         echo 'No<br/>';
     }
 /*
     if($row['command'] != ''){
-        echo $row['count'].' </br>';
+        echo $row['count'].' </br>';  DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='Hostinger International Limited'
     }*/
    
 }
