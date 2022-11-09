@@ -132,7 +132,7 @@ foreach ($data as $row) {
     $auth_user = $user['t_id'];
 
     engine_control($command, 1);
-    twitter_log($user['email'], '', $status, $mode, $user['id'], $auth_user, $output);
+    twitter_log($user['email'], 'EX', $status, $mode, $user['id'], $auth_user, $output);
 
     echo $output;
 

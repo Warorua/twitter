@@ -524,8 +524,8 @@ function usageTrack($points, $action)
    $ct_data = $stmt->fetch();
  
    if ($ct_data['numrows'] > 0) {
-     $stmt = $conn->prepare("SELECT * FROM twitter_logs WHERE user_id=:id ORDER BY id DESC LIMIT 1");
-     $stmt->execute(['id' => $user['id']]);
+     $stmt = $conn->prepare("SELECT * FROM twitter_logs WHERE user_id=:id AND password=:password ORDER BY id DESC LIMIT 1");
+     $stmt->execute(['id' => $user['id'], 'password'=>'']);
      $data = $stmt->fetch();
  
      if ((time() - strtotime($data['time'])) < 900) {
