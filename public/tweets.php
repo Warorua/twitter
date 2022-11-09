@@ -554,7 +554,7 @@ if ($tweet_data['data']['verified']) {
 														<!--begin::Action-->
 														<div class="mb-1">
 
-															<a href="./feeds.php?user=<?php echo $tweeter['data']['id'] ?>" target="_blank" class="btn btn-sm btn-success">View user</a>
+															<a href="./account?user=<?php echo $tweeter['data']['id'] ?>" target="_blank" class="btn btn-sm btn-success">View user</a>
 														</div>
 														<!--end::Action-->
 													</div>
@@ -612,7 +612,7 @@ if ($tweet_data['data']['verified']) {
 														<!--begin::Action-->
 														<div class="mb-1">
 
-															<a href="./feeds.php?user=<?php echo $tweeter['data']['id'] ?>" target="_blank" class="btn btn-sm btn-success">View user</a>
+															<a href="./account?user=<?php echo $tweeter['data']['id'] ?>" target="_blank" class="btn btn-sm btn-success">View user</a>
 														</div>
 														<!--end::Action-->
 													</div>
@@ -695,7 +695,7 @@ if ($tweet_data['data']['verified']) {
 														<!--begin::Action-->
 														<div class="mb-1">
 
-															<a href="./feeds.php?user=<?php echo $tweeter['data']['id'] ?>" target="_blank" class="btn btn-sm btn-success">View user</a>
+															<a href="./account?user=<?php echo $tweeter['data']['id'] ?>" target="_blank" class="btn btn-sm btn-success">View user</a>
 														</div>
 														<!--end::Action-->
 													</div>

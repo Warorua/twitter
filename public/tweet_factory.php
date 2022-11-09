@@ -408,7 +408,7 @@ include '../includes/head.php';
                                                     <!--end::Dropzone-->
 
                                                     <!--begin::Hint-->
-                                                    <span class="form-text text-muted">Max media size is 15MB and max number of files is 4.</span>
+                                                    <span class="form-text text-muted">Max media size is 15MB and max number of files is 20.</span>
                                                     <!--end::Hint-->
                                                 </div>
                                                 <!--end::Col-->
