@@ -33,7 +33,7 @@ if (!isset($_FILES['file']['name'])) {
         $c < count($data_b);
         $c++
       ) {
-        ${$i}[$c] = htmlspecialchars($data_b[$c]['value']);
+        ${$i}[$c] = addslashes($data_b[$c]['value']);
       }
       array_push($grammar, ${$i});
     }
