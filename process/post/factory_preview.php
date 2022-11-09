@@ -39,6 +39,10 @@ if (!isset($_FILES['file']['name'])) {
     }
   }
 
+  
+  $_SESSION['postTestData'] = $grammar;
+
+
   if (isset($grammar['media'])) {
     $data_size = count($grammar) - 1;
   } else {
