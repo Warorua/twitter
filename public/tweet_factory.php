@@ -268,83 +268,7 @@ include '../includes/head.php';
                                                 </thead>
                                                 <!--end::Table head-->
                                                 <!--begin::Table body-->
-                                                <tbody>
-                                                    <?php
-                                                    $stmt = $conn->prepare("SELECT * FROM automation_subs WHERE user_id=:user_id");
-                                                    $stmt->execute(['user_id' => $user['id']]);
-                                                    $data_3 = $stmt->fetchAll();
-                                                    if (count($data_3) >= 1) {
-
-                                                        foreach ($data_3 as $row_3) {
-                                                            $stmt = $conn->prepare("SELECT * FROM automation_scripts WHERE id=:id");
-                                                            $stmt->execute(['id' => $row_3['script_id']]);
-                                                            $data_4 = $stmt->fetch();
-                                                            $tweet_rate = 10800 / intval($data_4['execution']);
-                                                            $arr = array("a" => "info", "b" => "danger", "c" => "success", "d" => "warning", "e" => "primary", "f" => "dark");
-                                                            $key = array_rand($arr);
-
-                                                            echo '
-                                                       <tr>
-                                                        <td>
-                                                            <div class="form-check form-check-sm form-check-custom form-check-solid">
-                                                                <input class="form-check-input widget-9-check" type="checkbox" value="1" />
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="symbol symbol-45px me-5">
-                                                                    <img src="' . $data_4['logo'] . '" alt="" />
-                                                                </div>
-                                                                <div class="d-flex justify-content-start flex-column">
-                                                                    <a href="#" class="text-dark fw-bold text-hover-primary fs-6">' . $data_4['title'] . '</a>
-                                                                    <span class="text-muted fw-semibold text-muted d-block fs-7">' . $data_4['description'] . '</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <a href="#" class="text-dark fw-bold text-hover-primary d-block fs-6">' . ucfirst($data_4['category']) . '</a>
-                                                            <span class="text-muted fw-semibold text-muted d-block fs-7">By ' . $data_4['author'] . '</span>
-                                                        </td>
-                                                        <td class="text-end">
-                                                            <div class="d-flex flex-column w-100 me-2">
-                                                                <div class="d-flex flex-stack mb-2">
-                                                                    <span class="text-muted me-2 fs-7 fw-bold">' . $tweet_rate . '%</span>
-                                                                </div>
-                                                                <div class="progress h-6px w-100">
-                                                                    <div class="progress-bar bg-' . $arr[$key] . '" role="progressbar" style="width: ' . $tweet_rate . '%" aria-valuenow="' . $tweet_rate . '" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex justify-content-end flex-shrink-0">
-                                                                <a onclick="tweetFactoryDelete(' . $row_3['id'] . ')" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
-                                                                    <!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
-                                                                    <span class="svg-icon svg-icon-3">
-                                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                            <path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor" />
-                                                                            <path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor" />
-                                                                            <path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor" />
-                                                                        </svg>
-                                                                    </span>
-                                                                    <!--end::Svg Icon-->
-                                                                </a>
-                                                            </div>
-                                                        </td>
-                                                       </tr>
-                                                        ';
-                                                        }
-                                                    } else {
-                                                        echo '
-                                                            <tr>
-                                                             <td></td>
-                                                              <td></td>
-                                                              <td>You do not have active tweet automations</td>
-                                                              <td></td>
-                                                              <td></td>
-                                                            </tr>
-                                                        ';
-                                                    }
-                                                    ?>
+                                                <tbody id="activefactBody">
 
 
                                                 </tbody>
@@ -371,10 +295,26 @@ include '../includes/head.php';
                                                     <label for="floatingDescription">Description</label>
                                                 </div>
                                                 <!--end::Input group-->
+                                                <?php
+                                                $stmt = $conn->prepare("SELECT * FROM tweet_factory WHERE user_id=:user_id ORDER BY id ASC LIMIT 1");
+                                                $stmt->execute(['user_id' => $user['id']]);
+                                                $fact_cont = $stmt->fetch();
 
+                                                if (is_array($fact_cont)) {
+                                                    if (count($fact_cont) > 0) {
+                                                        $fact_cont_time = number_format(($fact_cont['execution'] / 60) + 10, 0);
+                                                    } else {
+                                                        $fact_cont_time = 10;
+                                                    }
+                                                } else {
+                                                    $fact_cont_time = 10;
+                                                }
+
+
+                                                ?>
                                                 <!--begin::Input group-->
                                                 <div class="form-floating col-md-4">
-                                                    <input type="number" class="form-control" id="floatingDuration" name="duration" placeholder="Tweet duration" min="10" value="10" />
+                                                    <input type="number" class="form-control" id="floatingDuration" name="duration" placeholder="Tweet duration" min="<?php echo $fact_cont_time ?>" value="<?php echo $fact_cont_time ?>" />
                                                     <label for="floatingDuration">Tweet every(minutes)</label>
                                                 </div>
                                                 <!--end::Input group-->
@@ -408,6 +348,9 @@ include '../includes/head.php';
                                                     <a href="javascript:;" data-repeater-create class="btn btn-light-primary">
                                                         <i class="bi bi-plus-circle-fill fs-3"></i>Add Grammar Rule
                                                     </a>
+                                                    <button type="submit" id="factoryPreview" class="btn btn-light-info mt-3">
+                                                        <i class="bi bi-binoculars-fill fs-3"></i>Preview Result
+                                                    </button>
                                                 </div>
                                                 <!--end::Form group-->
                                             </div>
@@ -471,7 +414,7 @@ include '../includes/head.php';
                                                 <!--end::Col-->
                                             </div>
                                             <!--end::Input group-->
-                                            <button type="submit" class="btn btn-primary mt-7">Create Automation</button>
+                                            <button type="submit" id="factorySubmit" class="btn btn-primary mt-7">Create Automation</button>
                                         </form>
 
                                     </div>
@@ -623,30 +566,80 @@ include '../includes/head.php';
 
 
 
+
+        $('#factorySubmit').on('click', function(e) {
+            btnCheck = 'submit';
+            return btnCheck;
+        });
+
+        $('#factoryPreview').on('click', function(e) {
+            btnCheck = 'preview';
+            return btnCheck;
+        });
+
+
         /////////////////////////final form process
         $(document).on('submit', '#tweetFactory', function(e) {
             e.preventDefault();
 
             formData = new FormData(this);
+            myForm = this;
             //formData.append('avatar', $('#upload_file_fr').files);
+            //  alert(e.type);
+            // alert(btnCheck);
+            if (btnCheck == 'submit') {
+                //*
+                $.ajax({
+                    method: "POST",
+                    url: "../process/post/tweet_factory_custom.php",
+                    data: formData,
+                    processData: false, // tell jQuery not to process the data
+                    contentType: false, // tell jQuery not to set contentType
+                    enctype: 'multipart/form-data',
+
+                    success: function(data) {
+                        // alert(data);
+                        //console.log(data); 
+
+                        window.location.reload();
+                    }
+                }); //*/
+            } else if (btnCheck == 'preview') {
+                $.ajax({
+                    method: "POST",
+                    url: "../process/post/factory_preview.php",
+                    data: formData,
+                    processData: false, // tell jQuery not to process the data
+                    contentType: false, // tell jQuery not to set contentType
+                    enctype: 'multipart/form-data',
+
+                    success: function(arr) {
+                        // var status;
+                        data = $.parseJSON(arr);
+
+                        Swal.fire(data[1], '', data[0]);
+                        $(myForm).children('button[type="submit"]').text("Create Automation");
+                    }
+                });
+            }
+
+        });
 
 
+        $(document).ready(activeIndustry());
+
+        function activeIndustry() {
+            //*
             $.ajax({
                 method: "POST",
-                url: "../process/post/tweet_factory_custom.php",
-                data: formData,
-                processData: false, // tell jQuery not to process the data
-                contentType: false, // tell jQuery not to set contentType
-                enctype: 'multipart/form-data',
-
+                url: "../process/get/active_factory.php",
                 success: function(data) {
-                    // alert(data);
-                    //console.log(data); 
 
-                    window.location.reload();
+                    $('#activefactBody').html(data);
+
                 }
-            });
-        });
+            }); //*/
+        }
     </script>
 
 

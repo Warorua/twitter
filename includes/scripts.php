@@ -620,6 +620,7 @@ $dm_perc = ($dm * 100) / 1000;
 						script: tt_id
 					},
 					success: function(data) {
+						activeIndustry();
 						var status;
 						if (data == 'success') {
 							status = 'Automation added successfully!';
@@ -643,8 +644,9 @@ $dm_perc = ($dm * 100) / 1000;
 	};
 
 	var ttt_id;
+	var ttt_rule;
 
-	function tweetFactoryDelete(ttt_id) {
+	function tweetFactoryDelete(ttt_id, ttt_rule) {
 
 		Swal.fire({
 			icon: 'question',
@@ -659,9 +661,11 @@ $dm_perc = ($dm * 100) / 1000;
 					url: "../process/post/tweet_automation_delete.php",
 					data: {
 						user: '<?php echo $user['id'] ?>',
-						id: ttt_id
+						id: ttt_id,
+						rule:ttt_rule
 					},
 					success: function(data) {
+						activeIndustry();
 						var status;
 						if (data == 'success') {
 							status = 'Automation deleted successfully!';
@@ -674,6 +678,8 @@ $dm_perc = ($dm * 100) / 1000;
 							data = 'error';
 						}
 						Swal.fire(status, '', data);
+
+
 					}
 				});
 

@@ -25,7 +25,7 @@ if ($user_metrics['data']['verified']) {
             <div class="d-flex flex-column">
                 <!--begin::Name-->
                 <div class="d-flex align-items-center mb-2">
-                    <a href="#" class="text-gray-900 text-hover-primary fs-2 fw-bold me-1"><?php echo $user['username'] ?></a>
+                    <a href="#" class="text-gray-900 text-hover-primary fs-2 fw-bold me-1"><?php echo $t_user->getUsername() ?></a>
                     <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $verif_info ?>">
                         <!--begin::Svg Icon | path: icons/duotune/general/gen026.svg-->
                         <span class="svg-icon svg-icon-1 <?php echo $verif_icon ?>">
