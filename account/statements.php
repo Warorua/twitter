@@ -82,7 +82,7 @@ include '../includes/head.php';
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
 									<li class="nav-item mt-2">
-										<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="statements">Statements</a>
+										<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="statements">Campaigns</a>
 									</li>
 									<!--end::Nav item-->
 									<!--begin::Nav item-->
