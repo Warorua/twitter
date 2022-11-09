@@ -95,7 +95,7 @@
 <script>
 	$(document).on('submit', 'form', function(e) {
 		$(this).children('button[type="submit"]').text("Processing...");
-		$(this).children('button[type="submit"]').text("Processing...");
+		$(this).children('button[type="submit"]').prepend('<span class="spinner-border spinner-border-sm" role="status"></span> ');
 	});
 
 	$('button[type="submit"]').click(function() {
