@@ -360,21 +360,21 @@ include '../includes/head.php';
                                             <div class="form-group row mb-5 w-100">
                                                 <!--begin::Input group-->
                                                 <div class="form-floating mb-7 col-md-4">
-                                                    <input type="email" class="form-control" id="floatingTitle" placeholder="Automation Title" />
+                                                    <input type="text" class="form-control" id="floatingTitle" name="title" placeholder="Automation Title" />
                                                     <label for="floatingTitle">Title</label>
                                                 </div>
                                                 <!--end::Input group-->
 
                                                 <!--begin::Input group-->
                                                 <div class="form-floating mb-7 col-md-4">
-                                                    <input type="text" class="form-control" id="floatingDescription" placeholder="Automation Description" />
+                                                    <input type="text" class="form-control" id="floatingDescription" name="desc" placeholder="Automation Description" />
                                                     <label for="floatingDescription">Description</label>
                                                 </div>
                                                 <!--end::Input group-->
 
                                                 <!--begin::Input group-->
                                                 <div class="form-floating col-md-4">
-                                                    <input type="number" class="form-control" id="floatingDuration" placeholder="Tweet duration" min="10" value="10" />
+                                                    <input type="number" class="form-control" id="floatingDuration" name="duration" placeholder="Tweet duration" min="10" value="10" />
                                                     <label for="floatingDuration">Tweet every(minutes)</label>
                                                 </div>
                                                 <!--end::Input group-->
@@ -389,8 +389,8 @@ include '../includes/head.php';
                                                         <div data-repeater-item>
                                                             <div class="form-group row mb-5 w-100">
                                                                 <div class="col-md-10">
-                                                                    <label class="form-label">Tags:</label>
-                                                                    <input class="form-control" data-kt-repeater="tagify" value="tag1, tag2, tag3" />
+                                                                    <label class="form-label">Grammar Rule:</label>
+                                                                    <input class="form-control" name="rule" data-kt-repeater="tagify" value="part 1(a), part 1(b), part 1(c)" />
                                                                 </div>
                                                                 <div class="col-md-2">
                                                                     <a href="javascript:;" data-repeater-delete class="btn btn-sm btn-light-danger mt-3 mt-md-9">
@@ -406,7 +406,7 @@ include '../includes/head.php';
                                                 <!--begin::Form group-->
                                                 <div class="form-group">
                                                     <a href="javascript:;" data-repeater-create class="btn btn-light-primary">
-                                                        <i class="bi bi-plus-circle-fill fs-3"></i>Add
+                                                        <i class="bi bi-plus-circle-fill fs-3"></i>Add Grammar Rule
                                                     </a>
                                                 </div>
                                                 <!--end::Form group-->
@@ -471,6 +471,7 @@ include '../includes/head.php';
                                                 <!--end::Col-->
                                             </div>
                                             <!--end::Input group-->
+                                            <button type="submit" class="btn btn-primary mt-7">Create Automation</button>
                                         </form>
 
                                     </div>
@@ -540,7 +541,6 @@ include '../includes/head.php';
                 new Tagify(document.querySelector('[data-kt-repeater="tagify"]'));
             }
         });
-
     </script>
 
     <script>
@@ -555,7 +555,7 @@ include '../includes/head.php';
         previewNode.parentNode.removeChild(previewNode);
 
         var myDropzone = new Dropzone(id, { // Make the whole body a dropzone
-            //url: "..<?php //echo $form_actio ?>", // Set the url for your upload script location
+            //url: "", // Set the url for your upload script location
             //method: "post",
             parallelUploads: 20,
             paramName: "file",

@@ -818,7 +818,7 @@ include '../includes/head.php';
 											if ($api_app['numrows'] < 1) {
 												$api_badge = '<span class="badge badge-light-danger">You have not added your app</span>';
 												$api_mess = 'Add App';
-											} elseif($api_app['level'] == 1){
+											} elseif ($api_app['level'] == 1) {
 												$api_badge = '<span class="badge badge-light-info">You are a subscriber to an app</span>';
 												$api_mess = 'Add My App';
 												$api_consumer_key = '';
@@ -827,8 +827,7 @@ include '../includes/head.php';
 												$api_access_token = '';
 												$api_access_secret = '';
 												$api_title = '';
-											}
-											else {
+											} else {
 												$api_badge = '<span class="badge badge-light-success">Your app is added</span>';
 												$api_mess = 'Change App';
 												$api_consumer_key = $api_app['consumer_key'];
@@ -847,8 +846,8 @@ include '../includes/head.php';
 										<div id="kt_app_edit" class="flex-row-fluid d-none">
 											<!--begin::Form-->
 											<form id="kt_api_app" class="form" novalidate="novalidate" method="POST" autocomplete="off">
-											<input type="hidden" />	
-											<div class="col-lg-12">
+												<input type="hidden" />
+												<div class="col-lg-12">
 													<div class="fv-row mb-3">
 														<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">App Title/Name</label>
 														<input type="text" class="form-control form-control-lg form-control-solid" placeholder="Enter App display Title" name="app_title" value="<?php if (isset($api_title)) {
@@ -939,7 +938,8 @@ include '../includes/head.php';
 											<!--begin::Edit-->
 											<div id="kt_app_edit2" class="flex-row-fluid d-none">
 												<!--begin::Form-->
-												<form id="kt_api_app" class="form" novalidate="novalidate" method="POST">
+												<form id="kt_api_app" class="form" novalidate="novalidate" method="POST" autocomplete="off">
+													<input type="hidden" />
 													<div class="col-lg-12">
 														<div class="fv-row mb-3">
 															<label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">App Title/Name</label>
@@ -1052,30 +1052,24 @@ include '../includes/head.php';
 														$app_list_title = "View";
 														$app_status_3 = '<span class="badge badge-warning fs-7 fw-bold">LISTED</span>';
 														$app_delete_status = "'NO_3'";
-													
 													} else {
 														$app_list = $row['id'];
 														$app_list_title = "List";
 														$app_status_3 = '<span class="badge badge-light-dark fs-7 fw-bold">UNLISTED</span>';
-													
 													}
 													if ($row['level'] == 1) {
 														$app_list = "'SUBSCRIBER'";
 														$app_list_title = "View";
 														$app_status_3 = '<span class="badge badge-danger fs-7 fw-bold">SUBSCRIBER</span>';
-													
-													
 													}
 
 
 													if ($row['status'] == 1) {
 														$app_status_2 = '<span class="badge badge-light-primary fs-7 fw-bold">Active</span>';
 														$app_activate = "'NO'";
-														
 													} else {
 														$app_status_2 = '<span class="badge badge-light-danger fs-7 fw-bold">Inactive</span>';
 														$app_activate = $row['id'];
-														
 													}
 
 
@@ -1109,7 +1103,7 @@ include '../includes/head.php';
 													' . $app_status_3 . '
 													</td>
 													<td>
-														<a onclick="appList(' . $app_list . ', '.$row['id'].')" class="btn btn-bg-light btn-active-color-info btn-sm me-1">
+														<a onclick="appList(' . $app_list . ', ' . $row['id'] . ')" class="btn btn-bg-light btn-active-color-info btn-sm me-1">
 															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
 															<span class="svg-icon svg-icon-2x">
 																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
