@@ -111,17 +111,19 @@ include '../includes/head.php';
 									<!--begin::Col-->
 									<div class="col-xl-6 mb-15 mb-xl-0 pe-5">
 										<h4 class="mb-0">How to use Referral Program</h4>
-										<p class="fs-6 fw-semibold text-gray-600 py-4 m-0">Use images to enhance your post, improve its flow, add humor
-											<br />and explain complex topics
+										<p class="fs-6 fw-semibold text-gray-600 py-4 m-0">Copy your referal link and send it to unregistered users
+											<br />so that they can sign up.
 										</p>
-										<a href="#" class="btn btn-light btn-active-light-primary fw-bold">Get Started</a>
+										<p class="fs-6 fw-semibold text-gray-600 py-4 m-0">Every successful registration through your link will garner
+											<br />you PTS.100 which will be added to your referral wallet.
+										</p>
 									</div>
 									<!--end::Col-->
 									<!--begin::Col-->
 									<div class="col-xl-6">
 										<h4 class="text-gray-800 mb-0">Your Referral Link</h4>
-										<p class="fs-6 fw-semibold text-gray-600 py-4 m-0">Plan your blog post by choosing a topic, creating an outline conduct
-											<br />research, and checking facts
+										<p class="fs-6 fw-semibold text-gray-600 py-4 m-0">Share your referral code with friends and people close to you to
+											<br />earn referral points.
 										</p>
 										<div class="d-flex">
 											<input id="kt_referral_link_input" type="text" class="form-control form-control-solid me-3 flex-grow-1" name="search" value="<?php echo $parent_url ?>/v3/refer?refid=<?php echo $user['referer_code'] ?>" />
@@ -179,7 +181,7 @@ include '../includes/head.php';
 								</div>
 								<!--end::Stats-->
 								<!--begin::Info-->
-								<p class="fs-5 fw-semibold text-gray-600 py-6">Writing headlines for blog posts is as much an art as it is a science, and probably warrants its own post, but for now, all I’d advise is experimenting with what works for your audience, especially if it’s not resonating with your audience</p>
+								<p class="fs-5 fw-semibold text-gray-600 py-6">Use the various point earning means provided in this platform to earn extra points which you can later convert to KSH money or refill them to your KOTNOVA points wallet. List your app for sale or refer new users to the platform to earn points.</p>
 								<!--end::Info-->
 								<!--begin::Notice-->
 								<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed p-6">
@@ -197,12 +199,12 @@ include '../includes/head.php';
 									<div class="d-flex flex-stack flex-grow-1 flex-wrap flex-md-nowrap">
 										<!--begin::Content-->
 										<div class="mb-3 mb-md-0 fw-semibold">
-											<h4 class="text-gray-900 fw-bold">Withdraw Your Money to a Bank Account</h4>
-											<div class="fs-6 text-gray-700 pe-7">Withdraw money securily to your bank account. Commision is PTS.25 per transaction under PTS.5,000</div>
+											<h4 class="text-gray-900 fw-bold">Convert Your Points to KSH</h4>
+											<div class="fs-6 text-gray-700 pe-7">Convert your points securily to your KSH. Commision is PTS.100 for every PTS.1,000</div>
 										</div>
 										<!--end::Content-->
 										<!--begin::Action-->
-										<a href="#" class="btn btn-primary px-6 align-self-center text-nowrap">Withdraw Money</a>
+										<a href="#" class="btn btn-primary px-6 align-self-center text-nowrap">Convert Points</a>
 										<!--end::Action-->
 									</div>
 									<!--end::Wrapper-->
