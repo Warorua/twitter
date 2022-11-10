@@ -119,29 +119,45 @@ if($row['numrows'] > 0){
         redirect($parent_url.'/v2/new');
     }
 }
-////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////
 
-  //insert data into db
-$stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM users WHERE t_id=:t_id");
-$stmt->execute(['t_id'=>$t_id]);
-$row = $stmt->fetch();
-if($row['numrows'] > 0){
-     $_SESSION['error'] = 'User already registered. Login instead.';
-          unset($_SESSION['access_token']);
-     redirect($parent_url.'/v2/new');
+    //insert data into db
+    $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM users WHERE t_id=:t_id");
+    $stmt->execute(['t_id' => $t_id]);
+    $row = $stmt->fetch();
+    if ($row['numrows'] > 0) {
+        $_SESSION['error'] = 'User already registered. Login instead.';
+        unset($_SESSION['access_token']);
+        redirect($parent_url . '/v2/new');
+    } elseif ($suspension == TRUE) {
+        $_SESSION['error'] = 'This account has been banned and cannot be used!';
+        unset($_SESSION['access_token']);
+        redirect($parent_url . '/v2/new');
+    } else {
 
-}elseif($suspension == TRUE){
-$_SESSION['error'] = 'This account has been banned and cannot be used!';
-    unset($_SESSION['access_token']);
-redirect($parent_url.'/v2/new');
-}else{
-    $stmt = $conn->prepare("INSERT INTO users (username, address, verified, source, email, firstname, lastname, photo, t_id, status, type, created_on, p_value) VALUES (:username, :address, :verified, :source, :email, :firstname, :lastname, :photo, :t_id, :status, :type, :created_on, :p_value)");
-  $stmt->execute(['username'=>$username, 'address'=>$address, 'verified'=>$verified, 'source'=>$source, 'email'=>$email, 'firstname'=>$firstname, 'lastname'=>$lastname, 'photo'=>$photo, 't_id'=>$t_id, 'status'=>$status, 'type'=>$type, 'created_on'=>$create_on, 'p_value'=>500]);
- $_SESSION['user_id'] = $conn->lastInsertId();
- $_SESSION['success'] =  'Welcome! Registration successful.';
+        if (isset($_SESSION['refererId'])) {
+            $referer_id = $_SESSION['refererId'];
 
- redirect('../account/user');
+            $stmt = $conn->prepare("SELECT * FROM user_earnings WHERE user_id=:user_id");
+            $stmt->execute(['user_id' => $referer_id]);
+            $ref_dt = $stmt->fetch();
 
-}
+            $refer_pts = (int)$ref_dt['refer'] + 100;
+
+            $stmt = $conn->prepare("UPDATE user_earnings SET refer=:refer WHERE user_id=:user_id");
+            $stmt->execute(['user_id' => $referer_id, 'refer' => $refer_pts]);
+        } else {
+            $referer_id = '';
+        }
+
+
+
+        $stmt = $conn->prepare("INSERT INTO users (username, address, verified, source, email, firstname, lastname, photo, t_id, status, type, created_on, p_value, referer_id) VALUES (:username, :address, :verified, :source, :email, :firstname, :lastname, :photo, :t_id, :status, :type, :created_on, :p_value, :referer_id)");
+        $stmt->execute(['username' => $username, 'address' => $address, 'verified' => $verified, 'source' => $source, 'email' => $email, 'firstname' => $firstname, 'lastname' => $lastname, 'photo' => $photo, 't_id' => $t_id, 'status' => $status, 'type' => $type, 'created_on' => $create_on, 'p_value' => 500, 'referer_id'=>$referer_id]);
+        $_SESSION['user_id'] = $conn->lastInsertId();
+        $_SESSION['success'] =  'Welcome! Registration successful.';
+
+        redirect('../account/user');
+    }
 }
 ?>

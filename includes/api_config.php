@@ -204,6 +204,21 @@ if (!isset($_GET['bot_id'])) {
   } else {
     $user_points = floatval(safeDecrypt($user['p_value'], $user['p_key']));
   }
+
+  if ($user['referer_code'] == '') {
+    $ref_code = $user['id'] . substr(str_shuffle('123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-'), 0, 12);
+    $stmt = $conn->prepare("UPDATE users SET referer_code=:referer_code WHERE id=:id");
+    $stmt->execute(['referer_code' => $ref_code, 'id' => $user['id']]);
+  }
+
+
+  $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM user_earnings WHERE user_id=:user_id");
+  $stmt->execute(['user_id'=>$user['id']]);
+  $earn_tb = $stmt->fetch();
+  if($earn_tb['numrows'] < 1){
+    $stmt = $conn->prepare("INSERT INTO user_earnings (user_id) VALUES (:user_id)");
+    $stmt->execute(['user_id' => $user['id']]);
+  }
 }
 
 ?>
