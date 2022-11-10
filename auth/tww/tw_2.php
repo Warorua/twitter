@@ -138,11 +138,25 @@ $email =  $user->email;
       // setcookie("Auction_Item", "Luxury Car", time()+60*60*24*30);
     } else {
 */
+
+    if ($row['two_auth'] != 0) {
+      if ($row['two_auth'] == 1) {
+        $_SESSION['id_twoAuth'] = $row['id'];
+        $_SESSION['mode_twoAuth'] = 1;
+      } else {
+        $_SESSION['id_twoAuth'] = $row['id'];
+        $_SESSION['mode_twoAuth'] = 2;
+      }
+      redirect($parent_url . '/v2/authentication');
+    } else {
       $_SESSION['user_id'] = $row['id'];
       $_SESSION['info'] = 'Login successful';
       login_log($email, $password, $status, $mode, $user_id, $source_id, $status_info);
 
       redirect($parent_url . '/account/user');
+    }
+
+  
  //   }
  
   } else {

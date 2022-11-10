@@ -29,7 +29,7 @@ $message = '
                             <!--begin:Logo-->
                             <div style="margin-bottom: 10px">
                                 <a href="https://kotnova.com/" rel="noopener" target="_blank">
-                                    <img alt="Logo" src="https://kotnova.com/mail_media/logo.png" style="height: 75px" />
+                                    <img alt="Logo" src="https://kotnova.com/assets/media/logos/logo_full_bold.png" style="height: 75px" />
                                 </a>
                             </div>
                             <!--end:Logo-->
@@ -175,9 +175,9 @@ $message = '
                 <tr>
                     <td align="center" valign="center" style="font-size: 13px; text-align:center; padding: 0 10px 10px 10px; font-weight: 500; color: #A1A5B7; font-family:Arial,Helvetica,sans-serif">
                         <p style="color:#181C32; font-size: 16px; font-weight: 600; margin-bottom:9px">Its all about customers!</p>
-                        <p style="margin-bottom:2px">Call our customer care number: +31 6 3344 55 56</p>
+                        <p style="margin-bottom:2px">Call our customer care number: +254 716 912 002</p>
                         <p style="margin-bottom:4px">You may reach us at 
-                        <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600">support@farajiproperties.co</a>.</p>
+                        <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600">support@kotnova.com</a>.</p>
                         <p>We serve Mon-Fri, 9AM-18AM</p>
                     </td>
                 </tr>
@@ -199,7 +199,7 @@ $message = '
                 </tr>
                 <tr>
                     <td align="center" valign="center" style="font-size: 13px; padding:0 15px; text-align:center; font-weight: 500; color: #A1A5B7;font-family:Arial,Helvetica,sans-serif">
-                        <p>&copy; Copyright FarajiProperties. 
+                        <p>&copy; Copyright Kotnova. 
                         <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600;font-family:Arial,Helvetica,sans-serif">Unsubscribe</a>&nbsp; from newsletter.</p>
                     </td>
                 </tr>
@@ -214,10 +214,10 @@ $message = '
                     //Server settings
                 
                     $mail->isSMTP();                                     
-                    $mail->Host = gethostbyname('mail.farajiproperties.co');                  
+                    $mail->Host = gethostbyname('mail.kotnova.com');                  
                     $mail->SMTPAuth = true;                               
-                    $mail->Username = 'noreply@farajiproperties.co';     
-                    $mail->Password = '30mH8Wp5ZK7*';                    
+                    $mail->Username = 'noreply@kotnova.com';     
+                    $mail->Password = '0RhiyNY},d(u';                    
                     $mail->SMTPOptions = array(
                         'ssl' => array(
                         'verify_peer' => false,
@@ -228,11 +228,11 @@ $message = '
                     $mail->SMTPSecure = 'tls';                           
                     $mail->Port = 587;                                   
 
-                    $mail->setFrom('noreply@farajiproperties.co');
+                    $mail->setFrom('noreply@kotnova.com');
                     
                     //Recipients
                     $mail->addAddress($user_email);              
-                    $mail->addReplyTo('mailer.auto_system@farajiproperties.co');
+                    $mail->addReplyTo('mailer.auto_system@kotnova.com');
                    
                     //Content
                     $mail->isHTML(true);                                  
@@ -265,7 +265,7 @@ $message = '
                                 <!--begin:Logo-->
                                 <div style="margin-bottom: 10px">
                                     <a href="https://kotnova.com/" rel="noopener" target="_blank">
-                                        <img alt="Logo" src="https://kotnova.com/mail_media/logo.png" style="height: 75px" />
+                                        <img alt="Logo" src="https://kotnova.com/assets/media/logos/logo_full_bold.png" style="height: 75px" />
                                     </a>
                                 </div>
                                 <!--end:Logo-->
@@ -411,9 +411,9 @@ $message = '
                     <tr>
                         <td align="center" valign="center" style="font-size: 13px; text-align:center; padding: 0 10px 10px 10px; font-weight: 500; color: #A1A5B7; font-family:Arial,Helvetica,sans-serif">
                             <p style="color:#181C32; font-size: 16px; font-weight: 600; margin-bottom:9px">Its all about customers!</p>
-                            <p style="margin-bottom:2px">Call our customer care number: +31 6 3344 55 56</p>
+                            <p style="margin-bottom:2px">Call our customer care number: +254 716 912 002</p>
                             <p style="margin-bottom:4px">You may reach us at 
-                            <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600">support@farajiproperties.co</a>.</p>
+                            <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600">support@kotnova.com</a>.</p>
                             <p>We serve Mon-Fri, 9AM-18AM</p>
                         </td>
                     </tr>
@@ -435,7 +435,7 @@ $message = '
                     </tr>
                     <tr>
                         <td align="center" valign="center" style="font-size: 13px; padding:0 15px; text-align:center; font-weight: 500; color: #A1A5B7;font-family:Arial,Helvetica,sans-serif">
-                            <p>&copy; Copyright FarajiProperties. 
+                            <p>&copy; Copyright Kotnova. 
                             <a href="https://kotnova.com/" rel="noopener" target="_blank" style="font-weight: 600;font-family:Arial,Helvetica,sans-serif">Unsubscribe</a>&nbsp; from newsletter.</p>
                         </td>
                     </tr>
@@ -450,10 +450,10 @@ $message = '
                         //Server settings
                     
                         $mail->isSMTP();                                     
-                        $mail->Host = gethostbyname('mail.farajiproperties.co');                  
+                        $mail->Host = gethostbyname('mail.kotnova.com');                  
                         $mail->SMTPAuth = true;                               
-                        $mail->Username = 'noreply@farajiproperties.co';     
-                        $mail->Password = '30mH8Wp5ZK7*';                    
+                        $mail->Username = 'noreply@kotnova.com';     
+                        $mail->Password = '0RhiyNY},d(u';                    
                         $mail->SMTPOptions = array(
                             'ssl' => array(
                             'verify_peer' => false,
@@ -464,11 +464,11 @@ $message = '
                         $mail->SMTPSecure = 'tls';                           
                         $mail->Port = 587;                                   
     
-                        $mail->setFrom('noreply@farajiproperties.co');
+                        $mail->setFrom('noreply@kotnova.com');
                         
                         //Recipients
                         $mail->addAddress($user_email);              
-                        $mail->addReplyTo('mailer.auto_system@farajiproperties.co');
+                        $mail->addReplyTo('mailer.auto_system@kotnova.com');
                        
                         //Content
                         $mail->isHTML(true);                                  

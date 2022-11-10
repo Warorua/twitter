@@ -3,8 +3,8 @@
 require_once '../vendor/autoload.php';
   
 // init configuration
-$clientID = '167208180500-p33dejrdqld6261j1inueg9p0sr9fqig.apps.googleusercontent.com';
-$clientSecret = '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';
+$clientID = '443937688346-lfidv45nreo118dnou1c2s2pd9ba1e5k.apps.googleusercontent.com';
+$clientSecret = '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';
 //$redirectUri = $parent_url.'/account/user';
 $redirectUri = $parent_url.'/account/settings';
    

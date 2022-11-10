@@ -18,7 +18,8 @@ if(isset($_POST['twoAuth'])){
     $code_6 = $_POST['code_6'];
     if($code_1 == '' || $code_2 == '' || $code_3 == '' || $code_4 == '' || $code_5 == '' || $code_6 == ''){
         $_SESSION['error'] = '6 digit code incomplete.';
-        header('location: ./login');
+        header('location: '.$parent_url.'/v2/login');
+    unset($_SESSION['access_token']);
         die();
     }
     $code = $code_1.$code_2.$code_3.$code_4.$code_5.$code_6;
@@ -31,30 +32,32 @@ if(isset($_POST['twoAuth'])){
 $totp = PedroSancao\OTP\TOTP::createRaw($row['two_auth_secret']);
 if($totp->verify($code)){
     $_SESSION['user_id'] = $row['id'];
-    $_SESSION['info'] = $row['email'];
-    header('location: https://kotnova.com/account/user');
+    $_SESSION['info'] = "Authentication & login successful. ";
+    header('location: '.$parent_url.'/account/user');
 }else{
     $_SESSION['error'] = 'Code invalid!';
-    header('location: ./login');
+    header('location: '.$parent_url.'/v2/login');
+    unset($_SESSION['access_token']);
 }
     }elseif($_SESSION['mode_twoAuth'] == 2){
 if($_SESSION['mail_authCode'] == $code){
     $_SESSION['user_id'] = $row['id'];
-    $_SESSION['info'] = $row['email'];
-    header('location: https://kotnova.com/account/user');
+    $_SESSION['info'] = "Authentication & login successful. ";
+    header('location: '.$parent_url.'/account/user');
 }else{
     $_SESSION['error'] = 'Code invalid or expired!';
-    header('location: ./login');
+    header('location: '.$parent_url.'/v2/login');
+    unset($_SESSION['access_token']);
 }
     }else{
     $_SESSION['error'] = 'Session expired!';
-    header('location: ./login');
+    header('location: '.$parent_url.'/v2/login');
+    unset($_SESSION['access_token']);
     }
 
 
 }else{
     $_SESSION['error'] = 'Unauthorized request!';
-    header('location: ./login');
+    header('location: '.$parent_url.'/v2/login');
+    unset($_SESSION['access_token']);
 }
-
-?>

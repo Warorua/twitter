@@ -45,6 +45,8 @@ RewriteRule ^v2/login auth/sign-in.php [NC,L]
 RewriteRule ^v2/new auth/sign-up.php [NC,L]
 RewriteRule ^v2/password auth/reset-password.php [NC,L]
 RewriteRule ^v2/overheat error/overheat.php [NC,L]
+RewriteRule ^v2/authentication auth/two-steps.php [NC,L]
+RewriteRule ^v2/authenticationP auth/two_auth_process.php [NC,L]
 
 RewriteRule ^v3/account public/feeds.php [NC,L]
 RewriteRule ^v3/tweets public/tweets.php [NC,L]

@@ -41,20 +41,20 @@
 
 							//twoAuth($row['id'], $row['two_auth'], $row['two_auth_secret']);
 
-							if($row['two_auth'] != 0){
-								if($row['two_auth'] == 1){
-								 $_SESSION['id_twoAuth'] = $row['id'];
-								 $_SESSION['mode_twoAuth'] = 1;
-								}else{
-								 $_SESSION['id_twoAuth'] = $row['id'];
-								 $_SESSION['mode_twoAuth'] = 2;
+							if ($row['two_auth'] != 0) {
+								if ($row['two_auth'] == 1) {
+									$_SESSION['id_twoAuth'] = $row['id'];
+									$_SESSION['mode_twoAuth'] = 1;
+								} else {
+									$_SESSION['id_twoAuth'] = $row['id'];
+									$_SESSION['mode_twoAuth'] = 2;
 								}
 								header('location: ./two-steps.php');
-							 }else{
+							} else {
 								$_SESSION['user_id'] = $row['id'];
-							$_SESSION['info'] = $row['email'];
+								$_SESSION['info'] = $row['email'];
 								header('location: https://kotnova.com/account/user');
-							 }
+							}
 
 							
 							die();
