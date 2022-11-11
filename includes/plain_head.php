@@ -6,6 +6,14 @@ include '../includes/conn.php';
 <head>
 	<title>Kotnova</title>
 	<meta charset="utf-8" />
+	<meta data-n-head="ssr" charset="utf-8" />
+    <meta data-n-head="ssr" name="msapplication-TileColor" content="#ff5f6d" />
+    <meta data-n-head="ssr" name="theme-color" content="#ff5f6d" />
+    <meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1" />
+    <meta data-n-head="ssr" name="robots" content="index, follow" />
+    <meta data-n-head="ssr" data-hid="charset" charset="utf-8" />
+    <meta data-n-head="ssr" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes" />
+    <meta data-n-head="ssr" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="Kotnova" />
 	<meta name="description" content="Grow and manage your Twitter account. Let us give you content for your Twitter account. Mass like tweets and replies. Mass delete old tweets from your account. Mass follow accounts on Twitter. Get to use a source label of your choice." />
 	<meta name="keywords" content="Twitter, gain followers, twitter grow, likes, follows, tweets, auto-follow, auto-reply, twitter manage, follow for follow, KOT, Kenyans on twitter, Kenyan twitter" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +26,7 @@ include '../includes/conn.php';
 	<meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" content="Grow and manage your Twitter account.">
 	<meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://kotnova.com/assets/media/logos/icon_b.png">
 	<meta data-n-head="ssr" data-hid="twitter:card" name="twitter:card" content="summary_large_image">
-	<meta data-n-head="ssr" data-hid="twitter:url" name="twitter:url" content="https://kotnova.com" />
+	<meta data-n-head="ssr" data-hid="twitter:url" name="twitter:url" content="https://www.kotnova.com" />
 	<meta data-n-head="ssr" data-hid="twitter:site" name="twitter:site" content="@Kotnovaa" />
 	<link rel="canonical" href="https://kotnova.com/" />
 	<link rel="shortcut icon" href="../assets/media/logos/icon_b.png" />
