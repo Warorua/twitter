@@ -16,16 +16,16 @@ include 'includes/conn.php';
     <meta data-n-head="ssr" data-hid="charset" charset="utf-8" />
     <meta data-n-head="ssr" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes" />
     <meta data-n-head="ssr" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="Kotnova" />
-	<meta name="description" content="Grow and manage your Twitter account. Let us give you content for your Twitter account. Mass like tweets and replies. Mass delete old tweets from your account. Mass follow accounts on Twitter. Get to use a source label of your choice." />
+	<meta name="description" content="Kotnova - Grow and manage your Twitter account with the Kotnova Twitter Artificial Intelligence Let us give you content for your Twitter account. Mass like tweets and replies. Mass delete old tweets from your account. Mass follow accounts on Twitter. Get to use a source label of your choice." />
 	<meta name="keywords" content="Twitter, gain followers, twitter grow, likes, follows, tweets, auto-follow, auto-reply, twitter manage, follow for follow, KOT, Kenyans on twitter, Kenyan twitter" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Grow and manage your Twitter account." />
+	<meta property="og:title" content="Kotnova - Grow and manage your Twitter account with the Kotnova Twitter Artificial Intelligence" />
 	<meta property="og:url" content="https://kotnova.com/" />
 	<meta property="og:site_name" content="Kotnova" />
 	<meta  data-n-head="ssr" data-hid="twitter:title" name="twitter:title" content="The Twitter Manager and Growth Expert">
-	<meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" content="Grow and manage your Twitter account.">
+	<meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" content="Kotnova - Grow and manage your Twitter account with the Kotnova Twitter Artificial Intelligence">
 	<meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://kotnova.com/assets/media/logos/icon_b.png">
 	<meta data-n-head="ssr" data-hid="twitter:card" name="twitter:card" content="summary_large_image">
 	<meta data-n-head="ssr" data-hid="twitter:url" name="twitter:url" content="https://www.kotnova.com" />

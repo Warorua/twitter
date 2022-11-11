@@ -22,11 +22,11 @@ include '../includes/api_config.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Grow and manage your Twitter account." />
+	<meta property="og:title" content="Kotnova - Grow and manage your Twitter account with the Kotnova Twitter Artificial Intelligence" />
 	<meta property="og:url" content="https://kotnova.com/" />
 	<meta property="og:site_name" content="Kotnova" />
 	<meta  data-n-head="ssr" data-hid="twitter:title" name="twitter:title" content="The Twitter Manager and Growth Expert">
-	<meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" content="Grow and manage your Twitter account.">
+	<meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" content="Kotnova - Grow and manage your Twitter account with the Kotnova Twitter Artificial Intelligence">
 	<meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://kotnova.com/assets/media/logos/icon_b.png">
 	<meta data-n-head="ssr" data-hid="twitter:card" name="twitter:card" content="summary_large_image">
 	<meta data-n-head="ssr" data-hid="twitter:url" name="twitter:url" content="https://www.kotnova.com" />
