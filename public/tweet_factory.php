@@ -408,7 +408,7 @@ include '../includes/head.php';
                                                     <!--end::Dropzone-->
 
                                                     <!--begin::Hint-->
-                                                    <span class="form-text text-muted">Max media size is 15MB and max number of files is 20.</span>
+                                                    <span class="form-text text-muted">Max media size is 15MB and max number of files is 50.</span>
                                                     <!--end::Hint-->
                                                 </div>
                                                 <!--end::Col-->
@@ -500,9 +500,9 @@ include '../includes/head.php';
         var myDropzone = new Dropzone(id, { // Make the whole body a dropzone
             //url: "", // Set the url for your upload script location
             //method: "post",
-            parallelUploads: 20,
+            parallelUploads: 50,
             paramName: "file",
-            maxFiles: 20,
+            maxFiles: 50,
             maxFilesize: 15, // Max filesize in MB
             acceptedFiles: ".jpeg,.png,.gif,.mp4,.jpg",
             previewTemplate: previewTemplate,
