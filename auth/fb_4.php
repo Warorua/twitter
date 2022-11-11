@@ -3,7 +3,7 @@ include '../includes/conn.php';
 
 
 require '../vendor/autoload.php';
-
+$output = '';
 function redirect($url){
     if (!headers_sent())
     {    
@@ -38,30 +38,30 @@ $fb = new Facebook\Facebook([
     $accessToken = $helper->getAccessToken();
   } catch(Facebook\Exception\ResponseException $e) {
     // When Graph returns an error
-    echo 'Graph returned an error: ' . $e->getMessage();
-    exit;
+    $output .= 'Graph returned an error: ' . $e->getMessage();
+    //exit;
   } catch(Facebook\Exception\SDKException $e) {
     // When validation fails or other local issues
-    echo 'Facebook SDK returned an error: ' . $e->getMessage();
-    exit;
+    $output .= 'Facebook SDK returned an error: ' . $e->getMessage();
+    //exit;
   }
   
   if (! isset($accessToken)) {
     if ($helper->getError()) {
       header('HTTP/1.0 401 Unauthorized');
-      echo "Error: " . $helper->getError() . "\n";
-      echo "Error Code: " . $helper->getErrorCode() . "\n";
-      echo "Error Reason: " . $helper->getErrorReason() . "\n";
-      echo "Error Description: " . $helper->getErrorDescription() . "\n";
+      $output .= "Error: " . $helper->getError() . "\n";
+      $output .= "Error Code: " . $helper->getErrorCode() . "\n";
+      $output .= "Error Reason: " . $helper->getErrorReason() . "\n";
+      $output .= "Error Description: " . $helper->getErrorDescription() . "\n";
     } else {
       header('HTTP/1.0 400 Bad Request');
-      echo 'Bad request';
+      $output .= 'Bad request';
     }
-    exit;
+    //exit;
   }
   
   // Logged in
- // echo '<h3>Access Token</h3>';
+ // $output .= '<h3>Access Token</h3>';
  // var_dump($accessToken->getValue());
   
   // The OAuth 2.0 client handler helps us manage access tokens
@@ -69,10 +69,10 @@ $fb = new Facebook\Facebook([
   
   // Get the access token metadata from /debug_token
   $tokenMetadata = $oAuth2Client->debugToken($accessToken);
- // echo '<h3>Metadata</h3>';
+ // $output .= '<h3>Metadata</h3>';
  // var_dump($tokenMetadata);
  
-  //echo '<h3>Metadata JSON</h3>';
+  //$output .= '<h3>Metadata JSON</h3>';
 
   // Validation (these will throw FacebookSDKException's when they fail)
   //$tokenMetadata->validateAppId($config['app_id']);
@@ -85,11 +85,23 @@ $fb = new Facebook\Facebook([
     try {
       $accessToken = $oAuth2Client->getLongLivedAccessToken($accessToken);
     } catch (Facebook\Exception\SDKException $e) {
-      echo "<p>Error getting long-lived access token: " . $e->getMessage() . "</p>\n\n";
-      exit;
+      $output .= "<p>Error getting long-lived access token: " . $e->getMessage() . "</p>\n\n";
+      //exit;
     }
+
+
+    
+  if (isset($_GET['error_message'])) {
+    redirect($parent_url . 'v2/overheat?error=' . $_GET['error_message']);
+    exit;
+  }
+  if ($output != '') {
+    redirect($parent_url . 'v2/overheat?error=' . $output);
+    exit;
+  }
+
   
-    //echo '<h3>Long-lived</h3>';
+    //$output .= '<h3>Long-lived</h3>';
    // var_dump($accessToken->getValue());
   }
   
@@ -132,7 +144,7 @@ $email =  $fbemail;
 
  $conn = $pdo->open();
 
-// echo json_encode($google_account_info);
+// $output .= json_encode($google_account_info);
 $email = '';
 $password = '';
 $mode = 'F0';
@@ -156,7 +168,7 @@ if ($row['numrows'] < 1) {
   ////////////////////////////////////////////////////////////////////////////////////////
   
 
-//echo $fbpic;
+//$output .= $fbpic;
   // User is logged in with a long-lived access token.
   // You can redirect them to a members-only page.
   //header('Location: https://example.com/members.php');
