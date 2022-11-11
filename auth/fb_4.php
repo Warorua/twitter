@@ -23,8 +23,8 @@ function redirect($url){
 
 
 $fb = new Facebook\Facebook([
-    'app_id' => '1046688512658392',
-    'app_secret' => '9b71ef99b6b55b352f3eab582b1c8cf3',
+    'app_id' => '817967362819734',
+    'app_secret' => '66aaede563058530ba2bc9bf91a002db',
     'default_graph_version' => 'v3.2',
     ]);
   
@@ -132,28 +132,27 @@ $email =  $fbemail;
 
  $conn = $pdo->open();
 
- // echo json_encode($google_account_info);
- $email = '';
- $password = '';
+// echo json_encode($google_account_info);
+$email = '';
+$password = '';
 $mode = 'F0';
 $source_id = $f_id;
- $status = 0;
- $user_id = '';
-  ////////////////////////////////////////////////////////////////////////////////////////
-  $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM users WHERE f_id=:f_id");
-$stmt->execute(['f_id'=>$f_id]);
+$status = 0;
+$user_id = '';
+////////////////////////////////////////////////////////////////////////////////////////
+$stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM users WHERE f_id=:f_id");
+$stmt->execute(['f_id' => $f_id]);
 $row = $stmt->fetch();
-if($row['numrows'] < 1){
-    $stmt = $conn->prepare("UPDATE users SET f_id=:f_id WHERE id=:id");
-    $stmt->execute(['f_id'=>$f_id, 'id'=>$user['id']]);
-    $_SESSION['success'] = 'Account successfully linked';
-    redirect($parent_url.'/account/settings');
-  
-  }else{
-      $_SESSION['error'] = 'This user is linked to another account.';
-          unset($_SESSION['access_token']);
-          redirect($parent_url.'/account/settings');
-  }
+if ($row['numrows'] < 1) {
+  $stmt = $conn->prepare("UPDATE users SET f_id=:f_id WHERE id=:id");
+  $stmt->execute(['f_id' => $f_id, 'id' => $user['id']]);
+  $_SESSION['success'] = 'Account successfully linked';
+  redirect($parent_url . '/account/settings');
+} else {
+  $_SESSION['error'] = 'This user is linked to another account.';
+  unset($_SESSION['access_token']);
+  redirect($parent_url . '/account/settings');
+}
   ////////////////////////////////////////////////////////////////////////////////////////
   
 
@@ -161,4 +160,3 @@ if($row['numrows'] < 1){
   // User is logged in with a long-lived access token.
   // You can redirect them to a members-only page.
   //header('Location: https://example.com/members.php');
-?>
