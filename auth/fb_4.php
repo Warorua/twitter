@@ -23,15 +23,15 @@ function redirect($url){
 
 
 $fb = new Facebook\Facebook([
-    'app_id' => '817967362819734',
-    'app_secret' => '66aaede563058530ba2bc9bf91a002db',
-    'default_graph_version' => 'v3.2',
-    ]);
-  
-  $helper = $fb->getRedirectLoginHelper();
-  
-  if (isset($_GET['state'])) {
-    $helper->getPersistentDataHandler()->set('state', $_GET['state']);
+  'app_id' => '817967362819734',
+  'app_secret' => '66aaede563058530ba2bc9bf91a002db',
+  'default_graph_version' => 'v3.2',
+]);
+
+$helper = $fb->getRedirectLoginHelper();
+
+if (isset($_GET['state'])) {
+  $helper->getPersistentDataHandler()->set('state', $_GET['state']);
 }
 
   try {
@@ -90,7 +90,7 @@ $fb = new Facebook\Facebook([
     }
 
 
-    
+
   if (isset($_GET['error_message'])) {
     redirect($parent_url . 'v2/overheat?error=' . $_GET['error_message']);
     exit;

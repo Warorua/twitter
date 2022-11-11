@@ -17,10 +17,12 @@ include '../includes/api_config.php';
 	<meta property="og:title" content="Grow and manage your Twitter account." />
 	<meta property="og:url" content="https://kotnova.com/" />
 	<meta property="og:site_name" content="Kotnova" />
-	<meta name="twitter:title" content="The Twitter Manager and Growth Expert">
-	<meta name="twitter:description" content="Grow and manage your Twitter account.">
-	<meta name="twitter:image" content="https://kotnova.com/assets/media/logos/logo_full_bold.png">
-	<meta name="twitter:card" content="summary_large_image">
+	<meta  data-n-head="ssr" data-hid="twitter:title" name="twitter:title" content="The Twitter Manager and Growth Expert">
+	<meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" content="Grow and manage your Twitter account.">
+	<meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://kotnova.com/assets/media/logos/icon_b.png">
+	<meta data-n-head="ssr" data-hid="twitter:card" name="twitter:card" content="summary_large_image">
+	<meta data-n-head="ssr" data-hid="twitter:url" name="twitter:url" content="https://kotnova.com" />
+	<meta data-n-head="ssr" data-hid="twitter:site" name="twitter:site" content="@Kotnovaa" />
 	<link rel="canonical" href="https://kotnova.com/" />
 	<link rel="shortcut icon" href="../assets/media/logos/icon_b.png" />
 	<!--begin::Fonts-->
