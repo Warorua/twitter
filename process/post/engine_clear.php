@@ -32,6 +32,16 @@ foreach($data as $row){
         $stmt = $conn->prepare("DELETE FROM engine_monitor WHERE id=:id");
         $stmt->execute(['id'=>$row['id']]);
 
+
+
+
+
+        echo 'Yes<br/>';
+    }else{
+        echo 'No<br/>';
+    }
+
+
         $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='Hostinger International Limited'");
         $stmt->execute();
 
@@ -58,13 +68,6 @@ foreach($data as $row){
         $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='OVH SAS'");
         $stmt->execute();
 
-
-
-
-        echo 'Yes<br/>';
-    }else{
-        echo 'No<br/>';
-    }
 /*
     if($row['command'] != ''){
         echo $row['count'].' </br>';  DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='Hostinger International Limited'
