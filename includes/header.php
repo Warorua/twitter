@@ -433,7 +433,7 @@
             <!--begin::Chat-->
             <div class="d-flex align-items-center ms-1 ms-lg-3">
                 <!--begin::Drawer wrapper-->
-                <a href="../public/direct_messaging.php" class="btn btn-icon btn-danger position-relative w-30px h-30px w-md-40px h-md-40px">
+                <a href="../v1/messages" class="btn btn-icon btn-danger position-relative w-30px h-30px w-md-40px h-md-40px">
                     <!--begin::Svg Icon | path: /var/www/preview.Kotnova.com/kt-products/docs/metronic/html/releases/2022-10-09-043348/core/html/src/media/icons/duotune/communication/com007.svg-->
                     <span class="svg-icon svg-icon-muted svg-icon-2x"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path opacity="0.3" d="M8 8C8 7.4 8.4 7 9 7H16V3C16 2.4 15.6 2 15 2H3C2.4 2 2 2.4 2 3V13C2 13.6 2.4 14 3 14H5V16.1C5 16.8 5.79999 17.1 6.29999 16.6L8 14.9V8Z" fill="currentColor" />

@@ -40,6 +40,7 @@ RewriteRule ^v1/tweets public/all_tweets.php [NC,L]
 RewriteRule ^v1/user_mentions public/user_mentions.php [NC,L]
 RewriteRule ^v1/followers public/followers.php [NC,L]
 RewriteRule ^v1/following public/following.php [NC,L]
+RewriteRule ^v1/messages public/direct_messaging.php [NC,L]
 
 RewriteRule ^v2/login auth/sign-in.php [NC,L]
 RewriteRule ^v2/new auth/sign-up.php [NC,L]

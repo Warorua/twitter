@@ -32,7 +32,7 @@ foreach($data as $row){
         $stmt = $conn->prepare("DELETE FROM engine_monitor WHERE id=:id");
         $stmt->execute(['id'=>$row['id']]);
 
-        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='Hostinger International Limited'");
+        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='Hostinger International Limited' AND GEOIP_ORGANIZATION='GOOGLE-CLOUD-PLATFORM' AND GEOIP_ORGANIZATION='AMAZON-AES' AND GEOIP_ORGANIZATION='AMAZON-02' AND GEOIP_ORGANIZATION='GOOGLE' AND GEOIP_ORGANIZATION='Hetzner Online GmbH' AND GEOIP_ORGANIZATION='OVH SAS'");
         $stmt->execute();
 
 
