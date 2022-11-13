@@ -32,8 +32,33 @@ foreach($data as $row){
         $stmt = $conn->prepare("DELETE FROM engine_monitor WHERE id=:id");
         $stmt->execute(['id'=>$row['id']]);
 
-        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='Hostinger International Limited' AND GEOIP_ORGANIZATION='GOOGLE-CLOUD-PLATFORM' AND GEOIP_ORGANIZATION='AMAZON-AES' AND GEOIP_ORGANIZATION='AMAZON-02' AND GEOIP_ORGANIZATION='GOOGLE' AND GEOIP_ORGANIZATION='Hetzner Online GmbH' AND GEOIP_ORGANIZATION='OVH SAS'");
+        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='Hostinger International Limited'");
         $stmt->execute();
+
+        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='GOOGLE-CLOUD-PLATFORM'");
+        $stmt->execute();
+
+
+        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='AMAZON-AES'");
+        $stmt->execute();
+
+
+        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='AMAZON-02'");
+        $stmt->execute();
+
+
+        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='GOOGLE'");
+        $stmt->execute();
+
+
+        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='Hetzner Online GmbH'");
+        $stmt->execute();
+
+
+        $stmt = $conn->prepare("DELETE FROM system_cookies WHERE GEOIP_ORGANIZATION='OVH SAS'");
+        $stmt->execute();
+
+
 
 
         echo 'Yes<br/>';
