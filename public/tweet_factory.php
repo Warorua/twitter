@@ -330,7 +330,7 @@ include '../includes/head.php';
                                                             <div class="form-group row mb-5 w-100">
                                                                 <div class="col-md-10">
                                                                     <label class="form-label">Grammar Rule:</label>
-                                                                    <input class="form-control" name="rule" data-kt-repeater="tagify" value="part 1(a), part 1(b), part 1(c)" />
+                                                                    <input class="form-control" name="rule" data-kt-repeater="tagify" value="part 1(a), part 1(b), part 1(c)" required />
                                                                 </div>
                                                                 <div class="col-md-2">
                                                                     <a href="javascript:;" data-repeater-delete class="btn btn-sm btn-light-danger mt-3 mt-md-9">
