@@ -17,6 +17,14 @@ function redirect($url)
     }
 }
 
+function system_mailer($subject, $message, $to)
+{
+  $subject;
+  $message;
+  $to;
+  return 0;
+}
+
 function usageTrack($points, $action)
 {
   global $user;
