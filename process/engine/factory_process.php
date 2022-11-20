@@ -94,6 +94,7 @@ foreach ($data as $row) {
 
         $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_cipher=:p_cipher WHERE id=:id");
         $stmt->execute(['id' => $user['id'], 'p_value' => $cipher_points, 'p_cipher' => $user['p_cipher']]);
+        usageTrack($charge_points, '');
         //////////////////////////////////////////////////////////////////////////////////////////////////
 
         if(is_array($media)){
