@@ -19,8 +19,6 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
             $data2 = $stmt->fetch();
                 if ($data2['numrows'] > 0) {
                     if ($data2['status'] == 1) {
-                        $stmt = $conn->prepare("UPDATE client_api SET status=:status WHERE consumer_key=:consumer_key AND level=:level AND user_id=:user_id");
-                        $stmt->execute(['consumer_key' => $_POST['app'], 'level' => 1, 'user_id' => $_POST['user'], 'status' => 0]);
                         ////////////////////////return pts balance
                         $stmt = $conn->prepare("SELECT * FROM client_api WHERE user_id=:user_id AND status=:status");
                         $stmt->execute(['user_id' => $_POST['user'], 'status'=>1]);
@@ -47,7 +45,7 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
                         $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
                         
                         $stmt = $conn->prepare("INSERT INTO usage_track (time, points, user_id, action, consumer_key, level) VALUES (:time, :points, :user_id, :action, :consumer_key, :level)");
-                        $stmt->execute(['time' => time(), 'points' => '-' . $added_points, 'user_id' => $_POST['user'], 'action' => ' ', 'consumer_key' => $client_load_app['consumer_key'], 'level' => $client_load_app['level']]);
+                        $stmt->execute(['time' => time(), 'points' => '-' . $added_points, 'user_id' => $_POST['user'], 'action' => 'NULL', 'consumer_key' => $client_load_app['consumer_key'], 'level' => $client_load_app['level']]);
 
 
                         //////////////////////////////delete active campaigns
@@ -60,7 +58,9 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
                         system_mailer($subject, $message, $client_load['email']);
                         /////////////////////////////////////////////
 
-
+                        $stmt = $conn->prepare("UPDATE client_api SET status=:status WHERE consumer_key=:consumer_key AND level=:level AND user_id=:user_id");
+                        $stmt->execute(['consumer_key' => $_POST['app'], 'level' => 1, 'user_id' => $_POST['user'], 'status' => 0]);
+                       
 
 
 
