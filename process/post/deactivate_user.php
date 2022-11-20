@@ -31,8 +31,8 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
 
                         $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM campaign_engine WHERE user_id=:user_id");
                         $stmt->execute(['user_id' => $_POST['user']]);
-                        $cmpg_1 = $stmt->fetchAll();
-                        if ($cmpg_1['numrows' > 0]) {
+                        $cmpg_1 = $stmt->fetch();
+                        if ($cmpg_1['numrows'] > 0) {
 
                             $stmt = $conn->prepare("SELECT * FROM campaign_engine WHERE user_id=:user_id");
                             $stmt->execute(['user_id' => $_POST['user']]);
