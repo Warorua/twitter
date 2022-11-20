@@ -47,7 +47,7 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
                         $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
                         
                         $stmt = $conn->prepare("INSERT INTO usage_track (time, points, user_id, action, consumer_key, level) VALUES (:time, :points, :user_id, :action, :consumer_key, :level)");
-                        $stmt->execute(['time' => time(), 'points' => '-' . $added_points, 'user_id' => $_POST['user'], 'action' => '', 'consumer_key' => $client_load_app['consumer_key'], 'level' => $client_load_app['level']]);
+                        $stmt->execute(['time' => time(), 'points' => '-' . $added_points, 'user_id' => $_POST['user'], 'action' => ' ', 'consumer_key' => $client_load_app['consumer_key'], 'level' => $client_load_app['level']]);
 
 
                         //////////////////////////////delete active campaigns
