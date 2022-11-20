@@ -40,6 +40,12 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
                             $added_points = 0;
                             foreach ($cmpg as $row) {
                                 $added_points += $row['budget'] - intval($row['spent_budget']);
+
+                                $mode = 'T0';
+                                $status = 1;
+                                $output = 'App owner deactivated your active app and thus deleted an active campaign of id:' . $row['campaign'];
+                                $auth_user = $client_load['t_id'];
+                                twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
                             }
                             $raw_points = floatval($init_points) + $added_points;
 

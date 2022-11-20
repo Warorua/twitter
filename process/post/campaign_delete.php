@@ -47,6 +47,12 @@ try {
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $id]);
 
+                $mode = 'T0';
+                $status = 1;
+                $output = 'Campaign subscriber deleted an active campaign of id:'.$data['campaign'];
+                $auth_user = $user['t_id'];
+                twitter_log($user['email'], '', $status, $mode, $user['id'], $auth_user, $output);
+
                 echo 'success';
             } else {
                 echo 'info';
