@@ -29,28 +29,35 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
                         $client_load = $stmt->fetch();
                         $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
 
-                        $stmt = $conn->prepare("SELECT * FROM campaign_engine WHERE user_id=:user_id");
+                        $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM campaign_engine WHERE user_id=:user_id");
                         $stmt->execute(['user_id' => $_POST['user']]);
-                        $cmpg = $stmt->fetchAll();
-                        $added_points = 0;
-                        foreach ($cmpg as $row) {
-                            $added_points += $row['budget'] - intval($row['spent_budget']);
+                        $cmpg_1 = $stmt->fetch();
+                        if ($cmpg_1['numrows' > 0]) {
+
+                            $stmt = $conn->prepare("SELECT * FROM campaign_engine WHERE user_id=:user_id");
+                            $stmt->execute(['user_id' => $_POST['user']]);
+                            $cmpg = $stmt->fetchAll();
+                            $added_points = 0;
+                            foreach ($cmpg as $row) {
+                                $added_points += $row['budget'] - intval($row['spent_budget']);
+                            }
+                            $raw_points = floatval($init_points) + $added_points;
+
+                            $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
+                            $cipher_points = safeEncrypt($raw_points, $key);
+
+                            $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
+                            $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
+
+                            $stmt = $conn->prepare("INSERT INTO usage_track (time, points, user_id, action, consumer_key, level) VALUES (:time, :points, :user_id, :action, :consumer_key, :level)");
+                            $stmt->execute(['time' => time(), 'points' => '-' . $added_points, 'user_id' => $_POST['user'], 'action' => 'NULL', 'consumer_key' => $client_load_app['consumer_key'], 'level' => $client_load_app['level']]);
+
+
+                            //////////////////////////////delete active campaigns
+                            $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE user_id=:user_id");
+                            $stmt->execute(['user_id' => $_POST['user']]);
                         }
-                        $raw_points = floatval($init_points) + $added_points;
 
-                        $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
-                        $cipher_points = safeEncrypt($raw_points, $key);
-
-                        $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
-                        $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-                        
-                        $stmt = $conn->prepare("INSERT INTO usage_track (time, points, user_id, action, consumer_key, level) VALUES (:time, :points, :user_id, :action, :consumer_key, :level)");
-                        $stmt->execute(['time' => time(), 'points' => '-' . $added_points, 'user_id' => $_POST['user'], 'action' => 'NULL', 'consumer_key' => $client_load_app['consumer_key'], 'level' => $client_load_app['level']]);
-
-
-                        //////////////////////////////delete active campaigns
-                        $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE user_id=:user_id");
-                        $stmt->execute(['user_id' => $_POST['user']]);
 
                         ///////////////////////////send message
                         $message = 'Your active app at Kotnova has been deactivated. If you had active campaigns they have been deactivated and the POINTS balance recharged back to your POINTS wallet but you can always re-build them. You can reactivate the App from your Kotnova dashboard.';
