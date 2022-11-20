@@ -22,6 +22,10 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
                         $stmt = $conn->prepare("UPDATE client_api SET status=:status WHERE consumer_key=:consumer_key AND level=:level AND user_id=:user_id");
                         $stmt->execute(['consumer_key' => $_POST['app'], 'level' => 1, 'user_id' => $_POST['user'], 'status' => 0]);
                         ////////////////////////return pts balance
+                        $stmt = $conn->prepare("SELECT * FROM client_api WHERE user_id=:user_id AND status=:status");
+                        $stmt->execute(['user_id' => $_POST['user'], 'status'=>1]);
+                        $client_load_app = $stmt->fetch();
+
                         $stmt = $conn->prepare("SELECT * FROM users WHERE id=:id");
                         $stmt->execute(['id' => $_POST['user']]);
                         $client_load = $stmt->fetch();
@@ -41,7 +45,10 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
 
                         $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
                         $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-                        usageTrack('-' . $added_points, '');
+                        
+                        $stmt = $conn->prepare("INSERT INTO usage_track (time, points, user_id, action, consumer_key, level) VALUES (:time, :points, :user_id, :action, :consumer_key, :level)");
+                        $stmt->execute(['time' => time(), 'points' => '-' . $added_points, 'user_id' => $_POST['user'], 'action' => '', 'consumer_key' => $client_load_app['consumer_key'], 'level' => $client_load_app['level']]);
+
 
                         //////////////////////////////delete active campaigns
                         $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE user_id=:user_id");
