@@ -106,7 +106,7 @@ foreach ($data as $row) {
 
                 $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
                 $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-
+                usageTrack('-' . $added_points, '');
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $row['id']]);
 
@@ -141,7 +141,7 @@ foreach ($data as $row) {
 
             $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
             $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-
+            usageTrack('-' . $added_points, '');
             $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
             $stmt->execute(['id' => $row['id']]);
 
@@ -299,7 +299,7 @@ foreach ($data as $row) {
 
                 $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
                 $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-
+usageTrack('-' . $added_points, '');
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $row['id']]);
 
@@ -378,7 +378,7 @@ foreach ($data as $row) {
 
                 $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
                 $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-
+                usageTrack('-' . $added_points, '');
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $row['id']]);
 
@@ -495,7 +495,7 @@ foreach ($data as $row) {
 
                 $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
                 $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-
+                usageTrack('-' . $added_points, '');
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $row['id']]);
 
@@ -529,7 +529,7 @@ foreach ($data as $row) {
 
             $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
             $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-
+            usageTrack('-' . $added_points, '');
             $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
             $stmt->execute(['id' => $row['id']]);
 

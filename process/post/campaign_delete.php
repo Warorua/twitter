@@ -27,7 +27,7 @@ try {
                 $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
                 $stmt->execute(['id' => $user_id, 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
 
-
+                usageTrack('-' . $added_points, '');
 
                 if($data['campaign'] == 1){
                     $file_path = 'followers';
