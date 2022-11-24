@@ -662,7 +662,7 @@ $dm_perc = ($dm * 100) / 1000;
 					data: {
 						user: '<?php echo $user['id'] ?>',
 						id: ttt_id,
-						rule:ttt_rule
+						rule: ttt_rule
 					},
 					success: function(data) {
 						activeIndustry();
@@ -1134,6 +1134,52 @@ $dm_perc = ($dm * 100) / 1000;
 
 		//*/
 	};
+
+	function clearLogs() {
+
+		//*
+			Swal.fire({
+				icon: 'question',
+				title: 'Clear logs',
+				text: 'Are you sure you want to clear your logs?',
+				confirmButtonText: 'Yes, Delete',
+				footer: '<a href="">Why do I have this issue?</a>'
+			}).then((result) => {
+				if (result.isConfirmed) {
+					$.ajax({
+						type: "POST",
+						url: "../process/post/clear_logs.php",
+						data: {
+							owner: '<?php echo $user['id'] ?>',
+						},
+						success: function(arr) {
+							var status;
+							//*
+							data = $.parseJSON(arr);
+							if (data[0] == 'success') {
+								status = 'Logs successfully cleared!';
+								Swal.fire(status, '', data[0]);
+								window.location.reload();
+							} else {
+								status = data[0];
+								data[0] = 'error';
+								Swal.fire(status, '', data[0]);
+							}
+							//*/
+
+
+						}
+					});
+
+				} else if (result.isDenied) {
+					Swal.fire('Changes are not saved', '', 'info')
+				}
+			})
+		
+
+		//*/
+	};
+
 
 
 	$('a[href="..<?php echo str_replace('/twitter', '', $_SERVER['REQUEST_URI']) ?>"]').addClass('active');
