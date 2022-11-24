@@ -16,7 +16,7 @@ if (isset($_POST['owner'])) {
         $stmt->execute(['user_id' => $user['id']]);
         $data22 = $stmt->fetch();
             //*
-            if ($data22['numrows'] > 10000) {
+            if ($data22['numrows'] > 1000) {
                 $log_count = 0;
                 $stmt = $conn->prepare("SELECT * FROM twitter_logs WHERE user_id=:user_id");
                 $stmt->execute(['user_id' => $user['id']]);
@@ -29,7 +29,7 @@ if (isset($_POST['owner'])) {
                 $output = array('success', $log_count.' logs successfully deleted!');
 
             } else {
-                $output = array('Your logs count is '.number_format($data22['numrows']).'.<br/> Log count not enough to process deleting!');
+                $output = array('Your logs count is '.number_format($data22['numrows']).'.<br/> Log count not enough(Less than 1,000) to process deleting!');
             }
     //*/
    // $output = array(0=>count($data2));
