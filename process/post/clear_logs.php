@@ -29,7 +29,7 @@ if (isset($_POST['owner'])) {
                 $output = array('success', $log_count.' logs successfully deleted!');
 
             } else {
-                $output = array('Your logs count is '.number_format($data22['numrows']).'.<br/> You dont have enough logs to be cleared!');
+                $output = array('Your logs count is '.number_format($data22['numrows']).'.<br/> Log count not enough to process deleting!');
             }
     //*/
    // $output = array(0=>count($data2));

@@ -1157,9 +1157,10 @@ $dm_perc = ($dm * 100) / 1000;
 							//*
 							data = $.parseJSON(arr);
 							if (data[0] == 'success') {
-								status = 'Logs successfully cleared!';
-								Swal.fire(status, '', data[0]);
-								window.location.reload();
+								Swal.fire(data[1], '', data[0]);
+								setTimeout(function() {
+									window.location.reload();
+								}, 2000);
 							} else {
 								status = data[0];
 								data[0] = 'error';
