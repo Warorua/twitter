@@ -156,6 +156,8 @@ include '../includes/head.php';
 												$time = timeDiff($row['time'], date("Y-m-d H:i:s"));
 												if ($row['status'] == 1) {
 													$stat = '<span class="badge badge-light-success fs-7 fw-bold">OK</span>';
+												} elseif($row['status'] == 3) {
+													$stat = '<span class="badge badge-light-info fs-7 fw-bold">INF</span>';
 												} else {
 													$stat = '<span class="badge badge-light-danger fs-7 fw-bold">ERR</span>';
 												}
