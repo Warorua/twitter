@@ -8,7 +8,13 @@ if (isset($_POST['campaign'])) {
     try {
 
         $campaign = $_POST['campaign'];
-        $frequency = $_POST['frequency'] * 60;
+
+        if($campaign == 2){
+            $frequency = ($_POST['frequency'] * 60)+600;
+        }else{
+            $frequency = $_POST['frequency'] * 60;
+        }
+        
 
         if (!empty($_POST['budget'])) {
             $budget = $_POST['budget'];

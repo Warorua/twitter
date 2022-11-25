@@ -679,11 +679,11 @@
              <div class="scroll-y me-n5 pe-5" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer" data-kt-scroll-wrappers="#kt_drawer_chat_messenger_body" data-kt-scroll-offset="0px">
 
                  <div class="userChatsHolder">
-                    <?php
-                    if(isset($_SESSION['activeChat'])){
-                        echo $_SESSION['activeChat'];
-                    }else{
-                        echo '
+                     <?php
+                        if (isset($_SESSION['activeChat'])) {
+                            echo $_SESSION['activeChat'];
+                        } else {
+                            echo '
                         <!--begin::Message(in)-->
                         <div kt_msg_holder="1" class="d-flex justify-content-start mb-10">
                             <!--begin::Wrapper-->
@@ -741,10 +741,10 @@
                         </div>
                         <!--end::Message(in)-->
                         ';
-                    }
+                        }
 
 
-?>
+                        ?>
                  </div>
 
                  <div class="userChats"></div>
