@@ -184,9 +184,14 @@ foreach ($data as $row) {
         $agg_count = 0;
         foreach ($data_2 as $row2) {
             // charge($charge['']);
-            like_tweet($client_load['t_id'], $row2['id']);
-            $agg_charge += $charge['like_charge'];
-            $agg_count += 1;
+            if ($row2['favorited'] == FALSE) {
+                like_tweet($client_load['t_id'],
+                    $row2['id']
+                );
+                $agg_charge += $charge['like_charge'];
+                $agg_count += 1;
+            }
+           
         }
         //*/
 
