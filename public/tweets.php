@@ -1163,7 +1163,7 @@ if ($tweet_data['data']['verified']) {
 			paramName: "file",
 			maxFiles: 4,
 			maxFilesize: 15, // Max filesize in MB
-			acceptedFiles: ".jpeg,.png,.gif,.mp4,.jpg",
+			acceptedFiles: ".jpeg,.png,.gif,.mp4,.jpg,.jfif",
 			previewTemplate: previewTemplate,
 			previewsContainer: id + " .dropzone-items", // Define the container to display the previews
 			clickable: id + " .dropzone-select", // Define the element that should be used as click trigger to select files.
