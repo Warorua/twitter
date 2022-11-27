@@ -47,7 +47,7 @@ if(isset($_GET['error'])){
 							<!--end::Link-->
 							<!--begin::Link-->
 							<div class="mb-0">
-								<a href="../account/logout" class="btn btn-sm btn-primary">Logout</a>
+								<a href="https://kotnova.com/account/logout#" class="btn btn-sm btn-primary">Logout</a>
 							</div>
 							<!--end::Link-->
 						</div>
