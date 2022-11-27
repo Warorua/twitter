@@ -302,7 +302,7 @@ foreach ($data as $row) {
 
                 $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
                 $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-usageTrack('-' . $added_points, '');
+       usageTrack('-' . $added_points, '');
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $row['id']]);
 
@@ -412,84 +412,124 @@ usageTrack('-' . $added_points, '');
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
            
       //  }
-//echo json_encode($run_lap); 
+     //echo json_encode($run_lap); 
 
 
 
 
 
     } elseif ($row['campaign'] == 4) {
-        $path = $parent_url . '/process/post/follow_user.php';
-
-
-        $file_name = "../../process/client/following/" . $client_load['t_id'] . ".json";
-        if (file_exists($file_name)) {
-            $data_3 = json_decode(file_get_contents($file_name), true);
-        } else {
-            $user_b = $user_client->getFollowing($client_load['t_id']);
-
-
-            $followers_data = json_encode($user_b);
-
-            $file_data = fopen($file_name, "w");
-
-            fwrite($file_data, $followers_data);
-
-            fclose($file_data);
-
-            $data_3 = json_decode($followers_data, true);
-        }
-        if ($row['last_key'] == '') {
-            $to_unfollow_id = $data_3['data'][0]['id'];
-        } else {
-            $to_unfollow_id = $data_3['data'][$row['last_key']]['id'];
-        }
-
-        $abraham_client->setApiVersion('1.1');
-        $data = $abraham_client->get('friendships/lookup', [
-            "user_id" => $to_unfollow_id,
-            //'id' => $client_load['t_id'],
-
-        ]);
-
-        $arr_79 = array_convert($data);
-
-        if ($arr_79[0]['connections'][1] != 'followed_by') {
-            unfollow($to_unfollow_id);
-          //  charge($charge['follow_charge']);
-            if ($row['spent_budget'] == '') {
-                $spent_budget = $charge['follow_charge'];
-            } else {
-                $spent_budget = intval($row['spent_budget']) + $charge['follow_charge'];
-            }
-        } else {
-            $spent_budget = $row['spent_budget'];
-        }
-
-
-
-        $last_key = floatval($row['last_key']) + 1;
-
-        if ($row['execution'] == '') {
-            $execution = time() + $row['frequency'];
-        } else {
-            $execution = $row['execution'] + $row['frequency'];
-        }
-
-
-
-
         $mode = 'T0';
         $command = 'unfollow';
-        $output = $command . ' automation success';
         $status = 1;
         $auth_user = $client_load['id'];
+        try {
+
+            $path = $parent_url . '/process/post/follow_user.php';
 
 
-        $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
-        $arr_78 = end($data_3['data']);
-        if ($last_key >= 100 && $arr_78['id'] == $to_unfollow_id) {
-            if (!isset($data_3['meta']['next_token'])) {
+            $file_name = "../../process/client/following/" . $client_load['t_id'] . ".json";
+            if (file_exists($file_name)) {
+                $data_3 = json_decode(file_get_contents($file_name), true);
+            } else {
+                $user_b = $user_client->getFollowing($client_load['t_id']);
+
+
+                $followers_data = json_encode($user_b);
+
+                $file_data = fopen($file_name, "w");
+
+                fwrite($file_data, $followers_data);
+
+                fclose($file_data);
+
+                $data_3 = json_decode($followers_data, true);
+            }
+            if ($row['last_key'] == '') {
+                $to_unfollow_id = $data_3['data'][0]['id'];
+            } else {
+                $to_unfollow_id = $data_3['data'][$row['last_key']]['id'];
+            }
+
+            $abraham_client->setApiVersion('1.1');
+            $data = $abraham_client->get('friendships/lookup', [
+                "user_id" => $to_unfollow_id,
+                //'id' => $client_load['t_id'],
+
+            ]);
+
+            $arr_79 = array_convert($data);
+
+            if ($arr_79[0]['connections'][1] != 'followed_by') {
+                unfollow($to_unfollow_id);
+                //  charge($charge['follow_charge']);
+                if ($row['spent_budget'] == '') {
+                    $spent_budget = $charge['follow_charge'];
+                } else {
+                    $spent_budget = intval($row['spent_budget']) + $charge['follow_charge'];
+                }
+            } else {
+                $spent_budget = $row['spent_budget'];
+            }
+
+
+
+            $last_key = floatval($row['last_key']) + 1;
+
+            if ($row['execution'] == '') {
+                $execution = time() + $row['frequency'];
+            } else {
+                $execution = $row['execution'] + $row['frequency'];
+            }
+
+
+
+
+            $mode = 'T0';
+            $command = 'unfollow';
+            $output = $command . ' automation success';
+            $status = 1;
+            $auth_user = $client_load['id'];
+
+
+            $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
+            $arr_78 = end($data_3['data']);
+            if ($last_key >= 100 && $arr_78['id'] == $to_unfollow_id) {
+                if (!isset($data_3['meta']['next_token'])) {
+                    $added_points = $row['budget'] - intval($row['spent_budget']);
+                    $raw_points = floatval($init_points) + $added_points;
+
+                    $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
+                    $cipher_points = safeEncrypt($raw_points, $key);
+
+                    $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
+                    $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
+                    usageTrack('-' . $added_points, '');
+                    $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
+                    $stmt->execute(['id' => $row['id']]);
+
+                    $output = 'Campaign ended: Last traversal key equal or greater than 100, No next pagination token, Last data key reached.';
+                    twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+
+
+                    unlink($file_name);
+                    die();
+                } else {
+                    $user_c = $user_client->getFollowers($client_load['t_id'], 100, $data_3['meta']['next_token']);
+
+                    unlink($file_name);
+
+                    $followers_data = json_encode($user_c);
+
+                    $file_data = fopen($file_name, "w");
+
+                    fwrite($file_data, $followers_data);
+
+                    $last_key = 0;
+
+                    fclose($file_data);
+                }
+            } elseif ($last_key < 100 && !isset($data_3['meta']['next_token']) && $arr_78['id'] == $to_unfollow_id) {
                 $added_points = $row['budget'] - intval($row['spent_budget']);
                 $raw_points = floatval($init_points) + $added_points;
 
@@ -502,112 +542,57 @@ usageTrack('-' . $added_points, '');
                 $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
                 $stmt->execute(['id' => $row['id']]);
 
-                $output = 'Campaign ended: Last traversal key equal or greater than 100, No next pagination token, Last data key reached.';
+                $output = 'Campaign ended: Last traversal key less than 100, No next pagination token, Last data key reached.';
                 twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
-   
+
 
                 unlink($file_name);
                 die();
-            } else {
-                $user_c = $user_client->getFollowers($client_load['t_id'], 100, $data_3['meta']['next_token']);
+            }
 
+
+
+            if ($row['budget'] <= $row['spent_budget']) {
+                $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
+                $stmt->execute(['id' => $row['id']]);
                 unlink($file_name);
 
-                $followers_data = json_encode($user_c);
-
-                $file_data = fopen($file_name, "w");
-
-                fwrite($file_data, $followers_data);
-
-                $last_key = 0;
-
-                fclose($file_data);
+                $output = 'Campaign ended: Budget limit reached! Campaign ID: ' . $row['id'];
+                twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+                die();
             }
-        } elseif ($last_key < 100 && !isset($data_3['meta']['next_token']) && $arr_78['id'] == $to_unfollow_id) {
-            $added_points = $row['budget'] - intval($row['spent_budget']);
-            $raw_points = floatval($init_points) + $added_points;
 
-            $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
-            $cipher_points = safeEncrypt($raw_points, $key);
-
-            $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
-            $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-            usageTrack('-' . $added_points, '');
-            $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
-            $stmt->execute(['id' => $row['id']]);
-
-            $output = 'Campaign ended: Last traversal key less than 100, No next pagination token, Last data key reached.';
+            engine_control($command, 1);
             twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
-   
-
-            unlink($file_name);
-            die();
+        } catch (Exception $e) {
+            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $e->getMessage());
         }
 
+    }
+
+        if (!isset($pagination_token)) {
+            $pagination_token = '';
+        }
+        if (!isset($last_key)) {
+            $last_key = '';
+        }
+        if (!isset($execution)) {
+            $execution = '';
+        }
+        if (!isset($spent_budget)) {
+            $spent_budget = '';
+        }
+        $stmt = $conn->prepare("UPDATE campaign_engine SET last_key=:last_key, pagination_token=:pagination_token, spent_budget=:spent_budget, execution=:execution WHERE id=:id");
+        $stmt->execute(['id' => $row['id'], 'last_key' => $last_key, 'pagination_token' => $pagination_token, 'spent_budget' => $spent_budget, 'execution' => $execution]);
 
 
         if ($row['budget'] <= $row['spent_budget']) {
             $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
             $stmt->execute(['id' => $row['id']]);
-            unlink($file_name);
 
-            $output = 'Campaign ended: Budget limit reached! Campaign ID: ' . $row['id'];
-            twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
-            die();
+            if (isset($file_name)) {
+                unlink($file_name);
+            }
         }
-
-        engine_control($command, 1);
-        twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
-   
-    }
-
-    //////////////////////////////////////////////////////////////////////////GENERAL 
-    /*
-    $method = $_SERVER['REQUEST_METHOD'];
-    if ($method == 'POST') {
-        $js_obj =  json_encode($_POST);
-    } else {
-        $js_obj =  json_encode($_GET);
-    }
-
-    $stmt = $conn->prepare("SELECT * FROM process_engine WHERE user_id=:id ORDER BY id DESC LIMIT 1");
-    $stmt->execute(['id' => $client_load['id']]);
-    $data_2 = $stmt->fetch();
-
-    if ($data_2) {
-        $exec_time = $data_2['execution'] + 900;
-    } else {
-        $exec_time = strtotime($data['time']) + 900;
-    }
-
-    $page = $_SERVER['PHP_SELF'];
-    $method = $_SERVER['REQUEST_METHOD'];
-
-    $stmt = $conn->prepare("INSERT INTO process_engine (request_method,page,object,access_token,access_secret, execution, user_id) VALUES (:req, :page, :object, :access_token, :access_secret, :execution, :user_id)");
-    $stmt->execute(['req' => $method, 'page' => $page, 'object' => $js_obj, 'access_token' => $api_app['access_token'], 'access_secret' => $api_app['access_secret'], 'execution' => $exec_time, 'user_id' => $client_load['id']]);
-//*/
-    if (!isset($pagination_token)) {
-        $pagination_token = '';
-    }
-    if (!isset($last_key)) {
-        $last_key = '';
-    }
-    if (!isset($execution)) {
-        $execution = '';
-    }
-    if (!isset($spent_budget)) {
-        $spent_budget = '';
-    }
-    $stmt = $conn->prepare("UPDATE campaign_engine SET last_key=:last_key, pagination_token=:pagination_token, spent_budget=:spent_budget, execution=:execution WHERE id=:id");
-    $stmt->execute(['id' => $row['id'], 'last_key' => $last_key, 'pagination_token' => $pagination_token, 'spent_budget' => $spent_budget, 'execution' => $execution]);
-
-
-    if ($row['budget'] <= $row['spent_budget']) {
-        $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
-        $stmt->execute(['id' => $row['id']]);
-
-        if (isset($file_name)) {
-            unlink($file_name);
-        }
-    }
+    
 }
