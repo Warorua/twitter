@@ -2,6 +2,32 @@
 ini_set('max_execution_time', 1800);
 include '../../includes/conn.php';
 
+/////ENGINE FUNCTIONS
+function campaign_4_killer($file_name, $error)
+{
+    global $row;
+    global $conn;
+    global $client_load;
+    $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
+    $added_points = $row['budget'] - intval($row['spent_budget']);
+    $raw_points = floatval($init_points) + $added_points;
+
+    $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
+    $cipher_points = safeEncrypt($raw_points, $key);
+
+    $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
+    $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
+    usageTrack('-' . $added_points, '');
+    $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
+    $stmt->execute(['id' => $row['id']]);
+
+    $output = 'Campaign ended: '.$error.' ~ Generated from campaign 4';
+    twitter_log($client_load['email'], '', 2, 'T0', $client_load['id'], $client_load['id'], $output);
+
+
+    unlink($file_name);
+    die();
+}
 //*
 
 $stmt = $conn->prepare("SELECT *  FROM campaign_engine WHERE execution<:time LIMIT 10");
@@ -421,7 +447,7 @@ foreach ($data as $row) {
     } elseif ($row['campaign'] == 4) {
         $mode = 'T0';
         $command = 'unfollow';
-        $status = 1;
+        $status = 2;
         $auth_user = $client_load['id'];
         try {
 
@@ -446,9 +472,20 @@ foreach ($data as $row) {
                 $data_3 = json_decode($followers_data, true);
             }
             if ($row['last_key'] == '') {
-                $to_unfollow_id = $data_3['data'][0]['id'];
+
+                if (isset($data_3['data'][0]['id'])) {
+                    $to_unfollow_id = $data_3['data'][0]['id'];
+                } else {
+                    $error = 'Campaign batch is empty. No traversable data.';
+                    campaign_4_killer($file_name, $error);
+                }
             } else {
-                $to_unfollow_id = $data_3['data'][$row['last_key']]['id'];
+                if (isset($data_3['data'][$row['last_key']]['id'])) {
+                    $to_unfollow_id = $data_3['data'][$row['last_key']]['id'];
+                } else {
+                    $error = 'Campaign last key is unavailable. No traversable data.';
+                    campaign_4_killer($file_name, $error);
+                }
             }
 
             $abraham_client->setApiVersion('1.1');
@@ -530,24 +567,8 @@ foreach ($data as $row) {
                     fclose($file_data);
                 }
             } elseif ($last_key < 100 && !isset($data_3['meta']['next_token']) && $arr_78['id'] == $to_unfollow_id) {
-                $added_points = $row['budget'] - intval($row['spent_budget']);
-                $raw_points = floatval($init_points) + $added_points;
-
-                $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
-                $cipher_points = safeEncrypt($raw_points, $key);
-
-                $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
-                $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
-                usageTrack('-' . $added_points, '');
-                $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
-                $stmt->execute(['id' => $row['id']]);
-
-                $output = 'Campaign ended: Last traversal key less than 100, No next pagination token, Last data key reached.';
-                twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
-
-
-                unlink($file_name);
-                die();
+                $output = 'Last traversal key less than 100, No next pagination token, Last data key reached.';
+                campaign_4_killer($file_name, $output);
             }
 
 
