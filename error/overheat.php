@@ -45,6 +45,11 @@ if(isset($_GET['error'])){
 								<a href="../account/user" class="btn btn-sm btn-primary">Return Home</a>
 							</div>
 							<!--end::Link-->
+							<!--begin::Link-->
+							<div class="mb-0">
+								<a href="../account/logout" class="btn btn-sm btn-primary">Logout</a>
+							</div>
+							<!--end::Link-->
 						</div>
 					</div>
 					<!--end::Wrapper-->
