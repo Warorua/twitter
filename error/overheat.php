@@ -41,7 +41,7 @@ if(isset($_GET['error'])){
 							</div>
 							<!--end::Illustration-->
 							<!--begin::Link-->
-							<div class="mb-0">
+							<div class="mb-5">
 								<a href="../account/user" class="btn btn-sm btn-primary">Return Home</a>
 							</div>
 							<!--end::Link-->
