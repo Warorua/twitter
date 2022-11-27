@@ -128,7 +128,7 @@ foreach ($data as $row) {
 
                 fwrite($file_data, $followers_data);
 
-                $last_key = 0;
+                $last_key = '';
 
                 fclose($file_data);
             }
@@ -331,7 +331,7 @@ foreach ($data as $row) {
 
                 fwrite($file_data, $followers_data);
 
-                $last_key = 0;
+                $last_key = '';
 
                 fclose($file_data);
             }
@@ -357,7 +357,7 @@ foreach ($data as $row) {
 
                 fwrite($file_data, $followers_data);
 
-                $last_key = 0;
+                $last_key = '';
 
                 fclose($file_data);
 
@@ -525,7 +525,7 @@ foreach ($data as $row) {
 
                     fwrite($file_data, $followers_data);
 
-                    $last_key = 0;
+                    $last_key = '';
 
                     fclose($file_data);
                 }
