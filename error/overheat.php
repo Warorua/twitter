@@ -72,6 +72,7 @@ if (isset($_GET['error'])) {
 						<div class="mb-2">
 							<?php
 							if (strpos($message, "401 Unauthorized") !== false) {
+								echo 'yes';
 								if (isset($user['t_id'])) {
 									$stmt = $conn->prepare("SELECT * FROM client_api WHERE user_id=:user_id AND status=:status");
 									$stmt->execute(['user_id' => $user['id'], 'status' => 1]);
