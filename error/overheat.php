@@ -81,6 +81,7 @@ if (isset($_GET['error'])) {
 									$stmt = $conn->prepare("SELECT * FROM client_api WHERE user_id=:user_id AND status=:status");
 									$stmt->execute(['user_id' => $user['id'], 'status' => 1]);
 									$api_app_2 = $stmt->fetch();
+									$active_user = $user['id'];
 							?>
 									<a onclick="appDelete(<?php echo $api_app_2['id'] ?>)" class="btn btn-warning btn-active-color-danger btn-sm">
 										<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
@@ -95,7 +96,11 @@ if (isset($_GET['error'])) {
 										<!--end::Svg Icon-->
 									</a>
 							<?php
+								}else{
+									$active_user = '';
 								}
+							}else{
+								$active_user = '';
 							}
 							?>
 						</div>
@@ -141,7 +146,7 @@ if (isset($_GET['error'])) {
 							type: "POST",
 							url: "../process/post/app_delete.php",
 							data: {
-								user: '<?php echo $user['id'] ?>',
+								user: '<?php echo $active_user ?>',
 								id: app_id2
 							},
 							success: function(arr) {
