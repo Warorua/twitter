@@ -71,7 +71,7 @@ if (isset($_GET['error'])) {
 						<!--end::Link-->
 						<div class="mb-2">
 							<?php
-							if (strpos($message, "`401 Unauthorized`") !== false) {
+							if (strpos($message, "401 Unauthorized") !== false) {
 								if (isset($user['t_id'])) {
 									$stmt = $conn->prepare("SELECT * FROM client_api WHERE user_id=:user_id AND status=:status");
 									$stmt->execute(['user_id' => $user['id'], 'status' => 1]);
