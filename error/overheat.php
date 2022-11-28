@@ -132,7 +132,7 @@ if (isset($_GET['error'])) {
 				Swal.fire({
 					icon: 'question',
 					title: 'API App Removal',
-					text: 'Are you sure you want to delete this app?',
+					text: 'Are you sure you want to delete your active app?',
 					confirmButtonText: 'Yes, delete',
 					footer: '<a href="">Why do I have this issue?</a>'
 				}).then((result) => {
