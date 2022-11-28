@@ -1,7 +1,7 @@
 <?php
 include '../includes/plain_head.php';
 if (isset($_GET['error'])) {
-	$message = $_GET['error'];
+	$message = urldecode($_GET['error']);
 } else {
 	$message = 'Too Many Requests! Please wait then try again later.';
 }
