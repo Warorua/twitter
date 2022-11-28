@@ -1,9 +1,9 @@
 <?php
 include '../../includes/conn.php';
 include '../../includes/session.php';
-require '../../vendor/autoload.php';
-include '../../includes/api_config.php';
-use Abraham\TwitterOAuth\TwitterOAuth;
+//require '../../vendor/autoload.php';
+//include '../../includes/api_config.php';
+//use Abraham\TwitterOAuth\TwitterOAuth;
 //*
 $output = [];
 if (isset($_POST['id']) && isset($_POST['user'])) {
