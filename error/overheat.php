@@ -82,7 +82,7 @@ if (isset($_GET['error'])) {
 									$stmt->execute(['user_id' => $user['id'], 'status' => 1]);
 									$api_app_2 = $stmt->fetch();
 							?>
-									<a onclick="appDelete(<?php echo $api_app_2['id'] ?>)" class="btn btn-bg-light btn-active-color-danger btn-sm">
+									<a onclick="appDelete(<?php echo $api_app_2['id'] ?>)" class="btn btn-warning btn-active-color-danger btn-sm">
 										<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
 										<span class="svg-icon svg-icon-2x">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
