@@ -155,7 +155,7 @@ if (isset($_GET['error'])) {
 								if (data[0] == 'success') {
 									Swal.fire(data[1], '', data[0])
 									setTimeout(function() {
-										window.location.reload();
+										window.location.href = 'https://kotnova.com/account/user#';
 									}, 2000);
 
 								} else {
