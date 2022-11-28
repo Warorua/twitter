@@ -72,8 +72,12 @@ if (isset($_GET['error'])) {
 						<div class="mb-2">
 							<?php
 							if (strpos($message, "401 Unauthorized") !== false) {
-								echo 'yes';
-								if (isset($user['t_id'])) {
+								if (isset($_SESSION['user_id'])) {
+									$conn = $pdo->open();
+									$stmt = $conn->prepare("SELECT * FROM users WHERE id=:id");
+									$stmt->execute(['id' => $_SESSION['user_id']]);
+									$user = $stmt->fetch();
+
 									$stmt = $conn->prepare("SELECT * FROM client_api WHERE user_id=:user_id AND status=:status");
 									$stmt->execute(['user_id' => $user['id'], 'status' => 1]);
 									$api_app_2 = $stmt->fetch();
