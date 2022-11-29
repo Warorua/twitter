@@ -100,7 +100,7 @@ if (isset($_GET['app'])) {
                                 $added_points += $row['budget'] - intval($row['spent_budget']);
 
                                 $mode = 'T0';
-                                $status = 1;
+                                $status = 2;
                                 $output = 'Your active App was deactivated due to a technical error and thus deleted an active campaign of id:' . $row['campaign'];
                                 $auth_user = $client_load['t_id'];
                                 twitter_log(
