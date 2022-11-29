@@ -491,6 +491,12 @@ $dm_perc = ($dm * 100) / 1000;
 		//
 		//FLWPUBK-ed9feb43ba6c806e2b78ee953080f58e-X  FLWPUBK_TEST-SANDBOXDEMOKEY-X
 
+
+		pts_ref(price);
+
+	});
+
+	function pts_ref(price) {
 		FlutterwaveCheckout({
 			public_key: "FLWPUBK-ed9feb43ba6c806e2b78ee953080f58e-X",
 			tx_ref: '<?php echo $tx_ref ?>',
@@ -523,9 +529,7 @@ $dm_perc = ($dm * 100) / 1000;
 				logo: "https://kotnova.com/assets/media/logos/icon.png",
 			},
 		});
-
-
-	});
+	}
 </script>
 
 
@@ -1140,45 +1144,45 @@ $dm_perc = ($dm * 100) / 1000;
 	function clearLogs() {
 
 		//*
-			Swal.fire({
-				icon: 'question',
-				title: 'Clear logs',
-				text: 'Are you sure you want to clear your logs?',
-				confirmButtonText: 'Yes, Delete',
-				footer: '<a href="">Why do I have this issue?</a>'
-			}).then((result) => {
-				if (result.isConfirmed) {
-					$.ajax({
-						type: "POST",
-						url: "../process/post/clear_logs.php",
-						data: {
-							owner: '<?php echo $user['id'] ?>',
-						},
-						success: function(arr) {
-							var status;
-							//*
-							data = $.parseJSON(arr);
-							if (data[0] == 'success') {
-								Swal.fire(data[1], '', data[0]);
-								setTimeout(function() {
-									window.location.reload();
-								}, 2000);
-							} else {
-								status = data[0];
-								data[0] = 'error';
-								Swal.fire(status, '', data[0]);
-							}
-							//*/
-
-
+		Swal.fire({
+			icon: 'question',
+			title: 'Clear logs',
+			text: 'Are you sure you want to clear your logs?',
+			confirmButtonText: 'Yes, Delete',
+			footer: '<a href="">Why do I have this issue?</a>'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				$.ajax({
+					type: "POST",
+					url: "../process/post/clear_logs.php",
+					data: {
+						owner: '<?php echo $user['id'] ?>',
+					},
+					success: function(arr) {
+						var status;
+						//*
+						data = $.parseJSON(arr);
+						if (data[0] == 'success') {
+							Swal.fire(data[1], '', data[0]);
+							setTimeout(function() {
+								window.location.reload();
+							}, 2000);
+						} else {
+							status = data[0];
+							data[0] = 'error';
+							Swal.fire(status, '', data[0]);
 						}
-					});
+						//*/
 
-				} else if (result.isDenied) {
-					Swal.fire('Changes are not saved', '', 'info')
-				}
-			})
-		
+
+					}
+				});
+
+			} else if (result.isDenied) {
+				Swal.fire('Changes are not saved', '', 'info')
+			}
+		})
+
 
 		//*/
 	};

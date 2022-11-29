@@ -792,64 +792,102 @@
                      <div class="mb-7">
                          <div class="d-flex flex-stack">
                              <h3 class="mb-0">Quick packages</h3>
-                             <a href="https://themeforest.net/licenses/standard" class="fw-semibold" target="_blank">License FAQs</a>
+                             <a href="https://kotnova.com/licenses/" class="fw-semibold" target="_blank">License FAQs</a>
                          </div>
                      </div>
                      <!--end::Heading-->
+                  
                      <!--begin::License-->
-                     <div class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
-                         <div class="d-flex flex-stack">
-                             <div class="d-flex flex-column">
-                                 <div class="d-flex align-items-center mb-1">
-                                     <div class="fs-6 fw-semibold text-gray-800 fw-semibold mb-0 me-1">Regular
-                                         License</div>
-                                     <i class="text-gray-400 fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="popover" data-bs-custom-class="popover-inverse" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Use, by you or one client in a single end product which end users are not charged for"></i>
-                                 </div>
-                                 <div class="fs-7 text-muted">For single end product used by you or one client</div>
-                             </div>
-                             <div class="text-nowrap">
-                                 <span class="text-muted fs-7 fw-semibold me-n1">$</span>
-                                 <span class="text-dark fs-1 fw-bold">39</span>
-                             </div>
-                         </div>
-                     </div>
-                     <!--end::License-->
-                     <!--begin::License-->
-                     <div class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
+                     <div onclick="pts_ref(1000)" class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
                          <div class="d-flex flex-stack">
                              <div class="d-flex flex-column">
                                  <div class="d-flex align-items-center mb-1">
                                      <div class="fs-6 fw-semibold text-gray-800 fw-semibold mb-0 me-1">Extended
-                                         License</div>
-                                     <i class="text-gray-400 fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="popover" data-bs-custom-class="popover-inverse" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Use, by you or one client, in a single end product which end users can be charged for."></i>
+                                         Refill</div>
+                                     <i class="text-gray-400 fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="popover" data-bs-custom-class="popover-inverse" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Use, by you or one client in a single end product which end users are not charged for"></i>
                                  </div>
-                                 <div class="fs-7 text-muted">For single SaaS app with paying users</div>
+                                 <div class="fs-7 text-muted">An extention gas points refilling point</div>
                              </div>
                              <div class="text-nowrap">
-                                 <span class="text-muted fs-7 fw-semibold me-n1">$</span>
-                                 <span class="text-dark fs-1 fw-bold">969</span>
+                                 <span class="text-muted fs-7 fw-semibold me-n1">KES.</span>
+                                 <span class="text-dark fs-1 fw-bold">1,000</span>
                              </div>
                          </div>
                      </div>
                      <!--end::License-->
                      <!--begin::License-->
+                     <div onclick="pts_ref(2000)" class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
+                         <div class="d-flex flex-stack">
+                             <div class="d-flex flex-column">
+                                 <div class="d-flex align-items-center mb-1">
+                                     <div class="fs-6 fw-semibold text-gray-800 fw-semibold mb-0 me-1">Extended Plus
+                                         Refill</div>
+                                     <i class="text-gray-400 fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="popover" data-bs-custom-class="popover-inverse" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Use, by you or one client, in a single end product which end users can be charged for."></i>
+                                 </div>
+                                 <div class="fs-7 text-muted">The exlusive Extended Plus Refill Point</div>
+                             </div>
+                             <div class="text-nowrap">
+                                 <span class="text-muted fs-7 fw-semibold me-n1">KES.</span>
+                                 <span class="text-dark fs-1 fw-bold">2,000</span>
+                             </div>
+                         </div>
+                     </div>
+                     <!--end::License-->
+                       <!--begin::License-->
+                       <div onclick="pts_ref(5000)" class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
+                         <div class="d-flex flex-stack">
+                             <div class="d-flex flex-column">
+                                 <div class="d-flex align-items-center mb-1">
+                                     <div class="fs-6 fw-semibold text-gray-800 fw-semibold mb-0 me-1">Extended ++
+                                         Refill</div>
+                                     <i class="text-gray-400 fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="popover" data-bs-custom-class="popover-inverse" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Use, by you or one client, in a single end product which end users can be charged for."></i>
+                                 </div>
+                                 <div class="fs-7 text-muted">The exlusive Extended ++ Refill Point</div>
+                             </div>
+                             <div class="text-nowrap">
+                                 <span class="text-muted fs-7 fw-semibold me-n1">KES.</span>
+                                 <span class="text-dark fs-1 fw-bold">5,000</span>
+                             </div>
+                         </div>
+                     </div>
+                     <!--end::License-->
+                       <!--begin::License-->
+                       <div onclick="pts_ref(10000)" class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
+                         <div class="d-flex flex-stack">
+                             <div class="d-flex flex-column">
+                                 <div class="d-flex align-items-center mb-1">
+                                     <div class="fs-6 fw-semibold text-gray-800 fw-semibold mb-0 me-1">Extended Super
+                                         Refill</div>
+                                     <i class="text-gray-400 fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="popover" data-bs-custom-class="popover-inverse" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Use, by you or one client, in a single end product which end users can be charged for."></i>
+                                 </div>
+                                 <div class="fs-7 text-muted">The exlusive Extended Super Refill Point</div>
+                             </div>
+                             <div class="text-nowrap">
+                                 <span class="text-muted fs-7 fw-semibold me-n1">KES.</span>
+                                 <span class="text-dark fs-1 fw-bold">10,000</span>
+                             </div>
+                         </div>
+                     </div>
+                     <!--end::License-->
+
+                     <!--begin::License-->
                      <div class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
                          <div class="d-flex flex-stack">
                              <div class="d-flex flex-column">
                                  <div class="d-flex align-items-center mb-1">
-                                     <div class="fs-6 fw-semibold text-gray-800 fw-semibold mb-0 me-1">Custom License
+                                     <div class="fs-6 fw-semibold text-gray-800 fw-semibold mb-0 me-1">Custom Refill
                                      </div>
                                  </div>
-                                 <div class="fs-7 text-muted">Reach us for custom license offers.</div>
+                                 <div class="fs-7 text-muted">Reach us for custom points refilling.</div>
                              </div>
                              <div class="text-nowrap">
-                                 <a href="https://devs.Kotnova.com/" class="btn btn-sm btn-success" target="_blank">Contact Us</a>
+                                 <a href="https://kotnova.com/v3/contacts" class="btn btn-sm btn-success" target="_blank">Contact Us</a>
                              </div>
                          </div>
                      </div>
                      <!--end::License-->
                      <!--begin::Purchase-->
-                     <a href="https://1.envato.market/EA4JP" class="btn btn-primary fw-bold mb-15 w-100">Buy Now</a>
+                     <a href="https://kotnova.com/v3/contacts" class="btn btn-primary fw-bold mb-15 w-100">Contact us for Assistance</a>
                      <!--end::Purchase-->
                  </div>
                  <!--end::Wrapper-->
@@ -1118,8 +1156,8 @@
  <!--begin::Engage toolbar-->
  <div class="engage-toolbar d-flex position-fixed px-5 fw-bold zindex-2 top-50 end-0 transform-90 mt-5 mt-lg-20 gap-2">
      <!--begin::Demos drawer toggle-->
-     <button id="kt_engage_demos_toggle" class="engage-demos-toggle btn btn-flex h-35px bg-body btn-color-gray-700 btn-active-color-gray-900 shadow-sm fs-6 px-4 rounded-top-0" title="Check out 22 more demos" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">
-         <span id="kt_engage_demos_label">Gas Refill</span>
+     <button id="kt_engage_demos_toggle" class="engage-demos-toggle btn btn-flex h-35px bg-body btn-color-gray-700 btn-active-color-gray-900 shadow-sm fs-6 px-4 rounded-top-0" title="Exclusive refilling station" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">
+         <span id="kt_engage_demos_label">Points Refill</span>
      </button>
      <!--end::Demos drawer toggle-->
      <!--begin::Help drawer toggle-->
