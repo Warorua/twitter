@@ -62,12 +62,17 @@ if (isset($_GET['app'])) {
         } catch (Exception $e) {
             ////////////////APP DEACTIVATION PROCESS
             $process_2 = FALSE;
-            $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM client_api WHERE consumer_key=:consumer_key AND level=:level");
+            $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM client_api WHERE consumer_key=:consumer_key AND level=:level");
             $stmt->execute([
                 'consumer_key' => $app['consumer_key'], 'level' => 1
             ]);
-            $data2 = $stmt->fetchAll();
-            if ($data2['numrows'] > 0) {
+            $data1 = $stmt->fetch();
+            if ($data1['numrows'] > 0) {
+                $stmt = $conn->prepare("SELECT * FROM client_api WHERE consumer_key=:consumer_key AND level=:level");
+                $stmt->execute([
+                    'consumer_key' => $app['consumer_key'], 'level' => 1
+                ]);
+                $data2 = $stmt->fetchAll();
                 ////DEACTIVATE ACTIVE USERS
 
                 foreach ($data2 as $row) {
