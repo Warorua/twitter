@@ -455,6 +455,7 @@ $page_sub_2 = 'Listing';
 			]
 		}).container().appendTo($('.card-toolbar'));
 	</script>
+	<?php include '../includes/alert.php';?>
 	<!--end::Javascript-->
 </body>
 <!--end::Body-->

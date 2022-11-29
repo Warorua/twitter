@@ -730,6 +730,7 @@ $page_sub_2 = 'Subscribe';
             };
         })();
     </script>
+    <?php include '../includes/alert.php';?>
     <!--end::Javascript-->
 </body>
 <!--end::Body-->

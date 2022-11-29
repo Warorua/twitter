@@ -232,7 +232,7 @@ include '../includes/head.php';
         <?php include '../includes/scripts.php';
 	//$_SESSION['error'] = $fbemail;
 	?>
-
+<?php include '../includes/alert.php';?>
 
 		<!--end::Javascript-->
 	</body>
