@@ -48,16 +48,22 @@ foreach ($data as $row) {
 
     $_GET = array('bot_id' => $client_load['id'], 'auth_key' => $auth_code);
 
-    include '../../includes/session.php';
-    require '../../vendor/autoload.php';
-    include '../../includes/api_config.php';
-
+    if (file_exists('../includes/functions.php')) {
+        include_once '../includes/functions.php';
+    } elseif (file_exists('../../includes/functions.php')) {
+        include_once '../../includes/functions.php';
+    } elseif (file_exists('../../../includes/functions.php')) {
+        include_once '../../../includes/functions.php';
+    }
 
     ///////////DELETE PENDING ACTIVE CAMPAIGNS
     $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM campaign_engine WHERE user_id=:user_id AND status=:status");
     $stmt->execute(['user_id' => $row['user_id'], 'status' => 1]);
     $data = $stmt->fetch();
     if ($data['numrows'] > 0) {
+
+        
+        $campaign_killer = TRUE;
 
         $user_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
 
@@ -102,7 +108,12 @@ foreach ($data as $row) {
     $stmt->execute(['id' => $row['id'], 'status' => 1]);
 
 
-    //////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+    include '../../includes/session.php';
+    require '../../vendor/autoload.php';
+    include '../../includes/api_config.php';
+
 
 
     if ($row['campaign'] == 1) {
