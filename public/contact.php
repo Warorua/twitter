@@ -1,5 +1,5 @@
 <?php
-include '../includes/plain_head.php';
+include '../includes/head.php';
 ?>
 	<!--begin::Body-->
 	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled aside-enabled">
