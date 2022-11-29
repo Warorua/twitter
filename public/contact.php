@@ -232,7 +232,7 @@ include '../includes/head.php';
         <?php include '../includes/scripts.php';
 	//$_SESSION['error'] = $fbemail;
 	?>
-
+<script src="../assets/plugins/custom/leaflet/leaflet.bundle.js"></script>
 		<!--end::Javascript-->
 	</body>
 	<!--end::Body-->
