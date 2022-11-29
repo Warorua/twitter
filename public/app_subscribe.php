@@ -180,7 +180,7 @@ if (isset($_GET['app'])) {
    
             ////////////////////////////////////////
             $_SESSION['error'] = 'App has a technical error!';
-            redirect($parent_url . '/v3/subscribe');
+            redirect($parent_url . '/v3/shop');
         }
     } else {
         $_SESSION['error'] = 'App not found';
