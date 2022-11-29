@@ -18,8 +18,10 @@
 <!--begin::Vendors Javascript(used by this page)-->
 <script src="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
 <script src="../assets/plugins/custom/datatables/datatables.bundle.js"></script>
+<script src="../assets/plugins/custom/leaflet/leaflet.bundle.js"></script>
 <!--end::Vendors Javascript-->
 <!--begin::Custom Javascript(account overview page)-->
+<script src="../assets/js/custom/pages/general/contact.js"></script>
 <script src="../assets/js/custom/apps/user-management/users/list/table.js"></script>
 <script src="../assets/js/custom/apps/user-management/users/list/export-users.js"></script>
 <script src="../assets/js/custom/apps/user-management/users/list/add.js"></script>

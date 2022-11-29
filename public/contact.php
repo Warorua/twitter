@@ -227,17 +227,12 @@ include '../includes/head.php';
 		<!--end::Scrolltop-->
 		<!--begin::Modals-->
         <?php include '../includes/modals.php' ?>
-		<!--end::Modals-->
+		<!--end::Modals-->		
 		<!--begin::Javascript-->
         <?php include '../includes/scripts.php';
 	//$_SESSION['error'] = $fbemail;
 	?>
-		<!--begin::Vendors Javascript(used by this page)-->
-		<script src="../assets/plugins/custom/leaflet/leaflet.bundle.js"></script>
 
-		<!--end::Vendors Javascript-->
-		<!--begin::Custom Javascript(used by this page)-->
-		<script src="../assets/js/custom/pages/general/contact.js"></script>
 
 		<!--end::Javascript-->
 	</body>
