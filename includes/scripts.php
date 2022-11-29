@@ -108,8 +108,8 @@
 	$(document).on("click", "div[kt_tweet_link_disabled]", function() {
 		Toast.fire({
 			icon: 'warning',
-			title: 'Sorry! You have not set up your Twitter API.',
-			html: 'To use this feature add your API credentials. Visit here to learn how to get your Twitter API app credentials and how to set them up to get started. <a href="#" class="btn btn-light-danger">Add app details</a>',
+			title: 'Sorry! Subscribe to an App or set up your Twitter API.',
+			html: 'To use this feature add your API credentials. You can also subscribe to ready apps from <a href="<?php echo $parent_url ?>/v3/shop" class="btn btn-light-danger">Here</a>',
 		})
 	});
 </script>
