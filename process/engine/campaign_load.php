@@ -39,6 +39,7 @@ foreach ($data as $row) {
     $stmt->execute(['id' => $row['user_id']]);
 
     $client_load = $stmt->fetch();
+  
 
     $auth_key = $_SESSION['access_token'] = array('oauth_token' => $client_load['access_token'], 'oauth_token_secret' => $client_load['access_secret']);
 
@@ -50,6 +51,59 @@ foreach ($data as $row) {
     include '../../includes/session.php';
     require '../../vendor/autoload.php';
     include '../../includes/api_config.php';
+
+
+    ///////////DELETE PENDING ACTIVE CAMPAIGNS
+    $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM campaign_engine WHERE user_id=:user_id AND status=:status");
+    $stmt->execute(['user_id' => $row['user_id'], 'status' => 1]);
+    $data = $stmt->fetch();
+    if ($data['numrows'] > 0) {
+
+        $user_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
+
+        $added_points = $data['budget'] - intval($data['spent_budget']);
+        $raw_points = floatval($user_points) + $added_points;
+
+        $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
+        $cipher_points = safeEncrypt($raw_points, $key);
+
+        $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
+        $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
+
+        usageTrack('-' . $added_points, '');
+
+        if ($data['campaign'] == 1) {
+            $file_path = 'followers';
+        } elseif ($data['campaign'] == 3) {
+            $file_path = 'tweets';
+        } else {
+            $file_path = 'following';
+        }
+
+        $file_name = "../../process/client/" . $file_path . "/" . $client_load['t_id'] . ".json";
+
+        if (file_exists($file_name)) {
+            unlink($file_name);
+        }
+
+
+        $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
+        $stmt->execute(['id' => $data['id']]);
+
+        $mode = 'T0';
+        $status = 1;
+        $output = 'The system automatically deleted an active campaign of id:' . $data['campaign'].' due to a processing error.';
+        $auth_user = $client_load['t_id'];
+        twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+        die();
+    }
+    ///////////SET CAMPAIGN AS ACTIVE
+    $stmt = $conn->prepare("UPDATE campaign_engine SET status=:status WHERE id=:id");
+    $stmt->execute(['id' => $row['id'], 'status' => 1]);
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     if ($row['campaign'] == 1) {
         $path = $parent_url . '/process/post/follow_user.php';
@@ -591,8 +645,9 @@ foreach ($data as $row) {
         if (!isset($spent_budget)) {
             $spent_budget = '';
         }
-        $stmt = $conn->prepare("UPDATE campaign_engine SET last_key=:last_key, pagination_token=:pagination_token, spent_budget=:spent_budget, execution=:execution WHERE id=:id");
-        $stmt->execute(['id' => $row['id'], 'last_key' => $last_key, 'pagination_token' => $pagination_token, 'spent_budget' => $spent_budget, 'execution' => $execution]);
+
+        $stmt = $conn->prepare("UPDATE campaign_engine SET last_key=:last_key, pagination_token=:pagination_token, spent_budget=:spent_budget, execution=:execution, status=:status WHERE id=:id");
+        $stmt->execute(['id' => $row['id'], 'last_key' => $last_key, 'pagination_token' => $pagination_token, 'spent_budget' => $spent_budget, 'execution' => $execution, 'status' => 0]);
 
 
         if ($row['budget'] <= $row['spent_budget']) {
