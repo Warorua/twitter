@@ -57,17 +57,17 @@ foreach ($data as $row) {
     }
 
     ///////////DELETE PENDING ACTIVE CAMPAIGNS
-    $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM campaign_engine WHERE user_id=:user_id AND status=:status");
-    $stmt->execute(['user_id' => $row['user_id'], 'status' => 1]);
-    $data = $stmt->fetch();
-    if ($data['numrows'] > 0) {
+    $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM campaign_engine WHERE id=:id AND status=:status");
+    $stmt->execute(['id' => $row['id'], 'status' => 1]);
+    $data_cmp = $stmt->fetch();
+    if ($data_cmp['numrows'] > 0) {
 
         
         $campaign_killer = TRUE;
 
         $user_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
 
-        $added_points = $data['budget'] - intval($data['spent_budget']);
+        $added_points = $data_cmp['budget'] - intval($data_cmp['spent_budget']);
         $raw_points = floatval($user_points) + $added_points;
 
         $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
@@ -78,9 +78,9 @@ foreach ($data as $row) {
 
         usageTrack('-' . $added_points, '');
 
-        if ($data['campaign'] == 1) {
+        if ($data_cmp['campaign'] == 1) {
             $file_path = 'followers';
-        } elseif ($data['campaign'] == 3) {
+        } elseif ($data_cmp['campaign'] == 3) {
             $file_path = 'tweets';
         } else {
             $file_path = 'following';
@@ -94,11 +94,11 @@ foreach ($data as $row) {
 
 
         $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE id=:id");
-        $stmt->execute(['id' => $data['id']]);
+        $stmt->execute(['id' => $data_cmp['id']]);
 
         $mode = 'T0';
         $status = 1;
-        $output = 'The system automatically deleted an active campaign of id:' . $data['campaign'].' due to a processing error.';
+        $output = 'The system automatically deleted an active campaign of id:' . $data_cmp['campaign'].' due to a processing error.';
         $auth_user = $client_load['t_id'];
         twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
         die();
