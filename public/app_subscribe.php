@@ -60,8 +60,127 @@ if (isset($_GET['app'])) {
                 redirect($parent_url . '/account/user');
             }
         } catch (Exception $e) {
+            ////////////////APP DEACTIVATION PROCESS
+            $process_2 = FALSE;
+            $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM client_api WHERE consumer_key=:consumer_key AND level=:level");
+            $stmt->execute([
+                'consumer_key' => $app['consumer_key'], 'level' => 1
+            ]);
+            $data2 = $stmt->fetchAll();
+            if ($data2['numrows'] > 0) {
+                ////DEACTIVATE ACTIVE USERS
+
+                foreach ($data2 as $row) {
+                    if ($row['status'] == 1) {
+                        ////////////////////////return pts balance
+                        $stmt = $conn->prepare("SELECT * FROM client_api WHERE user_id=:user_id AND status=:status");
+                        $stmt->execute(['user_id' => $row['user_id'], 'status' => 1]);
+                        $client_load_app = $stmt->fetch();
+
+                        $stmt = $conn->prepare("SELECT * FROM users WHERE id=:id");
+                        $stmt->execute(['id' => $row['user_id']]);
+                        $client_load = $stmt->fetch();
+
+                        $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM campaign_engine WHERE user_id=:user_id");
+                        $stmt->execute(['user_id' => $row['user_id']]);
+                        $cmpg_1 = $stmt->fetch();
+                        if ($cmpg_1['numrows'] > 0) {
+                            $init_points = safeDecrypt($client_load['p_value'], $client_load['p_key']);
+
+                            $stmt = $conn->prepare("SELECT * FROM campaign_engine WHERE user_id=:user_id");
+                            $stmt->execute(['user_id' => $row['user_id']]);
+                            $cmpg = $stmt->fetchAll();
+                            $added_points = 0;
+                            foreach ($cmpg as $row) {
+                                $added_points += $row['budget'] - intval($row['spent_budget']);
+
+                                $mode = 'T0';
+                                $status = 1;
+                                $output = 'Your active App was deactivated due to a technical error and thus deleted an active campaign of id:' . $row['campaign'];
+                                $auth_user = $client_load['t_id'];
+                                twitter_log(
+                                    $client_load['email'],
+                                    '',
+                                    $status,
+                                    $mode,
+                                    $client_load['id'],
+                                    $auth_user,
+                                    $output
+                                );
+                            }
+                            $raw_points = floatval($init_points) + $added_points;
+
+                            $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
+                            $cipher_points = safeEncrypt($raw_points, $key);
+
+                            $stmt = $conn->prepare("UPDATE users SET p_value=:p_value, p_key=:p_key, p_cipher=:p_cipher WHERE id=:id");
+                            $stmt->execute(['id' => $client_load['id'], 'p_value' => $cipher_points, 'p_key' => $key, 'p_cipher' => 1]);
+
+                            $stmt = $conn->prepare("INSERT INTO usage_track (time, points, user_id, action, consumer_key, level) VALUES (:time, :points, :user_id, :action, :consumer_key, :level)");
+                            $stmt->execute(['time' => time(), 'points' => '-' . $added_points, 'user_id' => $row['user_id'], 'action' => 'NULL', 'consumer_key' => $client_load_app['consumer_key'], 'level' => $client_load_app['level']]);
+
+
+                            //////////////////////////////delete active campaigns
+                            $stmt = $conn->prepare("DELETE FROM campaign_engine WHERE user_id=:user_id");
+                            $stmt->execute(['user_id' => $row['user_id']]);
+                        }
+
+
+                        ///////////////////////////send message
+                        $message = 'Your active app at Kotnova has been deactivated. If you had active campaigns they have been deactivated and the POINTS balance recharged back to your POINTS wallet but you can always re-build them. You can reactivate the App from your Kotnova dashboard.';
+                        $subject = 'Active App Deactivation';
+                        system_mailer(
+                            $subject,
+                            $message,
+                            $client_load['email']
+                        );
+                        /////////////////////////////////////////////
+
+                        $stmt = $conn->prepare("UPDATE client_api SET status=:status WHERE consumer_key=:consumer_key AND level=:level AND user_id=:user_id");
+                        $stmt->execute(['consumer_key' => $app['consumer_key'], 'level' => 1, 'user_id' => $row['user_id'], 'status' => 0]);
+                    }
+                }
+                $process_2 = TRUE;
+                /////////////////////UNSUBSCRIBE ACTIVE USERS
+                if ($process_2 == TRUE) {
+                    foreach ($data2 as $row_2) {
+                        $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM client_api WHERE consumer_key=:consumer_key AND user_id=:user_id AND level=:level");
+                        $stmt->execute(['consumer_key' => $app['consumer_key'], 'user_id' => $row_2['user_id'], 'level' => 1]);
+                        $data2 = $stmt->fetch();
+                        if ($data2['numrows'] > 0) {
+                            if ($data2['status'] != 1) {
+                                $stmt = $conn->prepare("DELETE FROM client_api WHERE consumer_key=:consumer_key AND level=:level AND user_id=:user_id");
+                                $stmt->execute(['consumer_key' => $app['consumer_key'], 'level' => 1, 'user_id' => $row_2['user_id']]);
+                            }
+                        }
+                    }
+                }
+                ////////////////////UNLIST APP
+
+                foreach ($data2 as $row_3) {
+                    $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM client_api WHERE consumer_key=:consumer_key AND status=:status AND level=:level");
+                    $stmt->execute(['consumer_key' => $app['consumer_key'], 'status' => 1, 'level' => 1]);
+                    $data3 = $stmt->fetch();
+                    if ($data3['numrows'] < 1) {
+
+                        $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM api_shop WHERE app_id=:app_id");
+                        $stmt->execute(['app_id' => $app['app_id']]);
+                        $data2 = $stmt->fetch();
+                        if ($data2['numrows'] > 0) {
+
+                            $stmt = $conn->prepare("DELETE FROM api_shop WHERE app_id=:app_id");
+                            $stmt->execute(['app_id' => $app['app_id']]);
+
+                            $stmt = $conn->prepare("DELETE FROM client_api WHERE  consumer_key=:consumer_key AND level=:level");
+                            $stmt->execute(['consumer_key' => $app['consumer_key'], 'level' => 1]);
+                        }
+                    }
+                }
+            }
+   
+            ////////////////////////////////////////
             $_SESSION['error'] = 'App has a technical error!';
-            redirect($parent_url . '/account/user');
+            redirect($parent_url . '/v3/subscribe');
         }
     } else {
         $_SESSION['error'] = 'App not found';
