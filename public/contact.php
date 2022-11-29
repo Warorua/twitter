@@ -119,7 +119,7 @@ include '../includes/plain_head.php';
 												<h1 class="text-dark fw-bold my-5">Let’s Speak</h1>
 												<!--end::Subtitle-->
 												<!--begin::Number-->
-												<div class="text-gray-700 fw-semibold fs-2">1 (833) 597-7538</div>
+												<div class="text-gray-700 fw-semibold fs-2">+254 716 912 002</div>
 												<!--end::Number-->
 											</div>
 											<!--end::Phone-->
@@ -143,7 +143,7 @@ include '../includes/plain_head.php';
 												<h1 class="text-dark fw-bold my-5">Our Head Office</h1>
 												<!--end::Subtitle-->
 												<!--begin::Description-->
-												<div class="text-gray-700 fs-3 fw-semibold">Churchill-laan 16 II, 1052 CD, Amsterdam</div>
+												<div class="text-gray-700 fs-3 fw-semibold">Leoden, Roysambu, Nairobi, Kenya</div>
 												<!--end::Description-->
 											</div>
 											<!--end::Address-->
