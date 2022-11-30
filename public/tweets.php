@@ -762,7 +762,7 @@ if ($tweet_data['data']['verified']) {
 									<div id="kt_docs_card_collapsible" class="collapse show">
 										<div class="card-body">
 											<div class="row">
-												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+												<div class="col-md-4 mb-3" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
 													<div kt_tweet_link="LR" class="btn btn-flex btn-danger px-6 w-100">
 														<span class="svg-icon svg-icon-2x">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -777,7 +777,7 @@ if ($tweet_data['data']['verified']) {
 														</span>
 													</div>
 												</div>
-												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+												<div class="col-md-4 mb-3" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
 													<div kt_tweet_link="RR" class="btn btn-flex btn-primary px-6 w-100">
 														<span class="svg-icon svg-icon-2x">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -791,7 +791,7 @@ if ($tweet_data['data']['verified']) {
 														</span>
 													</div>
 												</div>
-												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+												<div class="col-md-4 mb-3" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
 													<div kt_tweet_link="SR" class="btn btn-flex btn-info px-6 w-100">
 														<span class="svg-icon svg-icon-2x">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -809,7 +809,7 @@ if ($tweet_data['data']['verified']) {
 										</div>
 										<div class="card-footer">
 											<div class="row">
-												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+												<div class="col-md-4 mb-3" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
 													<div kt_tweet_link="FL" class="btn btn-flex btn-light-danger px-6 w-100">
 														<span class="svg-icon svg-icon-2x">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -823,7 +823,7 @@ if ($tweet_data['data']['verified']) {
 														</span>
 													</div>
 												</div>
-												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+												<div class="col-md-4 mb-3" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
 													<div kt_tweet_link="FR" class="btn btn-flex btn-light-primary px-6 w-100">
 														<span class="svg-icon svg-icon-2x">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -837,7 +837,7 @@ if ($tweet_data['data']['verified']) {
 														</span>
 													</div>
 												</div>
-												<div class="col-md-4" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
+												<div class="col-md-4 mb-3" kt_tweet_id="<?php echo $tweet_data['data']['id'] ?>">
 													<div kt_tweet_link="FR_2" class="btn btn-flex btn-light-success px-6 w-100">
 														<span class="svg-icon svg-icon-2x">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
