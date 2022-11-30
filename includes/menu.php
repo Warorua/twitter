@@ -308,7 +308,7 @@
     <!--begin::Footer-->
     <div class="aside-footer flex-column-auto pt-3 pb-7" id="kt_aside_footer">
         <a href="#" class="btn btn-custom btn-primary w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="Get to learn how to work with Kotnova">
-            <span class="btn-label">Documentattion</span>
+            <span class="btn-label">Documentation</span>
             <!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
             <span class="svg-icon btn-icon svg-icon-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

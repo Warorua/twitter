@@ -2,7 +2,7 @@
 if (isset($page_title)) {
     $page_title = $page_title;
 } else {
-    $page_title = 'The Tweet Bot.site';
+    $page_title = 'Kotnova';
 }
 
 if (isset($page_sub_1)) {
