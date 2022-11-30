@@ -55,6 +55,9 @@ foreach ($data as $row) {
     } elseif (file_exists('../../../includes/functions.php')) {
         include_once '../../../includes/functions.php';
     }
+    include '../../includes/session.php';
+    require '../../vendor/autoload.php';
+
 
     ///////////DELETE PENDING ACTIVE CAMPAIGNS
     $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM campaign_engine WHERE id=:id AND status=:status");
@@ -110,8 +113,7 @@ foreach ($data as $row) {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-    include '../../includes/session.php';
-    require '../../vendor/autoload.php';
+ 
     include '../../includes/api_config.php';
 
 
