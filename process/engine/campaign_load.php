@@ -184,7 +184,7 @@ foreach ($data as $row) {
         if ($row['execution'] == '') {
             $execution = time() + $row['frequency'];
         } else {
-            $execution = $row['execution'] + $row['frequency'];
+            $execution = time() + $row['frequency'];
         }
 
 
@@ -288,7 +288,7 @@ foreach ($data as $row) {
         if ($row['execution'] == '') {
             $execution = time() + $row['frequency'];
         } else {
-            $execution = $row['execution'] + $row['frequency'];
+            $execution = time() + $row['frequency'];
         }
 
         $mode = 'T0';
@@ -372,7 +372,7 @@ foreach ($data as $row) {
             if ($row['execution'] == '') {
                 $execution = time() + $row['frequency'];
             } else {
-                $execution = $row['execution'] + $row['frequency'];
+                $execution = time() + $row['frequency'];
             }
 
 
@@ -571,7 +571,7 @@ foreach ($data as $row) {
             if ($row['execution'] == '') {
                 $execution = time() + $row['frequency'];
             } else {
-                $execution = $row['execution'] + $row['frequency'];
+                $execution = time() + $row['frequency'];
             }
 
 
