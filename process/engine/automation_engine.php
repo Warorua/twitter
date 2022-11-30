@@ -1,5 +1,5 @@
 <?php
-ini_set('max_execution_time', 180);
+ini_set('max_execution_time', 1800);
 include '../../includes/conn.php';
 
 
@@ -33,9 +33,46 @@ foreach ($data as $row) {
         $auth_code = json_encode($auth_key);
         $_GET = array('bot_id' => $client['id'], 'auth_key' => $auth_code);
 
+        if (file_exists('../includes/functions.php')) {
+            include_once '../includes/functions.php';
+        } elseif (file_exists('../../includes/functions.php')) {
+            include_once '../../includes/functions.php';
+        } elseif (file_exists('../../../includes/functions.php')) {
+            include_once '../../../includes/functions.php';
+        }
         include '../../includes/session.php';
         require '../../vendor/autoload.php';
+
+
+        ///////////DELETE PENDING ACTIVE FACTORY
+        $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM automation_subs WHERE id=:id AND status=:status");
+        $stmt->execute(['id' => $row_1['id'], 'status' => 1]);
+        $data_cmp = $stmt->fetch();
+        if ($data_cmp['numrows'] > 0) {
+            $user = $row_1['user_id'];
+            $id = $row_1['id'];
+
+           
+                $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM automation_subs WHERE user_id=:user_id AND id=:id");
+                $stmt->execute(['user_id' => $user, 'id' => $id]);
+                $data = $stmt->fetch();
+                if ($data['numrows'] > 0) {
+
+                    $stmt = $conn->prepare("DELETE FROM automation_subs WHERE id=:id");
+                    $stmt->execute(['id' => $id]);
+                }
+            
+        }
+        ///////////SET FACTORY AS ACTIVE
+        $stmt = $conn->prepare("UPDATE automation_subs SET status=:status WHERE id=:id");
+        $stmt->execute(['id' => $row_1['id'], 'status' => 1]);
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+
         include '../../includes/api_config.php';
+    
 
         //*
         $media = [];
@@ -148,6 +185,9 @@ foreach ($data as $row) {
     //*/
     $stmt = $conn->prepare("UPDATE automation_scripts SET automation=:automation WHERE id=:id");
     $stmt->execute(['id' => $next_automation_id, 'automation' => $next_automation]);
+
+    $stmt = $conn->prepare("UPDATE automation_subs SET status=:status WHERE id=:id");
+    $stmt->execute(['id' => $row_1['id'], 'status' => 0]);
 }
 
 //*/
