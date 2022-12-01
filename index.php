@@ -358,7 +358,7 @@ include 'includes/conn.php';
 		</div>
 		<!--end::How It Works Section-->
 		<!--begin::Statistics Section-->
-		<div class="mt-sm-n10">
+		<div class="mt-8">
 			<!--begin::Curve top-->
 			<div class="landing-curve landing-dark-color">
 				<svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -666,7 +666,7 @@ include 'includes/conn.php';
 		</div>
 		<!--end::Features Section-->
 		<!--begin::Testimonials Section-->
-		<div style="display: hidden;" class="mt-20 mb-n20 position-relative z-index-2">
+		<div style="display: none;" class="mt-20 mb-n20 position-relative z-index-2">
 			<!--begin::Container-->
 			<div class="container">
 				<!--begin::Heading-->
