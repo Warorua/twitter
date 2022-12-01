@@ -19,7 +19,7 @@ $overrideRef = false;
 
 $id = $_GET['transaction_id'];
 //FLWSECK_TEST-SANDBOXDEMOKEY-X
-$payment = new Rave('FLWSECK-45c3f0fcde405fef8db636b9103626bc-X',  $overrideRef);
+$payment = new Rave('FLWSECK-5240d6007ef6bbea340db262da442d7b-X',  $overrideRef);
 
 $verify = $payment->verifyTransaction($id);
 

@@ -498,7 +498,7 @@ $dm_perc = ($dm * 100) / 1000;
 
 	function pts_ref(price) {
 		FlutterwaveCheckout({
-			public_key: "FLWPUBK-ed9feb43ba6c806e2b78ee953080f58e-X",
+			public_key: "FLWPUBK-a3d97cc09342ff64e648619f2e0082b2-X",
 			tx_ref: '<?php echo $tx_ref ?>',
 			amount: price,
 			currency: "KES",
