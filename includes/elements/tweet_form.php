@@ -121,9 +121,9 @@
         <div class="card-footer d-flex justify-content-end pt-0">
 
             <!--begin::Post action-->
-            <button class="btn btn-sm btn-primary" type="submit">
+            <button class="btn btn btn-primary tweetPosting" type="submit">
                 <!--begin::Indicator label-->
-                <span class="indicator-label">Post</span>
+                <span class="indicator-label">Tweet</span>
                 <!--end::Indicator label-->
                 <!--begin::Indicator progress-->
                 <span class="indicator-progress">Please wait...

@@ -612,7 +612,7 @@ $ajax_user_id = $user['t_id'];
 		previewNode.parentNode.removeChild(previewNode);
 
 		var myDropzone = new Dropzone(id, { // Make the whole body a dropzone
-			//url: "..<?php //echo $form_action ?>", // Set the url for your upload script location
+			//url: "", // Set the url for your upload script location
 			//method: "post",
 			parallelUploads: 20,
 			paramName: "file",
@@ -659,6 +659,9 @@ $ajax_user_id = $user['t_id'];
 		});
 
 		myDropzone.on("sending", function(file) {
+			$('.tweetPosting').addClass('disabled');
+			$('.tweetPosting').text("Uploading...");
+			$('.tweetPosting').prepend('<span class="spinner-border spinner-border-sm" role="status"></span> ');
 			// Show the total progress bar when upload starts
 			const progressBars = dropzone.querySelectorAll('.progress-bar');
 			progressBars.forEach(progressBar => {
@@ -668,6 +671,8 @@ $ajax_user_id = $user['t_id'];
 
 		// Hide the total progress bar when nothing"s uploading anymore
 		myDropzone.on("complete", function(progress) {
+			$('.tweetPosting').removeClass('disabled');
+			$('.tweetPosting').text("Tweet");
 			const progressBars = dropzone.querySelectorAll('.dz-complete');
 
 			setTimeout(function() {

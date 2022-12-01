@@ -100,9 +100,9 @@
 		$(this).children('button[type="submit"]').prepend('<span class="spinner-border spinner-border-sm" role="status"></span> ');
 	});
 
-	$('button[type="submit"]').click(function() {
-		//$(this).text("Processing...");
-		//$(this).prepend('<span class="spinner-border spinner-border-sm" role="status"></span> ');
+	$('.tweetPosting').click(function() {
+		$(this).text("Processing...");
+		$(this).prepend('<span class="spinner-border spinner-border-sm" role="status"></span> ');
 	});
 
 	$(document).on("click", "div[kt_tweet_link_disabled]", function() {
@@ -524,7 +524,7 @@ $dm_perc = ($dm * 100) / 1000;
 				}
 			},
 			customizations: {
-				title: "KOT Tweet Admin",
+				title: "Kotnova",
 				description: "Refill your gas points",
 				logo: "https://kotnova.com/assets/media/logos/icon.png",
 			},
