@@ -1204,6 +1204,9 @@ if ($tweet_data['data']['verified']) {
 		});
 
 		myDropzone.on("sending", function(file) {
+			$('.tweetPosting').addClass('disabled');
+			$('.tweetPosting').text("Uploading...");
+			$('.tweetPosting').prepend('<span class="spinner-border spinner-border-sm" role="status"></span> ');
 			// Show the total progress bar when upload starts
 			const progressBars = dropzone.querySelectorAll('.progress-bar');
 			progressBars.forEach(progressBar => {
@@ -1213,6 +1216,8 @@ if ($tweet_data['data']['verified']) {
 
 		// Hide the total progress bar when nothing"s uploading anymore
 		myDropzone.on("complete", function(progress) {
+			$('.tweetPosting').removeClass('disabled');
+			$('.tweetPosting').text("Tweet");
 			const progressBars = dropzone.querySelectorAll('.dz-complete');
 
 			setTimeout(function() {
