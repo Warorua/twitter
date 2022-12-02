@@ -135,11 +135,21 @@ include '../includes/head.php';
 								<!--end::Overview-->
 								<!--begin::Stats-->
 								<?php
+								$stmt = $conn->prepare("SELECT * FROM pts_conversion WHERE user_id=:user_id");
+								$stmt->execute(['user_id' => $user['id']]);
+								$pts_conversion = $stmt->fetchAll();
+								$total_pts_conversion = 0;
+								foreach($pts_conversion as $row){
+									$total_pts_conversion += $row['points'];
+								}
+
+
 								$stmt = $conn->prepare("SELECT * FROM user_earnings WHERE user_id=:user_id");
 								$stmt->execute(['user_id' => $user['id']]);
 								$my_earn = $stmt->fetch();
 
 								$balance = $my_earn['refer'] + $my_earn['app'];
+								$total_earnings = $balance + $total_pts_conversion;
 								?>
 								<div class="row">
 									<!--begin::Col-->
@@ -147,7 +157,7 @@ include '../includes/head.php';
 										<div class="card card-dashed flex-center min-w-175px my-3 p-6">
 											<span class="fs-4 fw-semibold text-info pb-1 px-2">Total Earnings</span>
 											<span class="fs-lg-2tx fw-bold d-flex justify-content-center">PTS.
-												<span data-kt-countup="true" data-kt-countup-value="<?php echo $balance ?>">0</span></span>
+												<span data-kt-countup="true" data-kt-countup-value="<?php echo $total_earnings ?>">0</span></span>
 										</div>
 									</div>
 									<!--end::Col-->
