@@ -596,6 +596,33 @@ $dm_perc = ($dm * 100) / 1000;
 
 
 	});
+
+		///////////////////////////////////CREATE CAMPAIGN
+		$(document).on('submit', '#kt_convert_points', function(e) {
+		e.preventDefault();
+
+		formData = new FormData(this);
+
+
+		Toast.fire({
+			icon: 'info',
+			title: 'Conversion started: Please wait for the notification message'
+		})
+
+		$.ajax({
+			type: "POST",
+			url: "../process/post/points_conversion.php",
+			data: formData,
+			processData: false, // tell jQuery not to process the data
+			contentType: false, // tell jQuery not to set contentType
+			enctype: 'multipart/form-data',
+			success: function(data) {
+				window.location.reload();
+			}
+		});
+
+
+	});
 </script>
 
 <script>

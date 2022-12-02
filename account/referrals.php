@@ -204,7 +204,7 @@ include '../includes/head.php';
 										</div>
 										<!--end::Content-->
 										<!--begin::Action-->
-										<a href="#" class="btn btn-primary px-6 align-self-center text-nowrap">Convert Points</a>
+										<a href="#" class="btn btn-primary px-6 align-self-center text-nowrap" data-bs-toggle="modal" data-bs-target="#kt_modal_top_up_wallet">Convert Points</a>
 										<!--end::Action-->
 									</div>
 									<!--end::Wrapper-->
