@@ -20,7 +20,9 @@ function redirect($url){
         echo '</noscript>'; exit;
     }
 }
-
+if(isset($_GET['error_message'])){
+  redirect($parent_url.'/v2/overheat?error='.$_GET['error_message']);
+}
 
 $fb = new Facebook\Facebook([
   'app_id' => '817967362819734',
