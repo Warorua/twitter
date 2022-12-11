@@ -289,6 +289,18 @@ $ajax_user_id = $user['t_id'];
 										<!--begin::Row-->
 										<div class="row mb-7">
 											<!--begin::Label-->
+											<label class="col-lg-4 fw-semibold text-muted">Twitter ID Number</label>
+											<!--end::Label-->
+											<!--begin::Col-->
+											<div class="col-lg-8">
+												<span class="badge badge-light-info fw-bold fs-6 text-gray-800"><?php echo $user['t_id'] ?></span>
+											</div>
+											<!--end::Col-->
+										</div>
+										<!--end::Row-->
+										<!--begin::Row-->
+										<div class="row mb-7">
+											<!--begin::Label-->
 											<label class="col-lg-4 fw-semibold text-muted">Full Name</label>
 											<!--end::Label-->
 											<!--begin::Col-->
@@ -298,18 +310,6 @@ $ajax_user_id = $user['t_id'];
 											<!--end::Col-->
 										</div>
 										<!--end::Row-->
-										<!--begin::Input group-->
-										<div class="row mb-7">
-											<!--begin::Label-->
-											<label class="col-lg-4 fw-semibold text-muted">Company</label>
-											<!--end::Label-->
-											<!--begin::Col-->
-											<div class="col-lg-8 fv-row">
-												<span class="fw-semibold text-gray-800 fs-6"><?php echo $user_company ?></span>
-											</div>
-											<!--end::Col-->
-										</div>
-										<!--end::Input group-->
 										<!--begin::Input group-->
 										<div class="row mb-7">
 											<!--begin::Label-->
