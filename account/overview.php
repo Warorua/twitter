@@ -293,7 +293,7 @@ $ajax_user_id = $user['t_id'];
 											<!--end::Label-->
 											<!--begin::Col-->
 											<div class="col-lg-8">
-												<span class="badge badge-light-info fw-bold fs-6 text-gray-800"><?php echo $user['t_id'] ?></span>
+												<span class="badge badge-light-info fw-bold fs-6"><?php echo $user['t_id'] ?></span>
 											</div>
 											<!--end::Col-->
 										</div>
