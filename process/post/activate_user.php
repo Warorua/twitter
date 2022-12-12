@@ -13,22 +13,31 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
         $data1 = $stmt->fetch();
         if ($data1['numrows'] > 0) {
 
-
-            $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM client_api WHERE consumer_key=:consumer_key AND user_id=:user_id AND level=:level");
-            $stmt->execute(['consumer_key' => $_POST['app'], 'user_id' => $_POST['user'], 'level' => 1]);
-            $data2 = $stmt->fetch();
-            if ($data2['numrows'] > 0) {
-                if ($data2['status'] == 0) {
-                    $stmt = $conn->prepare("UPDATE client_api SET status=:status WHERE consumer_key=:consumer_key AND level=:level AND user_id=:user_id");
-                    $stmt->execute(['consumer_key' => $_POST['app'], 'level' => 1, 'user_id' => $_POST['user'], 'status'=>1]);
-
-                    $output = array('success');
+                $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM client_api WHERE user_id=:user_id AND level=:level");
+                $stmt->execute(['user_id' => $_POST['user'], 'level' => 1]);
+                $data3 = $stmt->fetch();
+                if ($data3['numrows'] > 0) {
+                    $output = array('User is already active on another app!');
                 } else {
-                    $output = array('This user is not deactivated!');
+
+                    $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM client_api WHERE consumer_key=:consumer_key AND user_id=:user_id AND level=:level");
+                    $stmt->execute(['consumer_key' => $_POST['app'], 'user_id' => $_POST['user'], 'level' => 1]);
+                    $data2 = $stmt->fetch();
+                    if ($data2['numrows'] > 0) {
+                        if ($data2['status'] == 0) {
+                            $stmt = $conn->prepare("UPDATE client_api SET status=:status WHERE consumer_key=:consumer_key AND level=:level AND user_id=:user_id");
+                            $stmt->execute(['consumer_key' => $_POST['app'], 'level' => 1, 'user_id' => $_POST['user'], 'status' => 1]);
+
+                            $output = array('success');
+                        } else {
+                            $output = array('This user is not deactivated!');
+                        }
+                    } else {
+                        $output = array('User has not subscribed to app!');
+                    }
                 }
-            } else {
-                $output = array('User has not subscribed to app!');
-            }
+
+
             
 
 
