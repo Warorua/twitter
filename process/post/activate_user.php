@@ -13,8 +13,8 @@ if (isset($_POST['app']) && isset($_POST['owner']) && isset($_POST['user'])) {
         $data1 = $stmt->fetch();
         if ($data1['numrows'] > 0) {
 
-                $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM client_api WHERE user_id=:user_id AND level=:level");
-                $stmt->execute(['user_id' => $_POST['user'], 'level' => 1]);
+                $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM client_api WHERE user_id=:user_id AND status=:status");
+                $stmt->execute(['user_id' => $_POST['user'], 'status' => 1]);
                 $data3 = $stmt->fetch();
                 if ($data3['numrows'] > 0) {
                     $output = array('User is already active on another app!');
