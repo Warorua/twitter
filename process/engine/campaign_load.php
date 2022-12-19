@@ -82,10 +82,15 @@ foreach ($data as $row) {
         usageTrack('-' . $added_points, '');
 
         if ($data_cmp['campaign'] == 1) {
+            $cmp_nm = 'Auto follow back';
             $file_path = 'followers';
         } elseif ($data_cmp['campaign'] == 3) {
+            $cmp_nm = 'Auto tweet deleter';
             $file_path = 'tweets';
+        }elseif($data_cmp['campaign'] == 2){
+            $cmp_nm = 'Auto tweets liker';
         } else {
+            $cmp_nm = 'Auto unfollower';
             $file_path = 'following';
         }
 
@@ -101,9 +106,11 @@ foreach ($data as $row) {
 
         $mode = 'T0';
         $status = 1;
-        $output = 'The system automatically deleted an active campaign of id:' . $data_cmp['campaign'].' due to a processing error.';
+        $output = 'The automation engine automatically terminated the ' . $cmp_nm.' campaign due to a processing error.';
+        $output_1 = $output.' Unused points balance has been refilled to your wallet. You can recreate this campaign from your Kotnova dashboard.';
         $auth_user = $client_load['t_id'];
         twitter_log($client_load['email'], '', $status, $mode, $client_load['id'], $auth_user, $output);
+        system_mailer('Active campaign termination', $output_1, $client_load['email']);
         die();
     }
     ///////////SET CAMPAIGN AS ACTIVE
