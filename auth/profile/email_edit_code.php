@@ -248,6 +248,7 @@ if ($_POST['mail'] != '') {
                 } 
                 catch (Exception $e) {
                     $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
+                    echo 'ERR';
                 }
 }elseif($user['email'] == $_POST['mail']){
     $_SESSION['info'] = 'You are already using the email input!';
