@@ -6,7 +6,7 @@
             <!--begin::Wrapper-->
             <div class="flex-grow-1">
                 <!--begin::Aside toggle-->
-                <button class="btn btn-dark btn-active-color-primary aside-toggle hover-scale" id="kt_aside_toggle">
+                <button class="btn btn-dark btn-active-color-primary btn-active-gray-700 aside-toggle hover-scale" id="kt_aside_toggle">
                     <!--begin::Svg Icon | path: icons/duotune/general/gen059.svg-->
                  Menu
                     <!--end::Svg Icon-->
