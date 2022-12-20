@@ -28,7 +28,7 @@
          )
      );                          
      $mail->SMTPSecure = 'tls';                           
-     $mail->Port = 465;                                   
+     $mail->Port = 587;                                   
 
      $mail->setFrom('kotnova.mailer@kotnova.com');
      
