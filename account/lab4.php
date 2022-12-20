@@ -46,8 +46,8 @@
 
 } 
 catch (Exception $e) {
- $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
- echo 'ERR';
+ $output = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
+ echo $output;
 }
 ?>
 
