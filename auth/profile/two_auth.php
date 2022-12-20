@@ -217,7 +217,7 @@ $message = '
                     $mail->Host = gethostbyname('mail.kotnova.com');                  
                     $mail->SMTPAuth = true;                               
                     $mail->Username = 'kotnova.mailer@kotnova.com';     
-                    $mail->Password = '_^mMLZp3R^4X';                    
+                    $mail->Password = 'S=ev2W+B=$!T';                    
                     $mail->SMTPOptions = array(
                         'ssl' => array(
                         'verify_peer' => false,
@@ -453,7 +453,7 @@ $message = '
                         $mail->Host = gethostbyname('mail.kotnova.com');                  
                         $mail->SMTPAuth = true;                               
                         $mail->Username = 'kotnova.mailer@kotnova.com';     
-                        $mail->Password = '_^mMLZp3R^4X';                    
+                        $mail->Password = 'S=ev2W+B=$!T';                    
                         $mail->SMTPOptions = array(
                             'ssl' => array(
                             'verify_peer' => false,
