@@ -14,7 +14,7 @@
                             <rect opacity="0.3" y="12" width="8" height="3" rx="1.5" fill="currentColor" />
                             <rect opacity="0.3" width="12" height="3" rx="1.5" fill="currentColor" />
                         </svg>
-                    </span>
+                    </span>Menu
                     <!--end::Svg Icon-->
                 </button>
                 <!--end::Aside toggle-->
