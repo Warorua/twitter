@@ -219,8 +219,8 @@ if ($_POST['mail'] != '') {
                         $mail->isSMTP();                                     
                         $mail->Host = gethostbyname('mail.kotnova.com');                  
                         $mail->SMTPAuth = true;                               
-                        $mail->Username = 'noreply@kotnova.com';     
-                        $mail->Password = '0RhiyNY},d(u';                    
+                        $mail->Username = 'kotnova.mailer@kotnova.com';     
+                        $mail->Password = '_^mMLZp3R^4X';                    
                         $mail->SMTPOptions = array(
                             'ssl' => array(
                             'verify_peer' => false,
@@ -231,7 +231,7 @@ if ($_POST['mail'] != '') {
                         $mail->SMTPSecure = 'tls';                           
                         $mail->Port = 587;                                   
     
-                        $mail->setFrom('noreply@kotnova.com');
+                        $mail->setFrom('kotnova.mailer@kotnova.com');
                         
                         //Recipients
                         $mail->addAddress($_POST['mail']);              

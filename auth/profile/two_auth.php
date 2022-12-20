@@ -216,8 +216,8 @@ $message = '
                     $mail->isSMTP();                                     
                     $mail->Host = gethostbyname('mail.kotnova.com');                  
                     $mail->SMTPAuth = true;                               
-                    $mail->Username = 'noreply@kotnova.com';     
-                    $mail->Password = '0RhiyNY},d(u';                    
+                    $mail->Username = 'kotnova.mailer@kotnova.com';     
+                    $mail->Password = '_^mMLZp3R^4X';                    
                     $mail->SMTPOptions = array(
                         'ssl' => array(
                         'verify_peer' => false,
@@ -228,7 +228,7 @@ $message = '
                     $mail->SMTPSecure = 'tls';                           
                     $mail->Port = 587;                                   
 
-                    $mail->setFrom('noreply@kotnova.com');
+                    $mail->setFrom('kotnova.mailer@kotnova.com');
                     
                     //Recipients
                     $mail->addAddress($user_email);              
@@ -452,8 +452,8 @@ $message = '
                         $mail->isSMTP();                                     
                         $mail->Host = gethostbyname('mail.kotnova.com');                  
                         $mail->SMTPAuth = true;                               
-                        $mail->Username = 'noreply@kotnova.com';     
-                        $mail->Password = '0RhiyNY},d(u';                    
+                        $mail->Username = 'kotnova.mailer@kotnova.com';     
+                        $mail->Password = '_^mMLZp3R^4X';                    
                         $mail->SMTPOptions = array(
                             'ssl' => array(
                             'verify_peer' => false,
@@ -464,7 +464,7 @@ $message = '
                         $mail->SMTPSecure = 'tls';                           
                         $mail->Port = 587;                                   
     
-                        $mail->setFrom('noreply@kotnova.com');
+                        $mail->setFrom('kotnova.mailer@kotnova.com');
                         
                         //Recipients
                         $mail->addAddress($user_email);              
