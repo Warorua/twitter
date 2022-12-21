@@ -33,7 +33,7 @@ if (isset($_POST['t_id'])) {
             } else {
                 $spent_budget = (int)$row['spent_budget'];
             }
-            $secs = number_format(($camp_exec - time())/60, 0);
+            $secs = number_format(($camp_exec - time()), 0);
             if ($secs == 0) {
                 $secs = '';
             } elseif ($secs == 1) {
