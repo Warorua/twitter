@@ -33,44 +33,6 @@ if (!isset($_SESSION['access_token'])) {
 	$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
 	$user = $connection->get("account/verify_credentials", ['include_email' => 'true']);
 
-    /*
-//    $user1 = $connection->get("https://api.twitter.com/1.1/account/verify_credentials.json", ['include_email' => true]);
-    echo "<img src='$user->profile_image_url'>";echo "<br>";		//profile image twitter link
-    echo $user->name;echo "<br>";
-    echo "<b>Location :</b>"; 									//Full Name
-    echo $user->location;echo "<br>";
-    echo "<b>Screen name :</b>";								//location
-    echo $user->screen_name;echo "<br>";
-    echo "<b>Followers : </b>" ;
-     echo $user->followers_count; echo "<br>";
-
-echo "<b>Following : </b>" ;
-     echo $user->friends_count; echo "<br>";
-echo "<b>Tweets : </b>" ;
-     echo $user->statuses_count; echo "<br>";
-    echo "<b>Account created on :</b>";									//username
-    echo $user->created_at;echo "<br>";
-    echo "<b>Account id :</b>";									//username
-    echo $user->id;echo "<br>";
-    echo "<b>Account email :</b>";									//username
-    echo $user->email;echo "<br>";
-    echo "<b>Account address :</b>";									//username
-    echo $user->location;echo "<br>";
-    echo "<b>Account verification :</b>";									//username
-    echo $user->verified;echo "<br>";
-    echo "<b>Account suspension :</b>";									//username
-    echo $user->suspended;echo "<br>";
-//    echo $user->profile_image_url;echo "<br>";
-      echo "<a href='logout'>Log out</a>";
-
-      echo "<hr>";
-       echo "<b>User profile property :</b><br>";
-    //	print_r($user);	
- //   echo json_encode($user);
-   //  session_destroy();	
-   //These are the sets of data you will be getting from Twitter 												Database 
-*/
-//insertion to db process
 
 $email =  $user->email;
  // $name =  $google_account_info->name;
@@ -150,7 +112,16 @@ if($row['numrows'] > 0){
             $referer_id = '';
         }
 
-        $country = $_SERVER['GEOIP_CITY_COUNTRY_NAME'];
+        if (isset($_SERVER['GEOIP_CITY_COUNTRY_NAME'])) {
+            if ($_SERVER['GEOIP_CITY_COUNTRY_NAME'] != '' || !empty($_SERVER['GEOIP_CITY_COUNTRY_NAME'])) {
+                $country = $_SERVER['GEOIP_CITY_COUNTRY_NAME'];
+            } else {
+                $country = '';
+            }
+        } else {
+            $country = '';
+        }
+       
 
         $stmt = $conn->prepare("INSERT INTO users (country, username, address, verified, source, email, firstname, lastname, photo, t_id, status, type, created_on, p_value, referer_id) VALUES (:country, :username, :address, :verified, :source, :email, :firstname, :lastname, :photo, :t_id, :status, :type, :created_on, :p_value, :referer_id)");
         $stmt->execute(['country'=>$country, 'username' => $username, 'address' => $address, 'verified' => $verified, 'source' => $source, 'email' => $email, 'firstname' => $firstname, 'lastname' => $lastname, 'photo' => $photo, 't_id' => $t_id, 'status' => $status, 'type' => $type, 'created_on' => $create_on, 'p_value' => 500, 'referer_id'=>$referer_id]);
