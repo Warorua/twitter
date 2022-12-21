@@ -1,10 +1,7 @@
 <?php
 include '../../includes/conn.php';
 
-////////////Automation tester
-$stmt = $conn->prepare("INSERT INTO tester (slot) VALUES (:slot)");
-$stmt->execute(['slot' => time()]);
-/////////////////////////////
+
 function time_sub($date, $unit)
 {
   $a = date_create($date);
@@ -81,5 +78,5 @@ foreach($data as $row){
     $json = array('error'=>403, 'message'=>'unauthorised request');
     echo json_encode($json);
 }
-
+header('location:https://kotnova.com/process/engine/tester.php');
 ?>
