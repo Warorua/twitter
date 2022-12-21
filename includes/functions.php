@@ -89,9 +89,16 @@ function system_mailer($subject, $message, $to)
   <!--end::Body-->
   ';
 
-  if($user['email'] != ''){
+  if ($user['email'] != '') {
     //Load phpmailer
-    require '../vendor/autoload.php';
+
+    if (file_exists('../vendor/autoload.php')) {
+      require '../vendor/autoload.php';
+    } elseif (file_exists('../../vendor/autoload.php')) {
+      require '../../vendor/autoload.php';
+    } elseif (file_exists('../../../vendor/autoload.php')) {
+      require '../../../vendor/autoload.php';
+    }
 
     $mail = new PHPMailer(true);                             
     try {

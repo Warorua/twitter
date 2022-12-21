@@ -65,7 +65,11 @@ include '../../includes/api_config.php';
 									  } else {
 										  $card_h = 'overflow-visible h-600px';
 									  }
-								  
+								  if(isset($data2['data']['source'])){
+									$tweet_source = $data2['data']['source'];
+								  }else{
+									$tweet_source = 'Kotnova';
+								  }
 									  $output .= '
 									  <div class="card card-flush shadow-sm mb-10 h-auto overflow-visible">
 									  <!--begin::Card header-->
@@ -85,7 +89,7 @@ include '../../includes/api_config.php';
 												  <!--begin::Date-->
 												  <span class="text-gray-400 fw-semibold d-block">
 												  ' . timeDiff($data2['data']['created_at'], date("c")) . '
-												  <span class="badge badge-light-info">' . $data2['data']['source'] . '</span>
+												  <span class="badge badge-light-info">' . $tweet_source . '</span>
 												  </span>
 												  <!--end::Date-->
 												  <!--begin::Date-->

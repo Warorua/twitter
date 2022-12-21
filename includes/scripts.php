@@ -1004,6 +1004,23 @@ $dm_perc = ($dm * 100) / 1000;
 		});
 	});
 
+	$(document).on('submit', '#kt_account_auto_dm', function(e) {
+		e.preventDefault();
+
+		formData = new FormData(this);
+		$.ajax({
+			type: "POST",
+			url: "../process/post/auto_dm.php",
+			data: formData,
+			processData: false, // tell jQuery not to process the data
+			contentType: false, // tell jQuery not to set contentType
+			enctype: 'multipart/form-data',
+			success: function(arr) {
+				window.location.reload();
+			}
+		});
+	});
+
 	var us1;
 	var us2;
 
