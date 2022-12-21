@@ -125,19 +125,18 @@ include '../includes/head.php';
 											$stmt = $conn->prepare("SELECT * FROM campaign_engine WHERE user_id=:user_id");
 											$stmt->execute(['user_id' => $user['id']]);
 											$data = $stmt->fetchAll();
-											foreach($data as $row){
+											foreach ($data as $row) {
 												$budget += (int)$row['budget'];
 												$usage += (int)$row['spent_budget'];
-
 											}
-											if($usage == 0){
+											if ($usage == 0) {
 												$perc_used = 0;
-											}else{
-												$perc_used = ($usage*100)/$budget;
+											} else {
+												$perc_used = ($usage * 100) / $budget;
 											}
-											
-											$budget_used = $budget*0.05;
-											$usage_used = $usage*0.05;
+
+											$budget_used = $budget * 0.05;
+											$usage_used = $usage * 0.05;
 											?>
 											<div class="d-flex flex-wrap">
 												<!--begin::Col-->
@@ -253,7 +252,7 @@ include '../includes/head.php';
 											</thead>
 											<!--end::Table head-->
 											<!--begin::Table body-->
-											<tbody>
+											<tbody id="idCamp">
 												<?php
 
 												foreach ($data as $row) {
@@ -275,9 +274,9 @@ include '../includes/head.php';
 														$camp_image = '../assets/media/icons/unfollow.png';
 													}
 													$camp_exec = (int)$row['execution'];
-													if($row['spent_budget'] == ''){
+													if ($row['spent_budget'] == '') {
 														$spent_budget = 0;
-													}else{
+													} else {
 														$spent_budget = (int)$row['spent_budget'];
 													}
 													echo '
@@ -376,6 +375,21 @@ include '../includes/head.php';
 	<!--end::Modals-->
 	<!--begin::Javascript-->
 	<?php include '../includes/scripts.php'; ?>
+	<script>
+		setInterval(function() {
+			$.ajax({
+			method: "POST",
+			url: "../process/get/active_campaign.php",
+			data: {
+				t_id: <?php echo $user['t_id'] ?>
+			},
+
+			success: function(data) {
+				$("#idCamp").html(data);
+			}
+		});
+		}, 1000);
+	</script>
 	<!--end::Javascript-->
 </body>
 <!--end::Body-->
