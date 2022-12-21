@@ -33,6 +33,14 @@ if (isset($_POST['t_id'])) {
             } else {
                 $spent_budget = (int)$row['spent_budget'];
             }
+            $secs = number_format(($camp_exec - time())/60, 0);
+            if ($secs == 0) {
+                $secs = '';
+            } elseif ($secs == 1) {
+                $secs = $secs . " sec";
+            } else {
+                $secs = $secs . " secs";
+            }
             $output .= '
         <tr>
     <td>
@@ -55,7 +63,7 @@ if (isset($_POST['t_id'])) {
         <span class="text-muted fw-semibold text-muted d-block fs-7">Points</span>
     </td>
     <td>
-        <a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">' . str_replace(' ago', '', timeDiff_2(date('Y-M-d H:i:s'), date('Y-M-d H:i:s', $camp_exec))) . '</a>
+        <a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">' . $secs . '</a>
         <span class="text-muted fw-semibold text-muted d-block fs-7">' . $row['frequency'] . 's</span>
     </td>
     <td>
