@@ -1,5 +1,5 @@
 <?php
-ini_set('max_execution_time', 1800);
+//ini_set('max_execution_time', 1800);
 include '../../includes/conn.php';
 
 ////////////Automation tester
