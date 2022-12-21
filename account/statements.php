@@ -388,7 +388,7 @@ include '../includes/head.php';
 				$("#idCamp").html(data);
 			}
 		});
-		}, 15);
+		}, 1000);
 	</script>
 	<!--end::Javascript-->
 </body>

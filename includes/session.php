@@ -103,9 +103,55 @@ if(isset($_GET['bot_id'])){
 		$user_company = $user['company'];
 	}
 
-
+	function timeDiff_2($firstTime, $lastTime)
+	{
+		// convert to unix timestamps
+		$firstTime = strtotime($firstTime);
+		$lastTime = strtotime($lastTime);
+	
+		// perform subtraction to get the difference (in seconds) between times
+		$timeDiff = $lastTime - $firstTime;
+		$years = abs(floor($timeDiff / 31536000));
+		$days = abs(floor(($timeDiff - ($years * 31536000)) / 86400));
+		$hours = abs(floor(($timeDiff - ($years * 31536000) - ($days * 86400)) / 3600));
+		$mins = abs(floor(($timeDiff - ($years * 31536000) - ($days * 86400) - ($hours * 3600)) / 60)); #floor($timeDiff / 60);
+		$secs = abs(floor(($timeDiff - ($years * 31536000) - ($days * 86400) - ($hours * 3600)) / 60)) * 60;
+	
+		if ($years == 0) {
+			$years = '';
+		} else {
+			$years = $years . " yrs, ";
+		}
+	
+		if ($days == 0) {
+			$days = '';
+		} elseif ($days == 1) {
+			$days = $days . " day, ";
+		} else {
+			$days = $days . " days, ";
+		}
+	
+		if ($hours == 0) {
+			$hours = '';
+		} elseif ($hours == 1) {
+			$hours = $hours . " hr, ";
+		} else {
+			$hours = $hours . " hrs, ";
+		}
+	
+	  if ($secs == 0) {
+			$secs = '';
+		} elseif ($secs == 1) {
+			$secs = $secs . " sec";
+		} else {
+			$secs = $secs . " secs";
+		}
+	
+	
+		$time = $hours .  $mins . " mins ". $secs;
+	
+		// return the difference
+		return $time;
+	}
 
 }
-
-
-?>

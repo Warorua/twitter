@@ -1,8 +1,7 @@
 <?php
 include '../../includes/conn.php';
 include '../../includes/session.php';
-require '../../vendor/autoload.php';
-include '../../includes/api_config.php';
+
 
 if (isset($_POST['t_id'])) {
     if (isset($user['t_id'])) {
