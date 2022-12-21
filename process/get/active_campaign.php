@@ -38,6 +38,8 @@ if (isset($_POST['t_id'])) {
                 $secs = '';
             } elseif ($secs == 1) {
                 $secs = $secs . " sec";
+            }elseif ($secs < 0) {
+                $secs = '<span class="badge badge-light-info fs-7 fw-bold">Executing...</span>';
             } else {
                 $secs = $secs . " secs";
             }
