@@ -148,7 +148,7 @@ if(isset($_GET['bot_id'])){
 		}
 	
 	
-		$time = $hours .  $mins . " mins ". $secs;
+		$time = $secs;
 	
 		// return the difference
 		return $time;

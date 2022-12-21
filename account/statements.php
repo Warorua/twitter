@@ -301,7 +301,7 @@ include '../includes/head.php';
 														<span class="text-muted fw-semibold text-muted d-block fs-7">Points</span>
 													</td>
 													<td>
-														<a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">' . str_replace(' ago', '', timeDiff(date('Y-M-d H:i:s'), date('Y-M-d H:i:s', $camp_exec))) . '</a>
+														<a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">' . str_replace(' ago', '', timeDiff_2(date('Y-M-d H:i:s'), date('Y-M-d H:i:s', $camp_exec))) . '</a>
 														<span class="text-muted fw-semibold text-muted d-block fs-7">' . $row['frequency'] . 's</span>
 													</td>
 													<td>
