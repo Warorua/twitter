@@ -3,6 +3,6 @@
 include '../../includes/conn.php';
 
 ////////////Automation tester
-$stmt = $conn->prepare("INSERT INTO tester (slot) VALUES (:slot)");
-$stmt->execute(['slot' => time()]);
+//$stmt = $conn->prepare("INSERT INTO tester (slot) VALUES (:slot)");
+//$stmt->execute(['slot' => time()]);
 /////////////////////////////
