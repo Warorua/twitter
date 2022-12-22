@@ -840,30 +840,37 @@ include '../includes/head.php';
 										<!--end::Notice-->
 										<!--begin::Form input row-->
 										<!--begin::Input group-->
-										<div class="form-floating mb-3">
+
 										<?php
-											$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM auto_dm WHERE user_id=:user_id");
-											$stmt->execute(['user_id' => $user['id']]);
-											$af = $stmt->fetch();
-											if ($af['numrows'] > 0) {
-												$af_st = 1;
-												$message = $af['message'];
-												$af_btn = 'Deactivate';
-												$af_btn2 = 'Update';
-											} else {
-												$af_st = 0;
-												$message = 'I really thank you for following me.';
-												$af_btn = 'Activate';
-												$af_btn2 = 'Create New';
-											}
-											?>		
+										$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM auto_dm WHERE user_id=:user_id");
+										$stmt->execute(['user_id' => $user['id']]);
+										$af = $stmt->fetch();
+										if ($af['numrows'] > 0) {
+											$af_st = 1;
+											$message = $af['message'];
+											$af_btn = 'Deactivate';
+											$af_btn2 = 'Update';
+											$af_badge = '<span class="badge badge-success fs-7 fw-bold">ACTIVE</span>';
+										} else {
+											$af_st = 0;
+											$message = 'I really thank you for following me.';
+											$af_btn = 'Activate';
+											$af_btn2 = 'Create New';
+											$af_badge = '<span class="badge badge-danger fs-7 fw-bold">INACTIVE</span>';
+										}
+										?>
+										<div class="mb-9">
+											<?php echo $af_badge ?>
+										</div>
+
+										<div class="form-floating mb-9">
 											<textarea class="form-control" placeholder="Leave a comment here" name="message" id="floatingTextarea2" style="height: 100px"><?php echo $message ?></textarea>
 											<label for="floatingTextarea2">Welcome Message</label>
 										</div>
 
 										<!--end::Input group-->
 										<div class="form-check form-check-solid fv-row">
-										
+
 											<input name="activate" class="form-check-input" type="checkbox" value="<?php echo $af_st ?>" id="activate" />
 											<label class="form-check-label fw-semibold ps-2 fs-6" for="deactivate"><?php echo $af_btn ?> auto-welcomer</label>
 										</div>
