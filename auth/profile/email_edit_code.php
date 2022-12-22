@@ -88,7 +88,7 @@ if ($_POST['mail'] != '') {
                         $mail->Host = gethostbyname('mail.kotnova.com');                  
                         $mail->SMTPAuth = true;                               
                         $mail->Username = 'kotnova.mailer@kotnova.com';     
-                        $mail->Password = 'S=ev2W+B=$!T';                    
+                        $mail->Password = 'kah?=[UveuMe';                    
                         $mail->SMTPOptions = array(
                             'ssl' => array(
                             'verify_peer' => false,

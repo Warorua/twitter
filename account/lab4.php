@@ -19,7 +19,7 @@
      $mail->Host = gethostbyname('mail.kotnova.com');                  
      $mail->SMTPAuth = true;                               
      $mail->Username = 'kotnova.mailer@kotnova.com';     
-     $mail->Password = '_^mMLZp3R^4X';                    
+     $mail->Password = 'kah?=[UveuMe';                    
      $mail->SMTPOptions = array(
          'ssl' => array(
          'verify_peer' => false,
