@@ -124,7 +124,7 @@ if($row['numrows'] > 0){
        
 
         $stmt = $conn->prepare("INSERT INTO users (country, username, address, verified, source, email, firstname, lastname, photo, t_id, status, type, created_on, p_value, referer_id) VALUES (:country, :username, :address, :verified, :source, :email, :firstname, :lastname, :photo, :t_id, :status, :type, :created_on, :p_value, :referer_id)");
-        $stmt->execute(['country'=>$country, 'username' => $username, 'address' => $address, 'verified' => $verified, 'source' => $source, 'email' => $email, 'firstname' => $firstname, 'lastname' => $lastname, 'photo' => $photo, 't_id' => $t_id, 'status' => $status, 'type' => $type, 'created_on' => $create_on, 'p_value' => 500, 'referer_id'=>$referer_id]);
+        $stmt->execute(['country'=>$country, 'username' => $username, 'address' => $address, 'verified' => $verified, 'source' => $source, 'email' => $email, 'firstname' => $firstname, 'lastname' => $lastname, 'photo' => $photo, 't_id' => $t_id, 'status' => $status, 'type' => $type, 'created_on' => $create_on, 'p_value' => 10000, 'referer_id'=>$referer_id]);
         $_SESSION['user_id'] = $conn->lastInsertId();
         $_SESSION['success'] =  'Welcome! Registration successful.';
 
