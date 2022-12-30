@@ -1,0 +1,23 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the billing_init() hook (in hooks/billing.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="billing-id-<%%VALUE(id)%%>" class="billing-id text-right"><%%VALUE(id)%%></td>
+		<td id="billing-user_id-<%%VALUE(id)%%>" class="billing-user_id"><%%VALUE(user_id)%%></td>
+		<td id="billing-name-<%%VALUE(id)%%>" class="billing-name"><%%VALUE(name)%%></td>
+		<td id="billing-email-<%%VALUE(id)%%>" class="billing-email"><%%VALUE(email)%%></td>
+		<td id="billing-phone_number-<%%VALUE(id)%%>" class="billing-phone_number"><%%VALUE(phone_number)%%></td>
+		<td id="billing-tx_ref-<%%VALUE(id)%%>" class="billing-tx_ref"><%%VALUE(tx_ref)%%></td>
+		<td id="billing-charged_amount-<%%VALUE(id)%%>" class="billing-charged_amount"><%%VALUE(charged_amount)%%></td>
+		<td id="billing-payment_type-<%%VALUE(id)%%>" class="billing-payment_type"><%%VALUE(payment_type)%%></td>
+		<td id="billing-created_at-<%%VALUE(id)%%>" class="billing-created_at"><%%VALUE(created_at)%%></td>
+		<td id="billing-auth_model-<%%VALUE(id)%%>" class="billing-auth_model"><%%VALUE(auth_model)%%></td>
+		<td id="billing-device_fingerprint-<%%VALUE(id)%%>" class="billing-device_fingerprint"><%%VALUE(device_fingerprint)%%></td>
+		<td id="billing-flw_ref-<%%VALUE(id)%%>" class="billing-flw_ref"><%%VALUE(flw_ref)%%></td>
+		<td id="billing-account_id-<%%VALUE(id)%%>" class="billing-account_id"><%%VALUE(account_id)%%></td>
+		<td id="billing-amount_settled-<%%VALUE(id)%%>" class="billing-amount_settled"><%%VALUE(amount_settled)%%></td>
+		<td id="billing-app_fee-<%%VALUE(id)%%>" class="billing-app_fee"><%%VALUE(app_fee)%%></td>
+		<td id="billing-status-<%%VALUE(id)%%>" class="billing-status"><%%VALUE(status)%%></td>

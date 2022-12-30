@@ -1,0 +1,14 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the usage_track_init() hook (in hooks/usage_track.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="usage_track-id-<%%VALUE(id)%%>" class="usage_track-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="usage_track-time-<%%VALUE(id)%%>" class="usage_track-time"><%%SELECT%%><%%VALUE(time)%%><%%ENDSELECT%%></td>
+		<td id="usage_track-points-<%%VALUE(id)%%>" class="usage_track-points"><%%SELECT%%><%%VALUE(points)%%><%%ENDSELECT%%></td>
+		<td id="usage_track-user_id-<%%VALUE(id)%%>" class="usage_track-user_id"><%%SELECT%%><%%VALUE(user_id)%%><%%ENDSELECT%%></td>
+		<td id="usage_track-action-<%%VALUE(id)%%>" class="usage_track-action"><%%SELECT%%><%%VALUE(action)%%><%%ENDSELECT%%></td>
+		<td id="usage_track-consumer_key-<%%VALUE(id)%%>" class="usage_track-consumer_key"><%%SELECT%%><%%VALUE(consumer_key)%%><%%ENDSELECT%%></td>
+		<td id="usage_track-level-<%%VALUE(id)%%>" class="usage_track-level"><%%SELECT%%><%%VALUE(level)%%><%%ENDSELECT%%></td>

@@ -1,0 +1,331 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: Id -->
+		<div class="form-group users-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Email -->
+		<div class="form-group users-email" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Email</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(email)%%></div>
+			</div>
+		</div>
+		<!-- Field: Password -->
+		<div class="form-group users-password" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Password</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(password)%%></div>
+			</div>
+		</div>
+		<!-- Field: Type -->
+		<div class="form-group users-type" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Type</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(type)%%></div>
+			</div>
+		</div>
+		<!-- Field: Firstname -->
+		<div class="form-group users-firstname" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Firstname</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(firstname)%%></div>
+			</div>
+		</div>
+		<!-- Field: Lastname -->
+		<div class="form-group users-lastname" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lastname</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(lastname)%%></div>
+			</div>
+		</div>
+		<!-- Field: Username -->
+		<div class="form-group users-username" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Username</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(username)%%></div>
+			</div>
+		</div>
+		<!-- Field: Address -->
+		<div class="form-group users-address" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Address</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(address)%%></div>
+			</div>
+		</div>
+		<!-- Field: Country -->
+		<div class="form-group users-country" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Country</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(country)%%></div>
+			</div>
+		</div>
+		<!-- Field: Contact_info -->
+		<div class="form-group users-contact_info" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Contact_info</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(contact_info)%%></div>
+			</div>
+		</div>
+		<!-- Field: Contact_verify -->
+		<div class="form-group users-contact_verify" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Contact_verify</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(contact_verify)%%></div>
+			</div>
+		</div>
+		<!-- Field: Photo -->
+		<div class="form-group users-photo" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Photo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(photo)%%></div>
+			</div>
+		</div>
+		<!-- Field: Status -->
+		<div class="form-group users-status" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Status</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(status)%%></div>
+			</div>
+		</div>
+		<!-- Field: Activate_code -->
+		<div class="form-group users-activate_code" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Activate_code</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(activate_code)%%></div>
+			</div>
+		</div>
+		<!-- Field: Reset_code -->
+		<div class="form-group users-reset_code" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Reset_code</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(reset_code)%%></div>
+			</div>
+		</div>
+		<!-- Field: Created_on -->
+		<div class="form-group users-created_on" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Created_on</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(created_on)%%></div>
+			</div>
+		</div>
+		<!-- Field: Source -->
+		<div class="form-group users-source" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Source</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(source)%%></div>
+			</div>
+		</div>
+		<!-- Field: Verified -->
+		<div class="form-group users-verified" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Verified</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(verified)%%></div>
+			</div>
+		</div>
+		<!-- Field: Occupation -->
+		<div class="form-group users-occupation" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Occupation</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(occupation)%%></div>
+			</div>
+		</div>
+		<!-- Field: Company -->
+		<div class="form-group users-company" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Company</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(company)%%></div>
+			</div>
+		</div>
+		<!-- Field: Company_site -->
+		<div class="form-group users-company_site" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Company_site</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(company_site)%%></div>
+			</div>
+		</div>
+		<!-- Field: Language -->
+		<div class="form-group users-language" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Language</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(language)%%></div>
+			</div>
+		</div>
+		<!-- Field: Time_zone -->
+		<div class="form-group users-time_zone" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Time_zone</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(time_zone)%%></div>
+			</div>
+		</div>
+		<!-- Field: Currency -->
+		<div class="form-group users-currency" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Currency</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(currency)%%></div>
+			</div>
+		</div>
+		<!-- Field: Email_comm -->
+		<div class="form-group users-email_comm" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Email_comm</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(email_comm)%%></div>
+			</div>
+		</div>
+		<!-- Field: Phone_comm -->
+		<div class="form-group users-phone_comm" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Phone_comm</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(phone_comm)%%></div>
+			</div>
+		</div>
+		<!-- Field: Marketing -->
+		<div class="form-group users-marketing" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Marketing</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(marketing)%%></div>
+			</div>
+		</div>
+		<!-- Field: Two_auth -->
+		<div class="form-group users-two_auth" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Two_auth</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(two_auth)%%></div>
+			</div>
+		</div>
+		<!-- Field: Two_auth_secret -->
+		<div class="form-group users-two_auth_secret" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Two_auth_secret</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(two_auth_secret)%%></div>
+			</div>
+		</div>
+		<!-- Field: G_id -->
+		<div class="form-group users-g_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">G_id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(g_id)%%></div>
+			</div>
+		</div>
+		<!-- Field: F_id -->
+		<div class="form-group users-f_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">F_id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(f_id)%%></div>
+			</div>
+		</div>
+		<!-- Field: T_id -->
+		<div class="form-group users-t_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">T_id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(t_id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Access_token -->
+		<div class="form-group users-access_token" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Access_token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(access_token)%%></div>
+			</div>
+		</div>
+		<!-- Field: Access_secret -->
+		<div class="form-group users-access_secret" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Access_secret</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(access_secret)%%></div>
+			</div>
+		</div>
+		<!-- Field: P_value -->
+		<div class="form-group users-p_value" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">P_value</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(p_value)%%></div>
+			</div>
+		</div>
+		<!-- Field: P_key -->
+		<div class="form-group users-p_key" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">P_key</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(p_key)%%></div>
+			</div>
+		</div>
+		<!-- Field: P_cipher -->
+		<div class="form-group users-p_cipher" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">P_cipher</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(p_cipher)%%></div>
+			</div>
+		</div>
+		<!-- Field: Referer_code -->
+		<div class="form-group users-referer_code" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Referer_code</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(referer_code)%%></div>
+			</div>
+		</div>
+		<!-- Field: Referer_id -->
+		<div class="form-group users-referer_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Referer_id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(referer_id)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>
+<!-- child records -->
+<div class="panel-body">
+	<div id="users-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=users-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'users',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'users-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

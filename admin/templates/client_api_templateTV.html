@@ -1,0 +1,17 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the client_api_init() hook (in hooks/client_api.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="client_api-id-<%%VALUE(id)%%>" class="client_api-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="client_api-title-<%%VALUE(id)%%>" class="client_api-title"><%%SELECT%%><%%VALUE(title)%%><%%ENDSELECT%%></td>
+		<td id="client_api-user_id-<%%VALUE(id)%%>" class="client_api-user_id"><%%SELECT%%><%%VALUE(user_id)%%><%%ENDSELECT%%></td>
+		<td id="client_api-consumer_key-<%%VALUE(id)%%>" class="client_api-consumer_key"><%%SELECT%%><%%VALUE(consumer_key)%%><%%ENDSELECT%%></td>
+		<td id="client_api-consumer_secret-<%%VALUE(id)%%>" class="client_api-consumer_secret"><%%SELECT%%><%%VALUE(consumer_secret)%%><%%ENDSELECT%%></td>
+		<td id="client_api-bearer_token-<%%VALUE(id)%%>" class="client_api-bearer_token"><%%SELECT%%><%%VALUE(bearer_token)%%><%%ENDSELECT%%></td>
+		<td id="client_api-access_token-<%%VALUE(id)%%>" class="client_api-access_token"><%%SELECT%%><%%VALUE(access_token)%%><%%ENDSELECT%%></td>
+		<td id="client_api-access_secret-<%%VALUE(id)%%>" class="client_api-access_secret"><%%SELECT%%><%%VALUE(access_secret)%%><%%ENDSELECT%%></td>
+		<td id="client_api-status-<%%VALUE(id)%%>" class="client_api-status text-right"><%%SELECT%%><%%VALUE(status)%%><%%ENDSELECT%%></td>
+		<td id="client_api-level-<%%VALUE(id)%%>" class="client_api-level text-right"><%%SELECT%%><%%VALUE(level)%%><%%ENDSELECT%%></td>

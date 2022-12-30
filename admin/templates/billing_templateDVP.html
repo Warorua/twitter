@@ -1,0 +1,141 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: Id -->
+		<div class="form-group billing-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: User_id -->
+		<div class="form-group billing-user_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">User_id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="user_id<%%RND1%%>"><%%COMBOTEXT(user_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Name -->
+		<div class="form-group billing-name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Name</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(name)%%></div>
+			</div>
+		</div>
+		<!-- Field: Email -->
+		<div class="form-group billing-email" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Email</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(email)%%></div>
+			</div>
+		</div>
+		<!-- Field: Phone_number -->
+		<div class="form-group billing-phone_number" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Phone_number</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(phone_number)%%></div>
+			</div>
+		</div>
+		<!-- Field: Tx_ref -->
+		<div class="form-group billing-tx_ref" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tx_ref</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(tx_ref)%%></div>
+			</div>
+		</div>
+		<!-- Field: Charged_amount -->
+		<div class="form-group billing-charged_amount" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Charged_amount</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(charged_amount)%%></div>
+			</div>
+		</div>
+		<!-- Field: Payment_type -->
+		<div class="form-group billing-payment_type" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Payment_type</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(payment_type)%%></div>
+			</div>
+		</div>
+		<!-- Field: Created_at -->
+		<div class="form-group billing-created_at" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Created_at</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(created_at)%%></div>
+			</div>
+		</div>
+		<!-- Field: Auth_model -->
+		<div class="form-group billing-auth_model" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Auth_model</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(auth_model)%%></div>
+			</div>
+		</div>
+		<!-- Field: Device_fingerprint -->
+		<div class="form-group billing-device_fingerprint" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Device_fingerprint</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(device_fingerprint)%%></div>
+			</div>
+		</div>
+		<!-- Field: Flw_ref -->
+		<div class="form-group billing-flw_ref" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Flw_ref</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(flw_ref)%%></div>
+			</div>
+		</div>
+		<!-- Field: Account_id -->
+		<div class="form-group billing-account_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Account_id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(account_id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Amount_settled -->
+		<div class="form-group billing-amount_settled" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Amount_settled</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(amount_settled)%%></div>
+			</div>
+		</div>
+		<!-- Field: App_fee -->
+		<div class="form-group billing-app_fee" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">App_fee</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(app_fee)%%></div>
+			</div>
+		</div>
+		<!-- Field: Status -->
+		<div class="form-group billing-status" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Status</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(status)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>

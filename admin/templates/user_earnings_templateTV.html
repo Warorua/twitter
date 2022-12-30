@@ -1,0 +1,11 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the user_earnings_init() hook (in hooks/user_earnings.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="user_earnings-id-<%%VALUE(id)%%>" class="user_earnings-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="user_earnings-user_id-<%%VALUE(id)%%>" class="user_earnings-user_id"><%%SELECT%%><%%VALUE(user_id)%%><%%ENDSELECT%%></td>
+		<td id="user_earnings-app-<%%VALUE(id)%%>" class="user_earnings-app"><%%SELECT%%><%%VALUE(app)%%><%%ENDSELECT%%></td>
+		<td id="user_earnings-refer-<%%VALUE(id)%%>" class="user_earnings-refer"><%%SELECT%%><%%VALUE(refer)%%><%%ENDSELECT%%></td>

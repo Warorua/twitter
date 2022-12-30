@@ -1,0 +1,12 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the auto_dm_init() hook (in hooks/auto_dm.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="auto_dm-id-<%%VALUE(id)%%>" class="auto_dm-id text-right"><%%VALUE(id)%%></td>
+		<td id="auto_dm-user_id-<%%VALUE(id)%%>" class="auto_dm-user_id text-right"><%%VALUE(user_id)%%></td>
+		<td id="auto_dm-message-<%%VALUE(id)%%>" class="auto_dm-message"><%%VALUE(message)%%></td>
+		<td id="auto_dm-time-<%%VALUE(id)%%>" class="auto_dm-time text-right"><%%VALUE(time)%%></td>
+		<td id="auto_dm-status-<%%VALUE(id)%%>" class="auto_dm-status text-right"><%%VALUE(status)%%></td>

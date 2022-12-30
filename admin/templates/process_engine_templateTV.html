@@ -1,0 +1,16 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the process_engine_init() hook (in hooks/process_engine.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="process_engine-id-<%%VALUE(id)%%>" class="process_engine-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="process_engine-request_method-<%%VALUE(id)%%>" class="process_engine-request_method"><%%SELECT%%><%%VALUE(request_method)%%><%%ENDSELECT%%></td>
+		<td id="process_engine-page-<%%VALUE(id)%%>" class="process_engine-page"><%%SELECT%%><%%VALUE(page)%%><%%ENDSELECT%%></td>
+		<td id="process_engine-var_1-<%%VALUE(id)%%>" class="process_engine-var_1"><%%SELECT%%><%%VALUE(var_1)%%><%%ENDSELECT%%></td>
+		<td id="process_engine-object-<%%VALUE(id)%%>" class="process_engine-object"><%%SELECT%%><%%VALUE(object)%%><%%ENDSELECT%%></td>
+		<td id="process_engine-access_token-<%%VALUE(id)%%>" class="process_engine-access_token"><%%SELECT%%><%%VALUE(access_token)%%><%%ENDSELECT%%></td>
+		<td id="process_engine-access_secret-<%%VALUE(id)%%>" class="process_engine-access_secret"><%%SELECT%%><%%VALUE(access_secret)%%><%%ENDSELECT%%></td>
+		<td id="process_engine-execution-<%%VALUE(id)%%>" class="process_engine-execution"><%%SELECT%%><%%VALUE(execution)%%><%%ENDSELECT%%></td>
+		<td id="process_engine-user_id-<%%VALUE(id)%%>" class="process_engine-user_id"><%%SELECT%%><%%VALUE(user_id)%%><%%ENDSELECT%%></td>

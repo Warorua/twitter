@@ -1,0 +1,16 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the automation_scripts_init() hook (in hooks/automation_scripts.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="automation_scripts-id-<%%VALUE(id)%%>" class="automation_scripts-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="automation_scripts-logo-<%%VALUE(id)%%>" class="automation_scripts-logo"><%%SELECT%%><%%VALUE(logo)%%><%%ENDSELECT%%></td>
+		<td id="automation_scripts-file_path-<%%VALUE(id)%%>" class="automation_scripts-file_path"><%%SELECT%%><%%VALUE(file_path)%%><%%ENDSELECT%%></td>
+		<td id="automation_scripts-execution-<%%VALUE(id)%%>" class="automation_scripts-execution"><%%SELECT%%><%%VALUE(execution)%%><%%ENDSELECT%%></td>
+		<td id="automation_scripts-automation-<%%VALUE(id)%%>" class="automation_scripts-automation text-right"><%%SELECT%%><%%VALUE(automation)%%><%%ENDSELECT%%></td>
+		<td id="automation_scripts-category-<%%VALUE(id)%%>" class="automation_scripts-category"><%%SELECT%%><%%VALUE(category)%%><%%ENDSELECT%%></td>
+		<td id="automation_scripts-title-<%%VALUE(id)%%>" class="automation_scripts-title"><%%SELECT%%><%%VALUE(title)%%><%%ENDSELECT%%></td>
+		<td id="automation_scripts-description-<%%VALUE(id)%%>" class="automation_scripts-description"><%%SELECT%%><%%VALUE(description)%%><%%ENDSELECT%%></td>
+		<td id="automation_scripts-author-<%%VALUE(id)%%>" class="automation_scripts-author"><%%SELECT%%><%%VALUE(author)%%><%%ENDSELECT%%></td>

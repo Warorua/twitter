@@ -1,0 +1,572 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/users-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="users_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+
+<div class="panel-body hidden" id="users_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="billing_view.php?filterer_user_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="billing_link"><img src="resources/table_icons/money_dollar.png"> Billing</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="billing_view.php?filterer_user_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_billing_link"><img src="resources/table_icons/money_dollar.png"> Billing</a>
+			<input type="hidden" id="billing_hclink" value="billing_view.php?filterer_user_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="client_api_view.php?filterer_user_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="client_api_link"><img src="resources/table_icons/client_account_template.png"> Client_api</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="client_api_view.php?filterer_user_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_client_api_link"><img src="resources/table_icons/client_account_template.png"> Client_api</a>
+			<input type="hidden" id="client_api_hclink" value="client_api_view.php?filterer_user_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="users_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: Id -->
+				<div class="form-group users-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">Id</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Email -->
+				<div class="form-group users-email">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="email">Email</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="email" id="email" value="<%%VALUE(email)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Password -->
+				<div class="form-group users-password">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="password">Password</label>
+					<div class="col-lg-9">
+						<input maxlength="60" type="text" class="form-control" name="password" id="password" value="<%%VALUE(password)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Type -->
+				<div class="form-group users-type">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="type">Type</label>
+					<div class="col-lg-9">
+						<input maxlength="1" type="text" class="form-control" name="type" id="type" value="<%%VALUE(type)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Firstname -->
+				<div class="form-group users-firstname">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="firstname">Firstname</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="firstname" id="firstname" value="<%%VALUE(firstname)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Lastname -->
+				<div class="form-group users-lastname">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="lastname">Lastname</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="lastname" id="lastname" value="<%%VALUE(lastname)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Username -->
+				<div class="form-group users-username">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="username">Username</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="username" id="username" value="<%%VALUE(username)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Address -->
+				<div class="form-group users-address">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="address">Address</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="address" id="address" value="<%%VALUE(address)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Country -->
+				<div class="form-group users-country">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="country">Country</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="country" id="country" value="<%%VALUE(country)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Contact_info -->
+				<div class="form-group users-contact_info">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="contact_info">Contact_info</label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="contact_info" id="contact_info" value="<%%VALUE(contact_info)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Contact_verify -->
+				<div class="form-group users-contact_verify">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="contact_verify">Contact_verify</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="contact_verify" id="contact_verify" value="<%%VALUE(contact_verify)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Photo -->
+				<div class="form-group users-photo">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="photo">Photo</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="photo" id="photo" value="<%%VALUE(photo)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Status -->
+				<div class="form-group users-status">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="status">Status</label>
+					<div class="col-lg-9">
+						<input maxlength="1" type="text" class="form-control" name="status" id="status" value="<%%VALUE(status)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Activate_code -->
+				<div class="form-group users-activate_code">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="activate_code">Activate_code</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="activate_code" id="activate_code" value="<%%VALUE(activate_code)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Reset_code -->
+				<div class="form-group users-reset_code">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="reset_code">Reset_code</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="reset_code" id="reset_code" value="<%%VALUE(reset_code)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Created_on -->
+				<div class="form-group users-created_on">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="created_on">Created_on</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="created_on" id="created_on" value="<%%VALUE(created_on)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Source -->
+				<div class="form-group users-source">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="source">Source</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="source" id="source" value="<%%VALUE(source)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Verified -->
+				<div class="form-group users-verified">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="verified">Verified</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="verified" id="verified" value="<%%VALUE(verified)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Occupation -->
+				<div class="form-group users-occupation">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="occupation">Occupation</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="occupation" id="occupation" value="<%%VALUE(occupation)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Company -->
+				<div class="form-group users-company">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="company">Company</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="company" id="company" value="<%%VALUE(company)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Company_site -->
+				<div class="form-group users-company_site">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="company_site">Company_site</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="company_site" id="company_site" value="<%%VALUE(company_site)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Language -->
+				<div class="form-group users-language">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="language">Language</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="language" id="language" value="<%%VALUE(language)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Time_zone -->
+				<div class="form-group users-time_zone">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="time_zone">Time_zone</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="time_zone" id="time_zone" value="<%%VALUE(time_zone)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Currency -->
+				<div class="form-group users-currency">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="currency">Currency</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="currency" id="currency" value="<%%VALUE(currency)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Email_comm -->
+				<div class="form-group users-email_comm">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="email_comm">Email_comm</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="email_comm" id="email_comm" value="<%%VALUE(email_comm)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Phone_comm -->
+				<div class="form-group users-phone_comm">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="phone_comm">Phone_comm</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="phone_comm" id="phone_comm" value="<%%VALUE(phone_comm)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Marketing -->
+				<div class="form-group users-marketing">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="marketing">Marketing</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="marketing" id="marketing" value="<%%VALUE(marketing)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Two_auth -->
+				<div class="form-group users-two_auth">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="two_auth">Two_auth</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="two_auth" id="two_auth" value="<%%VALUE(two_auth)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Two_auth_secret -->
+				<div class="form-group users-two_auth_secret">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="two_auth_secret">Two_auth_secret</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="two_auth_secret" id="two_auth_secret" value="<%%VALUE(two_auth_secret)%%>">
+					</div>
+				</div>
+
+				<!-- Field: G_id -->
+				<div class="form-group users-g_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="g_id">G_id</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="g_id" id="g_id" value="<%%VALUE(g_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: F_id -->
+				<div class="form-group users-f_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="f_id">F_id</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="f_id" id="f_id" value="<%%VALUE(f_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: T_id -->
+				<div class="form-group users-t_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="t_id">T_id</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="t_id" id="t_id" value="<%%VALUE(t_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Access_token -->
+				<div class="form-group users-access_token">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="access_token">Access_token</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="access_token" id="access_token" value="<%%VALUE(access_token)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Access_secret -->
+				<div class="form-group users-access_secret">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="access_secret">Access_secret</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="access_secret" id="access_secret" value="<%%VALUE(access_secret)%%>">
+					</div>
+				</div>
+
+				<!-- Field: P_value -->
+				<div class="form-group users-p_value">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="p_value">P_value</label>
+					<div class="col-lg-9">
+						<input maxlength="10000" type="text" class="form-control" name="p_value" id="p_value" value="<%%VALUE(p_value)%%>">
+					</div>
+				</div>
+
+				<!-- Field: P_key -->
+				<div class="form-group users-p_key">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="p_key">P_key</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="p_key" id="p_key" value="<%%VALUE(p_key)%%>">
+					</div>
+				</div>
+
+				<!-- Field: P_cipher -->
+				<div class="form-group users-p_cipher">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="p_cipher">P_cipher</label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="p_cipher" id="p_cipher" value="<%%VALUE(p_cipher)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Referer_code -->
+				<div class="form-group users-referer_code">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="referer_code">Referer_code</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="referer_code" id="referer_code" value="<%%VALUE(referer_code)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Referer_id -->
+				<div class="form-group users-referer_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="referer_id">Referer_id</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="referer_id" id="referer_id" value="<%%VALUE(referer_id)%%>">
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="users_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="users-children" class="children-tabs">
+				<div class="text-center"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+			$j('#users_dv_container-loading').addClass('hidden');
+			$j('#users_dv_container').removeClass('hidden');
+			if(!$j('.table_view').length || $j('[name=SelectedID]').val().length) AppGini.focusFormElement('users', 'email');
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+			if(embedded_mode) {
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function() {
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"]):not([href$=".jpg"]):not([href$=".png"]):not([href$=".gif"])').each(
+						function() {
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode) {
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			} else {
+				post(
+					'parent-children.php', {
+						ParentTable: 'users',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'users-children'
+				);
+			}
+
+			if(true /* !embedded_mode */) {
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.removeItem(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'users',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+									// in case the parent record was updated, we should update auto-fills
+									var updaterName = field_id + '_update_autofills';
+									if(typeof(window[updaterName]) == 'function')
+										window[updaterName]();
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=users&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=users&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

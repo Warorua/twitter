@@ -1,0 +1,540 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: Id -->
+		<div class="form-group system_cookies-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: PATH -->
+		<div class="form-group system_cookies-PATH" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">PATH</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(PATH)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_ACCEPT -->
+		<div class="form-group system_cookies-HTTP_ACCEPT" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_ACCEPT</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_ACCEPT)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_ACCEPT_ENCODING -->
+		<div class="form-group system_cookies-HTTP_ACCEPT_ENCODING" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_ACCEPT_ENCODING</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_ACCEPT_ENCODING)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_ACCEPT_LANGUAGE -->
+		<div class="form-group system_cookies-HTTP_ACCEPT_LANGUAGE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_ACCEPT_LANGUAGE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_ACCEPT_LANGUAGE)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_COOKIE -->
+		<div class="form-group system_cookies-HTTP_COOKIE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_COOKIE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_COOKIE)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_HOST -->
+		<div class="form-group system_cookies-HTTP_HOST" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_HOST</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_HOST)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_USER_AGENT -->
+		<div class="form-group system_cookies-HTTP_USER_AGENT" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_USER_AGENT</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_USER_AGENT)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_CACHE_CONTROL -->
+		<div class="form-group system_cookies-HTTP_CACHE_CONTROL" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_CACHE_CONTROL</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_CACHE_CONTROL)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_SEC_CH_UA -->
+		<div class="form-group system_cookies-HTTP_SEC_CH_UA" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_SEC_CH_UA</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_SEC_CH_UA)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_SEC_CH_UA_MOBILE -->
+		<div class="form-group system_cookies-HTTP_SEC_CH_UA_MOBILE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_SEC_CH_UA_MOBILE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_SEC_CH_UA_MOBILE)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_SEC_CH_UA_PLATFORM -->
+		<div class="form-group system_cookies-HTTP_SEC_CH_UA_PLATFORM" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_SEC_CH_UA_PLATFORM</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_SEC_CH_UA_PLATFORM)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_UPGRADE_INSECURE_REQUESTS -->
+		<div class="form-group system_cookies-HTTP_UPGRADE_INSECURE_REQUESTS" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_UPGRADE_INSECURE_REQUESTS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_UPGRADE_INSECURE_REQUESTS)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_SEC_FETCH_SITE -->
+		<div class="form-group system_cookies-HTTP_SEC_FETCH_SITE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_SEC_FETCH_SITE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_SEC_FETCH_SITE)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_SEC_FETCH_MODE -->
+		<div class="form-group system_cookies-HTTP_SEC_FETCH_MODE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_SEC_FETCH_MODE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_SEC_FETCH_MODE)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_SEC_FETCH_USER -->
+		<div class="form-group system_cookies-HTTP_SEC_FETCH_USER" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_SEC_FETCH_USER</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_SEC_FETCH_USER)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_SEC_FETCH_DEST -->
+		<div class="form-group system_cookies-HTTP_SEC_FETCH_DEST" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_SEC_FETCH_DEST</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_SEC_FETCH_DEST)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_X_HTTPS -->
+		<div class="form-group system_cookies-HTTP_X_HTTPS" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_X_HTTPS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_X_HTTPS)%%></div>
+			</div>
+		</div>
+		<!-- Field: DOCUMENT_ROOT -->
+		<div class="form-group system_cookies-DOCUMENT_ROOT" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">DOCUMENT_ROOT</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(DOCUMENT_ROOT)%%></div>
+			</div>
+		</div>
+		<!-- Field: REMOTE_ADDR -->
+		<div class="form-group system_cookies-REMOTE_ADDR" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REMOTE_ADDR</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REMOTE_ADDR)%%></div>
+			</div>
+		</div>
+		<!-- Field: REMOTE_PORT -->
+		<div class="form-group system_cookies-REMOTE_PORT" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REMOTE_PORT</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REMOTE_PORT)%%></div>
+			</div>
+		</div>
+		<!-- Field: SERVER_ADDR -->
+		<div class="form-group system_cookies-SERVER_ADDR" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SERVER_ADDR</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SERVER_ADDR)%%></div>
+			</div>
+		</div>
+		<!-- Field: SERVER_NAME -->
+		<div class="form-group system_cookies-SERVER_NAME" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SERVER_NAME</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SERVER_NAME)%%></div>
+			</div>
+		</div>
+		<!-- Field: SERVER_ADMIN -->
+		<div class="form-group system_cookies-SERVER_ADMIN" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SERVER_ADMIN</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SERVER_ADMIN)%%></div>
+			</div>
+		</div>
+		<!-- Field: SERVER_PORT -->
+		<div class="form-group system_cookies-SERVER_PORT" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SERVER_PORT</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SERVER_PORT)%%></div>
+			</div>
+		</div>
+		<!-- Field: REQUEST_SCHEME -->
+		<div class="form-group system_cookies-REQUEST_SCHEME" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REQUEST_SCHEME</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REQUEST_SCHEME)%%></div>
+			</div>
+		</div>
+		<!-- Field: REQUEST_URI -->
+		<div class="form-group system_cookies-REQUEST_URI" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REQUEST_URI</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REQUEST_URI)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_ADDR -->
+		<div class="form-group system_cookies-GEOIP_ADDR" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_ADDR</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_ADDR)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_CONTINENT_CODE -->
+		<div class="form-group system_cookies-GEOIP_CONTINENT_CODE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_CONTINENT_CODE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_CONTINENT_CODE)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_COUNTRY_CODE -->
+		<div class="form-group system_cookies-GEOIP_COUNTRY_CODE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_COUNTRY_CODE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_COUNTRY_CODE)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_COUNTRY_NAME -->
+		<div class="form-group system_cookies-GEOIP_COUNTRY_NAME" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_COUNTRY_NAME</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_COUNTRY_NAME)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_CITY -->
+		<div class="form-group system_cookies-GEOIP_CITY" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_CITY</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_CITY)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_CITY_CONTINENT_CODE -->
+		<div class="form-group system_cookies-GEOIP_CITY_CONTINENT_CODE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_CITY_CONTINENT_CODE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_CITY_CONTINENT_CODE)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_CITY_COUNTRY_CODE -->
+		<div class="form-group system_cookies-GEOIP_CITY_COUNTRY_CODE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_CITY_COUNTRY_CODE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_CITY_COUNTRY_CODE)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_CITY_COUNTRY_NAME -->
+		<div class="form-group system_cookies-GEOIP_CITY_COUNTRY_NAME" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_CITY_COUNTRY_NAME</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_CITY_COUNTRY_NAME)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_REGION -->
+		<div class="form-group system_cookies-GEOIP_REGION" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_REGION</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_REGION)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_LATITUDE -->
+		<div class="form-group system_cookies-GEOIP_LATITUDE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_LATITUDE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_LATITUDE)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_LONGITUDE -->
+		<div class="form-group system_cookies-GEOIP_LONGITUDE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_LONGITUDE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_LONGITUDE)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_ISP -->
+		<div class="form-group system_cookies-GEOIP_ISP" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_ISP</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_ISP)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_ORGANIZATION -->
+		<div class="form-group system_cookies-GEOIP_ORGANIZATION" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_ORGANIZATION</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_ORGANIZATION)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_POSTAL_CODE -->
+		<div class="form-group system_cookies-GEOIP_POSTAL_CODE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_POSTAL_CODE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_POSTAL_CODE)%%></div>
+			</div>
+		</div>
+		<!-- Field: GEOIP_DMA_CODE -->
+		<div class="form-group system_cookies-GEOIP_DMA_CODE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">GEOIP_DMA_CODE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(GEOIP_DMA_CODE)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTPS -->
+		<div class="form-group system_cookies-HTTPS" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTPS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTPS)%%></div>
+			</div>
+		</div>
+		<!-- Field: CRAWLER_USLEEP -->
+		<div class="form-group system_cookies-CRAWLER_USLEEP" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">CRAWLER_USLEEP</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(CRAWLER_USLEEP)%%></div>
+			</div>
+		</div>
+		<!-- Field: CRAWLER_LOAD_LIMIT_ENFORCE -->
+		<div class="form-group system_cookies-CRAWLER_LOAD_LIMIT_ENFORCE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">CRAWLER_LOAD_LIMIT_ENFORCE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(CRAWLER_LOAD_LIMIT_ENFORCE)%%></div>
+			</div>
+		</div>
+		<!-- Field: X_SPDY -->
+		<div class="form-group system_cookies-X_SPDY" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">X_SPDY</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(X_SPDY)%%></div>
+			</div>
+		</div>
+		<!-- Field: SSL_PROTOCOL -->
+		<div class="form-group system_cookies-SSL_PROTOCOL" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SSL_PROTOCOL</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SSL_PROTOCOL)%%></div>
+			</div>
+		</div>
+		<!-- Field: SSL_CIPHER -->
+		<div class="form-group system_cookies-SSL_CIPHER" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SSL_CIPHER</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SSL_CIPHER)%%></div>
+			</div>
+		</div>
+		<!-- Field: SSL_CIPHER_USEKEYSIZE -->
+		<div class="form-group system_cookies-SSL_CIPHER_USEKEYSIZE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SSL_CIPHER_USEKEYSIZE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SSL_CIPHER_USEKEYSIZE)%%></div>
+			</div>
+		</div>
+		<!-- Field: SSL_CIPHER_ALGKEYSIZE -->
+		<div class="form-group system_cookies-SSL_CIPHER_ALGKEYSIZE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SSL_CIPHER_ALGKEYSIZE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SSL_CIPHER_ALGKEYSIZE)%%></div>
+			</div>
+		</div>
+		<!-- Field: SCRIPT_FILENAME -->
+		<div class="form-group system_cookies-SCRIPT_FILENAME" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SCRIPT_FILENAME</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SCRIPT_FILENAME)%%></div>
+			</div>
+		</div>
+		<!-- Field: QUERY_STRING -->
+		<div class="form-group system_cookies-QUERY_STRING" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">QUERY_STRING</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(QUERY_STRING)%%></div>
+			</div>
+		</div>
+		<!-- Field: SCRIPT_URI -->
+		<div class="form-group system_cookies-SCRIPT_URI" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SCRIPT_URI</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SCRIPT_URI)%%></div>
+			</div>
+		</div>
+		<!-- Field: SCRIPT_URL -->
+		<div class="form-group system_cookies-SCRIPT_URL" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SCRIPT_URL</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SCRIPT_URL)%%></div>
+			</div>
+		</div>
+		<!-- Field: SCRIPT_NAME -->
+		<div class="form-group system_cookies-SCRIPT_NAME" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SCRIPT_NAME</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SCRIPT_NAME)%%></div>
+			</div>
+		</div>
+		<!-- Field: SERVER_PROTOCOL -->
+		<div class="form-group system_cookies-SERVER_PROTOCOL" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SERVER_PROTOCOL</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SERVER_PROTOCOL)%%></div>
+			</div>
+		</div>
+		<!-- Field: SERVER_SOFTWARE -->
+		<div class="form-group system_cookies-SERVER_SOFTWARE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SERVER_SOFTWARE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SERVER_SOFTWARE)%%></div>
+			</div>
+		</div>
+		<!-- Field: REQUEST_METHOD -->
+		<div class="form-group system_cookies-REQUEST_METHOD" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REQUEST_METHOD</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REQUEST_METHOD)%%></div>
+			</div>
+		</div>
+		<!-- Field: PHP_SELF -->
+		<div class="form-group system_cookies-PHP_SELF" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">PHP_SELF</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(PHP_SELF)%%></div>
+			</div>
+		</div>
+		<!-- Field: REQUEST_TIME_FLOAT -->
+		<div class="form-group system_cookies-REQUEST_TIME_FLOAT" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REQUEST_TIME_FLOAT</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REQUEST_TIME_FLOAT)%%></div>
+			</div>
+		</div>
+		<!-- Field: REQUEST_TIME -->
+		<div class="form-group system_cookies-REQUEST_TIME" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REQUEST_TIME</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REQUEST_TIME)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_REFERER -->
+		<div class="form-group system_cookies-HTTP_REFERER" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_REFERER</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_REFERER)%%></div>
+			</div>
+		</div>
+		<!-- Field: REDIRECT_URL -->
+		<div class="form-group system_cookies-REDIRECT_URL" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REDIRECT_URL</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REDIRECT_URL)%%></div>
+			</div>
+		</div>
+		<!-- Field: REDIRECT_REQUEST_METHOD -->
+		<div class="form-group system_cookies-REDIRECT_REQUEST_METHOD" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REDIRECT_REQUEST_METHOD</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REDIRECT_REQUEST_METHOD)%%></div>
+			</div>
+		</div>
+		<!-- Field: REDIRECT_STATUS -->
+		<div class="form-group system_cookies-REDIRECT_STATUS" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REDIRECT_STATUS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REDIRECT_STATUS)%%></div>
+			</div>
+		</div>
+		<!-- Field: REDIRECT_QUERY_STRING -->
+		<div class="form-group system_cookies-REDIRECT_QUERY_STRING" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">REDIRECT_QUERY_STRING</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(REDIRECT_QUERY_STRING)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_CONNECTION -->
+		<div class="form-group system_cookies-HTTP_CONNECTION" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_CONNECTION</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_CONNECTION)%%></div>
+			</div>
+		</div>
+		<!-- Field: CONTENT_TYPE -->
+		<div class="form-group system_cookies-CONTENT_TYPE" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">CONTENT_TYPE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(CONTENT_TYPE)%%></div>
+			</div>
+		</div>
+		<!-- Field: CONTENT_LENGTH -->
+		<div class="form-group system_cookies-CONTENT_LENGTH" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">CONTENT_LENGTH</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(CONTENT_LENGTH)%%></div>
+			</div>
+		</div>
+		<!-- Field: UNIQUE_ID -->
+		<div class="form-group system_cookies-UNIQUE_ID" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">UNIQUE_ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(UNIQUE_ID)%%></div>
+			</div>
+		</div>
+		<!-- Field: SSL_SESSION_ID -->
+		<div class="form-group system_cookies-SSL_SESSION_ID" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">SSL_SESSION_ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(SSL_SESSION_ID)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_X_REQUESTED_WITH -->
+		<div class="form-group system_cookies-HTTP_X_REQUESTED_WITH" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_X_REQUESTED_WITH</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_X_REQUESTED_WITH)%%></div>
+			</div>
+		</div>
+		<!-- Field: HTTP_ORIGIN -->
+		<div class="form-group system_cookies-HTTP_ORIGIN" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">HTTP_ORIGIN</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(HTTP_ORIGIN)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>

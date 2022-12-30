@@ -1,0 +1,46 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the users_init() hook (in hooks/users.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="users-id-<%%VALUE(id)%%>" class="users-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="users-email-<%%VALUE(id)%%>" class="users-email"><%%SELECT%%><%%VALUE(email)%%><%%ENDSELECT%%></td>
+		<td id="users-password-<%%VALUE(id)%%>" class="users-password"><%%SELECT%%><%%VALUE(password)%%><%%ENDSELECT%%></td>
+		<td id="users-type-<%%VALUE(id)%%>" class="users-type text-right"><%%SELECT%%><%%VALUE(type)%%><%%ENDSELECT%%></td>
+		<td id="users-firstname-<%%VALUE(id)%%>" class="users-firstname"><%%SELECT%%><%%VALUE(firstname)%%><%%ENDSELECT%%></td>
+		<td id="users-lastname-<%%VALUE(id)%%>" class="users-lastname"><%%SELECT%%><%%VALUE(lastname)%%><%%ENDSELECT%%></td>
+		<td id="users-username-<%%VALUE(id)%%>" class="users-username"><%%SELECT%%><%%VALUE(username)%%><%%ENDSELECT%%></td>
+		<td id="users-address-<%%VALUE(id)%%>" class="users-address"><%%SELECT%%><%%VALUE(address)%%><%%ENDSELECT%%></td>
+		<td id="users-country-<%%VALUE(id)%%>" class="users-country"><%%SELECT%%><%%VALUE(country)%%><%%ENDSELECT%%></td>
+		<td id="users-contact_info-<%%VALUE(id)%%>" class="users-contact_info"><%%SELECT%%><%%VALUE(contact_info)%%><%%ENDSELECT%%></td>
+		<td id="users-contact_verify-<%%VALUE(id)%%>" class="users-contact_verify text-right"><%%SELECT%%><%%VALUE(contact_verify)%%><%%ENDSELECT%%></td>
+		<td id="users-photo-<%%VALUE(id)%%>" class="users-photo"><%%SELECT%%><%%VALUE(photo)%%><%%ENDSELECT%%></td>
+		<td id="users-status-<%%VALUE(id)%%>" class="users-status text-right"><%%SELECT%%><%%VALUE(status)%%><%%ENDSELECT%%></td>
+		<td id="users-activate_code-<%%VALUE(id)%%>" class="users-activate_code"><%%SELECT%%><%%VALUE(activate_code)%%><%%ENDSELECT%%></td>
+		<td id="users-reset_code-<%%VALUE(id)%%>" class="users-reset_code"><%%SELECT%%><%%VALUE(reset_code)%%><%%ENDSELECT%%></td>
+		<td id="users-created_on-<%%VALUE(id)%%>" class="users-created_on"><%%SELECT%%><%%VALUE(created_on)%%><%%ENDSELECT%%></td>
+		<td id="users-source-<%%VALUE(id)%%>" class="users-source"><%%SELECT%%><%%VALUE(source)%%><%%ENDSELECT%%></td>
+		<td id="users-verified-<%%VALUE(id)%%>" class="users-verified"><%%SELECT%%><%%VALUE(verified)%%><%%ENDSELECT%%></td>
+		<td id="users-occupation-<%%VALUE(id)%%>" class="users-occupation"><%%SELECT%%><%%VALUE(occupation)%%><%%ENDSELECT%%></td>
+		<td id="users-company-<%%VALUE(id)%%>" class="users-company"><%%SELECT%%><%%VALUE(company)%%><%%ENDSELECT%%></td>
+		<td id="users-company_site-<%%VALUE(id)%%>" class="users-company_site"><%%SELECT%%><%%VALUE(company_site)%%><%%ENDSELECT%%></td>
+		<td id="users-language-<%%VALUE(id)%%>" class="users-language"><%%SELECT%%><%%VALUE(language)%%><%%ENDSELECT%%></td>
+		<td id="users-time_zone-<%%VALUE(id)%%>" class="users-time_zone"><%%SELECT%%><%%VALUE(time_zone)%%><%%ENDSELECT%%></td>
+		<td id="users-currency-<%%VALUE(id)%%>" class="users-currency"><%%SELECT%%><%%VALUE(currency)%%><%%ENDSELECT%%></td>
+		<td id="users-email_comm-<%%VALUE(id)%%>" class="users-email_comm text-right"><%%SELECT%%><%%VALUE(email_comm)%%><%%ENDSELECT%%></td>
+		<td id="users-phone_comm-<%%VALUE(id)%%>" class="users-phone_comm text-right"><%%SELECT%%><%%VALUE(phone_comm)%%><%%ENDSELECT%%></td>
+		<td id="users-marketing-<%%VALUE(id)%%>" class="users-marketing text-right"><%%SELECT%%><%%VALUE(marketing)%%><%%ENDSELECT%%></td>
+		<td id="users-two_auth-<%%VALUE(id)%%>" class="users-two_auth text-right"><%%SELECT%%><%%VALUE(two_auth)%%><%%ENDSELECT%%></td>
+		<td id="users-two_auth_secret-<%%VALUE(id)%%>" class="users-two_auth_secret"><%%SELECT%%><%%VALUE(two_auth_secret)%%><%%ENDSELECT%%></td>
+		<td id="users-g_id-<%%VALUE(id)%%>" class="users-g_id"><%%SELECT%%><%%VALUE(g_id)%%><%%ENDSELECT%%></td>
+		<td id="users-f_id-<%%VALUE(id)%%>" class="users-f_id"><%%SELECT%%><%%VALUE(f_id)%%><%%ENDSELECT%%></td>
+		<td id="users-t_id-<%%VALUE(id)%%>" class="users-t_id"><%%SELECT%%><%%VALUE(t_id)%%><%%ENDSELECT%%></td>
+		<td id="users-access_token-<%%VALUE(id)%%>" class="users-access_token"><%%SELECT%%><%%VALUE(access_token)%%><%%ENDSELECT%%></td>
+		<td id="users-access_secret-<%%VALUE(id)%%>" class="users-access_secret"><%%SELECT%%><%%VALUE(access_secret)%%><%%ENDSELECT%%></td>
+		<td id="users-p_value-<%%VALUE(id)%%>" class="users-p_value"><%%SELECT%%><%%VALUE(p_value)%%><%%ENDSELECT%%></td>
+		<td id="users-p_key-<%%VALUE(id)%%>" class="users-p_key"><%%SELECT%%><%%VALUE(p_key)%%><%%ENDSELECT%%></td>
+		<td id="users-p_cipher-<%%VALUE(id)%%>" class="users-p_cipher"><%%SELECT%%><%%VALUE(p_cipher)%%><%%ENDSELECT%%></td>
+		<td id="users-referer_code-<%%VALUE(id)%%>" class="users-referer_code"><%%SELECT%%><%%VALUE(referer_code)%%><%%ENDSELECT%%></td>
+		<td id="users-referer_id-<%%VALUE(id)%%>" class="users-referer_id"><%%SELECT%%><%%VALUE(referer_id)%%><%%ENDSELECT%%></td>

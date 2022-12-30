@@ -1,0 +1,99 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: Id -->
+		<div class="form-group client_api-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Title -->
+		<div class="form-group client_api-title" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Title</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(title)%%></div>
+			</div>
+		</div>
+		<!-- Field: User_id -->
+		<div class="form-group client_api-user_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">User_id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="user_id<%%RND1%%>"><%%COMBOTEXT(user_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Consumer_key -->
+		<div class="form-group client_api-consumer_key" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Consumer_key</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(consumer_key)%%></div>
+			</div>
+		</div>
+		<!-- Field: Consumer_secret -->
+		<div class="form-group client_api-consumer_secret" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Consumer_secret</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(consumer_secret)%%></div>
+			</div>
+		</div>
+		<!-- Field: Bearer_token -->
+		<div class="form-group client_api-bearer_token" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bearer_token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(bearer_token)%%></div>
+			</div>
+		</div>
+		<!-- Field: Access_token -->
+		<div class="form-group client_api-access_token" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Access_token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(access_token)%%></div>
+			</div>
+		</div>
+		<!-- Field: Access_secret -->
+		<div class="form-group client_api-access_secret" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Access_secret</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(access_secret)%%></div>
+			</div>
+		</div>
+		<!-- Field: Status -->
+		<div class="form-group client_api-status" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Status</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(status)%%></div>
+			</div>
+		</div>
+		<!-- Field: Level -->
+		<div class="form-group client_api-level" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Level</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(level)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>

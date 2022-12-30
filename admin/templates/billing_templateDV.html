@@ -1,0 +1,335 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/billing-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="billing_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+
+<div class="panel-body hidden" id="billing_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="billing_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: Id -->
+				<div class="form-group billing-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">Id</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: User_id -->
+				<div class="form-group billing-user_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="user_id" data-parent_link="view_parent_modal">User_id</label>
+					<div class="col-lg-9">
+						<div class="lookup-flex"><%%COMBO(user_id)%%><%%PLINK(user_id)%%><%%ADDNEW(users)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Name -->
+				<div class="form-group billing-name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="name">Name</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="name" id="name" value="<%%VALUE(name)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Email -->
+				<div class="form-group billing-email">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="email">Email</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="email" id="email" value="<%%VALUE(email)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Phone_number -->
+				<div class="form-group billing-phone_number">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="phone_number">Phone_number</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="phone_number" id="phone_number" value="<%%VALUE(phone_number)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Tx_ref -->
+				<div class="form-group billing-tx_ref">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="tx_ref">Tx_ref</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="tx_ref" id="tx_ref" value="<%%VALUE(tx_ref)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Charged_amount -->
+				<div class="form-group billing-charged_amount">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="charged_amount">Charged_amount</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="charged_amount" id="charged_amount" value="<%%VALUE(charged_amount)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Payment_type -->
+				<div class="form-group billing-payment_type">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="payment_type">Payment_type</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="payment_type" id="payment_type" value="<%%VALUE(payment_type)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Created_at -->
+				<div class="form-group billing-created_at">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="created_at">Created_at</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="created_at" id="created_at" value="<%%VALUE(created_at)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Auth_model -->
+				<div class="form-group billing-auth_model">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="auth_model">Auth_model</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="auth_model" id="auth_model" value="<%%VALUE(auth_model)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Device_fingerprint -->
+				<div class="form-group billing-device_fingerprint">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="device_fingerprint">Device_fingerprint</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="device_fingerprint" id="device_fingerprint" value="<%%VALUE(device_fingerprint)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Flw_ref -->
+				<div class="form-group billing-flw_ref">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="flw_ref">Flw_ref</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="flw_ref" id="flw_ref" value="<%%VALUE(flw_ref)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Account_id -->
+				<div class="form-group billing-account_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="account_id">Account_id</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="account_id" id="account_id" value="<%%VALUE(account_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Amount_settled -->
+				<div class="form-group billing-amount_settled">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="amount_settled">Amount_settled</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="amount_settled" id="amount_settled" value="<%%VALUE(amount_settled)%%>">
+					</div>
+				</div>
+
+				<!-- Field: App_fee -->
+				<div class="form-group billing-app_fee">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="app_fee">App_fee</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="app_fee" id="app_fee" value="<%%VALUE(app_fee)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Status -->
+				<div class="form-group billing-status">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="status">Status</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="status" id="status" value="<%%VALUE(status)%%>">
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="billing_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+			if(!$j('.table_view').length || $j('[name=SelectedID]').val().length) {
+				AppGini.once({
+					condition: function() {
+						return $j('.form-group.billing-user_id')
+									.find('.nicEdit-main, .select2-container, input[type=radio]')
+									.length > 0
+								// or read-only DV
+								|| (!$j('#update').length && !$j('#insert').length);
+					},
+					action: function() {
+						$j('#billing_dv_container-loading').addClass('hidden');
+						$j('#billing_dv_container').removeClass('hidden');
+						AppGini.focusFormElement('billing', 'user_id');
+					},
+					timeout:  5000,
+					doActionOnTimeout:  true
+				});
+			} else {
+				$j('#billing_dv_container-loading').addClass('hidden');
+				$j('#billing_dv_container').removeClass('hidden');
+			}
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+
+			if(true /* !embedded_mode */) {
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.removeItem(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'billing',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+									// in case the parent record was updated, we should update auto-fills
+									var updaterName = field_id + '_update_autofills';
+									if(typeof(window[updaterName]) == 'function')
+										window[updaterName]();
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=billing&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=billing&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

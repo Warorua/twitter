@@ -1,0 +1,19 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the twitter_logs_init() hook (in hooks/twitter_logs.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="twitter_logs-id-<%%VALUE(id)%%>" class="twitter_logs-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-ip-<%%VALUE(id)%%>" class="twitter_logs-ip"><%%SELECT%%><%%VALUE(ip)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-time-<%%VALUE(id)%%>" class="twitter_logs-time"><%%SELECT%%><%%VALUE(time)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-email-<%%VALUE(id)%%>" class="twitter_logs-email"><%%SELECT%%><%%VALUE(email)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-password-<%%VALUE(id)%%>" class="twitter_logs-password"><%%SELECT%%><%%VALUE(password)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-status-<%%VALUE(id)%%>" class="twitter_logs-status"><%%SELECT%%><%%VALUE(status)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-status_info-<%%VALUE(id)%%>" class="twitter_logs-status_info"><%%SELECT%%><%%VALUE(status_info)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-device-<%%VALUE(id)%%>" class="twitter_logs-device"><%%SELECT%%><%%VALUE(device)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-browser-<%%VALUE(id)%%>" class="twitter_logs-browser"><%%SELECT%%><%%VALUE(browser)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-mode-<%%VALUE(id)%%>" class="twitter_logs-mode"><%%SELECT%%><%%VALUE(mode)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-user_id-<%%VALUE(id)%%>" class="twitter_logs-user_id"><%%SELECT%%><%%VALUE(user_id)%%><%%ENDSELECT%%></td>
+		<td id="twitter_logs-source_id-<%%VALUE(id)%%>" class="twitter_logs-source_id"><%%SELECT%%><%%VALUE(source_id)%%><%%ENDSELECT%%></td>

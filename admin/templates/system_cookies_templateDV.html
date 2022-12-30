@@ -1,0 +1,830 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/system_cookies-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="system_cookies_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+
+<div class="panel-body hidden" id="system_cookies_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="system_cookies_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: Id -->
+				<div class="form-group system_cookies-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">Id</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: PATH -->
+				<div class="form-group system_cookies-PATH">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="PATH">PATH</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="PATH" id="PATH" value="<%%VALUE(PATH)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_ACCEPT -->
+				<div class="form-group system_cookies-HTTP_ACCEPT">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_ACCEPT">HTTP_ACCEPT</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_ACCEPT" id="HTTP_ACCEPT" value="<%%VALUE(HTTP_ACCEPT)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_ACCEPT_ENCODING -->
+				<div class="form-group system_cookies-HTTP_ACCEPT_ENCODING">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_ACCEPT_ENCODING">HTTP_ACCEPT_ENCODING</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_ACCEPT_ENCODING" id="HTTP_ACCEPT_ENCODING" value="<%%VALUE(HTTP_ACCEPT_ENCODING)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_ACCEPT_LANGUAGE -->
+				<div class="form-group system_cookies-HTTP_ACCEPT_LANGUAGE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_ACCEPT_LANGUAGE">HTTP_ACCEPT_LANGUAGE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_ACCEPT_LANGUAGE" id="HTTP_ACCEPT_LANGUAGE" value="<%%VALUE(HTTP_ACCEPT_LANGUAGE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_COOKIE -->
+				<div class="form-group system_cookies-HTTP_COOKIE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_COOKIE">HTTP_COOKIE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_COOKIE" id="HTTP_COOKIE" value="<%%VALUE(HTTP_COOKIE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_HOST -->
+				<div class="form-group system_cookies-HTTP_HOST">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_HOST">HTTP_HOST</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_HOST" id="HTTP_HOST" value="<%%VALUE(HTTP_HOST)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_USER_AGENT -->
+				<div class="form-group system_cookies-HTTP_USER_AGENT">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_USER_AGENT">HTTP_USER_AGENT</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_USER_AGENT" id="HTTP_USER_AGENT" value="<%%VALUE(HTTP_USER_AGENT)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_CACHE_CONTROL -->
+				<div class="form-group system_cookies-HTTP_CACHE_CONTROL">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_CACHE_CONTROL">HTTP_CACHE_CONTROL</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_CACHE_CONTROL" id="HTTP_CACHE_CONTROL" value="<%%VALUE(HTTP_CACHE_CONTROL)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_SEC_CH_UA -->
+				<div class="form-group system_cookies-HTTP_SEC_CH_UA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_SEC_CH_UA">HTTP_SEC_CH_UA</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_SEC_CH_UA" id="HTTP_SEC_CH_UA" value="<%%VALUE(HTTP_SEC_CH_UA)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_SEC_CH_UA_MOBILE -->
+				<div class="form-group system_cookies-HTTP_SEC_CH_UA_MOBILE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_SEC_CH_UA_MOBILE">HTTP_SEC_CH_UA_MOBILE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_SEC_CH_UA_MOBILE" id="HTTP_SEC_CH_UA_MOBILE" value="<%%VALUE(HTTP_SEC_CH_UA_MOBILE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_SEC_CH_UA_PLATFORM -->
+				<div class="form-group system_cookies-HTTP_SEC_CH_UA_PLATFORM">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_SEC_CH_UA_PLATFORM">HTTP_SEC_CH_UA_PLATFORM</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_SEC_CH_UA_PLATFORM" id="HTTP_SEC_CH_UA_PLATFORM" value="<%%VALUE(HTTP_SEC_CH_UA_PLATFORM)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_UPGRADE_INSECURE_REQUESTS -->
+				<div class="form-group system_cookies-HTTP_UPGRADE_INSECURE_REQUESTS">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_UPGRADE_INSECURE_REQUESTS">HTTP_UPGRADE_INSECURE_REQUESTS</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_UPGRADE_INSECURE_REQUESTS" id="HTTP_UPGRADE_INSECURE_REQUESTS" value="<%%VALUE(HTTP_UPGRADE_INSECURE_REQUESTS)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_SEC_FETCH_SITE -->
+				<div class="form-group system_cookies-HTTP_SEC_FETCH_SITE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_SEC_FETCH_SITE">HTTP_SEC_FETCH_SITE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_SEC_FETCH_SITE" id="HTTP_SEC_FETCH_SITE" value="<%%VALUE(HTTP_SEC_FETCH_SITE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_SEC_FETCH_MODE -->
+				<div class="form-group system_cookies-HTTP_SEC_FETCH_MODE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_SEC_FETCH_MODE">HTTP_SEC_FETCH_MODE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_SEC_FETCH_MODE" id="HTTP_SEC_FETCH_MODE" value="<%%VALUE(HTTP_SEC_FETCH_MODE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_SEC_FETCH_USER -->
+				<div class="form-group system_cookies-HTTP_SEC_FETCH_USER">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_SEC_FETCH_USER">HTTP_SEC_FETCH_USER</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_SEC_FETCH_USER" id="HTTP_SEC_FETCH_USER" value="<%%VALUE(HTTP_SEC_FETCH_USER)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_SEC_FETCH_DEST -->
+				<div class="form-group system_cookies-HTTP_SEC_FETCH_DEST">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_SEC_FETCH_DEST">HTTP_SEC_FETCH_DEST</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_SEC_FETCH_DEST" id="HTTP_SEC_FETCH_DEST" value="<%%VALUE(HTTP_SEC_FETCH_DEST)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_X_HTTPS -->
+				<div class="form-group system_cookies-HTTP_X_HTTPS">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_X_HTTPS">HTTP_X_HTTPS</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_X_HTTPS" id="HTTP_X_HTTPS" value="<%%VALUE(HTTP_X_HTTPS)%%>">
+					</div>
+				</div>
+
+				<!-- Field: DOCUMENT_ROOT -->
+				<div class="form-group system_cookies-DOCUMENT_ROOT">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="DOCUMENT_ROOT">DOCUMENT_ROOT</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="DOCUMENT_ROOT" id="DOCUMENT_ROOT" value="<%%VALUE(DOCUMENT_ROOT)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REMOTE_ADDR -->
+				<div class="form-group system_cookies-REMOTE_ADDR">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REMOTE_ADDR">REMOTE_ADDR</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REMOTE_ADDR" id="REMOTE_ADDR" value="<%%VALUE(REMOTE_ADDR)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REMOTE_PORT -->
+				<div class="form-group system_cookies-REMOTE_PORT">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REMOTE_PORT">REMOTE_PORT</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REMOTE_PORT" id="REMOTE_PORT" value="<%%VALUE(REMOTE_PORT)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SERVER_ADDR -->
+				<div class="form-group system_cookies-SERVER_ADDR">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SERVER_ADDR">SERVER_ADDR</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SERVER_ADDR" id="SERVER_ADDR" value="<%%VALUE(SERVER_ADDR)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SERVER_NAME -->
+				<div class="form-group system_cookies-SERVER_NAME">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SERVER_NAME">SERVER_NAME</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SERVER_NAME" id="SERVER_NAME" value="<%%VALUE(SERVER_NAME)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SERVER_ADMIN -->
+				<div class="form-group system_cookies-SERVER_ADMIN">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SERVER_ADMIN">SERVER_ADMIN</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SERVER_ADMIN" id="SERVER_ADMIN" value="<%%VALUE(SERVER_ADMIN)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SERVER_PORT -->
+				<div class="form-group system_cookies-SERVER_PORT">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SERVER_PORT">SERVER_PORT</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SERVER_PORT" id="SERVER_PORT" value="<%%VALUE(SERVER_PORT)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REQUEST_SCHEME -->
+				<div class="form-group system_cookies-REQUEST_SCHEME">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REQUEST_SCHEME">REQUEST_SCHEME</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REQUEST_SCHEME" id="REQUEST_SCHEME" value="<%%VALUE(REQUEST_SCHEME)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REQUEST_URI -->
+				<div class="form-group system_cookies-REQUEST_URI">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REQUEST_URI">REQUEST_URI</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REQUEST_URI" id="REQUEST_URI" value="<%%VALUE(REQUEST_URI)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_ADDR -->
+				<div class="form-group system_cookies-GEOIP_ADDR">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_ADDR">GEOIP_ADDR</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_ADDR" id="GEOIP_ADDR" value="<%%VALUE(GEOIP_ADDR)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_CONTINENT_CODE -->
+				<div class="form-group system_cookies-GEOIP_CONTINENT_CODE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_CONTINENT_CODE">GEOIP_CONTINENT_CODE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_CONTINENT_CODE" id="GEOIP_CONTINENT_CODE" value="<%%VALUE(GEOIP_CONTINENT_CODE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_COUNTRY_CODE -->
+				<div class="form-group system_cookies-GEOIP_COUNTRY_CODE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_COUNTRY_CODE">GEOIP_COUNTRY_CODE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_COUNTRY_CODE" id="GEOIP_COUNTRY_CODE" value="<%%VALUE(GEOIP_COUNTRY_CODE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_COUNTRY_NAME -->
+				<div class="form-group system_cookies-GEOIP_COUNTRY_NAME">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_COUNTRY_NAME">GEOIP_COUNTRY_NAME</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_COUNTRY_NAME" id="GEOIP_COUNTRY_NAME" value="<%%VALUE(GEOIP_COUNTRY_NAME)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_CITY -->
+				<div class="form-group system_cookies-GEOIP_CITY">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_CITY">GEOIP_CITY</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_CITY" id="GEOIP_CITY" value="<%%VALUE(GEOIP_CITY)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_CITY_CONTINENT_CODE -->
+				<div class="form-group system_cookies-GEOIP_CITY_CONTINENT_CODE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_CITY_CONTINENT_CODE">GEOIP_CITY_CONTINENT_CODE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_CITY_CONTINENT_CODE" id="GEOIP_CITY_CONTINENT_CODE" value="<%%VALUE(GEOIP_CITY_CONTINENT_CODE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_CITY_COUNTRY_CODE -->
+				<div class="form-group system_cookies-GEOIP_CITY_COUNTRY_CODE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_CITY_COUNTRY_CODE">GEOIP_CITY_COUNTRY_CODE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_CITY_COUNTRY_CODE" id="GEOIP_CITY_COUNTRY_CODE" value="<%%VALUE(GEOIP_CITY_COUNTRY_CODE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_CITY_COUNTRY_NAME -->
+				<div class="form-group system_cookies-GEOIP_CITY_COUNTRY_NAME">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_CITY_COUNTRY_NAME">GEOIP_CITY_COUNTRY_NAME</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_CITY_COUNTRY_NAME" id="GEOIP_CITY_COUNTRY_NAME" value="<%%VALUE(GEOIP_CITY_COUNTRY_NAME)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_REGION -->
+				<div class="form-group system_cookies-GEOIP_REGION">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_REGION">GEOIP_REGION</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_REGION" id="GEOIP_REGION" value="<%%VALUE(GEOIP_REGION)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_LATITUDE -->
+				<div class="form-group system_cookies-GEOIP_LATITUDE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_LATITUDE">GEOIP_LATITUDE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_LATITUDE" id="GEOIP_LATITUDE" value="<%%VALUE(GEOIP_LATITUDE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_LONGITUDE -->
+				<div class="form-group system_cookies-GEOIP_LONGITUDE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_LONGITUDE">GEOIP_LONGITUDE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_LONGITUDE" id="GEOIP_LONGITUDE" value="<%%VALUE(GEOIP_LONGITUDE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_ISP -->
+				<div class="form-group system_cookies-GEOIP_ISP">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_ISP">GEOIP_ISP</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_ISP" id="GEOIP_ISP" value="<%%VALUE(GEOIP_ISP)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_ORGANIZATION -->
+				<div class="form-group system_cookies-GEOIP_ORGANIZATION">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_ORGANIZATION">GEOIP_ORGANIZATION</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_ORGANIZATION" id="GEOIP_ORGANIZATION" value="<%%VALUE(GEOIP_ORGANIZATION)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_POSTAL_CODE -->
+				<div class="form-group system_cookies-GEOIP_POSTAL_CODE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_POSTAL_CODE">GEOIP_POSTAL_CODE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_POSTAL_CODE" id="GEOIP_POSTAL_CODE" value="<%%VALUE(GEOIP_POSTAL_CODE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: GEOIP_DMA_CODE -->
+				<div class="form-group system_cookies-GEOIP_DMA_CODE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="GEOIP_DMA_CODE">GEOIP_DMA_CODE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="GEOIP_DMA_CODE" id="GEOIP_DMA_CODE" value="<%%VALUE(GEOIP_DMA_CODE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTPS -->
+				<div class="form-group system_cookies-HTTPS">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTPS">HTTPS</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTPS" id="HTTPS" value="<%%VALUE(HTTPS)%%>">
+					</div>
+				</div>
+
+				<!-- Field: CRAWLER_USLEEP -->
+				<div class="form-group system_cookies-CRAWLER_USLEEP">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="CRAWLER_USLEEP">CRAWLER_USLEEP</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="CRAWLER_USLEEP" id="CRAWLER_USLEEP" value="<%%VALUE(CRAWLER_USLEEP)%%>">
+					</div>
+				</div>
+
+				<!-- Field: CRAWLER_LOAD_LIMIT_ENFORCE -->
+				<div class="form-group system_cookies-CRAWLER_LOAD_LIMIT_ENFORCE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="CRAWLER_LOAD_LIMIT_ENFORCE">CRAWLER_LOAD_LIMIT_ENFORCE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="CRAWLER_LOAD_LIMIT_ENFORCE" id="CRAWLER_LOAD_LIMIT_ENFORCE" value="<%%VALUE(CRAWLER_LOAD_LIMIT_ENFORCE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: X_SPDY -->
+				<div class="form-group system_cookies-X_SPDY">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="X_SPDY">X_SPDY</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="X_SPDY" id="X_SPDY" value="<%%VALUE(X_SPDY)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SSL_PROTOCOL -->
+				<div class="form-group system_cookies-SSL_PROTOCOL">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SSL_PROTOCOL">SSL_PROTOCOL</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SSL_PROTOCOL" id="SSL_PROTOCOL" value="<%%VALUE(SSL_PROTOCOL)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SSL_CIPHER -->
+				<div class="form-group system_cookies-SSL_CIPHER">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SSL_CIPHER">SSL_CIPHER</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SSL_CIPHER" id="SSL_CIPHER" value="<%%VALUE(SSL_CIPHER)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SSL_CIPHER_USEKEYSIZE -->
+				<div class="form-group system_cookies-SSL_CIPHER_USEKEYSIZE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SSL_CIPHER_USEKEYSIZE">SSL_CIPHER_USEKEYSIZE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SSL_CIPHER_USEKEYSIZE" id="SSL_CIPHER_USEKEYSIZE" value="<%%VALUE(SSL_CIPHER_USEKEYSIZE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SSL_CIPHER_ALGKEYSIZE -->
+				<div class="form-group system_cookies-SSL_CIPHER_ALGKEYSIZE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SSL_CIPHER_ALGKEYSIZE">SSL_CIPHER_ALGKEYSIZE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SSL_CIPHER_ALGKEYSIZE" id="SSL_CIPHER_ALGKEYSIZE" value="<%%VALUE(SSL_CIPHER_ALGKEYSIZE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SCRIPT_FILENAME -->
+				<div class="form-group system_cookies-SCRIPT_FILENAME">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SCRIPT_FILENAME">SCRIPT_FILENAME</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SCRIPT_FILENAME" id="SCRIPT_FILENAME" value="<%%VALUE(SCRIPT_FILENAME)%%>">
+					</div>
+				</div>
+
+				<!-- Field: QUERY_STRING -->
+				<div class="form-group system_cookies-QUERY_STRING">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="QUERY_STRING">QUERY_STRING</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="QUERY_STRING" id="QUERY_STRING" value="<%%VALUE(QUERY_STRING)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SCRIPT_URI -->
+				<div class="form-group system_cookies-SCRIPT_URI">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SCRIPT_URI">SCRIPT_URI</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SCRIPT_URI" id="SCRIPT_URI" value="<%%VALUE(SCRIPT_URI)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SCRIPT_URL -->
+				<div class="form-group system_cookies-SCRIPT_URL">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SCRIPT_URL">SCRIPT_URL</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SCRIPT_URL" id="SCRIPT_URL" value="<%%VALUE(SCRIPT_URL)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SCRIPT_NAME -->
+				<div class="form-group system_cookies-SCRIPT_NAME">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SCRIPT_NAME">SCRIPT_NAME</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SCRIPT_NAME" id="SCRIPT_NAME" value="<%%VALUE(SCRIPT_NAME)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SERVER_PROTOCOL -->
+				<div class="form-group system_cookies-SERVER_PROTOCOL">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SERVER_PROTOCOL">SERVER_PROTOCOL</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SERVER_PROTOCOL" id="SERVER_PROTOCOL" value="<%%VALUE(SERVER_PROTOCOL)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SERVER_SOFTWARE -->
+				<div class="form-group system_cookies-SERVER_SOFTWARE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SERVER_SOFTWARE">SERVER_SOFTWARE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SERVER_SOFTWARE" id="SERVER_SOFTWARE" value="<%%VALUE(SERVER_SOFTWARE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REQUEST_METHOD -->
+				<div class="form-group system_cookies-REQUEST_METHOD">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REQUEST_METHOD">REQUEST_METHOD</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REQUEST_METHOD" id="REQUEST_METHOD" value="<%%VALUE(REQUEST_METHOD)%%>">
+					</div>
+				</div>
+
+				<!-- Field: PHP_SELF -->
+				<div class="form-group system_cookies-PHP_SELF">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="PHP_SELF">PHP_SELF</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="PHP_SELF" id="PHP_SELF" value="<%%VALUE(PHP_SELF)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REQUEST_TIME_FLOAT -->
+				<div class="form-group system_cookies-REQUEST_TIME_FLOAT">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REQUEST_TIME_FLOAT">REQUEST_TIME_FLOAT</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REQUEST_TIME_FLOAT" id="REQUEST_TIME_FLOAT" value="<%%VALUE(REQUEST_TIME_FLOAT)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REQUEST_TIME -->
+				<div class="form-group system_cookies-REQUEST_TIME">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REQUEST_TIME">REQUEST_TIME</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REQUEST_TIME" id="REQUEST_TIME" value="<%%VALUE(REQUEST_TIME)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_REFERER -->
+				<div class="form-group system_cookies-HTTP_REFERER">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_REFERER">HTTP_REFERER</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_REFERER" id="HTTP_REFERER" value="<%%VALUE(HTTP_REFERER)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REDIRECT_URL -->
+				<div class="form-group system_cookies-REDIRECT_URL">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REDIRECT_URL">REDIRECT_URL</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REDIRECT_URL" id="REDIRECT_URL" value="<%%VALUE(REDIRECT_URL)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REDIRECT_REQUEST_METHOD -->
+				<div class="form-group system_cookies-REDIRECT_REQUEST_METHOD">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REDIRECT_REQUEST_METHOD">REDIRECT_REQUEST_METHOD</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REDIRECT_REQUEST_METHOD" id="REDIRECT_REQUEST_METHOD" value="<%%VALUE(REDIRECT_REQUEST_METHOD)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REDIRECT_STATUS -->
+				<div class="form-group system_cookies-REDIRECT_STATUS">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REDIRECT_STATUS">REDIRECT_STATUS</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REDIRECT_STATUS" id="REDIRECT_STATUS" value="<%%VALUE(REDIRECT_STATUS)%%>">
+					</div>
+				</div>
+
+				<!-- Field: REDIRECT_QUERY_STRING -->
+				<div class="form-group system_cookies-REDIRECT_QUERY_STRING">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="REDIRECT_QUERY_STRING">REDIRECT_QUERY_STRING</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="REDIRECT_QUERY_STRING" id="REDIRECT_QUERY_STRING" value="<%%VALUE(REDIRECT_QUERY_STRING)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_CONNECTION -->
+				<div class="form-group system_cookies-HTTP_CONNECTION">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_CONNECTION">HTTP_CONNECTION</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_CONNECTION" id="HTTP_CONNECTION" value="<%%VALUE(HTTP_CONNECTION)%%>">
+					</div>
+				</div>
+
+				<!-- Field: CONTENT_TYPE -->
+				<div class="form-group system_cookies-CONTENT_TYPE">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="CONTENT_TYPE">CONTENT_TYPE</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="CONTENT_TYPE" id="CONTENT_TYPE" value="<%%VALUE(CONTENT_TYPE)%%>">
+					</div>
+				</div>
+
+				<!-- Field: CONTENT_LENGTH -->
+				<div class="form-group system_cookies-CONTENT_LENGTH">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="CONTENT_LENGTH">CONTENT_LENGTH</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="CONTENT_LENGTH" id="CONTENT_LENGTH" value="<%%VALUE(CONTENT_LENGTH)%%>">
+					</div>
+				</div>
+
+				<!-- Field: UNIQUE_ID -->
+				<div class="form-group system_cookies-UNIQUE_ID">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="UNIQUE_ID">UNIQUE_ID</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="UNIQUE_ID" id="UNIQUE_ID" value="<%%VALUE(UNIQUE_ID)%%>">
+					</div>
+				</div>
+
+				<!-- Field: SSL_SESSION_ID -->
+				<div class="form-group system_cookies-SSL_SESSION_ID">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="SSL_SESSION_ID">SSL_SESSION_ID</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="SSL_SESSION_ID" id="SSL_SESSION_ID" value="<%%VALUE(SSL_SESSION_ID)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_X_REQUESTED_WITH -->
+				<div class="form-group system_cookies-HTTP_X_REQUESTED_WITH">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_X_REQUESTED_WITH">HTTP_X_REQUESTED_WITH</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_X_REQUESTED_WITH" id="HTTP_X_REQUESTED_WITH" value="<%%VALUE(HTTP_X_REQUESTED_WITH)%%>">
+					</div>
+				</div>
+
+				<!-- Field: HTTP_ORIGIN -->
+				<div class="form-group system_cookies-HTTP_ORIGIN">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="HTTP_ORIGIN">HTTP_ORIGIN</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="HTTP_ORIGIN" id="HTTP_ORIGIN" value="<%%VALUE(HTTP_ORIGIN)%%>">
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="system_cookies_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+			$j('#system_cookies_dv_container-loading').addClass('hidden');
+			$j('#system_cookies_dv_container').removeClass('hidden');
+			if(!$j('.table_view').length || $j('[name=SelectedID]').val().length) AppGini.focusFormElement('system_cookies', 'PATH');
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+
+			if(true /* !embedded_mode */) {
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.removeItem(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'system_cookies',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+									// in case the parent record was updated, we should update auto-fills
+									var updaterName = field_id + '_update_autofills';
+									if(typeof(window[updaterName]) == 'function')
+										window[updaterName]();
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=system_cookies&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=system_cookies&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

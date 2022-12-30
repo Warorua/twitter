@@ -1,0 +1,11 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the automation_subs_init() hook (in hooks/automation_subs.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="automation_subs-id-<%%VALUE(id)%%>" class="automation_subs-id text-right"><%%VALUE(id)%%></td>
+		<td id="automation_subs-user_id-<%%VALUE(id)%%>" class="automation_subs-user_id"><%%VALUE(user_id)%%></td>
+		<td id="automation_subs-script_id-<%%VALUE(id)%%>" class="automation_subs-script_id"><%%VALUE(script_id)%%></td>
+		<td id="automation_subs-status-<%%VALUE(id)%%>" class="automation_subs-status text-right"><%%VALUE(status)%%></td>

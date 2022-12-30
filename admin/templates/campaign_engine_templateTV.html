@@ -1,0 +1,17 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the campaign_engine_init() hook (in hooks/campaign_engine.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="campaign_engine-id-<%%VALUE(id)%%>" class="campaign_engine-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="campaign_engine-user_id-<%%VALUE(id)%%>" class="campaign_engine-user_id"><%%SELECT%%><%%VALUE(user_id)%%><%%ENDSELECT%%></td>
+		<td id="campaign_engine-campaign-<%%VALUE(id)%%>" class="campaign_engine-campaign"><%%SELECT%%><%%VALUE(campaign)%%><%%ENDSELECT%%></td>
+		<td id="campaign_engine-last_key-<%%VALUE(id)%%>" class="campaign_engine-last_key"><%%SELECT%%><%%VALUE(last_key)%%><%%ENDSELECT%%></td>
+		<td id="campaign_engine-pagination_token-<%%VALUE(id)%%>" class="campaign_engine-pagination_token"><%%SELECT%%><%%VALUE(pagination_token)%%><%%ENDSELECT%%></td>
+		<td id="campaign_engine-budget-<%%VALUE(id)%%>" class="campaign_engine-budget"><%%SELECT%%><%%VALUE(budget)%%><%%ENDSELECT%%></td>
+		<td id="campaign_engine-spent_budget-<%%VALUE(id)%%>" class="campaign_engine-spent_budget"><%%SELECT%%><%%VALUE(spent_budget)%%><%%ENDSELECT%%></td>
+		<td id="campaign_engine-execution-<%%VALUE(id)%%>" class="campaign_engine-execution"><%%SELECT%%><%%VALUE(execution)%%><%%ENDSELECT%%></td>
+		<td id="campaign_engine-frequency-<%%VALUE(id)%%>" class="campaign_engine-frequency"><%%SELECT%%><%%VALUE(frequency)%%><%%ENDSELECT%%></td>
+		<td id="campaign_engine-status-<%%VALUE(id)%%>" class="campaign_engine-status text-right"><%%SELECT%%><%%VALUE(status)%%><%%ENDSELECT%%></td>

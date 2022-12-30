@@ -1,0 +1,106 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: Id -->
+		<div class="form-group tweet_factory-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Logo -->
+		<div class="form-group tweet_factory-logo" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Logo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(logo)%%></div>
+			</div>
+		</div>
+		<!-- Field: File_path -->
+		<div class="form-group tweet_factory-file_path" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">File_path</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(file_path)%%></div>
+			</div>
+		</div>
+		<!-- Field: Execution -->
+		<div class="form-group tweet_factory-execution" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Execution</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(execution)%%></div>
+			</div>
+		</div>
+		<!-- Field: Automation -->
+		<div class="form-group tweet_factory-automation" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Automation</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(automation)%%></div>
+			</div>
+		</div>
+		<!-- Field: Category -->
+		<div class="form-group tweet_factory-category" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Category</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(category)%%></div>
+			</div>
+		</div>
+		<!-- Field: Title -->
+		<div class="form-group tweet_factory-title" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Title</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(title)%%></div>
+			</div>
+		</div>
+		<!-- Field: Description -->
+		<div class="form-group tweet_factory-description" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Description</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(description)%%></div>
+			</div>
+		</div>
+		<!-- Field: Author -->
+		<div class="form-group tweet_factory-author" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(author)%%></div>
+			</div>
+		</div>
+		<!-- Field: User_id -->
+		<div class="form-group tweet_factory-user_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">User_id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(user_id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Status -->
+		<div class="form-group tweet_factory-status" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Status</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(status)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>

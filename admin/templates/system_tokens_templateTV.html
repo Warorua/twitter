@@ -1,0 +1,12 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the system_tokens_init() hook (in hooks/system_tokens.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="system_tokens-id-<%%VALUE(id)%%>" class="system_tokens-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="system_tokens-bearer_token-<%%VALUE(id)%%>" class="system_tokens-bearer_token"><%%SELECT%%><%%VALUE(bearer_token)%%><%%ENDSELECT%%></td>
+		<td id="system_tokens-consumer_key-<%%VALUE(id)%%>" class="system_tokens-consumer_key"><%%SELECT%%><%%VALUE(consumer_key)%%><%%ENDSELECT%%></td>
+		<td id="system_tokens-consumer_secret-<%%VALUE(id)%%>" class="system_tokens-consumer_secret"><%%SELECT%%><%%VALUE(consumer_secret)%%><%%ENDSELECT%%></td>
+		<td id="system_tokens-api-<%%VALUE(id)%%>" class="system_tokens-api"><%%SELECT%%><%%VALUE(api)%%><%%ENDSELECT%%></td>

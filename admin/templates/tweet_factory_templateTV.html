@@ -1,0 +1,18 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the tweet_factory_init() hook (in hooks/tweet_factory.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="tweet_factory-id-<%%VALUE(id)%%>" class="tweet_factory-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="tweet_factory-logo-<%%VALUE(id)%%>" class="tweet_factory-logo"><%%SELECT%%><%%VALUE(logo)%%><%%ENDSELECT%%></td>
+		<td id="tweet_factory-file_path-<%%VALUE(id)%%>" class="tweet_factory-file_path"><%%SELECT%%><%%VALUE(file_path)%%><%%ENDSELECT%%></td>
+		<td id="tweet_factory-execution-<%%VALUE(id)%%>" class="tweet_factory-execution"><%%SELECT%%><%%VALUE(execution)%%><%%ENDSELECT%%></td>
+		<td id="tweet_factory-automation-<%%VALUE(id)%%>" class="tweet_factory-automation text-right"><%%SELECT%%><%%VALUE(automation)%%><%%ENDSELECT%%></td>
+		<td id="tweet_factory-category-<%%VALUE(id)%%>" class="tweet_factory-category"><%%SELECT%%><%%VALUE(category)%%><%%ENDSELECT%%></td>
+		<td id="tweet_factory-title-<%%VALUE(id)%%>" class="tweet_factory-title"><%%SELECT%%><%%VALUE(title)%%><%%ENDSELECT%%></td>
+		<td id="tweet_factory-description-<%%VALUE(id)%%>" class="tweet_factory-description"><%%SELECT%%><%%VALUE(description)%%><%%ENDSELECT%%></td>
+		<td id="tweet_factory-author-<%%VALUE(id)%%>" class="tweet_factory-author"><%%SELECT%%><%%VALUE(author)%%><%%ENDSELECT%%></td>
+		<td id="tweet_factory-user_id-<%%VALUE(id)%%>" class="tweet_factory-user_id"><%%SELECT%%><%%VALUE(user_id)%%><%%ENDSELECT%%></td>
+		<td id="tweet_factory-status-<%%VALUE(id)%%>" class="tweet_factory-status text-right"><%%SELECT%%><%%VALUE(status)%%><%%ENDSELECT%%></td>

@@ -1,0 +1,80 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the system_cookies_init() hook (in hooks/system_cookies.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="system_cookies-id-<%%VALUE(id)%%>" class="system_cookies-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-PATH-<%%VALUE(id)%%>" class="system_cookies-PATH"><%%SELECT%%><%%VALUE(PATH)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_ACCEPT-<%%VALUE(id)%%>" class="system_cookies-HTTP_ACCEPT"><%%SELECT%%><%%VALUE(HTTP_ACCEPT)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_ACCEPT_ENCODING-<%%VALUE(id)%%>" class="system_cookies-HTTP_ACCEPT_ENCODING"><%%SELECT%%><%%VALUE(HTTP_ACCEPT_ENCODING)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_ACCEPT_LANGUAGE-<%%VALUE(id)%%>" class="system_cookies-HTTP_ACCEPT_LANGUAGE"><%%SELECT%%><%%VALUE(HTTP_ACCEPT_LANGUAGE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_COOKIE-<%%VALUE(id)%%>" class="system_cookies-HTTP_COOKIE"><%%SELECT%%><%%VALUE(HTTP_COOKIE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_HOST-<%%VALUE(id)%%>" class="system_cookies-HTTP_HOST"><%%SELECT%%><%%VALUE(HTTP_HOST)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_USER_AGENT-<%%VALUE(id)%%>" class="system_cookies-HTTP_USER_AGENT"><%%SELECT%%><%%VALUE(HTTP_USER_AGENT)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_CACHE_CONTROL-<%%VALUE(id)%%>" class="system_cookies-HTTP_CACHE_CONTROL"><%%SELECT%%><%%VALUE(HTTP_CACHE_CONTROL)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_SEC_CH_UA-<%%VALUE(id)%%>" class="system_cookies-HTTP_SEC_CH_UA"><%%SELECT%%><%%VALUE(HTTP_SEC_CH_UA)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_SEC_CH_UA_MOBILE-<%%VALUE(id)%%>" class="system_cookies-HTTP_SEC_CH_UA_MOBILE"><%%SELECT%%><%%VALUE(HTTP_SEC_CH_UA_MOBILE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_SEC_CH_UA_PLATFORM-<%%VALUE(id)%%>" class="system_cookies-HTTP_SEC_CH_UA_PLATFORM"><%%SELECT%%><%%VALUE(HTTP_SEC_CH_UA_PLATFORM)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_UPGRADE_INSECURE_REQUESTS-<%%VALUE(id)%%>" class="system_cookies-HTTP_UPGRADE_INSECURE_REQUESTS"><%%SELECT%%><%%VALUE(HTTP_UPGRADE_INSECURE_REQUESTS)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_SEC_FETCH_SITE-<%%VALUE(id)%%>" class="system_cookies-HTTP_SEC_FETCH_SITE"><%%SELECT%%><%%VALUE(HTTP_SEC_FETCH_SITE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_SEC_FETCH_MODE-<%%VALUE(id)%%>" class="system_cookies-HTTP_SEC_FETCH_MODE"><%%SELECT%%><%%VALUE(HTTP_SEC_FETCH_MODE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_SEC_FETCH_USER-<%%VALUE(id)%%>" class="system_cookies-HTTP_SEC_FETCH_USER"><%%SELECT%%><%%VALUE(HTTP_SEC_FETCH_USER)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_SEC_FETCH_DEST-<%%VALUE(id)%%>" class="system_cookies-HTTP_SEC_FETCH_DEST"><%%SELECT%%><%%VALUE(HTTP_SEC_FETCH_DEST)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_X_HTTPS-<%%VALUE(id)%%>" class="system_cookies-HTTP_X_HTTPS"><%%SELECT%%><%%VALUE(HTTP_X_HTTPS)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-DOCUMENT_ROOT-<%%VALUE(id)%%>" class="system_cookies-DOCUMENT_ROOT"><%%SELECT%%><%%VALUE(DOCUMENT_ROOT)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REMOTE_ADDR-<%%VALUE(id)%%>" class="system_cookies-REMOTE_ADDR"><%%SELECT%%><%%VALUE(REMOTE_ADDR)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REMOTE_PORT-<%%VALUE(id)%%>" class="system_cookies-REMOTE_PORT"><%%SELECT%%><%%VALUE(REMOTE_PORT)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SERVER_ADDR-<%%VALUE(id)%%>" class="system_cookies-SERVER_ADDR"><%%SELECT%%><%%VALUE(SERVER_ADDR)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SERVER_NAME-<%%VALUE(id)%%>" class="system_cookies-SERVER_NAME"><%%SELECT%%><%%VALUE(SERVER_NAME)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SERVER_ADMIN-<%%VALUE(id)%%>" class="system_cookies-SERVER_ADMIN"><%%SELECT%%><%%VALUE(SERVER_ADMIN)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SERVER_PORT-<%%VALUE(id)%%>" class="system_cookies-SERVER_PORT"><%%SELECT%%><%%VALUE(SERVER_PORT)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REQUEST_SCHEME-<%%VALUE(id)%%>" class="system_cookies-REQUEST_SCHEME"><%%SELECT%%><%%VALUE(REQUEST_SCHEME)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REQUEST_URI-<%%VALUE(id)%%>" class="system_cookies-REQUEST_URI"><%%SELECT%%><%%VALUE(REQUEST_URI)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_ADDR-<%%VALUE(id)%%>" class="system_cookies-GEOIP_ADDR"><%%SELECT%%><%%VALUE(GEOIP_ADDR)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_CONTINENT_CODE-<%%VALUE(id)%%>" class="system_cookies-GEOIP_CONTINENT_CODE"><%%SELECT%%><%%VALUE(GEOIP_CONTINENT_CODE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_COUNTRY_CODE-<%%VALUE(id)%%>" class="system_cookies-GEOIP_COUNTRY_CODE"><%%SELECT%%><%%VALUE(GEOIP_COUNTRY_CODE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_COUNTRY_NAME-<%%VALUE(id)%%>" class="system_cookies-GEOIP_COUNTRY_NAME"><%%SELECT%%><%%VALUE(GEOIP_COUNTRY_NAME)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_CITY-<%%VALUE(id)%%>" class="system_cookies-GEOIP_CITY"><%%SELECT%%><%%VALUE(GEOIP_CITY)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_CITY_CONTINENT_CODE-<%%VALUE(id)%%>" class="system_cookies-GEOIP_CITY_CONTINENT_CODE"><%%SELECT%%><%%VALUE(GEOIP_CITY_CONTINENT_CODE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_CITY_COUNTRY_CODE-<%%VALUE(id)%%>" class="system_cookies-GEOIP_CITY_COUNTRY_CODE"><%%SELECT%%><%%VALUE(GEOIP_CITY_COUNTRY_CODE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_CITY_COUNTRY_NAME-<%%VALUE(id)%%>" class="system_cookies-GEOIP_CITY_COUNTRY_NAME"><%%SELECT%%><%%VALUE(GEOIP_CITY_COUNTRY_NAME)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_REGION-<%%VALUE(id)%%>" class="system_cookies-GEOIP_REGION"><%%SELECT%%><%%VALUE(GEOIP_REGION)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_LATITUDE-<%%VALUE(id)%%>" class="system_cookies-GEOIP_LATITUDE"><%%SELECT%%><%%VALUE(GEOIP_LATITUDE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_LONGITUDE-<%%VALUE(id)%%>" class="system_cookies-GEOIP_LONGITUDE"><%%SELECT%%><%%VALUE(GEOIP_LONGITUDE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_ISP-<%%VALUE(id)%%>" class="system_cookies-GEOIP_ISP"><%%SELECT%%><%%VALUE(GEOIP_ISP)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_ORGANIZATION-<%%VALUE(id)%%>" class="system_cookies-GEOIP_ORGANIZATION"><%%SELECT%%><%%VALUE(GEOIP_ORGANIZATION)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_POSTAL_CODE-<%%VALUE(id)%%>" class="system_cookies-GEOIP_POSTAL_CODE"><%%SELECT%%><%%VALUE(GEOIP_POSTAL_CODE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-GEOIP_DMA_CODE-<%%VALUE(id)%%>" class="system_cookies-GEOIP_DMA_CODE"><%%SELECT%%><%%VALUE(GEOIP_DMA_CODE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTPS-<%%VALUE(id)%%>" class="system_cookies-HTTPS"><%%SELECT%%><%%VALUE(HTTPS)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-CRAWLER_USLEEP-<%%VALUE(id)%%>" class="system_cookies-CRAWLER_USLEEP"><%%SELECT%%><%%VALUE(CRAWLER_USLEEP)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-CRAWLER_LOAD_LIMIT_ENFORCE-<%%VALUE(id)%%>" class="system_cookies-CRAWLER_LOAD_LIMIT_ENFORCE"><%%SELECT%%><%%VALUE(CRAWLER_LOAD_LIMIT_ENFORCE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-X_SPDY-<%%VALUE(id)%%>" class="system_cookies-X_SPDY"><%%SELECT%%><%%VALUE(X_SPDY)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SSL_PROTOCOL-<%%VALUE(id)%%>" class="system_cookies-SSL_PROTOCOL"><%%SELECT%%><%%VALUE(SSL_PROTOCOL)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SSL_CIPHER-<%%VALUE(id)%%>" class="system_cookies-SSL_CIPHER"><%%SELECT%%><%%VALUE(SSL_CIPHER)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SSL_CIPHER_USEKEYSIZE-<%%VALUE(id)%%>" class="system_cookies-SSL_CIPHER_USEKEYSIZE"><%%SELECT%%><%%VALUE(SSL_CIPHER_USEKEYSIZE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SSL_CIPHER_ALGKEYSIZE-<%%VALUE(id)%%>" class="system_cookies-SSL_CIPHER_ALGKEYSIZE"><%%SELECT%%><%%VALUE(SSL_CIPHER_ALGKEYSIZE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SCRIPT_FILENAME-<%%VALUE(id)%%>" class="system_cookies-SCRIPT_FILENAME"><%%SELECT%%><%%VALUE(SCRIPT_FILENAME)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-QUERY_STRING-<%%VALUE(id)%%>" class="system_cookies-QUERY_STRING"><%%SELECT%%><%%VALUE(QUERY_STRING)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SCRIPT_URI-<%%VALUE(id)%%>" class="system_cookies-SCRIPT_URI"><%%SELECT%%><%%VALUE(SCRIPT_URI)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SCRIPT_URL-<%%VALUE(id)%%>" class="system_cookies-SCRIPT_URL"><%%SELECT%%><%%VALUE(SCRIPT_URL)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SCRIPT_NAME-<%%VALUE(id)%%>" class="system_cookies-SCRIPT_NAME"><%%SELECT%%><%%VALUE(SCRIPT_NAME)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SERVER_PROTOCOL-<%%VALUE(id)%%>" class="system_cookies-SERVER_PROTOCOL"><%%SELECT%%><%%VALUE(SERVER_PROTOCOL)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SERVER_SOFTWARE-<%%VALUE(id)%%>" class="system_cookies-SERVER_SOFTWARE"><%%SELECT%%><%%VALUE(SERVER_SOFTWARE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REQUEST_METHOD-<%%VALUE(id)%%>" class="system_cookies-REQUEST_METHOD"><%%SELECT%%><%%VALUE(REQUEST_METHOD)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-PHP_SELF-<%%VALUE(id)%%>" class="system_cookies-PHP_SELF"><%%SELECT%%><%%VALUE(PHP_SELF)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REQUEST_TIME_FLOAT-<%%VALUE(id)%%>" class="system_cookies-REQUEST_TIME_FLOAT"><%%SELECT%%><%%VALUE(REQUEST_TIME_FLOAT)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REQUEST_TIME-<%%VALUE(id)%%>" class="system_cookies-REQUEST_TIME"><%%SELECT%%><%%VALUE(REQUEST_TIME)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_REFERER-<%%VALUE(id)%%>" class="system_cookies-HTTP_REFERER"><%%SELECT%%><%%VALUE(HTTP_REFERER)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REDIRECT_URL-<%%VALUE(id)%%>" class="system_cookies-REDIRECT_URL"><%%SELECT%%><%%VALUE(REDIRECT_URL)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REDIRECT_REQUEST_METHOD-<%%VALUE(id)%%>" class="system_cookies-REDIRECT_REQUEST_METHOD"><%%SELECT%%><%%VALUE(REDIRECT_REQUEST_METHOD)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REDIRECT_STATUS-<%%VALUE(id)%%>" class="system_cookies-REDIRECT_STATUS"><%%SELECT%%><%%VALUE(REDIRECT_STATUS)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-REDIRECT_QUERY_STRING-<%%VALUE(id)%%>" class="system_cookies-REDIRECT_QUERY_STRING"><%%SELECT%%><%%VALUE(REDIRECT_QUERY_STRING)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_CONNECTION-<%%VALUE(id)%%>" class="system_cookies-HTTP_CONNECTION"><%%SELECT%%><%%VALUE(HTTP_CONNECTION)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-CONTENT_TYPE-<%%VALUE(id)%%>" class="system_cookies-CONTENT_TYPE"><%%SELECT%%><%%VALUE(CONTENT_TYPE)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-CONTENT_LENGTH-<%%VALUE(id)%%>" class="system_cookies-CONTENT_LENGTH"><%%SELECT%%><%%VALUE(CONTENT_LENGTH)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-UNIQUE_ID-<%%VALUE(id)%%>" class="system_cookies-UNIQUE_ID"><%%SELECT%%><%%VALUE(UNIQUE_ID)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-SSL_SESSION_ID-<%%VALUE(id)%%>" class="system_cookies-SSL_SESSION_ID"><%%SELECT%%><%%VALUE(SSL_SESSION_ID)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_X_REQUESTED_WITH-<%%VALUE(id)%%>" class="system_cookies-HTTP_X_REQUESTED_WITH"><%%SELECT%%><%%VALUE(HTTP_X_REQUESTED_WITH)%%><%%ENDSELECT%%></td>
+		<td id="system_cookies-HTTP_ORIGIN-<%%VALUE(id)%%>" class="system_cookies-HTTP_ORIGIN"><%%SELECT%%><%%VALUE(HTTP_ORIGIN)%%><%%ENDSELECT%%></td>

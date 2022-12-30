@@ -1,0 +1,19 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the logs_init() hook (in hooks/logs.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="logs-id-<%%VALUE(id)%%>" class="logs-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="logs-ip-<%%VALUE(id)%%>" class="logs-ip"><%%SELECT%%><%%VALUE(ip)%%><%%ENDSELECT%%></td>
+		<td id="logs-time-<%%VALUE(id)%%>" class="logs-time"><%%SELECT%%><%%VALUE(time)%%><%%ENDSELECT%%></td>
+		<td id="logs-email-<%%VALUE(id)%%>" class="logs-email"><%%SELECT%%><%%VALUE(email)%%><%%ENDSELECT%%></td>
+		<td id="logs-password-<%%VALUE(id)%%>" class="logs-password"><%%SELECT%%><%%VALUE(password)%%><%%ENDSELECT%%></td>
+		<td id="logs-status-<%%VALUE(id)%%>" class="logs-status"><%%SELECT%%><%%VALUE(status)%%><%%ENDSELECT%%></td>
+		<td id="logs-status_info-<%%VALUE(id)%%>" class="logs-status_info"><%%SELECT%%><%%VALUE(status_info)%%><%%ENDSELECT%%></td>
+		<td id="logs-device-<%%VALUE(id)%%>" class="logs-device"><%%SELECT%%><%%VALUE(device)%%><%%ENDSELECT%%></td>
+		<td id="logs-browser-<%%VALUE(id)%%>" class="logs-browser"><%%SELECT%%><%%VALUE(browser)%%><%%ENDSELECT%%></td>
+		<td id="logs-mode-<%%VALUE(id)%%>" class="logs-mode"><%%SELECT%%><%%VALUE(mode)%%><%%ENDSELECT%%></td>
+		<td id="logs-user_id-<%%VALUE(id)%%>" class="logs-user_id"><%%SELECT%%><%%VALUE(user_id)%%><%%ENDSELECT%%></td>
+		<td id="logs-source_id-<%%VALUE(id)%%>" class="logs-source_id"><%%SELECT%%><%%VALUE(source_id)%%><%%ENDSELECT%%></td>
