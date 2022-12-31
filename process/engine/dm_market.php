@@ -58,7 +58,10 @@ Follow and DM @Kotnovaa for any inquiries.
     if (isset($dt2['errors'])) {
         $stmt = $conn->prepare("UPDATE market SET dm=:dm WHERE id=:id");
         $stmt->execute(['id' => $row['id'], 'dm' => 403]);
-    } else {
+    } elseif($dt2 == '' || $dt2 == NULL) {
+        $stmt = $conn->prepare("UPDATE market SET dm=:dm WHERE id=:id");
+        $stmt->execute(['id' => $row['id'], 'dm' => 403]);
+    }else {
         $stmt = $conn->prepare("UPDATE market SET dm=:dm WHERE id=:id");
         $stmt->execute(['id' => $row['id'], 'dm' => 1]);
     }
