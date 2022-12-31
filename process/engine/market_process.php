@@ -1,9 +1,9 @@
 <?php
-require '../vendor/autoload.php';
-include '../includes/conn.php';
+require '../../vendor/autoload.php';
+include '../../includes/conn.php';
 $_SESSION['user_id'] = 2;
-include '../includes/session.php';
-include '../includes/api_config.php';
+include '../../includes/session.php';
+include '../../includes/api_config.php';
 
 //*
 //$abraham_client->setApiVersion('1.1');
