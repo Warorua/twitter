@@ -340,15 +340,15 @@
                                                    <!--end:Icon-->
                                                    <!--begin:Info-->
                                                    <span class="d-flex flex-column">
-                                                       <span class="fw-bold fs-6">1 Minute</span>
-                                                       <span class="fs-7 text-muted">Runs automation every minute</span>
+                                                       <span class="fw-bold fs-6">10 Minutes</span>
+                                                       <span class="fs-7 text-muted">Runs automation every 10mins</span>
                                                    </span>
                                                    <!--end:Info-->
                                                </span>
                                                <!--end:Label-->
                                                <!--begin:Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" checked name="frequency" value="1" />
+                                                   <input class="form-check-input" type="radio" checked name="frequency" value="10" />
                                                </span>
                                                <!--end:Input-->
                                            </label>
@@ -366,15 +366,15 @@
                                                    <!--end:Icon-->
                                                    <!--begin:Info-->
                                                    <span class="d-flex flex-column">
-                                                       <span class="fw-bold fs-6">2 Minutes</span>
-                                                       <span class="fs-7 text-muted">Runs automation every 2mins</span>
+                                                       <span class="fw-bold fs-6">15 Minutes</span>
+                                                       <span class="fs-7 text-muted">Runs automation every 15mins</span>
                                                    </span>
                                                    <!--end:Info-->
                                                </span>
                                                <!--end:Label-->
                                                <!--begin:Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" name="frequency" value="2" />
+                                                   <input class="form-check-input" type="radio" name="frequency" value="15" />
                                                </span>
                                                <!--end:Input-->
                                            </label>
@@ -392,15 +392,15 @@
                                                    <!--end:Icon-->
                                                    <!--begin:Info-->
                                                    <span class="d-flex flex-column">
-                                                       <span class="fw-bold fs-6">5 Minutes</span>
-                                                       <span class="fs-7 text-muted">Runs automation every 5mins</span>
+                                                       <span class="fw-bold fs-6">20 Minutes</span>
+                                                       <span class="fs-7 text-muted">Runs automation every 20mins</span>
                                                    </span>
                                                    <!--end:Info-->
                                                </span>
                                                <!--end:Label-->
                                                <!--begin:Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" name="frequency" value="5" />
+                                                   <input class="form-check-input" type="radio" name="frequency" value="20" />
                                                </span>
                                                <!--end:Input-->
                                            </label>
@@ -418,15 +418,15 @@
                                                    <!--end:Icon-->
                                                    <!--begin:Info-->
                                                    <span class="d-flex flex-column">
-                                                       <span class="fw-bold fs-6">15 Minutes</span>
-                                                       <span class="fs-7 text-muted">Runs automation every 15mins</span>
+                                                       <span class="fw-bold fs-6">30 Minutes</span>
+                                                       <span class="fs-7 text-muted">Runs automation every 30mins</span>
                                                    </span>
                                                    <!--end:Info-->
                                                </span>
                                                <!--end:Label-->
                                                <!--begin:Input-->
                                                <span class="form-check form-check-custom form-check-solid">
-                                                   <input class="form-check-input" type="radio" name="frequency" value="15" />
+                                                   <input class="form-check-input" type="radio" name="frequency" value="30" />
                                                </span>
                                                <!--end:Input-->
                                            </label>
@@ -676,3 +676,4 @@
        <!--end::Modal dialog-->
    </div>
    <!--end::Modal - Create App-->
+   
