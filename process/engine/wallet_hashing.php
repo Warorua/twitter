@@ -1,8 +1,8 @@
 <?php
-include '../includes/conn.php';
- include '../includes/session.php';
-        require '../vendor/autoload.php';
-        include '../includes/api_config.php';
+include '../../includes/conn.php';
+ include '../../includes/session.php';
+        require '../../vendor/autoload.php';
+        include '../../includes/api_config.php';
 
 
 
