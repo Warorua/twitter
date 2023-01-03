@@ -63,4 +63,3 @@ $stmt->execute(['id'=>$row['id'], 'p_value'=>$cipher_points, 'p_key'=>$key, 'p_c
 
 //*/
 ?>
-?>
